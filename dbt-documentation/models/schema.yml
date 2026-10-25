@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: customers
+    description: >
+      Cleaned dimensional table representing registered store customers.
+      Sourced directly from the raw `users` table.
+    columns:
+      - name: customer_id
+        description: "{{ doc('customer_id') }}"
+
+      - name: customer_name
+        description: "Full name of the customer as registered in the system."
+  - name: orders
+    description: >
+      Transactional order table recording user purchases.
+      Downstream dependent of the `customers` model (visible in dbt Lineage Graph).
+    columns:
+      - name: order_id
+        description: "Unique transaction identifier for the purchase."
+
+      - name: customer_id
+        description: "{{ doc('customer_id') }}"
+
+      - name: amount
+        description: "{{ doc('order_amount') }}"

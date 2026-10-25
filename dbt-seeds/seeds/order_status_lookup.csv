@@ -1,0 +1,6 @@
+status_code,status_name,is_completed
+PLACED,Order Placed,false
+SHIPPED,In Transit,false
+DELIVERED,Completed Delivery,true
+RETURNED,Returned by Customer,true
+CANCELLED,Cancelled Order,true

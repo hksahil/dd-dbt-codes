@@ -1,0 +1,1 @@
+{{ dbt_expectations.test_expect_column_values_to_be_between(column_name="amount", max_value=100000, min_value=0, model=get_where_subquery(ref('02_great_expectations'))) }}

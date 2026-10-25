@@ -1,0 +1,1003 @@
+==================== 2026-10-25T09:20:51.037441Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-25T09:20:51.037590Z | 2aa56b51-8df8-4bc7-ba2f-7f02b12ad1e2 ====================
+09:20:51.037601 [info ]: Starting dbt LSP server
+09:20:51.037612 [info ]: Connecting to LSP client on port 8000
+09:20:51.037789 [info ]: Successfully connected to LSP client
+09:20:51.037812 [info ]: Creating LSP service...
+09:20:51.038954 [info ]: Creating LSP server...
+09:20:51.038961 [info ]: Starting LSP server...
+09:20:51.045559 [info ]: Loading profiles.yml
+==================== 2026-10-25T09:20:51.060667Z | 033d5cb3-6268-450f-9809-14fa688fe462 ====================
+09:20:51.060760 [info ]: Started loading project
+09:20:51.061263 [info ]: Loading profiles.yml
+09:20:51.172802 [debug]: Ignoring unsupported LSP notification
+09:20:51.195230 [debug]:    Started loading packages
+09:20:51.195530 [debug]:     Loaded [  0.00s] packages
+09:20:51.195930 [info ]: Finished loading project [  0.14s]
+09:20:51.196080 [info ]: Started parsing (11 nodes)
+09:20:51.211062 [debug]:    Started building model nodes
+09:20:51.211064 [debug]:    Started building model nodes
+09:20:51.211077 [debug]:   Finished [  0.00s] building model nodes
+09:20:51.211077 [debug]:   Finished [  0.00s] building model nodes
+09:20:51.211170 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:20:51.211329 [debug]:    Started resolving data tests
+09:20:51.211329 [debug]:    Started resolving data tests
+09:20:51.211348 [debug]:   Finished [  0.00s] resolving data tests
+09:20:51.211348 [debug]:   Finished [  0.00s] resolving data tests
+09:20:51.211932 [debug]: Finished parsing models/demo_ephemeral.sql [  0.00s]
+09:20:51.212314 [debug]: Finished parsing models/demo_incremental.sql [  0.00s]
+09:20:51.213174 [debug]: Finished parsing models/demo_source_and_ref.sql [  0.00s]
+09:20:51.213519 [debug]: Finished parsing models/demo_table.sql [  0.00s]
+09:20:51.213778 [debug]: Finished parsing models/demo_view.sql [  0.00s]
+09:20:51.214084 [debug]: Finished parsing models/inc_strategy_append.sql [  0.00s]
+09:20:51.214445 [debug]: Finished parsing models/inc_strategy_delete_insert.sql [  0.00s]
+09:20:51.214773 [debug]: Finished parsing models/inc_strategy_merge.sql [  0.00s]
+09:20:51.215178 [debug]: Finished parsing models/inc_timestamp_watermark.sql [  0.00s]
+09:20:51.215511 [debug]:    Started building model nodes
+09:20:51.217391 [debug]:   Finished [  0.00s] building model nodes
+09:20:51.217430 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:20:51.218434 [debug]:    Started resolving data tests
+09:20:51.218447 [debug]:   Finished [  0.00s] resolving data tests
+09:20:51.218828 [debug]:    Started typechecking macros
+09:20:51.301597 [debug]:   Finished [  0.08s] typechecking macros
+09:20:51.301996 [info ]: Finished parsing [  0.11s] (11 nodes, 0 skipped, 0 errors)
+09:20:51.302142 [info ]: Cached model count updated: 10 models (estimate)
+09:20:51.302149 [info ]: Cached model count updated: 10 models (accurate)
+09:20:51.302185 [info ]: Started scheduling
+09:20:51.302305 [info ]: Finished scheduling [  0.00s]
+09:20:51.302313 [debug]: Compilation - 8 nodes selected: {"model.dbt_custom.demo_ephemeral", "model.dbt_custom.demo_incremental", "model.dbt_custom.demo_table", "model.dbt_custom.demo_view", "model.dbt_custom.inc_strategy_append", "model.dbt_custom.inc_strategy_delete_insert", "model.dbt_custom.inc_strategy_merge", "model.dbt_custom.inc_timestamp_watermark"}
+09:20:51.302344 [info ]: Started scheduling
+09:20:51.302383 [info ]: Finished scheduling [  0.00s]
+09:20:51.302448 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+09:20:51.302453 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+09:20:51.302859 [info ]:    Started downloading referenced relations (1 items)
+09:20:51.303132 [debug]: DuckDB driver resolved: duckdb 1.5.4
+09:20:51.317720 [debug]:    Started downloading "dev"."main"
+09:20:51.317761 [debug]: create_debug_span(...).entered() took 3.167µs
+09:20:51.319408 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 985.542µs
+09:20:51.319415 [debug]: reader.schema() took 125ns
+09:20:51.319474 [debug]: batch-consume loop (for res in reader) took 56.791µs
+09:20:51.319493 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.725917ms
+09:20:51.319570 [debug]: concat_batches + normalize_result_column_names took 73.792µs
+09:20:51.319575 [debug]: record_current_span_status_from_attrs took 2.25µs
+09:20:51.319581 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:20:51.319585 [debug]: drop(query_span_guard) (span exit/export) took 5.75µs
+09:20:51.319627 [debug]: Downloaded [  0.00s] "dev"."main"
+09:20:51.319722 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+09:20:51.319906 [info ]: Started building task graph
+09:20:51.319972 [info ]: Finished building task graph [  0.00s]
+09:20:51.320859 [info ]: Started rendering (8 nodes)
+09:20:51.320869 [info ]: Started model main.inc_timestamp_watermark
+09:20:51.320878 [debug]: Started rendering model main.inc_timestamp_watermark
+09:20:51.320893 [info ]: Started model main.inc_strategy_merge
+09:20:51.320898 [debug]: Started rendering model main.inc_strategy_merge
+09:20:51.320906 [info ]: Started model main.inc_strategy_delete_insert
+09:20:51.320910 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:20:51.320921 [info ]: Started model main.inc_strategy_append
+09:20:51.320924 [debug]: Started rendering model main.inc_strategy_append
+09:20:51.320929 [info ]: Started model main.demo_table
+09:20:51.320932 [debug]: Started rendering model main.demo_table
+09:20:51.320938 [info ]: Started model main.demo_incremental
+09:20:51.320942 [debug]: Started rendering model main.demo_incremental
+09:20:51.320947 [info ]: Started model main.demo_ephemeral
+09:20:51.320950 [debug]: Started rendering model main.demo_ephemeral
+09:20:51.321906 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/.lsp/compiled/dbt_custom/models/demo_table.sql
+09:20:51.322055 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:20:51.322091 [info ]: Started analyzing (8 nodes)
+09:20:51.322099 [debug]: Started analyzing model main.demo_table
+09:20:51.322114 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/.lsp/compiled/dbt_custom/models/inc_strategy_append.sql
+09:20:51.322121 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/.lsp/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:20:51.322130 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/.lsp/compiled/dbt_custom/models/demo_incremental.sql
+09:20:51.322205 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/.lsp/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:20:51.322199 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/.lsp/compiled/dbt_custom/models/demo_ephemeral.sql
+09:20:51.322273 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/.lsp/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+09:20:51.322245 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:20:51.322364 [debug]: Started analyzing model main.demo_incremental
+09:20:51.322390 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:20:51.322400 [debug]: Started analyzing model main.inc_strategy_append
+09:20:51.322409 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:20:51.322419 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:20:51.322428 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:20:51.322434 [debug]: Started analyzing model main.inc_strategy_merge
+09:20:51.322439 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:20:51.322451 [info ]: Started model main.demo_view
+09:20:51.322458 [debug]: Started rendering model main.demo_view
+09:20:51.322465 [debug]: Started analyzing model main.demo_ephemeral
+09:20:51.322470 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+09:20:51.322475 [debug]: Started analyzing model main.inc_timestamp_watermark
+09:20:51.323289 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/.lsp/compiled/dbt_custom/models/demo_view.sql
+09:20:51.323336 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:20:51.323343 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+09:20:51.323352 [debug]: Started analyzing model main.demo_view
+09:20:51.325350 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:20:51.325356 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+09:20:51.325831 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:20:51.325859 [info ]:  Succeeded model main.demo_table (table) [5 of 7 in 0.00s]
+09:20:51.326155 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:20:51.326162 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [3 of 7 in 0.00s]
+09:20:51.326171 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:20:51.326176 [info ]:  Succeeded model main.demo_incremental (incremental) [6 of 7 in 0.00s]
+09:20:51.326215 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:20:51.326226 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [2 of 7 in 0.00s]
+09:20:51.326241 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:20:51.326246 [info ]:  Succeeded model main.inc_strategy_append (incremental) [4 of 7 in 0.00s]
+09:20:51.326254 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+09:20:51.326258 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [1 of 7 in 0.00s]
+09:20:51.327467 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:20:51.327473 [info ]: Finished analyzing [  0.01s] (8 nodes, 0 skipped, 0 errors)
+09:20:51.327477 [info ]:  Succeeded model main.demo_view (view) [7 of 7 in 0.00s]
+09:20:51.330689 [info ]: Started scheduling
+09:20:51.330711 [info ]: Finished scheduling [  0.00s]
+09:20:51.330764 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [270ms]
+Processed: 8 models
+Summary: 8 total | 8 success
+09:20:51.330804 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:20:51.604076Z | de73db71-971a-447d-8024-c9ad39111b92 ====================
+09:20:51.604105 [info ]: Started loading project
+09:20:51.604267 [info ]: Loading profiles.yml
+09:20:51.605490 [info ]: Finished loading project [  0.00s]
+09:20:51.618341 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [14ms]
+09:20:51.618394 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:20:52.802506Z | 2f7f83e1-3792-4205-bc00-e3783091f7ee ====================
+09:20:52.802616 [info ]: Started loading project
+09:20:52.803079 [info ]: Loading profiles.yml
+09:20:52.805811 [info ]: Finished loading project [  0.00s]
+09:20:52.827970 [info ]: Cached model count updated: 10 models (estimate)
+09:20:52.828016 [info ]: Cached model count updated: 10 models (accurate)
+09:20:52.828058 [info ]: Started scheduling
+09:20:52.828189 [info ]: Finished scheduling [  0.00s]
+09:20:52.828210 [debug]: Compilation - 10 nodes selected: {"model.dbt_custom.demo_ephemeral", "model.dbt_custom.demo_incremental", "model.dbt_custom.demo_source_and_ref", "model.dbt_custom.demo_table", "model.dbt_custom.demo_view", "model.dbt_custom.inc_strategy_append", "model.dbt_custom.inc_strategy_delete_insert", "model.dbt_custom.inc_strategy_merge", "model.dbt_custom.inc_timestamp_watermark", "model.dbt_custom.user_orders"}
+09:20:52.829167 [info ]:    Started downloading referenced relations (1 items)
+09:20:52.843244 [debug]:    Started downloading "dev"."main"
+09:20:52.843278 [debug]: create_debug_span(...).entered() took 3.875µs
+09:20:52.845542 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.408084ms
+09:20:52.845553 [debug]: reader.schema() took 458ns
+09:20:52.845607 [debug]: batch-consume loop (for res in reader) took 50.292µs
+09:20:52.845629 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.342042ms
+09:20:52.845654 [debug]: concat_batches + normalize_result_column_names took 19.916µs
+09:20:52.845660 [debug]: record_current_span_status_from_attrs took 1.5µs
+09:20:52.845667 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:20:52.845674 [debug]: drop(query_span_guard) (span exit/export) took 8.833µs
+09:20:52.845713 [debug]: Downloaded [  0.00s] "dev"."main"
+09:20:52.845840 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+09:20:52.846165 [info ]: Started building task graph
+09:20:52.846233 [info ]: Finished building task graph [  0.00s]
+09:20:52.847052 [info ]: Started rendering (10 nodes)
+09:20:52.847065 [info ]: Started model main.user_orders
+09:20:52.847074 [debug]: Started rendering model main.user_orders
+09:20:52.847090 [info ]: Started model main.inc_timestamp_watermark
+09:20:52.847097 [debug]: Started rendering model main.inc_timestamp_watermark
+09:20:52.847109 [info ]: Started model main.inc_strategy_merge
+09:20:52.847113 [debug]: Started rendering model main.inc_strategy_merge
+09:20:52.847122 [info ]: Started model main.inc_strategy_delete_insert
+09:20:52.847127 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:20:52.847134 [info ]: Started model main.inc_strategy_append
+09:20:52.847138 [debug]: Started rendering model main.inc_strategy_append
+09:20:52.847145 [info ]: Started model main.demo_table
+09:20:52.847149 [debug]: Started rendering model main.demo_table
+09:20:52.847156 [info ]: Started model main.demo_source_and_ref
+09:20:52.847162 [debug]: Started rendering model main.demo_source_and_ref
+09:20:52.847169 [info ]: Started model main.demo_incremental
+09:20:52.847174 [debug]: Started rendering model main.demo_incremental
+09:20:52.847183 [info ]: Started model main.demo_ephemeral
+09:20:52.847189 [debug]: Started rendering model main.demo_ephemeral
+09:20:52.847382 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/.lsp/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+09:20:52.847396 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/.lsp/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:20:52.847413 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/.lsp/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:20:52.847429 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/.lsp/compiled/dbt_custom/models/inc_strategy_append.sql
+09:20:52.847445 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/.lsp/compiled/dbt_custom/models/demo_table.sql
+09:20:52.847535 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+09:20:52.847539 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/.lsp/compiled/dbt_custom/models/demo_ephemeral.sql
+09:20:52.847578 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/.lsp/compiled/dbt_custom/models/demo_incremental.sql
+09:20:52.847587 [info ]: Started analyzing (10 nodes)
+09:20:52.847608 [debug]: Started analyzing model main.inc_timestamp_watermark
+09:20:52.847657 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:20:52.847683 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:20:52.847711 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:20:52.847726 [debug]: Started analyzing model main.inc_strategy_append
+09:20:52.847756 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:20:52.847767 [debug]: Started analyzing model main.inc_strategy_merge
+09:20:52.847795 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:20:52.847839 [debug]: Started analyzing model main.demo_table
+09:20:52.847861 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:20:52.847873 [debug]: Started analyzing model main.demo_incremental
+09:20:52.847924 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:20:52.847964 [info ]: Started model main.demo_view
+09:20:52.847990 [debug]: Started rendering model main.demo_view
+09:20:52.848032 [debug]: Started analyzing model main.demo_ephemeral
+09:20:52.848084 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:20:52.848109 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [4 of 9 in 0.00s]
+09:20:52.848145 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:20:52.848157 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [3 of 9 in 0.00s]
+09:20:52.848176 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:20:52.848209 [info ]:  Succeeded model main.demo_table (table) [6 of 9 in 0.00s]
+09:20:52.848232 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:20:52.848244 [info ]:  Succeeded model main.inc_strategy_append (incremental) [5 of 9 in 0.00s]
+09:20:52.848263 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:20:52.848265 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:20:52.848271 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/.lsp/compiled/dbt_custom/models/demo_source_and_ref.sql
+09:20:52.848276 [info ]:  Succeeded model main.demo_incremental (incremental) [8 of 9 in 0.00s]
+09:20:52.848294 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+09:20:52.848302 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [2 of 9 in 0.00s]
+09:20:52.848296 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/.lsp/compiled/dbt_custom/models/demo_view.sql
+09:20:52.848340 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:20:52.848351 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+09:20:52.848391 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:20:52.848403 [debug]: Started analyzing model main.demo_view
+09:20:52.848418 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:20:52.848426 [debug]: Started analyzing model main.user_orders
+09:20:52.848437 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+09:20:52.848444 [info ]: Finished rendering [  0.00s] (10 nodes, 0 skipped, 0 errors)
+09:20:52.848451 [debug]: Started analyzing model main.demo_source_and_ref
+09:20:52.848895 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:20:52.848908 [info ]:  Succeeded model main.demo_view (view) [9 of 9 in 0.00s]
+09:20:52.849379 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:20:52.849388 [info ]:  Succeeded model main.user_orders (table) [1 of 9 in 0.00s]
+09:20:52.852693 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [success]
+09:20:52.852702 [info ]: Finished analyzing [  0.01s] (10 nodes, 0 skipped, 0 errors)
+09:20:52.852707 [info ]:  Succeeded model main.demo_source_and_ref (view) [7 of 9 in 0.01s]
+09:20:52.857015 [info ]: Started scheduling
+09:20:52.857047 [info ]: Finished scheduling [  0.00s]
+09:20:52.857094 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [54ms]
+Processed: 10 models
+Summary: 10 total | 10 success
+09:20:52.857157 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:20:53.135544Z | def64675-4f6b-4cb2-96c3-ab1a209d5c05 ====================
+09:20:53.135591 [info ]: Started loading project
+09:20:53.135819 [info ]: Loading profiles.yml
+09:20:53.137447 [info ]: Finished loading project [  0.00s]
+09:20:53.153559 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [18ms]
+09:20:53.153601 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:20:54.340022Z | 319a8a8c-85e0-4a1b-a6c4-00aed96494f4 ====================
+09:20:54.340108 [info ]: Started loading project
+09:20:54.340564 [info ]: Loading profiles.yml
+09:20:54.343403 [info ]: Finished loading project [  0.00s]
+09:20:54.364865 [info ]: Cached model count updated: 10 models (estimate)
+09:20:54.364897 [info ]: Cached model count updated: 10 models (accurate)
+09:20:54.364940 [info ]: Started scheduling
+09:20:54.365060 [info ]: Finished scheduling [  0.00s]
+09:20:54.365080 [debug]: Compilation - 10 nodes selected: {"model.dbt_custom.demo_ephemeral", "model.dbt_custom.demo_incremental", "model.dbt_custom.demo_source_and_ref", "model.dbt_custom.demo_table", "model.dbt_custom.demo_view", "model.dbt_custom.inc_strategy_append", "model.dbt_custom.inc_strategy_delete_insert", "model.dbt_custom.inc_strategy_merge", "model.dbt_custom.inc_timestamp_watermark", "model.dbt_custom.user_orders"}
+09:20:54.365983 [info ]:    Started downloading referenced relations (1 items)
+09:20:54.379420 [debug]:    Started downloading "dev"."main"
+09:20:54.379445 [debug]: create_debug_span(...).entered() took 3.458µs
+09:20:54.381494 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.303834ms
+09:20:54.381501 [debug]: reader.schema() took 125ns
+09:20:54.381541 [debug]: batch-consume loop (for res in reader) took 35.167µs
+09:20:54.381559 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.105625ms
+09:20:54.381578 [debug]: concat_batches + normalize_result_column_names took 15.209µs
+09:20:54.381583 [debug]: record_current_span_status_from_attrs took 1.083µs
+09:20:54.381588 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:20:54.381594 [debug]: drop(query_span_guard) (span exit/export) took 8.083µs
+09:20:54.381629 [debug]: Downloaded [  0.00s] "dev"."main"
+09:20:54.381733 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+09:20:54.381910 [info ]: Started building task graph
+09:20:54.381970 [info ]: Finished building task graph [  0.00s]
+09:20:54.382679 [info ]: Started rendering (10 nodes)
+09:20:54.382688 [info ]: Started model main.user_orders
+09:20:54.382695 [debug]: Started rendering model main.user_orders
+09:20:54.382708 [info ]: Started model main.inc_timestamp_watermark
+09:20:54.382714 [debug]: Started rendering model main.inc_timestamp_watermark
+09:20:54.382723 [info ]: Started model main.inc_strategy_merge
+09:20:54.382728 [debug]: Started rendering model main.inc_strategy_merge
+09:20:54.382737 [info ]: Started model main.inc_strategy_delete_insert
+09:20:54.382742 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:20:54.382748 [info ]: Started model main.inc_strategy_append
+09:20:54.382752 [debug]: Started rendering model main.inc_strategy_append
+09:20:54.382758 [info ]: Started model main.demo_table
+09:20:54.382762 [debug]: Started rendering model main.demo_table
+09:20:54.382768 [info ]: Started model main.demo_source_and_ref
+09:20:54.382772 [debug]: Started rendering model main.demo_source_and_ref
+09:20:54.382778 [info ]: Started model main.demo_incremental
+09:20:54.382784 [debug]: Started rendering model main.demo_incremental
+09:20:54.382794 [info ]: Started model main.demo_ephemeral
+09:20:54.382798 [debug]: Started rendering model main.demo_ephemeral
+09:20:54.382808 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:20:54.382845 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/.lsp/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+09:20:54.382856 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:20:54.382883 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/.lsp/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:20:54.382886 [info ]: Started analyzing (10 nodes)
+09:20:54.382893 [debug]: Started analyzing model main.user_orders
+09:20:54.382899 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/.lsp/compiled/dbt_custom/models/demo_incremental.sql
+09:20:54.382913 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+09:20:54.382934 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/.lsp/compiled/dbt_custom/models/demo_ephemeral.sql
+09:20:54.382939 [debug]: Started analyzing model main.inc_timestamp_watermark
+09:20:54.382956 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/.lsp/compiled/dbt_custom/models/demo_source_and_ref.sql
+09:20:54.383006 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:20:54.383018 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/.lsp/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:20:54.383019 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/.lsp/compiled/dbt_custom/models/demo_table.sql
+09:20:54.383021 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/.lsp/compiled/dbt_custom/models/inc_strategy_append.sql
+09:20:54.383026 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:20:54.383054 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:20:54.383081 [debug]: Started analyzing model main.demo_incremental
+09:20:54.383120 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+09:20:54.383135 [debug]: Started analyzing model main.demo_source_and_ref
+09:20:54.383149 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:20:54.383167 [info ]: Started model main.demo_view
+09:20:54.383180 [debug]: Started rendering model main.demo_view
+09:20:54.383211 [debug]: Started analyzing model main.demo_ephemeral
+09:20:54.383223 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:20:54.383234 [debug]: Started analyzing model main.inc_strategy_merge
+09:20:54.383244 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:20:54.383252 [debug]: Started analyzing model main.inc_strategy_append
+09:20:54.383268 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:20:54.383275 [debug]: Started analyzing model main.demo_table
+09:20:54.383288 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+09:20:54.383294 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [2 of 9 in 0.00s]
+09:20:54.383320 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:20:54.383365 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/.lsp/compiled/dbt_custom/models/demo_view.sql
+09:20:54.383365 [info ]:  Succeeded model main.demo_incremental (incremental) [8 of 9 in 0.00s]
+09:20:54.383473 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:20:54.383482 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [4 of 9 in 0.00s]
+09:20:54.383496 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:20:54.383502 [info ]:  Succeeded model main.user_orders (table) [1 of 9 in 0.00s]
+09:20:54.383512 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:20:54.383518 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+09:20:54.383527 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:20:54.383533 [info ]: Finished rendering [  0.00s] (10 nodes, 0 skipped, 0 errors)
+09:20:54.383538 [debug]: Started analyzing model main.demo_view
+09:20:54.383547 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:20:54.383554 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [3 of 9 in 0.00s]
+09:20:54.383563 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:20:54.383571 [info ]:  Succeeded model main.inc_strategy_append (incremental) [5 of 9 in 0.00s]
+09:20:54.383580 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:20:54.383585 [info ]:  Succeeded model main.demo_table (table) [6 of 9 in 0.00s]
+09:20:54.383635 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [success]
+09:20:54.383646 [info ]:  Succeeded model main.demo_source_and_ref (view) [7 of 9 in 0.00s]
+09:20:54.383903 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:20:54.383912 [info ]: Finished analyzing [  0.00s] (10 nodes, 0 skipped, 0 errors)
+09:20:54.383917 [info ]:  Succeeded model main.demo_view (view) [9 of 9 in 0.00s]
+09:20:54.388160 [info ]: Started scheduling
+09:20:54.388187 [info ]: Finished scheduling [  0.00s]
+09:20:54.388220 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [48ms]
+Processed: 10 models
+Summary: 10 total | 10 success
+09:20:54.388272 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:43:57.132165Z | 21f7734f-42dd-4d95-b256-5731a609e58f ====================
+09:43:57.132221 [info ]: Started loading project
+09:43:57.132439 [info ]: Loading profiles.yml
+09:43:57.133833 [info ]: Finished loading project [  0.00s]
+09:43:57.156984 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [24ms]
+09:43:57.157035 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:43:58.335544Z | f433af3a-55de-4a20-b8c1-7c9f72b6feaf ====================
+09:43:58.335667 [info ]: Started loading project
+09:43:58.336169 [info ]: Loading profiles.yml
+09:43:58.338005 [info ]: Finished loading project [  0.00s]
+09:43:58.350920 [info ]: Cached model count updated: 10 models (estimate)
+09:43:58.350987 [info ]: Cached model count updated: 10 models (accurate)
+09:43:58.351089 [info ]: Started scheduling
+09:43:58.351291 [info ]: Finished scheduling [  0.00s]
+09:43:58.351338 [debug]: Compilation - 10 nodes selected: {"model.dbt_custom.demo_ephemeral", "model.dbt_custom.demo_incremental", "model.dbt_custom.demo_source_and_ref", "model.dbt_custom.demo_table", "model.dbt_custom.demo_view", "model.dbt_custom.inc_strategy_append", "model.dbt_custom.inc_strategy_delete_insert", "model.dbt_custom.inc_strategy_merge", "model.dbt_custom.inc_timestamp_watermark", "model.dbt_custom.user_orders"}
+09:43:58.352483 [info ]:    Started downloading referenced relations (1 items)
+09:43:58.365940 [debug]:    Started downloading "dev"."main"
+09:43:58.365969 [debug]: create_debug_span(...).entered() took 3µs
+09:43:58.368073 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.338583ms
+09:43:58.368082 [debug]: reader.schema() took 41ns
+09:43:58.368132 [debug]: batch-consume loop (for res in reader) took 46.542µs
+09:43:58.368149 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.172292ms
+09:43:58.368187 [debug]: concat_batches + normalize_result_column_names took 34.416µs
+09:43:58.368194 [debug]: record_current_span_status_from_attrs took 1.5µs
+09:43:58.368201 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:43:58.368209 [debug]: drop(query_span_guard) (span exit/export) took 9.916µs
+09:43:58.368261 [debug]: Downloaded [  0.00s] "dev"."main"
+09:43:58.368368 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+09:43:58.368608 [info ]: Started building task graph
+09:43:58.368692 [info ]: Finished building task graph [  0.00s]
+09:43:58.370570 [info ]: Started rendering (10 nodes)
+09:43:58.370583 [info ]: Started model main.user_orders
+09:43:58.370591 [debug]: Started rendering model main.user_orders
+09:43:58.370604 [info ]: Started model main.inc_timestamp_watermark
+09:43:58.370609 [debug]: Started rendering model main.inc_timestamp_watermark
+09:43:58.370617 [info ]: Started model main.inc_strategy_merge
+09:43:58.370621 [debug]: Started rendering model main.inc_strategy_merge
+09:43:58.370628 [info ]: Started model main.inc_strategy_delete_insert
+09:43:58.370633 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:43:58.370639 [info ]: Started model main.inc_strategy_append
+09:43:58.370643 [debug]: Started rendering model main.inc_strategy_append
+09:43:58.370650 [info ]: Started model main.demo_table
+09:43:58.370654 [debug]: Started rendering model main.demo_table
+09:43:58.370661 [info ]: Started model main.demo_source_and_ref
+09:43:58.370665 [debug]: Started rendering model main.demo_source_and_ref
+09:43:58.370673 [info ]: Started model main.demo_incremental
+09:43:58.370677 [debug]: Started rendering model main.demo_incremental
+09:43:58.370683 [info ]: Started model main.demo_ephemeral
+09:43:58.370686 [debug]: Started rendering model main.demo_ephemeral
+09:43:58.371006 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:43:58.371006 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/.lsp/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:43:58.371070 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:43:58.371090 [info ]: Started analyzing (10 nodes)
+09:43:58.371093 [debug]: Started analyzing model main.user_orders
+09:43:58.371105 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:43:58.371120 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:43:58.371387 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/.lsp/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:43:58.371409 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:43:58.371420 [debug]: Started analyzing model main.inc_strategy_merge
+09:43:58.371525 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/.lsp/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+09:43:58.371579 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/.lsp/compiled/dbt_custom/models/inc_strategy_append.sql
+09:43:58.371592 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/.lsp/compiled/dbt_custom/models/demo_source_and_ref.sql
+09:43:58.371606 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+09:43:58.371612 [debug]: Started analyzing model main.inc_timestamp_watermark
+09:43:58.371725 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:43:58.371738 [debug]: Started analyzing model main.inc_strategy_append
+09:43:58.371750 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+09:43:58.371756 [debug]: Started analyzing model main.demo_source_and_ref
+09:43:58.371771 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/.lsp/compiled/dbt_custom/models/demo_table.sql
+09:43:58.371961 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/.lsp/compiled/dbt_custom/models/demo_incremental.sql
+09:43:58.372060 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:43:58.372080 [debug]: Started analyzing model main.demo_table
+09:43:58.372072 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/.lsp/compiled/dbt_custom/models/demo_ephemeral.sql
+09:43:58.372093 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:43:58.372099 [debug]: Started analyzing model main.demo_incremental
+09:43:58.372151 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:43:58.372211 [debug]: Started analyzing model main.demo_ephemeral
+09:43:58.372249 [info ]: Started model main.demo_view
+09:43:58.372256 [debug]: Started rendering model main.demo_view
+09:43:58.372602 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:43:58.372612 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [3 of 9 in 0.00s]
+09:43:58.372626 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:43:58.372631 [info ]:  Succeeded model main.demo_incremental (incremental) [8 of 9 in 0.00s]
+09:43:58.372639 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:43:58.372644 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [4 of 9 in 0.00s]
+09:43:58.372654 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:43:58.372659 [info ]:  Succeeded model main.inc_strategy_append (incremental) [5 of 9 in 0.00s]
+09:43:58.372667 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:43:58.372672 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+09:43:58.372681 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+09:43:58.372688 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [2 of 9 in 0.00s]
+09:43:58.372822 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:43:58.372829 [info ]:  Succeeded model main.demo_table (table) [6 of 9 in 0.00s]
+09:43:58.372982 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/.lsp/compiled/dbt_custom/models/demo_view.sql
+09:43:58.373039 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:43:58.373046 [info ]: Finished rendering [  0.00s] (10 nodes, 0 skipped, 0 errors)
+09:43:58.373052 [debug]: Started analyzing model main.demo_view
+09:43:58.373565 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:43:58.373574 [info ]:  Succeeded model main.user_orders (table) [1 of 9 in 0.00s]
+09:43:58.373916 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [success]
+09:43:58.373923 [info ]:  Succeeded model main.demo_source_and_ref (view) [7 of 9 in 0.00s]
+09:43:58.373969 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:43:58.373975 [info ]: Finished analyzing [  0.00s] (10 nodes, 0 skipped, 0 errors)
+09:43:58.373981 [info ]:  Succeeded model main.demo_view (view) [9 of 9 in 0.00s]
+09:43:58.380248 [info ]: Started scheduling
+09:43:58.380293 [info ]: Finished scheduling [  0.00s]
+09:43:58.380342 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [44ms]
+Processed: 10 models
+Summary: 10 total | 10 success
+09:43:58.380415 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:43:59.220679Z | c5d2f385-0467-4376-bcf9-5793b0521c7f ====================
+09:43:59.220723 [info ]: Started loading project
+09:43:59.220901 [info ]: Loading profiles.yml
+09:43:59.222111 [info ]: Finished loading project [  0.00s]
+09:43:59.237176 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [16ms]
+09:43:59.237219 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:44:00.414861Z | 127f5194-162c-4065-af83-adb212964ec5 ====================
+09:44:00.414936 [info ]: Started loading project
+09:44:00.415196 [info ]: Loading profiles.yml
+09:44:00.417294 [info ]: Finished loading project [  0.00s]
+09:44:00.429627 [info ]: Cached model count updated: 10 models (estimate)
+09:44:00.429650 [info ]: Cached model count updated: 10 models (accurate)
+09:44:00.429671 [info ]: Started scheduling
+09:44:00.429740 [info ]: Finished scheduling [  0.00s]
+09:44:00.429750 [debug]: Compilation - 10 nodes selected: {"model.dbt_custom.demo_ephemeral", "model.dbt_custom.demo_incremental", "model.dbt_custom.demo_source_and_ref", "model.dbt_custom.demo_table", "model.dbt_custom.demo_view", "model.dbt_custom.inc_strategy_append", "model.dbt_custom.inc_strategy_delete_insert", "model.dbt_custom.inc_strategy_merge", "model.dbt_custom.inc_timestamp_watermark", "model.dbt_custom.user_orders"}
+09:44:00.430268 [info ]:    Started downloading referenced relations (1 items)
+09:44:00.439755 [debug]:    Started downloading "dev"."main"
+09:44:00.439780 [debug]: create_debug_span(...).entered() took 2.667µs
+09:44:00.441753 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.2645ms
+09:44:00.441776 [debug]: reader.schema() took 208ns
+09:44:00.441846 [debug]: batch-consume loop (for res in reader) took 65.916µs
+09:44:00.441867 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.079542ms
+09:44:00.441891 [debug]: concat_batches + normalize_result_column_names took 19.875µs
+09:44:00.441898 [debug]: record_current_span_status_from_attrs took 3.625µs
+09:44:00.441904 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:44:00.441912 [debug]: drop(query_span_guard) (span exit/export) took 11.542µs
+09:44:00.441966 [debug]: Downloaded [  0.00s] "dev"."main"
+09:44:00.442098 [info ]:   Finished [  0.01s] downloading referenced relations (1 items)
+09:44:00.442355 [info ]: Started building task graph
+09:44:00.442414 [info ]: Finished building task graph [  0.00s]
+09:44:00.443274 [info ]: Started rendering (10 nodes)
+09:44:00.443287 [info ]: Started model main.user_orders
+09:44:00.443296 [debug]: Started rendering model main.user_orders
+09:44:00.443309 [info ]: Started model main.inc_timestamp_watermark
+09:44:00.443316 [debug]: Started rendering model main.inc_timestamp_watermark
+09:44:00.443324 [info ]: Started model main.inc_strategy_merge
+09:44:00.443329 [debug]: Started rendering model main.inc_strategy_merge
+09:44:00.443339 [info ]: Started model main.inc_strategy_delete_insert
+09:44:00.443343 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:44:00.443351 [info ]: Started model main.inc_strategy_append
+09:44:00.443356 [debug]: Started rendering model main.inc_strategy_append
+09:44:00.443364 [info ]: Started model main.demo_table
+09:44:00.443369 [debug]: Started rendering model main.demo_table
+09:44:00.443375 [info ]: Started model main.demo_source_and_ref
+09:44:00.443380 [debug]: Started rendering model main.demo_source_and_ref
+09:44:00.443389 [info ]: Started model main.demo_incremental
+09:44:00.443397 [debug]: Started rendering model main.demo_incremental
+09:44:00.443407 [info ]: Started model main.demo_ephemeral
+09:44:00.443413 [debug]: Started rendering model main.demo_ephemeral
+09:44:00.443510 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/.lsp/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:44:00.443533 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/.lsp/compiled/dbt_custom/models/demo_table.sql
+09:44:00.443524 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/.lsp/compiled/dbt_custom/models/inc_strategy_append.sql
+09:44:00.443559 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/.lsp/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+09:44:00.443567 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:44:00.443588 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:44:00.443604 [info ]: Started analyzing (10 nodes)
+09:44:00.443612 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:44:00.443601 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/.lsp/compiled/dbt_custom/models/demo_source_and_ref.sql
+09:44:00.443622 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/.lsp/compiled/dbt_custom/models/demo_ephemeral.sql
+09:44:00.443628 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:44:00.443635 [debug]: Started analyzing model main.demo_table
+09:44:00.443644 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:44:00.443652 [debug]: Started analyzing model main.inc_strategy_append
+09:44:00.443664 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+09:44:00.443657 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/.lsp/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:44:00.443675 [debug]: Started analyzing model main.inc_timestamp_watermark
+09:44:00.443686 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:44:00.443693 [debug]: Started analyzing model main.user_orders
+09:44:00.443703 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:44:00.443700 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/.lsp/compiled/dbt_custom/models/demo_incremental.sql
+09:44:00.443710 [debug]: Started analyzing model main.demo_ephemeral
+09:44:00.443724 [info ]: Started model main.demo_view
+09:44:00.443734 [debug]: Started rendering model main.demo_view
+09:44:00.443746 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+09:44:00.443752 [debug]: Started analyzing model main.demo_source_and_ref
+09:44:00.443759 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:44:00.443764 [debug]: Started analyzing model main.inc_strategy_merge
+09:44:00.443771 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:44:00.443775 [debug]: Started analyzing model main.demo_incremental
+09:44:00.443882 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:44:00.443915 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+09:44:00.443948 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:44:00.443985 [info ]:  Succeeded model main.inc_strategy_append (incremental) [5 of 9 in 0.00s]
+09:44:00.444009 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:44:00.444032 [info ]:  Succeeded model main.demo_table (table) [6 of 9 in 0.00s]
+09:44:00.444035 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/.lsp/compiled/dbt_custom/models/demo_view.sql
+09:44:00.444051 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+09:44:00.444073 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [2 of 9 in 0.00s]
+09:44:00.444088 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:44:00.444111 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [4 of 9 in 0.00s]
+09:44:00.444127 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:44:00.444144 [info ]:  Succeeded model main.demo_incremental (incremental) [8 of 9 in 0.00s]
+09:44:00.444162 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:44:00.444200 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [3 of 9 in 0.00s]
+09:44:00.444218 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:44:00.444228 [info ]: Finished rendering [  0.00s] (10 nodes, 0 skipped, 0 errors)
+09:44:00.444236 [debug]: Started analyzing model main.demo_view
+09:44:00.444247 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:44:00.444257 [info ]:  Succeeded model main.user_orders (table) [1 of 9 in 0.00s]
+09:44:00.444307 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [success]
+09:44:00.444313 [info ]:  Succeeded model main.demo_source_and_ref (view) [7 of 9 in 0.00s]
+09:44:00.444614 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:44:00.444622 [info ]: Finished analyzing [  0.00s] (10 nodes, 0 skipped, 0 errors)
+09:44:00.444626 [info ]:  Succeeded model main.demo_view (view) [9 of 9 in 0.00s]
+09:44:00.450464 [info ]: Started scheduling
+09:44:00.450510 [info ]: Finished scheduling [  0.00s]
+09:44:00.450556 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [35ms]
+Processed: 10 models
+Summary: 10 total | 10 success
+09:44:00.450644 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:59:40.366531Z | dc92d885-5b7f-4702-befb-57573b580171 ====================
+09:59:40.366711 [info ]: Started loading project
+09:59:40.367260 [info ]: Loading profiles.yml
+09:59:40.370529 [info ]: Finished loading project [  0.00s]
+09:59:40.403711 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [37ms]
+09:59:40.403793 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T09:59:41.576399Z | f750eda6-5481-45d6-88c1-5e0fce66fde5 ====================
+09:59:41.576447 [info ]: Started loading project
+09:59:41.576634 [info ]: Loading profiles.yml
+09:59:41.578083 [info ]: Finished loading project [  0.00s]
+09:59:41.591690 [info ]: Cached model count updated: 10 models (estimate)
+09:59:41.591718 [info ]: Cached model count updated: 10 models (accurate)
+09:59:41.591770 [info ]: Started scheduling
+09:59:41.591858 [info ]: Finished scheduling [  0.00s]
+09:59:41.591872 [debug]: Compilation - 10 nodes selected: {"model.dbt_custom.demo_ephemeral", "model.dbt_custom.demo_incremental", "model.dbt_custom.demo_source_and_ref", "model.dbt_custom.demo_table", "model.dbt_custom.demo_view", "model.dbt_custom.inc_strategy_append", "model.dbt_custom.inc_strategy_delete_insert", "model.dbt_custom.inc_strategy_merge", "model.dbt_custom.inc_timestamp_watermark", "model.dbt_custom.user_orders"}
+09:59:41.592799 [info ]:    Started downloading referenced relations (1 items)
+09:59:41.609221 [debug]:    Started downloading "dev"."main"
+09:59:41.609263 [debug]: create_debug_span(...).entered() took 3.791µs
+09:59:41.611452 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.321ms
+09:59:41.611477 [debug]: reader.schema() took 250ns
+09:59:41.611568 [debug]: batch-consume loop (for res in reader) took 83.125µs
+09:59:41.611596 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.318041ms
+09:59:41.611632 [debug]: concat_batches + normalize_result_column_names took 30.125µs
+09:59:41.611638 [debug]: record_current_span_status_from_attrs took 1.916µs
+09:59:41.611645 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:59:41.611651 [debug]: drop(query_span_guard) (span exit/export) took 9.25µs
+09:59:41.611692 [debug]: Downloaded [  0.00s] "dev"."main"
+09:59:41.611887 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+09:59:41.612189 [info ]: Started building task graph
+09:59:41.612263 [info ]: Finished building task graph [  0.00s]
+09:59:41.614433 [info ]: Started rendering (10 nodes)
+09:59:41.614450 [info ]: Started model main.user_orders
+09:59:41.614458 [debug]: Started rendering model main.user_orders
+09:59:41.614476 [info ]: Started model main.inc_timestamp_watermark
+09:59:41.614482 [debug]: Started rendering model main.inc_timestamp_watermark
+09:59:41.614491 [info ]: Started model main.inc_strategy_merge
+09:59:41.614497 [debug]: Started rendering model main.inc_strategy_merge
+09:59:41.614504 [info ]: Started model main.inc_strategy_delete_insert
+09:59:41.614508 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:59:41.614515 [info ]: Started model main.inc_strategy_append
+09:59:41.614520 [debug]: Started rendering model main.inc_strategy_append
+09:59:41.614527 [info ]: Started model main.demo_table
+09:59:41.614531 [debug]: Started rendering model main.demo_table
+09:59:41.614537 [info ]: Started model main.demo_source_and_ref
+09:59:41.614541 [debug]: Started rendering model main.demo_source_and_ref
+09:59:41.614549 [info ]: Started model main.demo_incremental
+09:59:41.614554 [debug]: Started rendering model main.demo_incremental
+09:59:41.614560 [info ]: Started model main.demo_ephemeral
+09:59:41.614565 [debug]: Started rendering model main.demo_ephemeral
+09:59:41.615365 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:59:41.615376 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/.lsp/compiled/dbt_custom/models/inc_strategy_append.sql
+09:59:41.615381 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/.lsp/compiled/dbt_custom/models/demo_source_and_ref.sql
+09:59:41.615441 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/.lsp/compiled/dbt_custom/models/demo_ephemeral.sql
+09:59:41.615448 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:59:41.615468 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/.lsp/compiled/dbt_custom/models/demo_table.sql
+09:59:41.615470 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/.lsp/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:59:41.615473 [info ]: Started analyzing (10 nodes)
+09:59:41.615477 [debug]: Started analyzing model main.inc_strategy_append
+09:59:41.615488 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:59:41.615495 [debug]: Started analyzing model main.user_orders
+09:59:41.615495 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/.lsp/compiled/dbt_custom/models/demo_incremental.sql
+09:59:41.615502 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+09:59:41.615502 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/.lsp/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:59:41.615513 [debug]: Started analyzing model main.demo_source_and_ref
+09:59:41.615518 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/.lsp/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+09:59:41.615523 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:59:41.615533 [debug]: Started analyzing model main.inc_strategy_merge
+09:59:41.615543 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:59:41.615551 [debug]: Started analyzing model main.demo_table
+09:59:41.615559 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:59:41.615569 [info ]: Started model main.demo_view
+09:59:41.615577 [debug]: Started rendering model main.demo_view
+09:59:41.615586 [debug]: Started analyzing model main.demo_ephemeral
+09:59:41.615594 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:59:41.615602 [debug]: Started analyzing model main.demo_incremental
+09:59:41.615609 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:59:41.615615 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:59:41.615621 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+09:59:41.615627 [debug]: Started analyzing model main.inc_timestamp_watermark
+09:59:41.616042 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:59:41.616061 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+09:59:41.616098 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/.lsp/compiled/dbt_custom/models/demo_view.sql
+09:59:41.616107 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:59:41.616124 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [3 of 9 in 0.00s]
+09:59:41.616144 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:59:41.616152 [info ]:  Succeeded model main.demo_table (table) [6 of 9 in 0.00s]
+09:59:41.616171 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:59:41.616182 [info ]:  Succeeded model main.demo_incremental (incremental) [8 of 9 in 0.00s]
+09:59:41.616225 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:59:41.616233 [info ]:  Succeeded model main.inc_strategy_append (incremental) [5 of 9 in 0.00s]
+09:59:41.616244 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:59:41.616249 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [4 of 9 in 0.00s]
+09:59:41.616258 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+09:59:41.616263 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [2 of 9 in 0.00s]
+09:59:41.616274 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:59:41.616278 [info ]: Finished rendering [  0.00s] (10 nodes, 0 skipped, 0 errors)
+09:59:41.616283 [debug]: Started analyzing model main.demo_view
+09:59:41.616337 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:59:41.616346 [info ]:  Succeeded model main.user_orders (table) [1 of 9 in 0.00s]
+09:59:41.616421 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [success]
+09:59:41.616431 [info ]:  Succeeded model main.demo_source_and_ref (view) [7 of 9 in 0.00s]
+09:59:41.616642 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:59:41.616647 [info ]: Finished analyzing [  0.00s] (10 nodes, 0 skipped, 0 errors)
+09:59:41.616651 [info ]:  Succeeded model main.demo_view (view) [9 of 9 in 0.00s]
+09:59:41.620633 [info ]: Started scheduling
+09:59:41.620669 [info ]: Finished scheduling [  0.00s]
+09:59:41.620711 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [44ms]
+Processed: 10 models
+Summary: 10 total | 10 success
+09:59:41.620804 [info ]: Cached model count updated: 10 models (accurate)
+10:01:24.906465 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+10:01:24.910882 [info ]:    Started formatting models/demo_table.sql
+10:01:24.937150 [info ]:  Formatted [  0.03s] models/demo_table.sql
+==================== 2026-10-25T10:01:24.969592Z | 9c513ff7-8079-407e-b946-27cc9c853c07 ====================
+10:01:24.969624 [info ]: Started loading project
+10:01:24.969773 [info ]: Loading profiles.yml
+10:01:24.972385 [info ]: Started parsing (1 nodes)
+10:01:24.996444 [info ]: Finished loading project [  0.03s]
+10:01:24.996605 [debug]:    Started building model nodes
+10:01:24.996610 [debug]:    Started building model nodes
+10:01:24.996618 [debug]:   Finished [  0.00s] building model nodes
+10:01:24.996617 [debug]:   Finished [  0.00s] building model nodes
+10:01:24.996895 [debug]:    Started resolving data tests
+10:01:24.996912 [debug]:   Finished [  0.00s] resolving data tests
+10:01:24.996956 [debug]:    Started resolving data tests
+10:01:24.996970 [debug]:   Finished [  0.00s] resolving data tests
+10:01:24.997116 [debug]:    Started building model nodes
+10:01:24.997412 [debug]:   Finished [  0.00s] building model nodes
+10:01:24.997677 [debug]:    Started resolving data tests
+10:01:24.997689 [debug]:   Finished [  0.00s] resolving data tests
+10:01:24.997720 [debug]: Finished parsing models/demo_table.sql [  0.00s]
+10:01:24.998077 [debug]:    Started typechecking macros
+10:01:25.105814 [debug]:   Finished [  0.11s] typechecking macros
+10:01:25.106434 [info ]: Finished parsing [  0.13s] (1 nodes, 0 skipped, 0 errors)
+10:01:25.107545 [info ]: Cached model count updated: 10 models (estimate)
+10:01:25.107559 [info ]: Cached model count updated: 10 models (accurate)
+10:01:25.107578 [info ]: Started scheduling
+10:01:25.107645 [info ]: Finished scheduling [  0.00s]
+10:01:25.107654 [debug]: Compilation - 3 nodes selected: {"model.dbt_custom.demo_ephemeral", "model.dbt_custom.demo_table", "model.dbt_custom.demo_view"}
+10:01:25.108221 [info ]: Started building task graph
+10:01:25.108251 [info ]: Finished building task graph [  0.00s]
+10:01:25.109916 [info ]: Started rendering (3 nodes)
+10:01:25.109931 [info ]: Started model main.demo_table
+10:01:25.109939 [debug]: Started rendering model main.demo_table
+10:01:25.109958 [info ]: Started model main.demo_ephemeral
+10:01:25.109966 [debug]: Started rendering model main.demo_ephemeral
+10:01:25.110413 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/.lsp/compiled/dbt_custom/models/demo_ephemeral.sql
+10:01:25.110517 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+10:01:25.110553 [info ]: Started model main.demo_view
+10:01:25.110567 [debug]: Started rendering model main.demo_view
+10:01:25.110602 [info ]: Started analyzing (3 nodes)
+10:01:25.110643 [debug]: Started analyzing model main.demo_ephemeral
+10:01:25.110958 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/.lsp/compiled/dbt_custom/models/demo_table.sql
+10:01:25.110984 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/.lsp/compiled/dbt_custom/models/demo_view.sql
+10:01:25.111058 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+10:01:25.111073 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+10:01:25.111107 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+10:01:25.111119 [debug]: Started analyzing model main.demo_table
+10:01:25.111135 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+10:01:25.111142 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+10:01:25.111147 [debug]: Started analyzing model main.demo_view
+10:01:25.111315 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+10:01:25.111337 [info ]:  Succeeded model main.demo_table (view) [1 of 2 in 0.00s]
+10:01:25.111687 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+10:01:25.111695 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+10:01:25.111700 [info ]:  Succeeded model main.demo_view (view) [2 of 2 in 0.00s]
+10:01:25.114856 [info ]: Started scheduling
+10:01:25.114937 [info ]: Finished scheduling [  0.00s]
+10:01:25.115542 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [145ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+10:01:25.115612 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T10:01:26.297851Z | 4e409802-7faa-47fb-8df6-8952a1556a82 ====================
+10:01:26.297907 [info ]: Started loading project
+10:01:26.298257 [info ]: Loading profiles.yml
+10:01:26.300972 [info ]: Finished loading project [  0.00s]
+10:01:26.317024 [info ]: Cached model count updated: 10 models (estimate)
+10:01:26.317046 [info ]: Cached model count updated: 10 models (accurate)
+10:01:26.317066 [info ]: Started scheduling
+10:01:26.317131 [info ]: Finished scheduling [  0.00s]
+10:01:26.317143 [debug]: Compilation - 10 nodes selected: {"model.dbt_custom.demo_ephemeral", "model.dbt_custom.demo_incremental", "model.dbt_custom.demo_source_and_ref", "model.dbt_custom.demo_table", "model.dbt_custom.demo_view", "model.dbt_custom.inc_strategy_append", "model.dbt_custom.inc_strategy_delete_insert", "model.dbt_custom.inc_strategy_merge", "model.dbt_custom.inc_timestamp_watermark", "model.dbt_custom.user_orders"}
+10:01:26.317549 [info ]:    Started downloading referenced relations (1 items)
+10:01:26.331701 [debug]:    Started downloading "dev"."main"
+10:01:26.331726 [debug]: create_debug_span(...).entered() took 3.375µs
+10:01:26.333557 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.115958ms
+10:01:26.333578 [debug]: reader.schema() took 125ns
+10:01:26.333622 [debug]: batch-consume loop (for res in reader) took 40.5µs
+10:01:26.333640 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.904125ms
+10:01:26.333663 [debug]: concat_batches + normalize_result_column_names took 19.541µs
+10:01:26.333668 [debug]: record_current_span_status_from_attrs took 1.417µs
+10:01:26.333673 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+10:01:26.333678 [debug]: drop(query_span_guard) (span exit/export) took 7.042µs
+10:01:26.333722 [debug]: Downloaded [  0.00s] "dev"."main"
+10:01:26.333842 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+10:01:26.334084 [info ]: Started building task graph
+10:01:26.334148 [info ]: Finished building task graph [  0.00s]
+10:01:26.334844 [info ]: Started rendering (10 nodes)
+10:01:26.334863 [info ]: Started model main.user_orders
+10:01:26.334872 [debug]: Started rendering model main.user_orders
+10:01:26.334895 [info ]: Started model main.inc_timestamp_watermark
+10:01:26.334905 [debug]: Started rendering model main.inc_timestamp_watermark
+10:01:26.334918 [info ]: Started model main.inc_strategy_merge
+10:01:26.334926 [debug]: Started rendering model main.inc_strategy_merge
+10:01:26.334937 [info ]: Started model main.inc_strategy_delete_insert
+10:01:26.334944 [debug]: Started rendering model main.inc_strategy_delete_insert
+10:01:26.334955 [info ]: Started model main.inc_strategy_append
+10:01:26.334961 [debug]: Started rendering model main.inc_strategy_append
+10:01:26.334970 [info ]: Started model main.demo_table
+10:01:26.334977 [debug]: Started rendering model main.demo_table
+10:01:26.334985 [info ]: Started model main.demo_source_and_ref
+10:01:26.334989 [debug]: Started rendering model main.demo_source_and_ref
+10:01:26.334997 [info ]: Started model main.demo_incremental
+10:01:26.335003 [debug]: Started rendering model main.demo_incremental
+10:01:26.335012 [info ]: Started model main.demo_ephemeral
+10:01:26.335019 [debug]: Started rendering model main.demo_ephemeral
+10:01:26.335324 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+10:01:26.335327 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/.lsp/compiled/dbt_custom/models/demo_table.sql
+10:01:26.335396 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+10:01:26.335410 [info ]: Started analyzing (10 nodes)
+10:01:26.335413 [debug]: Started analyzing model main.demo_table
+10:01:26.335418 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/.lsp/compiled/dbt_custom/models/demo_ephemeral.sql
+10:01:26.335426 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+10:01:26.335433 [debug]: Started analyzing model main.user_orders
+10:01:26.335446 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+10:01:26.335454 [info ]: Started model main.demo_view
+10:01:26.335459 [debug]: Started rendering model main.demo_view
+10:01:26.335466 [debug]: Started analyzing model main.demo_ephemeral
+10:01:26.335550 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/.lsp/compiled/dbt_custom/models/demo_view.sql
+10:01:26.335587 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+10:01:26.335596 [info ]:  Succeeded model main.demo_table (view) [6 of 9 in 0.00s]
+10:01:26.335608 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+10:01:26.335613 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+10:01:26.335625 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+10:01:26.335634 [debug]: Started analyzing model main.demo_view
+10:01:26.335776 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/.lsp/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+10:01:26.335822 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/.lsp/compiled/dbt_custom/models/demo_source_and_ref.sql
+10:01:26.335842 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/.lsp/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+10:01:26.335849 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/.lsp/compiled/dbt_custom/models/inc_strategy_merge.sql
+10:01:26.335894 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/.lsp/compiled/dbt_custom/models/inc_strategy_append.sql
+10:01:26.335895 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/.lsp/compiled/dbt_custom/models/demo_incremental.sql
+10:01:26.335938 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+10:01:26.335979 [debug]: Started analyzing model main.inc_strategy_delete_insert
+10:01:26.336026 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+10:01:26.336049 [debug]: Started analyzing model main.demo_source_and_ref
+10:01:26.336060 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+10:01:26.336066 [debug]: Started analyzing model main.inc_timestamp_watermark
+10:01:26.336074 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+10:01:26.336080 [debug]: Started analyzing model main.inc_strategy_merge
+10:01:26.336091 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+10:01:26.336097 [debug]: Started analyzing model main.demo_incremental
+10:01:26.336102 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+10:01:26.336107 [info ]: Finished rendering [  0.00s] (10 nodes, 0 skipped, 0 errors)
+10:01:26.336127 [debug]: Started analyzing model main.inc_strategy_append
+10:01:26.336149 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+10:01:26.336156 [info ]:  Succeeded model main.user_orders (table) [1 of 9 in 0.00s]
+10:01:26.336164 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+10:01:26.336169 [info ]:  Succeeded model main.demo_view (view) [9 of 9 in 0.00s]
+10:01:26.336219 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+10:01:26.336239 [info ]:  Succeeded model main.inc_strategy_append (incremental) [5 of 9 in 0.00s]
+10:01:26.336267 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+10:01:26.336278 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [2 of 9 in 0.00s]
+10:01:26.336333 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+10:01:26.336346 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [3 of 9 in 0.00s]
+10:01:26.336363 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+10:01:26.336370 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [4 of 9 in 0.00s]
+10:01:26.336377 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+10:01:26.336386 [info ]:  Succeeded model main.demo_incremental (incremental) [8 of 9 in 0.00s]
+10:01:26.336580 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [success]
+10:01:26.336585 [info ]: Finished analyzing [  0.00s] (10 nodes, 0 skipped, 0 errors)
+10:01:26.336590 [info ]:  Succeeded model main.demo_source_and_ref (view) [7 of 9 in 0.00s]
+10:01:26.341039 [info ]: Started scheduling
+10:01:26.341073 [info ]: Finished scheduling [  0.00s]
+10:01:26.341123 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [43ms]
+Processed: 10 models
+Summary: 10 total | 10 success
+10:01:26.341197 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T10:01:26.601246Z | e56ad0c0-4cc9-4a3a-9f01-a693ff268d1a ====================
+10:01:26.601290 [info ]: Started loading project
+10:01:26.601551 [info ]: Loading profiles.yml
+10:01:26.602887 [info ]: Finished loading project [  0.00s]
+10:01:26.618267 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [17ms]
+10:01:26.618313 [info ]: Cached model count updated: 10 models (accurate)
+==================== 2026-10-25T10:01:27.802619Z | 3c512c60-e001-405e-bbf0-b9ff8169301c ====================
+10:01:27.802753 [info ]: Started loading project
+10:01:27.803201 [info ]: Loading profiles.yml
+10:01:27.806405 [info ]: Finished loading project [  0.00s]
+10:01:27.825120 [info ]: Cached model count updated: 10 models (estimate)
+10:01:27.825148 [info ]: Cached model count updated: 10 models (accurate)
+10:01:27.825177 [info ]: Started scheduling
+10:01:27.825270 [info ]: Finished scheduling [  0.00s]
+10:01:27.825285 [debug]: Compilation - 10 nodes selected: {"model.dbt_custom.demo_ephemeral", "model.dbt_custom.demo_incremental", "model.dbt_custom.demo_source_and_ref", "model.dbt_custom.demo_table", "model.dbt_custom.demo_view", "model.dbt_custom.inc_strategy_append", "model.dbt_custom.inc_strategy_delete_insert", "model.dbt_custom.inc_strategy_merge", "model.dbt_custom.inc_timestamp_watermark", "model.dbt_custom.user_orders"}
+10:01:27.825937 [info ]:    Started downloading referenced relations (1 items)
+10:01:27.838718 [debug]:    Started downloading "dev"."main"
+10:01:27.838758 [debug]: create_debug_span(...).entered() took 4.667µs
+10:01:27.841187 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.454917ms
+10:01:27.841206 [debug]: reader.schema() took 333ns
+10:01:27.841256 [debug]: batch-consume loop (for res in reader) took 45.833µs
+10:01:27.841279 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.5105ms
+10:01:27.841303 [debug]: concat_batches + normalize_result_column_names took 20.125µs
+10:01:27.841309 [debug]: record_current_span_status_from_attrs took 2.375µs
+10:01:27.841316 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+10:01:27.841323 [debug]: drop(query_span_guard) (span exit/export) took 10.708µs
+10:01:27.841371 [debug]: Downloaded [  0.00s] "dev"."main"
+10:01:27.841492 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+10:01:27.841779 [info ]: Started building task graph
+10:01:27.841847 [info ]: Finished building task graph [  0.00s]
+10:01:27.842849 [info ]: Started rendering (10 nodes)
+10:01:27.842875 [info ]: Started model main.user_orders
+10:01:27.842887 [debug]: Started rendering model main.user_orders
+10:01:27.842919 [info ]: Started model main.inc_timestamp_watermark
+10:01:27.842925 [debug]: Started rendering model main.inc_timestamp_watermark
+10:01:27.842934 [info ]: Started model main.inc_strategy_merge
+10:01:27.842943 [debug]: Started rendering model main.inc_strategy_merge
+10:01:27.842955 [info ]: Started model main.inc_strategy_delete_insert
+10:01:27.842962 [debug]: Started rendering model main.inc_strategy_delete_insert
+10:01:27.842970 [info ]: Started model main.inc_strategy_append
+10:01:27.842974 [debug]: Started rendering model main.inc_strategy_append
+10:01:27.842984 [info ]: Started model main.demo_table
+10:01:27.842995 [debug]: Started rendering model main.demo_table
+10:01:27.843003 [info ]: Started model main.demo_source_and_ref
+10:01:27.843006 [debug]: Started rendering model main.demo_source_and_ref
+10:01:27.843014 [info ]: Started model main.demo_incremental
+10:01:27.843018 [debug]: Started rendering model main.demo_incremental
+10:01:27.843025 [info ]: Started model main.demo_ephemeral
+10:01:27.843031 [debug]: Started rendering model main.demo_ephemeral
+10:01:27.843250 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/.lsp/compiled/dbt_custom/models/inc_strategy_merge.sql
+10:01:27.843250 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/.lsp/compiled/dbt_custom/models/demo_table.sql
+10:01:27.843250 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/.lsp/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+10:01:27.843255 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+10:01:27.843251 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/.lsp/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+10:01:27.843250 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/.lsp/compiled/dbt_custom/models/inc_strategy_append.sql
+10:01:27.843363 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+10:01:27.843381 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/.lsp/compiled/dbt_custom/models/demo_incremental.sql
+10:01:27.843399 [info ]: Started analyzing (10 nodes)
+10:01:27.843406 [debug]: Started analyzing model main.inc_timestamp_watermark
+10:01:27.843424 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+10:01:27.843433 [debug]: Started analyzing model main.demo_table
+10:01:27.843445 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/.lsp/compiled/dbt_custom/models/demo_ephemeral.sql
+10:01:27.843450 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+10:01:27.843457 [debug]: Started analyzing model main.inc_strategy_merge
+10:01:27.843475 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+10:01:27.843454 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/.lsp/compiled/dbt_custom/models/demo_source_and_ref.sql
+10:01:27.843484 [debug]: Started analyzing model main.inc_strategy_delete_insert
+10:01:27.843500 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+10:01:27.843508 [debug]: Started analyzing model main.inc_strategy_append
+10:01:27.843518 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+10:01:27.843527 [debug]: Started analyzing model main.user_orders
+10:01:27.843538 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+10:01:27.843546 [debug]: Started analyzing model main.demo_incremental
+10:01:27.843562 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+10:01:27.843573 [info ]: Started model main.demo_view
+10:01:27.843584 [debug]: Started rendering model main.demo_view
+10:01:27.843591 [debug]: Started analyzing model main.demo_ephemeral
+10:01:27.843599 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+10:01:27.843605 [debug]: Started analyzing model main.demo_source_and_ref
+10:01:27.843726 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+10:01:27.843735 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+10:01:27.843758 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+10:01:27.843766 [info ]:  Succeeded model main.inc_strategy_append (incremental) [5 of 9 in 0.00s]
+10:01:27.843779 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+10:01:27.843791 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [3 of 9 in 0.00s]
+10:01:27.843801 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+10:01:27.843805 [info ]:  Succeeded model main.demo_incremental (incremental) [8 of 9 in 0.00s]
+10:01:27.843815 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+10:01:27.843822 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [4 of 9 in 0.00s]
+10:01:27.843831 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+10:01:27.843837 [info ]:  Succeeded model main.demo_table (view) [6 of 9 in 0.00s]
+10:01:27.843846 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+10:01:27.843851 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [2 of 9 in 0.00s]
+10:01:27.844097 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/.lsp/compiled/dbt_custom/models/demo_view.sql
+10:01:27.844156 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+10:01:27.844207 [info ]: Finished rendering [  0.00s] (10 nodes, 0 skipped, 0 errors)
+10:01:27.844241 [debug]: Started analyzing model main.demo_view
+10:01:27.844331 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+10:01:27.844342 [info ]:  Succeeded model main.user_orders (table) [1 of 9 in 0.00s]
+10:01:27.844425 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [success]
+10:01:27.844441 [info ]:  Succeeded model main.demo_source_and_ref (view) [7 of 9 in 0.00s]
+10:01:27.844684 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+10:01:27.844690 [info ]: Finished analyzing [  0.00s] (10 nodes, 0 skipped, 0 errors)
+10:01:27.844696 [info ]:  Succeeded model main.demo_view (view) [9 of 9 in 0.00s]
+10:01:27.850659 [info ]: Started scheduling
+10:01:27.850711 [info ]: Finished scheduling [  0.00s]
+10:01:27.850759 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [48ms]
+Processed: 10 models
+Summary: 10 total | 10 success
+10:01:27.850834 [info ]: Cached model count updated: 10 models (accurate)
+11:57:21.853817 [debug]: Ignoring unsupported LSP notification
+11:57:21.893390 [debug]: Ignoring unsupported LSP notification
+11:58:04.535112 [debug]: Ignoring unsupported LSP notification
+11:59:09.800762 [debug]: Ignoring unsupported LSP notification
+11:59:58.022597 [debug]: Ignoring unsupported LSP notification

@@ -1,0 +1,1 @@
+{{ dbt_expectations.test_expect_column_values_to_match_regex(column_name="status", model=get_where_subquery(ref('02_great_expectations')), regex="^[a-z_]+$") }}

@@ -1,0 +1,20 @@
+version: 2
+
+# ========================================================
+# REUSABILITY: sources.yml
+# ========================================================
+# Centralized Database & Schema Abstraction:
+# If the database or schema ever changes in production,
+# you only update it HERE in this file. All models referencing
+# {{ source('raw_duckdb', '...') }} will update automatically!
+# ========================================================
+
+sources:
+  - name: raw_duckdb
+    schema: main
+    description: "Centralized raw warehouse source in DuckDB"
+    tables:
+      - name: users
+        description: "Raw application users source table"
+      - name: orders
+        description: "Raw order transactions source table"

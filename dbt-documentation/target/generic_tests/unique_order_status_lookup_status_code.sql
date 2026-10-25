@@ -1,0 +1,1 @@
+{{ test_unique(column_name="status_code", model=get_where_subquery(ref('order_status_lookup'))) }}

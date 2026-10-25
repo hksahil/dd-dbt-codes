@@ -1,0 +1,19 @@
+version: 2
+
+seeds:
+  - name: country_codes
+    description: "Lookup mapping table for ISO country codes and continents"
+    columns:
+      - name: country_code
+        description: "Primary key: 2-letter ISO country code"
+        tests:
+          - unique
+          - not_null
+  - name: order_status_lookup
+    description: "Lookup table for internal order status codes and lifecycle indicators"
+    columns:
+      - name: status_code
+        description: "Primary key: Order status code"
+        tests:
+          - unique
+          - not_null

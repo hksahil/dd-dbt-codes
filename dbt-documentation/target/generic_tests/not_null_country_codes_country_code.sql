@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="country_code", model=get_where_subquery(ref('country_codes'))) }}

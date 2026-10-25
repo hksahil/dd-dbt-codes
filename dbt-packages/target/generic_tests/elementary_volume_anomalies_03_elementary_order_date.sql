@@ -1,0 +1,1 @@
+{{ elementary.test_volume_anomalies(model=get_where_subquery(ref('03_elementary')), timestamp_column="order_date") }}

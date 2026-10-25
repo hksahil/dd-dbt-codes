@@ -1,0 +1,1384 @@
+==================== 2026-10-25T09:04:56.853692Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-25T09:04:56.853774Z | 452b3617-f810-4196-bfe0-fb8d55e30e34 ====================
+09:04:56.853785 [info ]: Starting dbt LSP server
+09:04:56.853797 [info ]: Connecting to LSP client on port 8000
+09:04:56.853937 [info ]: Successfully connected to LSP client
+09:04:56.853944 [info ]: Creating LSP service...
+09:04:56.854677 [info ]: Creating LSP server...
+09:04:56.854684 [info ]: Starting LSP server...
+09:04:56.864081 [info ]: Loading profiles.yml
+==================== 2026-10-25T09:04:56.879099Z | 693e8d23-7ad9-4c87-bced-0bb20e8502bd ====================
+09:04:56.879141 [info ]: Started loading project
+09:04:56.879331 [info ]: Loading profiles.yml
+09:04:56.993711 [debug]:    Started loading packages
+09:04:56.993946 [debug]:     Loaded [  0.00s] packages
+09:04:56.994357 [info ]: Finished loading project [  0.12s]
+09:04:56.994513 [info ]: Started parsing (1 nodes)
+09:04:57.008886 [debug]:    Started building model nodes
+09:04:57.008893 [debug]:    Started building model nodes
+09:04:57.008901 [debug]:   Finished [  0.00s] building model nodes
+09:04:57.008901 [debug]:   Finished [  0.00s] building model nodes
+09:04:57.009156 [debug]:    Started resolving data tests
+09:04:57.009156 [debug]:    Started resolving data tests
+09:04:57.009200 [debug]:   Finished [  0.00s] resolving data tests
+09:04:57.009203 [debug]:   Finished [  0.00s] resolving data tests
+09:04:57.009353 [debug]:    Started building model nodes
+09:04:57.009708 [debug]:   Finished [  0.00s] building model nodes
+09:04:57.009971 [debug]:    Started resolving data tests
+09:04:57.009983 [debug]:   Finished [  0.00s] resolving data tests
+09:04:57.010027 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:04:57.010382 [debug]:    Started typechecking macros
+09:04:57.094778 [debug]:   Finished [  0.08s] typechecking macros
+09:04:57.095290 [info ]: Finished parsing [  0.10s] (1 nodes, 0 skipped, 0 errors)
+09:04:57.095420 [info ]: Cached model count updated: 1 models (estimate)
+09:04:57.095429 [info ]: Cached model count updated: 1 models (accurate)
+09:04:57.095462 [info ]: Started scheduling
+09:04:57.095523 [info ]: Finished scheduling [  0.00s]
+09:04:57.095532 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+09:04:57.095561 [info ]: Started scheduling
+09:04:57.095570 [info ]: Finished scheduling [  0.00s]
+09:04:57.096601 [info ]: Started building task graph
+09:04:57.096641 [info ]: Finished building task graph [  0.00s]
+09:04:57.098046 [info ]: Started rendering (1 nodes)
+09:04:57.098059 [info ]: Started model main.user_orders
+09:04:57.098068 [debug]: Started rendering model main.user_orders
+09:04:57.098535 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:04:57.098599 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:04:57.098606 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:57.098621 [info ]: Started analyzing (1 nodes)
+09:04:57.098627 [debug]: Started analyzing model main.user_orders
+09:04:57.102157 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:04:57.102165 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:57.102170 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.00s]
+09:04:57.105821 [info ]: Started scheduling
+09:04:57.105838 [info ]: Finished scheduling [  0.00s]
+09:04:57.105895 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [226ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:04:57.105937 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:04:57.376120Z | 5750edab-b1be-4de7-8217-16a5627863ed ====================
+09:04:57.376149 [info ]: Started loading project
+09:04:57.376303 [info ]: Loading profiles.yml
+09:04:57.377367 [info ]: Finished loading project [  0.00s]
+09:04:57.390749 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [14ms]
+09:04:57.390795 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:04:58.570179Z | 517a267e-564d-4d28-9157-1be227999a01 ====================
+09:04:58.570242 [info ]: Started loading project
+09:04:58.570585 [info ]: Loading profiles.yml
+09:04:58.572628 [info ]: Finished loading project [  0.00s]
+09:04:58.590255 [info ]: Cached model count updated: 1 models (estimate)
+09:04:58.590270 [info ]: Cached model count updated: 1 models (accurate)
+09:04:58.590286 [info ]: Started scheduling
+09:04:58.590319 [info ]: Finished scheduling [  0.00s]
+09:04:58.590333 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+09:04:58.590996 [info ]: Started building task graph
+09:04:58.591021 [info ]: Finished building task graph [  0.00s]
+09:04:58.591743 [info ]: Started rendering (1 nodes)
+09:04:58.591755 [info ]: Started model main.user_orders
+09:04:58.591765 [debug]: Started rendering model main.user_orders
+09:04:58.591936 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:04:58.591983 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:04:58.591995 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:58.592007 [info ]: Started analyzing (1 nodes)
+09:04:58.592013 [debug]: Started analyzing model main.user_orders
+09:04:58.592665 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:04:58.592673 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:04:58.592678 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.00s]
+09:04:58.595836 [info ]: Started scheduling
+09:04:58.595856 [info ]: Finished scheduling [  0.00s]
+09:04:58.595888 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [25ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:04:58.595951 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:06:14.786683Z | efbc1bbc-c128-401c-8a35-96fc7b6cf254 ====================
+09:06:14.786751 [info ]: Started loading project
+09:06:14.786961 [info ]: Loading profiles.yml
+09:06:14.788557 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T09:06:14.789804Z | 71ed81f0-0e33-4aa2-9e33-d500d31ff8b5 ====================
+09:06:14.789821 [info ]: Started loading project
+09:06:14.789918 [info ]: Loading profiles.yml
+09:06:14.888482 [debug]:    Started loading packages
+09:06:14.888683 [debug]:     Loaded [  0.00s] packages
+09:06:14.889017 [info ]: Finished loading project [  0.10s]
+09:06:14.889139 [info ]: Started parsing (2 nodes)
+09:06:14.904165 [debug]:    Started building model nodes
+09:06:14.904167 [debug]:    Started building model nodes
+09:06:14.904178 [debug]:   Finished [  0.00s] building model nodes
+09:06:14.904180 [debug]:   Finished [  0.00s] building model nodes
+09:06:14.904200 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:06:14.904431 [debug]:    Started resolving data tests
+09:06:14.904432 [debug]:    Started resolving data tests
+09:06:14.904445 [debug]:   Finished [  0.00s] resolving data tests
+09:06:14.904445 [debug]:   Finished [  0.00s] resolving data tests
+09:06:14.904744 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:14.904808 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:14.904906 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:14.904949 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:14.905867 [debug]:    Started building model nodes
+09:06:14.906102 [debug]:   Finished [  0.00s] building model nodes
+09:06:14.906657 [debug]:    Started resolving data tests
+09:06:14.906667 [debug]:   Finished [  0.00s] resolving data tests
+09:06:14.906704 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:06:14.907094 [debug]:    Started typechecking macros
+09:06:14.988270 [debug]:   Finished [  0.08s] typechecking macros
+09:06:14.988626 [info ]: Finished parsing [  0.10s] (2 nodes, 0 skipped, 0 errors)
+09:06:14.988945 [info ]: Cached model count updated: 1 models (estimate)
+09:06:14.988953 [info ]: Cached model count updated: 1 models (accurate)
+09:06:14.988970 [info ]: Started scheduling
+09:06:14.988986 [info ]: Finished scheduling [  0.00s]
+09:06:14.988991 [debug]: Compilation - 0 nodes selected: {}
+09:06:14.989011 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:06:14.989019 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:06:14.989031 [info ]: Started scheduling
+09:06:14.989051 [info ]: Finished scheduling [  0.00s]
+09:06:14.989555 [info ]: Started building task graph
+09:06:14.989564 [info ]: Finished building task graph [  0.00s]
+09:06:14.993469 [info ]: Started scheduling
+09:06:14.993488 [info ]: Finished scheduling [  0.00s]
+09:06:14.993532 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:06:14.993532 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings and 4 errors for target 'dev' [203ms]
+09:06:14.993559 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [206ms]
+09:06:14.994376 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:06:16.172647Z | f922ec83-cd1e-4fb6-96e5-549b1e3fa482 ====================
+09:06:16.172733 [info ]: Started loading project
+09:06:16.173184 [info ]: Loading profiles.yml
+09:06:16.177338 [info ]: Finished loading project [  0.00s]
+09:06:16.199722 [info ]: Cached model count updated: 1 models (estimate)
+09:06:16.199760 [info ]: Cached model count updated: 1 models (accurate)
+09:06:16.199792 [info ]: Started scheduling
+09:06:16.199847 [info ]: Finished scheduling [  0.00s]
+09:06:16.199864 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+09:06:16.200946 [info ]: Started building task graph
+09:06:16.200996 [info ]: Finished building task graph [  0.00s]
+09:06:16.201912 [info ]: Started rendering (1 nodes)
+09:06:16.201930 [info ]: Started model main.user_orders
+09:06:16.201942 [debug]: Started rendering model main.user_orders
+09:06:16.202833 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:06:16.202937 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:06:16.202952 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:06:16.202970 [info ]: Started analyzing (1 nodes)
+09:06:16.202977 [debug]: Started analyzing model main.user_orders
+09:06:16.205519 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:06:16.205529 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:06:16.205534 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.00s]
+09:06:16.211593 [info ]: Started scheduling
+09:06:16.211629 [info ]: Finished scheduling [  0.00s]
+09:06:16.211720 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [39ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:06:16.211825 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:06:16.473693Z | 3bb072c1-c613-49f7-89ab-6d3d1f19713f ====================
+09:06:16.473730 [info ]: Started loading project
+09:06:16.473867 [info ]: Loading profiles.yml
+09:06:16.474741 [info ]: Finished loading project [  0.00s]
+09:06:16.485363 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [11ms]
+09:06:16.485396 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:06:17.669198Z | c9683b6b-6944-4104-9142-afab4c342fa5 ====================
+09:06:17.669279 [info ]: Started loading project
+09:06:17.669724 [info ]: Loading profiles.yml
+09:06:17.672795 [info ]: Finished loading project [  0.00s]
+09:06:17.695228 [info ]: Cached model count updated: 1 models (estimate)
+09:06:17.695265 [info ]: Cached model count updated: 1 models (accurate)
+09:06:17.695297 [info ]: Started scheduling
+09:06:17.695355 [info ]: Finished scheduling [  0.00s]
+09:06:17.695375 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+09:06:17.696361 [info ]: Started building task graph
+09:06:17.696402 [info ]: Finished building task graph [  0.00s]
+09:06:17.697364 [info ]: Started rendering (1 nodes)
+09:06:17.697383 [info ]: Started model main.user_orders
+09:06:17.697397 [debug]: Started rendering model main.user_orders
+09:06:17.697621 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:06:17.697699 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:06:17.697711 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:06:17.697725 [info ]: Started analyzing (1 nodes)
+09:06:17.697731 [debug]: Started analyzing model main.user_orders
+09:06:17.699584 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:06:17.699595 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:06:17.699600 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.00s]
+09:06:17.705831 [info ]: Started scheduling
+09:06:17.705858 [info ]: Finished scheduling [  0.00s]
+09:06:17.705908 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [36ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:06:17.705976 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:06:32.790663Z | 4e01b9e5-208b-4dfd-9beb-7b657de9cafa ====================
+09:06:32.790723 [info ]: Started loading project
+09:06:32.791014 [info ]: Loading profiles.yml
+09:06:32.793184 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T09:06:32.794424Z | 053f8047-4f14-4b65-bdef-6caf0152e287 ====================
+09:06:32.794453 [info ]: Started loading project
+09:06:32.794584 [info ]: Loading profiles.yml
+09:06:32.901644 [debug]:    Started loading packages
+09:06:32.901854 [debug]:     Loaded [  0.00s] packages
+09:06:32.902163 [info ]: Finished loading project [  0.11s]
+09:06:32.902249 [info ]: Started parsing (2 nodes)
+09:06:32.915394 [debug]:    Started building model nodes
+09:06:32.915394 [debug]:    Started building model nodes
+09:06:32.915407 [debug]:   Finished [  0.00s] building model nodes
+09:06:32.915412 [debug]:   Finished [  0.00s] building model nodes
+09:06:32.915933 [debug]:    Started resolving data tests
+09:06:32.915945 [debug]:    Started resolving data tests
+09:06:32.915950 [debug]:   Finished [  0.00s] resolving data tests
+09:06:32.915958 [debug]:   Finished [  0.00s] resolving data tests
+09:06:32.916013 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:06:32.916199 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:32.916281 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:32.916382 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:32.916425 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:32.916898 [debug]:    Started building model nodes
+09:06:32.917151 [debug]:   Finished [  0.00s] building model nodes
+09:06:32.917448 [debug]:    Started resolving data tests
+09:06:32.917461 [debug]:   Finished [  0.00s] resolving data tests
+09:06:32.917503 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:06:32.917805 [debug]:    Started typechecking macros
+09:06:32.998607 [debug]:   Finished [  0.08s] typechecking macros
+09:06:32.998972 [info ]: Finished parsing [  0.10s] (2 nodes, 0 skipped, 0 errors)
+09:06:32.999047 [info ]: Cached model count updated: 1 models (estimate)
+09:06:32.999054 [info ]: Cached model count updated: 1 models (accurate)
+09:06:32.999065 [info ]: Started scheduling
+09:06:32.999080 [info ]: Finished scheduling [  0.00s]
+09:06:32.999084 [debug]: Compilation - 0 nodes selected: {}
+09:06:32.999093 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:06:32.999101 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:06:32.999113 [info ]: Started scheduling
+09:06:32.999125 [info ]: Finished scheduling [  0.00s]
+09:06:32.999517 [info ]: Started building task graph
+09:06:32.999525 [info ]: Finished building task graph [  0.00s]
+09:06:33.002205 [info ]: Started scheduling
+09:06:33.002215 [info ]: Finished scheduling [  0.00s]
+09:06:33.002266 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:06:33.002266 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings and 4 errors for target 'dev' [207ms]
+09:06:33.002298 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [211ms]
+09:06:33.002937 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:06:34.173546Z | 1adf7b73-96f8-4828-b443-bb62ea9dd0b5 ====================
+09:06:34.173602 [info ]: Started loading project
+09:06:34.173910 [info ]: Loading profiles.yml
+09:06:34.175796 [info ]: Finished loading project [  0.00s]
+09:06:34.191804 [info ]: Cached model count updated: 1 models (estimate)
+09:06:34.191824 [info ]: Cached model count updated: 1 models (accurate)
+09:06:34.191842 [info ]: Started scheduling
+09:06:34.191872 [info ]: Finished scheduling [  0.00s]
+09:06:34.191882 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+09:06:34.193600 [info ]: Started building task graph
+09:06:34.193628 [info ]: Finished building task graph [  0.00s]
+09:06:34.194351 [info ]: Started rendering (1 nodes)
+09:06:34.194362 [info ]: Started model main.user_orders
+09:06:34.194371 [debug]: Started rendering model main.user_orders
+09:06:34.194981 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:06:34.195053 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:06:34.195065 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:06:34.195077 [info ]: Started analyzing (1 nodes)
+09:06:34.195081 [debug]: Started analyzing model main.user_orders
+09:06:34.195554 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:06:34.195561 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:06:34.195564 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.00s]
+09:06:34.198921 [info ]: Started scheduling
+09:06:34.198940 [info ]: Finished scheduling [  0.00s]
+09:06:34.198980 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [25ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:06:34.199041 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:06:45.562643Z | ac1af326-dd58-4f61-849c-eb95b8607e23 ====================
+09:06:45.562678 [info ]: Started loading project
+09:06:45.562873 [info ]: Loading profiles.yml
+09:06:45.564105 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T09:06:45.564955Z | f92719fb-30b9-46e3-af62-6a0c09c80194 ====================
+09:06:45.564972 [info ]: Started loading project
+09:06:45.565061 [info ]: Loading profiles.yml
+09:06:45.664320 [debug]:    Started loading packages
+09:06:45.664522 [debug]:     Loaded [  0.00s] packages
+09:06:45.664833 [info ]: Finished loading project [  0.10s]
+09:06:45.664935 [info ]: Started parsing (3 nodes)
+09:06:45.681249 [debug]:    Started building model nodes
+09:06:45.681250 [debug]:    Started building model nodes
+09:06:45.681262 [debug]:   Finished [  0.00s] building model nodes
+09:06:45.681266 [debug]:   Finished [  0.00s] building model nodes
+09:06:45.681522 [debug]:    Started resolving data tests
+09:06:45.681537 [debug]:   Finished [  0.00s] resolving data tests
+09:06:45.681542 [debug]:    Started resolving data tests
+09:06:45.681555 [debug]:   Finished [  0.00s] resolving data tests
+09:06:45.682094 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"reusable_blocks"`. YAML path: `reusable_blocks`.
+  --> models/schema.yml:15:1
+09:06:45.682185 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:06:45.682616 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:06:45.683242 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:45.683299 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:45.683381 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:45.683417 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:45.683978 [debug]:    Started building model nodes
+09:06:45.684252 [debug]:   Finished [  0.00s] building model nodes
+09:06:45.684264 [warn ]: [NoNodeForYamlKey (dbt1089)]: Unused schema.yml entry for model 'stg_orders'
+  --> models/schema.yml
+09:06:45.684278 [warn ]: [NoNodeForYamlKey (dbt1089)]: Unused schema.yml entry for model 'stg_users'
+  --> models/schema.yml
+09:06:45.684285 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:06:45.684549 [debug]:    Started resolving data tests
+09:06:45.684561 [debug]:   Finished [  0.00s] resolving data tests
+09:06:45.685401 [debug]:    Started typechecking macros
+09:06:45.768913 [debug]:   Finished [  0.08s] typechecking macros
+09:06:45.769312 [info ]: Finished parsing [  0.10s] (3 nodes, 0 skipped, 0 errors)
+09:06:45.769392 [info ]: Cached model count updated: 1 models (estimate)
+09:06:45.769398 [info ]: Cached model count updated: 1 models (accurate)
+09:06:45.769410 [info ]: Started scheduling
+09:06:45.769425 [info ]: Finished scheduling [  0.00s]
+09:06:45.769430 [debug]: Compilation - 0 nodes selected: {}
+09:06:45.769438 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:06:45.769446 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:06:45.769458 [info ]: Started scheduling
+09:06:45.769472 [info ]: Finished scheduling [  0.00s]
+09:06:45.769815 [info ]: Started building task graph
+09:06:45.769823 [info ]: Finished building task graph [  0.00s]
+09:06:45.772413 [info ]: Started scheduling
+09:06:45.772422 [info ]: Finished scheduling [  0.00s]
+09:06:45.772470 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:06:45.772470 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 4 warnings and 5 errors for target 'dev' [207ms]
+09:06:45.772503 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [209ms]
+09:06:45.773243 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:06:46.949443Z | c3b363ec-5a4d-4b3d-b40d-21c7e6838efc ====================
+09:06:46.949520 [info ]: Started loading project
+09:06:46.949820 [info ]: Loading profiles.yml
+09:06:46.951620 [info ]: Finished loading project [  0.00s]
+09:06:46.968586 [info ]: Cached model count updated: 1 models (estimate)
+09:06:46.968605 [info ]: Cached model count updated: 1 models (accurate)
+09:06:46.968648 [info ]: Started scheduling
+09:06:46.968679 [info ]: Finished scheduling [  0.00s]
+09:06:46.968690 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+09:06:46.969314 [info ]: Started building task graph
+09:06:46.969337 [info ]: Finished building task graph [  0.00s]
+09:06:46.969948 [info ]: Started rendering (1 nodes)
+09:06:46.969961 [info ]: Started model main.user_orders
+09:06:46.969969 [debug]: Started rendering model main.user_orders
+09:06:46.970625 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:06:46.970707 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:06:46.970716 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:06:46.970727 [info ]: Started analyzing (1 nodes)
+09:06:46.970731 [debug]: Started analyzing model main.user_orders
+09:06:46.971213 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:06:46.971220 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:06:46.971224 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.00s]
+09:06:46.973967 [info ]: Started scheduling
+09:06:46.973987 [info ]: Finished scheduling [  0.00s]
+09:06:46.974039 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [24ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:06:46.974102 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T09:06:52.780613Z | 301933ed-4ccd-4516-93b7-592b3a05934e ====================
+09:06:52.780647 [info ]: Started loading project
+09:06:52.780839 [info ]: Loading profiles.yml
+09:06:52.782054 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T09:06:52.783270Z | 3c27a8df-472a-48ab-8923-25c621de4b98 ====================
+09:06:52.783287 [info ]: Started loading project
+09:06:52.783382 [info ]: Loading profiles.yml
+09:06:52.887470 [debug]:    Started loading packages
+09:06:52.887683 [debug]:     Loaded [  0.00s] packages
+09:06:52.887990 [info ]: Finished loading project [  0.10s]
+09:06:52.888076 [info ]: Started parsing (4 nodes)
+09:06:52.902419 [debug]:    Started building model nodes
+09:06:52.902419 [debug]:    Started building model nodes
+09:06:52.902431 [debug]:   Finished [  0.00s] building model nodes
+09:06:52.902435 [debug]:   Finished [  0.00s] building model nodes
+09:06:52.902504 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"reusable_blocks"`. YAML path: `reusable_blocks`.
+  --> models/schema.yml:15:1
+09:06:52.902597 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:06:52.902696 [debug]:    Started resolving data tests
+09:06:52.902712 [debug]:   Finished [  0.00s] resolving data tests
+09:06:52.902894 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:06:52.902958 [debug]:    Started resolving data tests
+09:06:52.902970 [debug]:   Finished [  0.00s] resolving data tests
+09:06:52.903415 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:52.903463 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:52.903541 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:52.903577 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:52.904044 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:06:52.904156 [debug]:    Started building model nodes
+09:06:52.904577 [debug]:   Finished [  0.00s] building model nodes
+09:06:52.904586 [warn ]: [NoNodeForYamlKey (dbt1089)]: Unused schema.yml entry for model 'stg_orders'
+  --> models/schema.yml
+09:06:52.904608 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:06:52.905231 [debug]:    Started resolving data tests
+09:06:52.905243 [debug]:   Finished [  0.00s] resolving data tests
+09:06:52.905638 [debug]:    Started typechecking macros
+09:06:52.986759 [debug]:   Finished [  0.08s] typechecking macros
+09:06:52.987170 [info ]: Finished parsing [  0.10s] (4 nodes, 0 skipped, 0 errors)
+09:06:52.987251 [info ]: Cached model count updated: 2 models (estimate)
+09:06:52.987258 [info ]: Cached model count updated: 2 models (accurate)
+09:06:52.987269 [info ]: Started scheduling
+09:06:52.987286 [info ]: Finished scheduling [  0.00s]
+09:06:52.987290 [debug]: Compilation - 0 nodes selected: {}
+09:06:52.987299 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:06:52.987307 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:06:52.987320 [info ]: Started scheduling
+09:06:52.987337 [info ]: Finished scheduling [  0.00s]
+09:06:52.987375 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+09:06:52.987759 [info ]: Started building task graph
+09:06:52.987766 [info ]: Finished building task graph [  0.00s]
+09:06:52.990459 [info ]: Started scheduling
+09:06:52.990470 [info ]: Finished scheduling [  0.00s]
+09:06:52.990517 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:06:52.990517 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings and 5 errors for target 'dev' [207ms]
+09:06:52.990549 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [209ms]
+09:06:52.991361 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T09:06:54.171400Z | f9526b0d-cd29-4e95-8e44-1f57abc23b88 ====================
+09:06:54.171431 [info ]: Started loading project
+09:06:54.171613 [info ]: Loading profiles.yml
+09:06:54.172845 [info ]: Finished loading project [  0.00s]
+09:06:54.185895 [info ]: Cached model count updated: 2 models (estimate)
+09:06:54.185913 [info ]: Cached model count updated: 2 models (accurate)
+09:06:54.185930 [info ]: Started scheduling
+09:06:54.185964 [info ]: Finished scheduling [  0.00s]
+09:06:54.185974 [debug]: Compilation - 2 nodes selected: {"model.dbt_custom.stg_users", "model.dbt_custom.user_orders"}
+09:06:54.186571 [info ]: Started building task graph
+09:06:54.186598 [info ]: Finished building task graph [  0.00s]
+09:06:54.187221 [info ]: Started rendering (2 nodes)
+09:06:54.187232 [info ]: Started model main.user_orders
+09:06:54.187240 [debug]: Started rendering model main.user_orders
+09:06:54.187254 [info ]: Started model main.stg_users
+09:06:54.187260 [debug]: Started rendering model main.stg_users
+09:06:54.187810 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:06:54.187865 [debug]: Compiled SQL for node model.dbt_custom.stg_users at target/.lsp/compiled/dbt_custom/models/stg_users.sql
+09:06:54.187878 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:06:54.187896 [info ]: Started analyzing (2 nodes)
+09:06:54.187900 [debug]: Started analyzing model main.user_orders
+09:06:54.187917 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:06:54.187924 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+09:06:54.187931 [debug]: Started analyzing model main.stg_users
+09:06:54.188367 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:06:54.188377 [info ]:  Succeeded model main.user_orders (view) [1 of 2 in 0.00s]
+09:06:54.188953 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:06:54.188961 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+09:06:54.188964 [info ]:  Succeeded model main.stg_users (view) [2 of 2 in 0.00s]
+09:06:54.192060 [info ]: Started scheduling
+09:06:54.192078 [info ]: Finished scheduling [  0.00s]
+09:06:54.192126 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [20ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+09:06:54.192183 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T09:06:58.485854Z | b2040fff-c3ce-47a9-aab6-73da0fe2a39d ====================
+09:06:58.485883 [info ]: Started loading project
+09:06:58.486058 [info ]: Loading profiles.yml
+09:06:58.487292 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T09:06:58.488271Z | 55362165-5800-4601-981a-1c172304370d ====================
+09:06:58.488288 [info ]: Started loading project
+09:06:58.488381 [info ]: Loading profiles.yml
+09:06:58.589830 [debug]:    Started loading packages
+09:06:58.590040 [debug]:     Loaded [  0.00s] packages
+09:06:58.590351 [info ]: Finished loading project [  0.10s]
+09:06:58.590439 [info ]: Started parsing (5 nodes)
+09:06:58.603890 [debug]:    Started building model nodes
+09:06:58.603890 [debug]:    Started building model nodes
+09:06:58.603901 [debug]:   Finished [  0.00s] building model nodes
+09:06:58.603905 [debug]:   Finished [  0.00s] building model nodes
+09:06:58.603963 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"reusable_blocks"`. YAML path: `reusable_blocks`.
+  --> models/schema.yml:15:1
+09:06:58.604054 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:06:58.604141 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:06:58.604162 [debug]:    Started resolving data tests
+09:06:58.604177 [debug]:   Finished [  0.00s] resolving data tests
+09:06:58.604450 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:58.604478 [debug]:    Started resolving data tests
+09:06:58.604491 [debug]:   Finished [  0.00s] resolving data tests
+09:06:58.604504 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:58.604594 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:06:58.604804 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:06:58.605298 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:06:58.605536 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:06:58.605654 [debug]:    Started building model nodes
+09:06:58.606437 [debug]:   Finished [  0.00s] building model nodes
+09:06:58.606914 [debug]:    Started resolving data tests
+09:06:58.606928 [debug]:   Finished [  0.00s] resolving data tests
+09:06:58.606977 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:06:58.607284 [debug]:    Started typechecking macros
+09:06:58.687994 [debug]:   Finished [  0.08s] typechecking macros
+09:06:58.688366 [info ]: Finished parsing [  0.10s] (5 nodes, 0 skipped, 0 errors)
+09:06:58.688450 [info ]: Cached model count updated: 3 models (estimate)
+09:06:58.688456 [info ]: Cached model count updated: 3 models (accurate)
+09:06:58.688469 [info ]: Started scheduling
+09:06:58.688486 [info ]: Finished scheduling [  0.00s]
+09:06:58.688491 [debug]: Compilation - 0 nodes selected: {}
+09:06:58.688500 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:06:58.688508 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:06:58.688521 [info ]: Started scheduling
+09:06:58.688541 [info ]: Finished scheduling [  0.00s]
+09:06:58.688578 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+09:06:58.688582 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+09:06:58.688949 [info ]: Started building task graph
+09:06:58.688957 [info ]: Finished building task graph [  0.00s]
+09:06:58.691883 [info ]: Started scheduling
+09:06:58.691904 [info ]: Finished scheduling [  0.00s]
+09:06:58.691960 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:06:58.691960 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings and 5 errors for target 'dev' [203ms]
+09:06:58.691994 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [206ms]
+09:06:58.692775 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:06:59.879491Z | 6482e4d3-d3d0-463b-a2a7-f8b506f017db ====================
+09:06:59.879580 [info ]: Started loading project
+09:06:59.880084 [info ]: Loading profiles.yml
+09:06:59.882698 [info ]: Finished loading project [  0.00s]
+09:06:59.904332 [info ]: Cached model count updated: 3 models (estimate)
+09:06:59.904369 [info ]: Cached model count updated: 3 models (accurate)
+09:06:59.904401 [info ]: Started scheduling
+09:06:59.904475 [info ]: Finished scheduling [  0.00s]
+09:06:59.904496 [debug]: Compilation - 3 nodes selected: {"model.dbt_custom.stg_orders", "model.dbt_custom.stg_users", "model.dbt_custom.user_orders"}
+09:06:59.905480 [info ]: Started building task graph
+09:06:59.905536 [info ]: Finished building task graph [  0.00s]
+09:06:59.906515 [info ]: Started rendering (3 nodes)
+09:06:59.906530 [info ]: Started model main.user_orders
+09:06:59.906544 [debug]: Started rendering model main.user_orders
+09:06:59.906568 [info ]: Started model main.stg_users
+09:06:59.906576 [debug]: Started rendering model main.stg_users
+09:06:59.906587 [info ]: Started model main.stg_orders
+09:06:59.906592 [debug]: Started rendering model main.stg_orders
+09:06:59.907428 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:06:59.907428 [debug]: Compiled SQL for node model.dbt_custom.stg_users at target/.lsp/compiled/dbt_custom/models/stg_users.sql
+09:06:59.907530 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:06:59.907559 [info ]: Started analyzing (3 nodes)
+09:06:59.907567 [debug]: Started analyzing model main.user_orders
+09:06:59.907583 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:06:59.907593 [debug]: Started analyzing model main.stg_users
+09:06:59.907634 [debug]: Compiled SQL for node model.dbt_custom.stg_orders at target/.lsp/compiled/dbt_custom/models/stg_orders.sql
+09:06:59.907739 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:06:59.907752 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:06:59.907763 [debug]: Started analyzing model main.stg_orders
+09:06:59.907799 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:06:59.907810 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:06:59.907931 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:06:59.907941 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:06:59.909246 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:06:59.909258 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:06:59.909264 [info ]:  Succeeded model main.user_orders (view) [1 of 3 in 0.00s]
+09:06:59.912828 [info ]: Started scheduling
+09:06:59.912857 [info ]: Finished scheduling [  0.00s]
+09:06:59.912926 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [33ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:06:59.912997 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:04.493028Z | 235adff1-e141-4a40-b45c-e145d8142f6c ====================
+09:07:04.493061 [info ]: Started loading project
+09:07:04.493239 [info ]: Loading profiles.yml
+09:07:04.496245 [info ]: Started parsing (4 nodes)
+09:07:04.520059 [info ]: Finished loading project [  0.03s]
+09:07:04.520235 [debug]:    Started building model nodes
+09:07:04.520243 [debug]:   Finished [  0.00s] building model nodes
+09:07:04.520309 [debug]:    Started building model nodes
+09:07:04.520316 [debug]:   Finished [  0.00s] building model nodes
+09:07:04.520334 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"reusable_blocks"`. YAML path: `reusable_blocks`.
+  --> models/schema.yml:15:1
+09:07:04.520440 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:07:04.520563 [debug]:    Started resolving data tests
+09:07:04.520574 [debug]:    Started resolving data tests
+09:07:04.520576 [debug]:   Finished [  0.00s] resolving data tests
+09:07:04.520586 [debug]:   Finished [  0.00s] resolving data tests
+09:07:04.521262 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:07:04.521548 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:07:04.521752 [debug]:    Started building model nodes
+09:07:04.522436 [debug]:   Finished [  0.00s] building model nodes
+09:07:04.522687 [debug]:    Started resolving data tests
+09:07:04.522698 [debug]:   Finished [  0.00s] resolving data tests
+09:07:04.522724 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:07:04.523031 [debug]:    Started typechecking macros
+09:07:04.603904 [debug]:   Finished [  0.08s] typechecking macros
+09:07:04.604348 [info ]: Finished parsing [  0.11s] (4 nodes, 0 skipped, 0 errors)
+09:07:04.605087 [info ]: Cached model count updated: 3 models (estimate)
+09:07:04.605094 [info ]: Cached model count updated: 3 models (accurate)
+09:07:04.605106 [info ]: Started scheduling
+09:07:04.605124 [info ]: Finished scheduling [  0.00s]
+09:07:04.605130 [debug]: Compilation - 0 nodes selected: {}
+09:07:04.605138 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:07:04.605146 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:07:04.605500 [info ]: Started building task graph
+09:07:04.605508 [info ]: Finished building task graph [  0.00s]
+09:07:04.608969 [info ]: Started scheduling
+09:07:04.609022 [info ]: Finished scheduling [  0.00s]
+09:07:04.609438 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:07:04.609438 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings and 1 error for target 'dev' [116ms]
+09:07:04.610180 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:05.795143Z | b40f4e73-9b92-456c-893c-0d0e0416e83f ====================
+09:07:05.795213 [info ]: Started loading project
+09:07:05.796044 [info ]: Loading profiles.yml
+09:07:05.797706 [info ]: Finished loading project [  0.00s]
+09:07:05.812045 [info ]: Cached model count updated: 3 models (estimate)
+09:07:05.812060 [info ]: Cached model count updated: 3 models (accurate)
+09:07:05.812075 [info ]: Started scheduling
+09:07:05.812122 [info ]: Finished scheduling [  0.00s]
+09:07:05.812133 [debug]: Compilation - 3 nodes selected: {"model.dbt_custom.stg_orders", "model.dbt_custom.stg_users", "model.dbt_custom.user_orders"}
+09:07:05.812655 [info ]: Started building task graph
+09:07:05.812687 [info ]: Finished building task graph [  0.00s]
+09:07:05.813377 [info ]: Started rendering (3 nodes)
+09:07:05.813387 [info ]: Started model main.user_orders
+09:07:05.813395 [debug]: Started rendering model main.user_orders
+09:07:05.813410 [info ]: Started model main.stg_users
+09:07:05.813415 [debug]: Started rendering model main.stg_users
+09:07:05.813423 [info ]: Started model main.stg_orders
+09:07:05.813428 [debug]: Started rendering model main.stg_orders
+09:07:05.813554 [debug]: Compiled SQL for node model.dbt_custom.stg_orders at target/.lsp/compiled/dbt_custom/models/stg_orders.sql
+09:07:05.813603 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:07:05.813602 [debug]: Compiled SQL for node model.dbt_custom.stg_users at target/.lsp/compiled/dbt_custom/models/stg_users.sql
+09:07:05.813621 [info ]: Started analyzing (3 nodes)
+09:07:05.813626 [debug]: Started analyzing model main.stg_orders
+09:07:05.813683 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:07:05.813694 [debug]: Started analyzing model main.stg_users
+09:07:05.813758 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:07:05.813766 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:07:05.813777 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:07:05.813783 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:07:05.813965 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:07:05.814023 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:07:05.814032 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:05.814040 [debug]: Started analyzing model main.user_orders
+09:07:05.815194 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:07:05.815201 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:05.815205 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:07:05.818372 [info ]: Started scheduling
+09:07:05.818392 [info ]: Finished scheduling [  0.00s]
+09:07:05.818440 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [23ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:07:05.818496 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:10.971489Z | a14ca8fd-05b3-4ecc-884d-75c6266a98e2 ====================
+09:07:10.971533 [info ]: Started loading project
+09:07:10.971744 [info ]: Loading profiles.yml
+09:07:10.973361 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T09:07:10.974370Z | f0d6d77d-e29a-47d2-9a4f-09b8cea03c48 ====================
+09:07:10.974390 [info ]: Started loading project
+09:07:10.974496 [info ]: Loading profiles.yml
+09:07:11.079756 [debug]:    Started loading packages
+09:07:11.079967 [debug]:     Loaded [  0.00s] packages
+09:07:11.080339 [info ]: Finished loading project [  0.11s]
+09:07:11.080420 [info ]: Started parsing (5 nodes)
+09:07:11.095262 [debug]:    Started building model nodes
+09:07:11.095262 [debug]:    Started building model nodes
+09:07:11.095273 [debug]:   Finished [  0.00s] building model nodes
+09:07:11.095276 [debug]:   Finished [  0.00s] building model nodes
+09:07:11.095294 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"reusable_blocks"`. YAML path: `reusable_blocks`.
+  --> models/schema.yml:15:1
+09:07:11.095388 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:07:11.095502 [debug]:    Started resolving data tests
+09:07:11.095517 [debug]:   Finished [  0.00s] resolving data tests
+09:07:11.095528 [debug]:    Started resolving data tests
+09:07:11.095540 [debug]:   Finished [  0.00s] resolving data tests
+09:07:11.095642 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:07:11.096309 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:07:11.096362 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:07:11.096449 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:22:5
+09:07:11.096491 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:25:5
+09:07:11.096960 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:07:11.097172 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:07:11.097331 [debug]:    Started building model nodes
+09:07:11.098010 [debug]:   Finished [  0.00s] building model nodes
+09:07:11.098256 [debug]:    Started resolving data tests
+09:07:11.098267 [debug]:   Finished [  0.00s] resolving data tests
+09:07:11.098305 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:07:11.098566 [debug]:    Started typechecking macros
+09:07:11.178899 [debug]:   Finished [  0.08s] typechecking macros
+09:07:11.179303 [info ]: Finished parsing [  0.10s] (5 nodes, 0 skipped, 0 errors)
+09:07:11.179385 [info ]: Cached model count updated: 3 models (estimate)
+09:07:11.179392 [info ]: Cached model count updated: 3 models (accurate)
+09:07:11.179404 [info ]: Started scheduling
+09:07:11.179422 [info ]: Finished scheduling [  0.00s]
+09:07:11.179427 [debug]: Compilation - 0 nodes selected: {}
+09:07:11.179437 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:07:11.179444 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:07:11.179456 [info ]: Started scheduling
+09:07:11.179480 [info ]: Finished scheduling [  0.00s]
+09:07:11.179502 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+09:07:11.179506 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+09:07:11.179941 [info ]: Started building task graph
+09:07:11.179950 [info ]: Finished building task graph [  0.00s]
+09:07:11.182212 [info ]: Started scheduling
+09:07:11.182223 [info ]: Finished scheduling [  0.00s]
+09:07:11.182269 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:07:11.182269 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings and 5 errors for target 'dev' [207ms]
+09:07:11.182298 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [210ms]
+09:07:11.183044 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:12.360433Z | ff535c33-533e-40a4-8d14-10aab5e7a9f2 ====================
+09:07:12.360502 [info ]: Started loading project
+09:07:12.360861 [info ]: Loading profiles.yml
+09:07:12.363143 [info ]: Finished loading project [  0.00s]
+09:07:12.381974 [info ]: Cached model count updated: 3 models (estimate)
+09:07:12.381992 [info ]: Cached model count updated: 3 models (accurate)
+09:07:12.382013 [info ]: Started scheduling
+09:07:12.382074 [info ]: Finished scheduling [  0.00s]
+09:07:12.382088 [debug]: Compilation - 3 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users", "model.dbt_reusability.user_orders"}
+09:07:12.382860 [info ]: Started building task graph
+09:07:12.382901 [info ]: Finished building task graph [  0.00s]
+09:07:12.383635 [info ]: Started rendering (3 nodes)
+09:07:12.383646 [info ]: Started model main.user_orders
+09:07:12.383656 [debug]: Started rendering model main.user_orders
+09:07:12.383672 [info ]: Started model main.stg_users
+09:07:12.383679 [debug]: Started rendering model main.stg_users
+09:07:12.383690 [info ]: Started model main.stg_orders
+09:07:12.383695 [debug]: Started rendering model main.stg_orders
+09:07:12.384491 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:07:12.384518 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/.lsp/compiled/dbt_reusability/models/user_orders.sql
+09:07:12.384530 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:07:12.384589 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:07:12.384609 [info ]: Started analyzing (3 nodes)
+09:07:12.384613 [debug]: Started analyzing model main.stg_users
+09:07:12.384626 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:07:12.384635 [debug]: Started analyzing model main.user_orders
+09:07:12.384646 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:07:12.384653 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:12.384659 [debug]: Started analyzing model main.stg_orders
+09:07:12.384772 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:07:12.384781 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:07:12.384795 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:07:12.384802 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:07:12.385229 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:07:12.385240 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:12.385245 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:07:12.388807 [info ]: Started scheduling
+09:07:12.388828 [info ]: Finished scheduling [  0.00s]
+09:07:12.388876 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [28ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:07:12.388933 [info ]: Cached model count updated: 3 models (accurate)
+09:07:12.724605 [info ]: Loading profiles.yml
+09:07:15.535220 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+==================== 2026-10-25T09:07:15.572962Z | 71ed673f-8504-4b16-916a-7bfcb9aa4f7f ====================
+09:07:15.572992 [info ]: Started loading project
+09:07:15.573142 [info ]: Loading profiles.yml
+09:07:15.575386 [info ]: Started parsing (4 nodes)
+09:07:15.595530 [info ]: Finished loading project [  0.02s]
+09:07:15.595665 [debug]:    Started building model nodes
+09:07:15.595677 [debug]:   Finished [  0.00s] building model nodes
+09:07:15.595696 [debug]:    Started building model nodes
+09:07:15.595708 [debug]:   Finished [  0.00s] building model nodes
+09:07:15.595722 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"reusable_blocks"`. YAML path: `reusable_blocks`.
+  --> models/schema.yml:15:1
+09:07:15.595842 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:07:15.595934 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:07:15.595994 [debug]:    Started resolving data tests
+09:07:15.596009 [debug]:   Finished [  0.00s] resolving data tests
+09:07:15.596325 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:15:5
+09:07:15.596382 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:18:5
+09:07:15.596387 [debug]:    Started resolving data tests
+09:07:15.596402 [debug]:   Finished [  0.00s] resolving data tests
+09:07:15.596477 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:15:5
+09:07:15.596523 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:18:5
+09:07:15.597045 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:07:15.597253 [debug]:    Started building model nodes
+09:07:15.597689 [debug]:   Finished [  0.00s] building model nodes
+09:07:15.597942 [debug]:    Started resolving data tests
+09:07:15.597953 [debug]:   Finished [  0.00s] resolving data tests
+09:07:15.598009 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:07:15.598652 [debug]:    Started typechecking macros
+09:07:15.678060 [debug]:   Finished [  0.08s] typechecking macros
+09:07:15.678461 [info ]: Finished parsing [  0.10s] (4 nodes, 0 skipped, 0 errors)
+09:07:15.679298 [info ]: Cached model count updated: 3 models (estimate)
+09:07:15.679306 [info ]: Cached model count updated: 3 models (accurate)
+09:07:15.679320 [info ]: Started scheduling
+09:07:15.679359 [info ]: Finished scheduling [  0.00s]
+09:07:15.679365 [debug]: Compilation - 2 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users"}
+09:07:15.679727 [info ]: Started building task graph
+09:07:15.679748 [info ]: Finished building task graph [  0.00s]
+09:07:15.680185 [info ]: Started rendering (2 nodes)
+09:07:15.680194 [info ]: Started model main.stg_users
+09:07:15.680201 [debug]: Started rendering model main.stg_users
+09:07:15.680212 [info ]: Started model main.stg_orders
+09:07:15.680216 [debug]: Started rendering model main.stg_orders
+09:07:15.680621 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:07:15.680624 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:07:15.680676 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:07:15.680688 [info ]: Started analyzing (2 nodes)
+09:07:15.680692 [debug]: Started analyzing model main.stg_orders
+09:07:15.680701 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:07:15.680706 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+09:07:15.680710 [debug]: Started analyzing model main.stg_users
+09:07:15.680812 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:07:15.680819 [info ]:  Succeeded model main.stg_users (view) [1 of 2 in 0.00s]
+09:07:15.680830 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:07:15.680834 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+09:07:15.680838 [info ]:  Succeeded model main.stg_orders (view) [2 of 2 in 0.00s]
+09:07:15.683017 [info ]: Started scheduling
+09:07:15.683054 [info ]: Finished scheduling [  0.00s]
+09:07:15.683395 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:07:15.683395 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 5 errors for target 'dev' [110ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+09:07:15.683433 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:16.868925Z | 31c1a1ed-c1d4-49f4-b067-4e0a9c4663b9 ====================
+09:07:16.868979 [info ]: Started loading project
+09:07:16.869220 [info ]: Loading profiles.yml
+09:07:16.870844 [info ]: Finished loading project [  0.00s]
+09:07:16.885427 [info ]: Cached model count updated: 3 models (estimate)
+09:07:16.885443 [info ]: Cached model count updated: 3 models (accurate)
+09:07:16.885462 [info ]: Started scheduling
+09:07:16.885510 [info ]: Finished scheduling [  0.00s]
+09:07:16.885521 [debug]: Compilation - 3 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users", "model.dbt_reusability.user_orders"}
+09:07:16.886119 [info ]: Started building task graph
+09:07:16.886154 [info ]: Finished building task graph [  0.00s]
+09:07:16.886839 [info ]: Started rendering (3 nodes)
+09:07:16.886849 [info ]: Started model main.user_orders
+09:07:16.886856 [debug]: Started rendering model main.user_orders
+09:07:16.886872 [info ]: Started model main.stg_users
+09:07:16.886878 [debug]: Started rendering model main.stg_users
+09:07:16.886887 [info ]: Started model main.stg_orders
+09:07:16.886894 [debug]: Started rendering model main.stg_orders
+09:07:16.887021 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:07:16.887029 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:07:16.887030 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/.lsp/compiled/dbt_reusability/models/user_orders.sql
+09:07:16.887073 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:07:16.887087 [info ]: Started analyzing (3 nodes)
+09:07:16.887090 [debug]: Started analyzing model main.stg_users
+09:07:16.887101 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:07:16.887110 [debug]: Started analyzing model main.stg_orders
+09:07:16.887119 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:07:16.887125 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:16.887131 [debug]: Started analyzing model main.user_orders
+09:07:16.887263 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:07:16.887275 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:07:16.887291 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:07:16.887298 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:07:16.887688 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:07:16.887696 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:16.887700 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:07:16.890644 [info ]: Started scheduling
+09:07:16.890661 [info ]: Finished scheduling [  0.00s]
+09:07:16.890715 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [21ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:07:16.890767 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:41.897274Z | 55ce228c-a5b4-48dc-86a5-3afb741bbc48 ====================
+09:07:41.897341 [info ]: Started loading project
+09:07:41.897586 [info ]: Loading profiles.yml
+09:07:41.902002 [info ]: Started parsing (4 nodes)
+09:07:41.933377 [info ]: Finished loading project [  0.04s]
+09:07:41.933540 [debug]:    Started building model nodes
+09:07:41.933547 [debug]:   Finished [  0.00s] building model nodes
+09:07:41.933575 [debug]:    Started building model nodes
+09:07:41.933589 [debug]:   Finished [  0.00s] building model nodes
+09:07:41.933649 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"reusable_blocks"`. YAML path: `reusable_blocks`.
+  --> models/schema.yml:15:1
+09:07:41.933767 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:07:41.933818 [debug]:    Started resolving data tests
+09:07:41.933832 [debug]:   Finished [  0.00s] resolving data tests
+09:07:41.933857 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:07:41.933887 [debug]:    Started resolving data tests
+09:07:41.933899 [debug]:   Finished [  0.00s] resolving data tests
+09:07:41.934902 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:07:41.935161 [debug]:    Started building model nodes
+09:07:41.935692 [debug]:   Finished [  0.00s] building model nodes
+09:07:41.935967 [debug]:    Started resolving data tests
+09:07:41.935979 [debug]:   Finished [  0.00s] resolving data tests
+09:07:41.936009 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:07:41.936348 [debug]:    Started typechecking macros
+09:07:42.016387 [debug]:   Finished [  0.08s] typechecking macros
+09:07:42.016801 [info ]: Finished parsing [  0.11s] (4 nodes, 0 skipped, 0 errors)
+09:07:42.017676 [info ]: Cached model count updated: 3 models (estimate)
+09:07:42.017683 [info ]: Cached model count updated: 3 models (accurate)
+09:07:42.017695 [info ]: Started scheduling
+09:07:42.017712 [info ]: Finished scheduling [  0.00s]
+09:07:42.017717 [debug]: Compilation - 0 nodes selected: {}
+09:07:42.017726 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:07:42.017734 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:07:42.018077 [info ]: Started building task graph
+09:07:42.018085 [info ]: Finished building task graph [  0.00s]
+09:07:42.020846 [info ]: Started scheduling
+09:07:42.020887 [info ]: Finished scheduling [  0.00s]
+09:07:42.021200 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:07:42.021200 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings and 1 error for target 'dev' [123ms]
+09:07:42.021996 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:43.206120Z | 52049421-f740-48c1-992a-2dc4cb0b6aa6 ====================
+09:07:43.206182 [info ]: Started loading project
+09:07:43.206483 [info ]: Loading profiles.yml
+09:07:43.209080 [info ]: Finished loading project [  0.00s]
+09:07:43.225556 [info ]: Cached model count updated: 3 models (estimate)
+09:07:43.225576 [info ]: Cached model count updated: 3 models (accurate)
+09:07:43.225598 [info ]: Started scheduling
+09:07:43.225654 [info ]: Finished scheduling [  0.00s]
+09:07:43.225669 [debug]: Compilation - 3 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users", "model.dbt_reusability.user_orders"}
+09:07:43.226341 [info ]: Started building task graph
+09:07:43.226380 [info ]: Finished building task graph [  0.00s]
+09:07:43.227089 [info ]: Started rendering (3 nodes)
+09:07:43.227100 [info ]: Started model main.user_orders
+09:07:43.227110 [debug]: Started rendering model main.user_orders
+09:07:43.227126 [info ]: Started model main.stg_users
+09:07:43.227134 [debug]: Started rendering model main.stg_users
+09:07:43.227141 [info ]: Started model main.stg_orders
+09:07:43.227147 [debug]: Started rendering model main.stg_orders
+09:07:43.227658 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/.lsp/compiled/dbt_reusability/models/user_orders.sql
+09:07:43.227745 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:07:43.227763 [info ]: Started analyzing (3 nodes)
+09:07:43.227769 [debug]: Started analyzing model main.user_orders
+09:07:43.227871 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:07:43.227920 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:07:43.227940 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:07:43.227989 [debug]: Started analyzing model main.stg_users
+09:07:43.228048 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:07:43.228064 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:43.228075 [debug]: Started analyzing model main.stg_orders
+09:07:43.228230 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:07:43.228241 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:07:43.228254 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:07:43.228259 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:07:43.228439 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:07:43.228447 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:43.228452 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:07:43.231435 [info ]: Started scheduling
+09:07:43.231453 [info ]: Finished scheduling [  0.00s]
+09:07:43.231489 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [25ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:07:43.231543 [info ]: Cached model count updated: 3 models (accurate)
+09:07:44.925853 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+==================== 2026-10-25T09:07:44.951738Z | 14a8b997-7009-4943-8c8f-c17d9ca59337 ====================
+09:07:44.951780 [info ]: Started loading project
+09:07:44.951944 [info ]: Loading profiles.yml
+09:07:44.960193 [info ]: Started parsing (4 nodes)
+09:07:45.053409 [info ]: Finished loading project [  0.10s]
+09:07:45.053609 [debug]:    Started building model nodes
+09:07:45.053648 [debug]:   Finished [  0.00s] building model nodes
+09:07:45.053964 [debug]:    Started building model nodes
+09:07:45.053972 [debug]:   Finished [  0.00s] building model nodes
+09:07:45.054138 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"reusable_blocks"`. YAML path: `reusable_blocks`.
+  --> models/schema.yml:15:1
+09:07:45.054295 [debug]:    Started resolving data tests
+09:07:45.054311 [debug]:   Finished [  0.00s] resolving data tests
+09:07:45.057813 [debug]:    Started resolving data tests
+09:07:45.059244 [debug]:   Finished [  0.00s] resolving data tests
+09:07:45.059332 [debug]: Finished parsing models/schema.yml [  0.01s]
+09:07:45.064193 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:07:45.065686 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:07:45.067485 [debug]:    Started building model nodes
+09:07:45.069597 [debug]:   Finished [  0.00s] building model nodes
+09:07:45.070299 [debug]:    Started resolving data tests
+09:07:45.070391 [debug]:   Finished [  0.00s] resolving data tests
+09:07:45.070650 [debug]: Finished parsing models/user_orders.sql [  0.01s]
+09:07:45.071729 [debug]:    Started typechecking macros
+09:07:45.207667 [debug]:   Finished [  0.14s] typechecking macros
+09:07:45.208281 [info ]: Finished parsing [  0.25s] (4 nodes, 0 skipped, 0 errors)
+09:07:45.209510 [info ]: Cached model count updated: 3 models (estimate)
+09:07:45.209518 [info ]: Cached model count updated: 3 models (accurate)
+09:07:45.209534 [info ]: Started scheduling
+09:07:45.209591 [info ]: Finished scheduling [  0.00s]
+09:07:45.209598 [debug]: Compilation - 3 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users", "model.dbt_reusability.user_orders"}
+09:07:45.210026 [info ]: Started building task graph
+09:07:45.210056 [info ]: Finished building task graph [  0.00s]
+09:07:45.210592 [info ]: Started rendering (3 nodes)
+09:07:45.210601 [info ]: Started model main.user_orders
+09:07:45.210609 [debug]: Started rendering model main.user_orders
+09:07:45.210622 [info ]: Started model main.stg_users
+09:07:45.210627 [debug]: Started rendering model main.stg_users
+09:07:45.210634 [info ]: Started model main.stg_orders
+09:07:45.210638 [debug]: Started rendering model main.stg_orders
+09:07:45.211093 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:07:45.211106 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:07:45.211146 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/.lsp/compiled/dbt_reusability/models/user_orders.sql
+09:07:45.211169 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:07:45.211186 [info ]: Started analyzing (3 nodes)
+09:07:45.211189 [debug]: Started analyzing model main.stg_orders
+09:07:45.211198 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:07:45.211205 [debug]: Started analyzing model main.stg_users
+09:07:45.211210 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:07:45.211214 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:45.211218 [debug]: Started analyzing model main.user_orders
+09:07:45.211363 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:07:45.211371 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:07:45.211381 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:07:45.211386 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:07:45.211625 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:07:45.211630 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:45.211633 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:07:45.213653 [info ]: Started scheduling
+09:07:45.213669 [info ]: Finished scheduling [  0.00s]
+09:07:45.213963 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:07:45.213963 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error for target 'dev' [262ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:07:45.214004 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:46.397431Z | f18cadc8-aeeb-4f3b-805a-e28df572ee43 ====================
+09:07:46.397535 [info ]: Started loading project
+09:07:46.397932 [info ]: Loading profiles.yml
+09:07:46.402577 [info ]: Finished loading project [  0.01s]
+09:07:46.423700 [info ]: Cached model count updated: 3 models (estimate)
+09:07:46.423745 [info ]: Cached model count updated: 3 models (accurate)
+09:07:46.423783 [info ]: Started scheduling
+09:07:46.423879 [info ]: Finished scheduling [  0.00s]
+09:07:46.423898 [debug]: Compilation - 3 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users", "model.dbt_reusability.user_orders"}
+09:07:46.425115 [info ]: Started building task graph
+09:07:46.425184 [info ]: Finished building task graph [  0.00s]
+09:07:46.426439 [info ]: Started rendering (3 nodes)
+09:07:46.426460 [info ]: Started model main.user_orders
+09:07:46.426477 [debug]: Started rendering model main.user_orders
+09:07:46.426506 [info ]: Started model main.stg_users
+09:07:46.426516 [debug]: Started rendering model main.stg_users
+09:07:46.426528 [info ]: Started model main.stg_orders
+09:07:46.426538 [debug]: Started rendering model main.stg_orders
+09:07:46.426711 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/.lsp/compiled/dbt_reusability/models/user_orders.sql
+09:07:46.426713 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:07:46.426783 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:07:46.426813 [info ]: Started analyzing (3 nodes)
+09:07:46.426821 [debug]: Started analyzing model main.stg_users
+09:07:46.426838 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:07:46.426847 [debug]: Started analyzing model main.user_orders
+09:07:46.426852 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:07:46.426917 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:07:46.426928 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:46.426940 [debug]: Started analyzing model main.stg_orders
+09:07:46.427065 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:07:46.427075 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:07:46.427091 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:07:46.427097 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:07:46.427607 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:07:46.427615 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:46.427621 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:07:46.432399 [info ]: Started scheduling
+09:07:46.432436 [info ]: Finished scheduling [  0.00s]
+09:07:46.432512 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [35ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:07:46.432621 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:50.504654Z | 07ebaaca-3f4c-4baa-bbe2-d5a6a47d34e8 ====================
+09:07:50.504700 [info ]: Started loading project
+09:07:50.504925 [info ]: Loading profiles.yml
+09:07:50.509237 [info ]: Started parsing (4 nodes)
+09:07:50.552846 [info ]: Finished loading project [  0.05s]
+09:07:50.553133 [debug]:    Started building model nodes
+09:07:50.553133 [debug]:    Started building model nodes
+09:07:50.553149 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:07:50.553151 [debug]:   Finished [  0.00s] building model nodes
+09:07:50.553152 [debug]:   Finished [  0.00s] building model nodes
+09:07:50.553886 [debug]:    Started resolving data tests
+09:07:50.553902 [debug]:   Finished [  0.00s] resolving data tests
+09:07:50.553974 [debug]:    Started resolving data tests
+09:07:50.553986 [debug]:   Finished [  0.00s] resolving data tests
+09:07:50.554025 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:07:50.554384 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:07:50.554626 [debug]:    Started building model nodes
+09:07:50.555261 [debug]:   Finished [  0.00s] building model nodes
+09:07:50.555506 [debug]:    Started resolving data tests
+09:07:50.555516 [debug]:   Finished [  0.00s] resolving data tests
+09:07:50.555546 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:07:50.555860 [debug]:    Started typechecking macros
+09:07:50.635757 [debug]:   Finished [  0.08s] typechecking macros
+09:07:50.636208 [info ]: Finished parsing [  0.13s] (4 nodes, 0 skipped, 0 errors)
+09:07:50.637024 [info ]: Cached model count updated: 3 models (estimate)
+09:07:50.637032 [info ]: Cached model count updated: 3 models (accurate)
+09:07:50.637044 [info ]: Started scheduling
+09:07:50.637064 [info ]: Finished scheduling [  0.00s]
+09:07:50.637069 [debug]: Compilation - 0 nodes selected: {}
+09:07:50.637078 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:07:50.637086 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:07:50.637461 [info ]: Started building task graph
+09:07:50.637471 [info ]: Finished building task graph [  0.00s]
+09:07:50.639880 [info ]: Started scheduling
+09:07:50.639894 [info ]: Finished scheduling [  0.00s]
+09:07:50.640174 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [135ms]
+09:07:50.641166 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:07:51.831545Z | 8ef27335-1789-4402-bd31-982cecc83198 ====================
+09:07:51.831628 [info ]: Started loading project
+09:07:51.832133 [info ]: Loading profiles.yml
+09:07:51.835656 [info ]: Finished loading project [  0.00s]
+09:07:51.858070 [info ]: Cached model count updated: 3 models (estimate)
+09:07:51.858104 [info ]: Cached model count updated: 3 models (accurate)
+09:07:51.858176 [info ]: Started scheduling
+09:07:51.858254 [info ]: Finished scheduling [  0.00s]
+09:07:51.858272 [debug]: Compilation - 3 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users", "model.dbt_reusability.user_orders"}
+09:07:51.859233 [info ]: Started building task graph
+09:07:51.859286 [info ]: Finished building task graph [  0.00s]
+09:07:51.860456 [info ]: Started rendering (3 nodes)
+09:07:51.860470 [info ]: Started model main.user_orders
+09:07:51.860485 [debug]: Started rendering model main.user_orders
+09:07:51.860510 [info ]: Started model main.stg_users
+09:07:51.860517 [debug]: Started rendering model main.stg_users
+09:07:51.860527 [info ]: Started model main.stg_orders
+09:07:51.860533 [debug]: Started rendering model main.stg_orders
+09:07:51.861494 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:07:51.861549 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/.lsp/compiled/dbt_reusability/models/user_orders.sql
+09:07:51.861590 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:07:51.861629 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:07:51.861654 [info ]: Started analyzing (3 nodes)
+09:07:51.861661 [debug]: Started analyzing model main.stg_users
+09:07:51.861677 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:07:51.861712 [debug]: Started analyzing model main.user_orders
+09:07:51.861726 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:07:51.861733 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:51.861740 [debug]: Started analyzing model main.stg_orders
+09:07:51.861889 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:07:51.861900 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:07:51.861919 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:07:51.861927 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:07:51.862447 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:07:51.862459 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:07:51.862466 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:07:51.865674 [info ]: Started scheduling
+09:07:51.865696 [info ]: Finished scheduling [  0.00s]
+09:07:51.865730 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [34ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:07:51.865792 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:08:55.031225Z | e61dbb7e-6a2e-4277-a0cd-33df0d226ec2 ====================
+09:08:55.031300 [info ]: Started loading project
+09:08:55.031578 [info ]: Loading profiles.yml
+09:08:55.039221 [info ]: Finished loading project [  0.01s]
+09:08:55.056120 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [24ms]
+09:08:55.056172 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:08:56.093257Z | 86c6fe21-1126-44ec-bd4e-bcb70a8d3ad6 ====================
+09:08:56.093304 [info ]: Started loading project
+09:08:56.093518 [info ]: Loading profiles.yml
+09:08:56.095807 [info ]: Finished loading project [  0.00s]
+09:08:56.113993 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [20ms]
+09:08:56.114035 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:08:56.994083Z | fd6665cd-6b86-471d-b8c8-1837c4f86a26 ====================
+09:08:56.994116 [info ]: Started loading project
+09:08:56.994284 [info ]: Loading profiles.yml
+09:08:56.995685 [info ]: Finished loading project [  0.00s]
+09:08:57.008718 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [14ms]
+09:08:57.008753 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:08:58.193135Z | 2a37cd53-6433-4a70-be77-af6dbc8e828c ====================
+09:08:58.193235 [info ]: Started loading project
+09:08:58.193572 [info ]: Loading profiles.yml
+09:08:58.197264 [info ]: Finished loading project [  0.00s]
+09:08:58.212780 [info ]: Cached model count updated: 3 models (estimate)
+09:08:58.212797 [info ]: Cached model count updated: 3 models (accurate)
+09:08:58.212820 [info ]: Started scheduling
+09:08:58.212867 [info ]: Finished scheduling [  0.00s]
+09:08:58.212878 [debug]: Compilation - 3 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users", "model.dbt_reusability.user_orders"}
+09:08:58.213551 [info ]: Started building task graph
+09:08:58.213591 [info ]: Finished building task graph [  0.00s]
+09:08:58.215923 [info ]: Started rendering (3 nodes)
+09:08:58.215932 [info ]: Started model main.user_orders
+09:08:58.215940 [debug]: Started rendering model main.user_orders
+09:08:58.215954 [info ]: Started model main.stg_users
+09:08:58.215960 [debug]: Started rendering model main.stg_users
+09:08:58.215967 [info ]: Started model main.stg_orders
+09:08:58.215972 [debug]: Started rendering model main.stg_orders
+09:08:58.216264 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/.lsp/compiled/dbt_reusability/models/user_orders.sql
+09:08:58.216265 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:08:58.216312 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:08:58.216329 [info ]: Started analyzing (3 nodes)
+09:08:58.216333 [debug]: Started analyzing model main.stg_users
+09:08:58.216343 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:08:58.216351 [debug]: Started analyzing model main.user_orders
+09:08:58.216666 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:08:58.216675 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:08:58.216816 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:08:58.216844 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:08:58.216851 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:08:58.216862 [debug]: Started analyzing model main.stg_orders
+09:08:58.216932 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:08:58.216939 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:08:58.217035 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:08:58.217043 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:08:58.217048 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:08:58.219326 [info ]: Started scheduling
+09:08:58.219346 [info ]: Finished scheduling [  0.00s]
+09:08:58.219366 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [26ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:08:58.219416 [info ]: Cached model count updated: 3 models (accurate)
+09:09:55.410761 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+==================== 2026-10-25T09:09:55.437863Z | 38576981-436a-40d8-b542-fc1af9b629c2 ====================
+09:09:55.437900 [info ]: Started loading project
+09:09:55.438049 [info ]: Loading profiles.yml
+09:09:55.441314 [info ]: Started parsing (4 nodes)
+09:09:55.479127 [info ]: Finished loading project [  0.04s]
+09:09:55.479285 [debug]:    Started building model nodes
+09:09:55.479285 [debug]:    Started building model nodes
+09:09:55.479295 [debug]:   Finished [  0.00s] building model nodes
+09:09:55.479324 [debug]:   Finished [  0.00s] building model nodes
+09:09:55.479385 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:09:55.479548 [debug]:    Started resolving data tests
+09:09:55.479562 [debug]:   Finished [  0.00s] resolving data tests
+09:09:55.479671 [debug]:    Started resolving data tests
+09:09:55.479686 [debug]:   Finished [  0.00s] resolving data tests
+09:09:55.480494 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:09:55.480826 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:09:55.481158 [debug]:    Started building model nodes
+09:09:55.481760 [debug]:   Finished [  0.00s] building model nodes
+09:09:55.481970 [debug]:    Started resolving data tests
+09:09:55.481980 [debug]:   Finished [  0.00s] resolving data tests
+09:09:55.482007 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:09:55.482275 [debug]:    Started typechecking macros
+09:09:55.561771 [debug]:   Finished [  0.08s] typechecking macros
+09:09:55.562200 [info ]: Finished parsing [  0.12s] (4 nodes, 0 skipped, 0 errors)
+09:09:55.562967 [info ]: Cached model count updated: 3 models (estimate)
+09:09:55.562975 [info ]: Cached model count updated: 3 models (accurate)
+09:09:55.562988 [info ]: Started scheduling
+09:09:55.563035 [info ]: Finished scheduling [  0.00s]
+09:09:55.563041 [debug]: Compilation - 3 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users", "model.dbt_reusability.user_orders"}
+09:09:55.563407 [info ]: Started building task graph
+09:09:55.563433 [info ]: Finished building task graph [  0.00s]
+09:09:55.565716 [info ]: Started rendering (3 nodes)
+09:09:55.565724 [info ]: Started model main.user_orders
+09:09:55.565732 [debug]: Started rendering model main.user_orders
+09:09:55.565744 [info ]: Started model main.stg_users
+09:09:55.565750 [debug]: Started rendering model main.stg_users
+09:09:55.565757 [info ]: Started model main.stg_orders
+09:09:55.565766 [debug]: Started rendering model main.stg_orders
+09:09:55.566414 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:09:55.566410 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/.lsp/compiled/dbt_reusability/models/user_orders.sql
+09:09:55.566411 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:09:55.566468 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:09:55.566482 [info ]: Started analyzing (3 nodes)
+09:09:55.566485 [debug]: Started analyzing model main.user_orders
+09:09:55.566498 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:09:55.566505 [debug]: Started analyzing model main.stg_users
+09:09:55.566514 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:09:55.566519 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:09:55.566524 [debug]: Started analyzing model main.stg_orders
+09:09:55.566609 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:09:55.566616 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:09:55.566627 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:09:55.566633 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:09:55.566884 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:09:55.566891 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:09:55.566895 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:09:55.568778 [info ]: Started scheduling
+09:09:55.568794 [info ]: Finished scheduling [  0.00s]
+09:09:55.569061 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [131ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:09:55.569096 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-25T09:09:56.756125Z | cac2f8ad-5bde-4929-9171-135db8646ecc ====================
+09:09:56.756209 [info ]: Started loading project
+09:09:56.756644 [info ]: Loading profiles.yml
+09:09:56.762199 [info ]: Finished loading project [  0.01s]
+09:09:56.784122 [info ]: Cached model count updated: 3 models (estimate)
+09:09:56.784159 [info ]: Cached model count updated: 3 models (accurate)
+09:09:56.784191 [info ]: Started scheduling
+09:09:56.784272 [info ]: Finished scheduling [  0.00s]
+09:09:56.784291 [debug]: Compilation - 3 nodes selected: {"model.dbt_reusability.stg_orders", "model.dbt_reusability.stg_users", "model.dbt_reusability.user_orders"}
+09:09:56.785317 [info ]: Started building task graph
+09:09:56.785371 [info ]: Finished building task graph [  0.00s]
+09:09:56.786607 [info ]: Started rendering (3 nodes)
+09:09:56.786622 [info ]: Started model main.user_orders
+09:09:56.786636 [debug]: Started rendering model main.user_orders
+09:09:56.786660 [info ]: Started model main.stg_users
+09:09:56.786667 [debug]: Started rendering model main.stg_users
+09:09:56.786676 [info ]: Started model main.stg_orders
+09:09:56.786681 [debug]: Started rendering model main.stg_orders
+09:09:56.786876 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/.lsp/compiled/dbt_reusability/models/user_orders.sql
+09:09:56.786918 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/.lsp/compiled/dbt_reusability/models/stg_orders.sql
+09:09:56.786925 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/.lsp/compiled/dbt_reusability/models/stg_users.sql
+09:09:56.786943 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:09:56.786968 [info ]: Started analyzing (3 nodes)
+09:09:56.786972 [debug]: Started analyzing model main.user_orders
+09:09:56.786986 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:09:56.786995 [debug]: Started analyzing model main.stg_orders
+09:09:56.787010 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:09:56.787018 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:09:56.787027 [debug]: Started analyzing model main.stg_users
+09:09:56.787174 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:09:56.787185 [info ]:  Succeeded model main.stg_users (view) [2 of 3 in 0.00s]
+09:09:56.787203 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:09:56.787211 [info ]:  Succeeded model main.stg_orders (view) [3 of 3 in 0.00s]
+09:09:56.787703 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:09:56.787717 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:09:56.787723 [info ]:  Succeeded model main.user_orders (table) [1 of 3 in 0.00s]
+09:09:56.792980 [info ]: Started scheduling
+09:09:56.793013 [info ]: Finished scheduling [  0.00s]
+09:09:56.793070 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [36ms]
+Processed: 3 models
+Summary: 3 total | 3 success
+09:09:56.793160 [info ]: Cached model count updated: 3 models (accurate)
+11:57:21.854208 [debug]: Ignoring unsupported LSP notification
+11:57:21.892917 [debug]: Ignoring unsupported LSP notification
+11:58:04.559954 [debug]: Ignoring unsupported LSP notification
+11:59:09.800854 [debug]: Ignoring unsupported LSP notification
+11:59:58.022669 [debug]: Ignoring unsupported LSP notification

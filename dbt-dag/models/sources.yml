@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw_duckdb
+    schema: main
+    tables:
+      - name: users
+      - name: orders

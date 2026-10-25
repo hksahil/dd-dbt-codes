@@ -1,0 +1,1 @@
+{{ dbt_utils.test_unique_combination_of_columns(combination_of_columns=["order_id","user_id"], model=get_where_subquery(ref('01_dbt_utils'))) }}

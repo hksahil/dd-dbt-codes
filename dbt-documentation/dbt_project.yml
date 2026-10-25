@@ -1,0 +1,12 @@
+name: 'dbt_documentation'
+version: '1.0.0'
+profile: 'dbt_custom'
+model-paths: ['models']
+
+# DOCUMENTATION: persist_docs
+# When enabled, dbt runs:
+#   COMMENT ON TABLE / COMMENT ON COLUMN
+models:
+  dbt_documentation:
+    +persist_docs:
+      columns: true

@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw_duckdb
+    schema: main
+    description: "Raw source tables in DuckDB"
+    tables:
+      - name: users
+        description: "Raw users table to track changes over time (SCD)"
+      - name: orders
+        description: "Raw orders table"

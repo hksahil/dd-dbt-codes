@@ -1,0 +1,1095 @@
+==================== 2026-10-24T10:48:49.655591Z | 01a16d87-0ce4-7c62-95e6-9def9550feeb ====================
+10:48:49.658913 [info ]: dbt 2.0.9
+10:48:49.662372 [info ]: Started loading project
+10:48:49.684362 [info ]: Loading profiles.yml
+10:48:49.728289 [debug]:    Started loading packages
+10:48:49.736964 [debug]:     Loaded [  0.01s] packages
+10:48:49.746210 [info ]: Finished loading project [  0.08s]
+10:48:49.752027 [info ]: Started parsing (1 nodes)
+10:48:49.821534 [debug]:    Started building model nodes
+10:48:49.821526 [debug]:    Started building model nodes
+10:48:49.821618 [debug]:   Finished [  0.00s] building model nodes
+10:48:49.821621 [debug]:   Finished [  0.00s] building model nodes
+10:48:49.823801 [debug]:    Started resolving data tests
+10:48:49.823813 [debug]:    Started resolving data tests
+10:48:49.824111 [debug]:   Finished [  0.00s] resolving data tests
+10:48:49.824111 [debug]:   Finished [  0.00s] resolving data tests
+10:48:49.830224 [debug]: Finished parsing models/user_orders.sql [  0.01s]
+10:48:49.830322 [debug]:    Started building model nodes
+10:48:49.834962 [debug]:   Finished [  0.00s] building model nodes
+10:48:49.836231 [debug]:    Started resolving data tests
+10:48:49.836322 [debug]:   Finished [  0.00s] resolving data tests
+10:48:49.837984 [debug]:    Started typechecking macros
+10:48:50.126279 [debug]:   Finished [  0.29s] typechecking macros
+10:48:50.130836 [info ]: Finished parsing [  0.38s] (1 nodes, 0 skipped, 0 errors)
+10:48:50.178907 [info ]: Started scheduling
+10:48:50.180883 [info ]: Finished scheduling [  0.00s]
+10:48:50.200921 [info ]: Started building task graph
+10:48:50.206495 [info ]: Finished building task graph [  0.01s]
+10:48:50.245838 [debug]: DuckDB driver resolved: duckdb 1.5.4
+10:48:50.383312 [error]: [DbDriverFailed (dbt1308)]: Failed to create schema 'main' in database 'dev' in remote for model.dbt_custom.user_orders: IO Error: Could not set lock on file "/Users/seal/Desktop/dbt-duckdb/duckdb-custom/dev.duckdb": Conflicting lock is held in /Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Plugin).app/Contents/MacOS/Antigravity IDE Helper (Plugin) (PID 1375) by user seal. However, you would be able to open this database in read-only mode, e.g. by using the -readonly parameter in the CLI. See also https://duckdb.org/docs/stable/connect/concurrency
+10:48:50.858934 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 error for target 'dev' [1.2s]
+Processed: 1 model
+==================== 2026-10-24T10:50:00.607977Z | 01a16d88-220d-7d61-adbe-b9af97c2320c ====================
+10:50:00.611762 [info ]: dbt 2.0.9
+10:50:00.614787 [info ]: Started loading project
+10:50:00.634200 [info ]: Loading profiles.yml
+10:50:00.672469 [debug]:    Started loading packages
+10:50:00.678917 [debug]:     Loaded [  0.01s] packages
+10:50:00.685690 [info ]: Finished loading project [  0.07s]
+10:50:00.689131 [info ]: Started parsing (1 nodes)
+10:50:00.736092 [debug]:    Started building model nodes
+10:50:00.736102 [debug]:    Started building model nodes
+10:50:00.736249 [debug]:   Finished [  0.00s] building model nodes
+10:50:00.736256 [debug]:   Finished [  0.00s] building model nodes
+10:50:00.737776 [debug]:    Started resolving data tests
+10:50:00.737778 [debug]:    Started resolving data tests
+10:50:00.738004 [debug]:   Finished [  0.00s] resolving data tests
+10:50:00.738005 [debug]:   Finished [  0.00s] resolving data tests
+10:50:00.744514 [debug]: Finished parsing models/user_orders.sql [  0.01s]
+10:50:00.744586 [debug]:    Started building model nodes
+10:50:00.747756 [debug]:   Finished [  0.00s] building model nodes
+10:50:00.748396 [debug]:    Started resolving data tests
+10:50:00.748415 [debug]:   Finished [  0.00s] resolving data tests
+10:50:00.749813 [debug]:    Started typechecking macros
+10:50:00.877469 [debug]:   Finished [  0.13s] typechecking macros
+10:50:00.881243 [info ]: Finished parsing [  0.19s] (1 nodes, 0 skipped, 0 errors)
+10:50:00.919836 [info ]: Started scheduling
+10:50:00.922508 [info ]: Finished scheduling [  0.00s]
+10:50:00.943817 [info ]: Started building task graph
+10:50:00.947803 [info ]: Finished building task graph [  0.00s]
+10:50:00.977553 [debug]: DuckDB driver resolved: duckdb 1.5.4
+10:50:01.067076 [debug]: create_debug_span(...).entered() took 579.625µs
+10:50:01.072913 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.604292ms
+10:50:01.072936 [debug]: reader.schema() took 209ns
+10:50:01.072962 [debug]: batch-consume loop (for res in reader) took 22.584µs
+10:50:01.073036 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 5.940916ms
+10:50:01.073161 [debug]: concat_batches + normalize_result_column_names took 116.666µs
+10:50:01.073327 [debug]: record_current_span_status_from_attrs took 155.042µs
+10:50:01.073345 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+10:50:01.073388 [debug]: drop(query_span_guard) (span exit/export) took 51.208µs
+10:50:01.078384 [debug]: create_debug_span(...).entered() took 15.083µs
+10:50:01.079158 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 406.958µs
+10:50:01.079167 [debug]: reader.schema() took 291ns
+10:50:01.079197 [debug]: batch-consume loop (for res in reader) took 26.208µs
+10:50:01.079217 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 806.792µs
+10:50:01.079234 [debug]: concat_batches + normalize_result_column_names took 11.458µs
+10:50:01.079240 [debug]: record_current_span_status_from_attrs took 1.459µs
+10:50:01.079247 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+10:50:01.079264 [debug]: drop(query_span_guard) (span exit/export) took 19.5µs
+10:50:01.080259 [debug]: create_debug_span(...).entered() took 12.959µs
+10:50:01.080919 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 131.958µs
+10:50:01.080930 [debug]: reader.schema() took 42ns
+10:50:01.081076 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 809.5µs
+10:50:01.081084 [debug]: concat_batches + normalize_result_column_names took 2.083µs
+10:50:01.081089 [debug]: record_current_span_status_from_attrs took 416ns
+10:50:01.081094 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+10:50:01.081106 [debug]: drop(query_span_guard) (span exit/export) took 12.208µs
+10:50:01.083159 [info ]: Started rendering (1 nodes)
+10:50:01.083458 [info ]: Started model main.user_orders
+10:50:01.083826 [debug]: Started rendering model main.user_orders
+10:50:01.088969 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/compiled/dbt_custom/models/user_orders.sql
+10:50:01.089891 [debug]: Finished rendering [  0.01s] model main.user_orders [success]
+10:50:01.089936 [info ]: Finished rendering [  0.01s] (1 nodes, 0 skipped, 0 errors)
+10:50:01.090736 [info ]: Started analyzing (1 nodes)
+10:50:01.090892 [debug]: Started analyzing model main.user_orders
+10:50:01.111994 [debug]: Finished analyzing [  0.02s] model main.user_orders [success]
+10:50:01.112072 [info ]: Finished analyzing [  0.02s] (1 nodes, 0 skipped, 0 errors)
+10:50:01.112113 [info ]: Started running (1 nodes)
+10:50:01.112178 [info ]: Started running model main.user_orders
+10:50:01.128608 [debug]: create_debug_span(...).entered() took 22.291µs
+10:50:01.138049 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 7.97975ms
+10:50:01.138086 [debug]: reader.schema() took 375ns
+10:50:01.139110 [debug]: batch-consume loop (for res in reader) took 1.002834ms
+10:50:01.139495 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 10.765917ms
+10:50:01.141090 [debug]: concat_batches + normalize_result_column_names took 1.542166ms
+10:50:01.141133 [debug]: record_current_span_status_from_attrs took 3.5µs
+10:50:01.141145 [debug]: Query executed on node model.dbt_custom.user_orders:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+10:50:01.141173 [debug]: drop(query_span_guard) (span exit/export) took 31.75µs
+10:50:01.146455 [debug]: Writing runtime sql for node "model.dbt_custom.user_orders"
+10:50:01.148511 [debug]: create_debug_span(...).entered() took 18.541µs
+10:50:01.152534 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 2.774208ms
+10:50:01.152560 [debug]: reader.schema() took 250ns
+10:50:01.153164 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 4.615333ms
+10:50:01.153192 [debug]: concat_batches + normalize_result_column_names took 6.833µs
+10:50:01.153201 [debug]: record_current_span_status_from_attrs took 3.417µs
+10:50:01.153210 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+  create view "dev"."main"."user_orders__dbt_tmp" as (
+    select
+    u.name,
+    o.id as order_id,
+    o.amount
+from users u
+join orders o on u.id = o.id - 100
+  );
+
+10:50:01.153230 [debug]: drop(query_span_guard) (span exit/export) took 24.875µs
+10:50:01.156394 [debug]: create_debug_span(...).entered() took 15.333µs
+10:50:01.157018 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 277.041µs
+10:50:01.157030 [debug]: reader.schema() took 250ns
+10:50:01.157058 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 641.417µs
+10:50:01.157068 [debug]: concat_batches + normalize_result_column_names took 5.458µs
+10:50:01.157075 [debug]: record_current_span_status_from_attrs took 1.709µs
+10:50:01.157082 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."user_orders" rename to "user_orders__dbt_backup"
+10:50:01.157100 [debug]: drop(query_span_guard) (span exit/export) took 20.708µs
+10:50:01.160597 [debug]: create_debug_span(...).entered() took 21µs
+10:50:01.161107 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 306.041µs
+10:50:01.161120 [debug]: reader.schema() took 333ns
+10:50:01.161148 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 517.958µs
+10:50:01.161155 [debug]: concat_batches + normalize_result_column_names took 3.208µs
+10:50:01.161160 [debug]: record_current_span_status_from_attrs took 1.5µs
+10:50:01.161166 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."user_orders__dbt_tmp" rename to "user_orders"
+10:50:01.161180 [debug]: drop(query_span_guard) (span exit/export) took 16.25µs
+10:50:01.164352 [debug]: create_debug_span(...).entered() took 17.916µs
+10:50:01.165077 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 241.583µs
+10:50:01.165096 [debug]: reader.schema() took 125ns
+10:50:01.165126 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 748.875µs
+10:50:01.165135 [debug]: concat_batches + normalize_result_column_names took 4.458µs
+10:50:01.165141 [debug]: record_current_span_status_from_attrs took 2.25µs
+10:50:01.165148 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop view if exists "dev"."main"."user_orders__dbt_backup" cascade
+    
+10:50:01.165164 [debug]: drop(query_span_guard) (span exit/export) took 19.667µs
+10:50:01.167195 [info ]: Finished running [  0.06s] model main.user_orders [success]
+10:50:01.167256 [info ]: Finished running [  0.06s] (1 nodes, 0 skipped, 0 errors)
+10:50:01.167278 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.08s]
+10:50:01.693590 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' successfully for target 'dev' [1.1s]
+Processed: 1 model
+Summary: 1 total | 1 success
+==================== 2026-10-25T09:04:56.851330Z | 01a1724e-4e11-7fd3-8127-fae6d22a8c1e ====================
+09:04:57.635566 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [784ms]
+==================== 2026-10-25T09:07:16.226260Z | 01a17250-6e81-7370-be34-99db20f8422c ====================
+09:07:16.226333 [info ]: dbt 2.0.9
+09:07:16.226423 [info ]: Started loading project
+09:07:16.226900 [info ]: Loading profiles.yml
+09:07:16.316731 [debug]:    Started loading packages
+09:07:16.317040 [debug]:     Loaded [  0.00s] packages
+09:07:16.317375 [info ]: Finished loading project [  0.09s]
+09:07:16.318210 [info ]: Started parsing (5 nodes)
+09:07:16.329036 [debug]:    Started building model nodes
+09:07:16.329051 [debug]:   Finished [  0.00s] building model nodes
+09:07:16.329094 [debug]:    Started building model nodes
+09:07:16.329115 [debug]:   Finished [  0.00s] building model nodes
+09:07:16.329172 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"reusable_blocks"`. YAML path: `reusable_blocks`.
+  --> models/schema.yml:15:1
+09:07:16.329256 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:07:16.329308 [debug]:    Started resolving data tests
+09:07:16.329327 [debug]:   Finished [  0.00s] resolving data tests
+09:07:16.329335 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:07:16.329342 [debug]:    Started resolving data tests
+09:07:16.329351 [debug]:   Finished [  0.00s] resolving data tests
+09:07:16.329749 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:15:5
+09:07:16.329788 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:18:5
+09:07:16.329877 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"freshness"`. YAML path: `freshness`.
+  --> models/sources.yml:15:5
+09:07:16.329911 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"loaded_at_field"`. YAML path: `loaded_at_field`.
+  --> models/sources.yml:18:5
+09:07:16.330360 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:07:16.330545 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:07:16.330722 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:07:16.330740 [debug]:    Started building model nodes
+09:07:16.332552 [debug]:   Finished [  0.00s] building model nodes
+09:07:16.332749 [debug]:    Started resolving data tests
+09:07:16.332951 [debug]: Finished parsing target/generic_tests/not_null_stg_orders_amount.sql [  0.00s]
+09:07:16.333079 [debug]: Finished parsing target/generic_tests/not_null_stg_orders_customer_id.sql [  0.00s]
+09:07:16.333265 [debug]: Finished parsing target/generic_tests/relationships_stg_orders_46ea207d857a6f3e55ee0b2c74691204.sql [  0.00s]
+09:07:16.333570 [debug]: Finished parsing target/generic_tests/unique_stg_orders_order_id.sql [  0.00s]
+09:07:16.333783 [debug]: Finished parsing target/generic_tests/not_null_stg_orders_order_id.sql [  0.00s]
+09:07:16.333950 [debug]: Finished parsing target/generic_tests/accepted_values_stg_orders_140f5c1c0d5da1362bd8aed7a924aa4e.sql [  0.00s]
+09:07:16.334084 [debug]: Finished parsing target/generic_tests/unique_stg_users_customer_id.sql [  0.00s]
+09:07:16.334233 [debug]: Finished parsing target/generic_tests/not_null_stg_users_customer_id.sql [  0.00s]
+09:07:16.334357 [debug]: Finished parsing target/generic_tests/unique_user_orders_order_id.sql [  0.00s]
+09:07:16.334540 [debug]: Finished parsing target/generic_tests/not_null_user_orders_order_id.sql [  0.00s]
+09:07:16.335606 [debug]:   Finished [  0.00s] resolving data tests
+09:07:16.335791 [debug]:    Started typechecking macros
+09:07:16.387693 [debug]:   Finished [  0.05s] typechecking macros
+09:07:16.388069 [info ]: Finished parsing [  0.07s] (5 nodes, 0 skipped, 0 errors)
+09:07:17.425210 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:07:17.425210 [info ]: 
+==================== Execution Summary =====================
+Finished 'build' with 5 errors for target 'dev' [1.2s]
+==================== 2026-10-25T09:07:55.320089Z | 01a17251-0737-7412-bdfa-6ab04ea315c9 ====================
+09:07:55.320178 [info ]: dbt 2.0.9
+09:07:55.320282 [info ]: Started loading project
+09:07:55.320838 [info ]: Loading profiles.yml
+09:07:55.414042 [debug]:    Started loading packages
+09:07:55.414321 [debug]:     Loaded [  0.00s] packages
+09:07:55.414661 [info ]: Finished loading project [  0.09s]
+09:07:55.415567 [info ]: Started parsing (5 nodes)
+09:07:55.427721 [debug]:    Started building model nodes
+09:07:55.427721 [debug]:    Started building model nodes
+09:07:55.427736 [debug]:   Finished [  0.00s] building model nodes
+09:07:55.427735 [debug]:   Finished [  0.00s] building model nodes
+09:07:55.427745 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:07:55.427958 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:07:55.427962 [debug]:    Started resolving data tests
+09:07:55.427979 [debug]:   Finished [  0.00s] resolving data tests
+09:07:55.427992 [debug]:    Started resolving data tests
+09:07:55.428002 [debug]:   Finished [  0.00s] resolving data tests
+09:07:55.428744 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+09:07:55.428979 [debug]: Finished parsing models/stg_users.sql [  0.00s]
+09:07:55.429163 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:07:55.429175 [debug]:    Started building model nodes
+09:07:55.430675 [debug]:   Finished [  0.00s] building model nodes
+09:07:55.430856 [debug]:    Started resolving data tests
+09:07:55.431043 [debug]: Finished parsing target/generic_tests/not_null_stg_orders_amount.sql [  0.00s]
+09:07:55.431176 [debug]: Finished parsing target/generic_tests/not_null_stg_orders_customer_id.sql [  0.00s]
+09:07:55.431357 [debug]: Finished parsing target/generic_tests/relationships_stg_orders_46ea207d857a6f3e55ee0b2c74691204.sql [  0.00s]
+09:07:55.431486 [debug]: Finished parsing target/generic_tests/unique_stg_orders_order_id.sql [  0.00s]
+09:07:55.431605 [debug]: Finished parsing target/generic_tests/not_null_stg_orders_order_id.sql [  0.00s]
+09:07:55.431733 [debug]: Finished parsing target/generic_tests/accepted_values_stg_orders_140f5c1c0d5da1362bd8aed7a924aa4e.sql [  0.00s]
+09:07:55.431836 [debug]: Finished parsing target/generic_tests/unique_stg_users_customer_id.sql [  0.00s]
+09:07:55.431945 [debug]: Finished parsing target/generic_tests/not_null_stg_users_customer_id.sql [  0.00s]
+09:07:55.432059 [debug]: Finished parsing target/generic_tests/unique_user_orders_order_id.sql [  0.00s]
+09:07:55.432170 [debug]: Finished parsing target/generic_tests/not_null_user_orders_order_id.sql [  0.00s]
+09:07:55.433230 [debug]:   Finished [  0.00s] resolving data tests
+09:07:55.433401 [debug]:    Started typechecking macros
+09:07:55.484906 [debug]:   Finished [  0.05s] typechecking macros
+09:07:55.485272 [info ]: Finished parsing [  0.07s] (5 nodes, 0 skipped, 0 errors)
+09:07:55.490803 [info ]: Started scheduling
+09:07:55.490901 [info ]: Finished scheduling [  0.00s]
+09:07:55.491413 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+09:07:55.491423 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+09:07:55.491912 [info ]: Started building task graph
+09:07:55.492073 [info ]: Finished building task graph [  0.00s]
+09:07:55.493436 [debug]: DuckDB driver resolved: duckdb 1.5.4
+09:07:55.506844 [debug]: create_debug_span(...).entered() took 15.5µs
+09:07:55.507265 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 94.625µs
+09:07:55.507270 [debug]: reader.schema() took 125ns
+09:07:55.507279 [debug]: batch-consume loop (for res in reader) took 6.834µs
+09:07:55.507287 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 433.917µs
+09:07:55.507299 [debug]: concat_batches + normalize_result_column_names took 9.375µs
+09:07:55.507304 [debug]: record_current_span_status_from_attrs took 1.875µs
+09:07:55.507308 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+09:07:55.507315 [debug]: drop(query_span_guard) (span exit/export) took 9µs
+09:07:55.507558 [debug]: create_debug_span(...).entered() took 2.292µs
+09:07:55.507685 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 49µs
+09:07:55.507688 [debug]: reader.schema() took 0ns
+09:07:55.507696 [debug]: batch-consume loop (for res in reader) took 5.875µs
+09:07:55.507701 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 138.542µs
+09:07:55.507704 [debug]: concat_batches + normalize_result_column_names took 1µs
+09:07:55.507707 [debug]: record_current_span_status_from_attrs took 417ns
+09:07:55.507709 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+09:07:55.507713 [debug]: drop(query_span_guard) (span exit/export) took 4.292µs
+09:07:55.507792 [debug]: create_debug_span(...).entered() took 1.25µs
+09:07:55.507856 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 21.584µs
+09:07:55.507859 [debug]: reader.schema() took 0ns
+09:07:55.507865 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 69.208µs
+09:07:55.507868 [debug]: concat_batches + normalize_result_column_names took 959ns
+09:07:55.507870 [debug]: record_current_span_status_from_attrs took 125ns
+09:07:55.507872 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+09:07:55.507876 [debug]: drop(query_span_guard) (span exit/export) took 3.667µs
+09:07:55.507955 [info ]: Started rendering (13 nodes)
+09:07:55.507986 [info ]: Started model main.stg_users
+09:07:55.507995 [debug]: Started rendering model main.stg_users
+09:07:55.508008 [info ]: Started model main.stg_orders
+09:07:55.508011 [debug]: Started rendering model main.stg_orders
+09:07:55.508461 [debug]: Compiled SQL for node model.dbt_reusability.stg_orders at target/compiled/dbt_reusability/models/stg_orders.sql
+09:07:55.508476 [debug]: Compiled SQL for node model.dbt_reusability.stg_users at target/compiled/dbt_reusability/models/stg_users.sql
+09:07:55.508503 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+09:07:55.508518 [info ]: Started analyzing (13 nodes)
+09:07:55.508532 [debug]: Started analyzing model main.stg_orders
+09:07:55.508541 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+09:07:55.508546 [debug]: Started analyzing model main.stg_users
+09:07:55.510528 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+09:07:55.510534 [info ]: Started running (13 nodes)
+09:07:55.510547 [info ]: Started running model main.stg_users
+09:07:55.510554 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+09:07:55.510559 [info ]: Started running model main.stg_orders
+09:07:55.511182 [debug]: create_debug_span(...).entered() took 8µs
+09:07:55.511186 [debug]: create_debug_span(...).entered() took 2.541µs
+09:07:55.512433 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 882.708µs
+09:07:55.512438 [debug]: reader.schema() took 41ns
+09:07:55.512443 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 895.167µs
+09:07:55.512447 [debug]: reader.schema() took 41ns
+09:07:55.512466 [debug]: batch-consume loop (for res in reader) took 16.916µs
+09:07:55.512467 [debug]: batch-consume loop (for res in reader) took 26.25µs
+09:07:55.512476 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.286375ms
+09:07:55.512477 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.291166ms
+09:07:55.512517 [debug]: concat_batches + normalize_result_column_names took 37.208µs
+09:07:55.512517 [debug]: concat_batches + normalize_result_column_names took 37.334µs
+09:07:55.512523 [debug]: record_current_span_status_from_attrs took 458ns
+09:07:55.512524 [debug]: record_current_span_status_from_attrs took 208ns
+09:07:55.512526 [debug]: Query executed on node model.dbt_reusability.stg_orders:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:07:55.512526 [debug]: Query executed on node model.dbt_reusability.stg_users:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:07:55.512532 [debug]: drop(query_span_guard) (span exit/export) took 5.875µs
+09:07:55.512531 [debug]: drop(query_span_guard) (span exit/export) took 5.5µs
+09:07:55.513314 [debug]: Writing runtime sql for node "model.dbt_reusability.stg_users"
+09:07:55.513328 [debug]: Writing runtime sql for node "model.dbt_reusability.stg_orders"
+09:07:55.513719 [debug]: create_debug_span(...).entered() took 2.75µs
+09:07:55.513733 [debug]: create_debug_span(...).entered() took 3.25µs
+09:07:55.513962 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 182.875µs
+09:07:55.513966 [debug]: reader.schema() took 0ns
+09:07:55.513971 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 247µs
+09:07:55.513975 [debug]: concat_batches + normalize_result_column_names took 917ns
+09:07:55.513976 [debug]: record_current_span_status_from_attrs took 209ns
+09:07:55.513979 [debug]: Query executed on node model.dbt_reusability.stg_users:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.stg_users", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+  create view "dev"."main"."stg_users__dbt_tmp" as (
+    
+
+select
+    id as customer_id,
+    name as customer_name
+from "dev"."main"."users"
+  );
+
+09:07:55.513984 [debug]: drop(query_span_guard) (span exit/export) took 5.5µs
+09:07:55.514010 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 212.083µs
+09:07:55.514015 [debug]: reader.schema() took 0ns
+09:07:55.514020 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 281.417µs
+09:07:55.514023 [debug]: concat_batches + normalize_result_column_names took 667ns
+09:07:55.514026 [debug]: record_current_span_status_from_attrs took 333ns
+09:07:55.514028 [debug]: Query executed on node model.dbt_reusability.stg_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.stg_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+  create view "dev"."main"."stg_orders__dbt_tmp" as (
+    
+
+select
+    order_id,
+    user_id as customer_id,
+    amount,
+    status as order_status,
+    order_date
+from "dev"."main"."orders"
+  );
+
+09:07:55.514034 [debug]: drop(query_span_guard) (span exit/export) took 6.291µs
+09:07:55.514502 [debug]: create_debug_span(...).entered() took 1.625µs
+09:07:55.514564 [debug]: create_debug_span(...).entered() took 2.166µs
+09:07:55.514618 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 82.084µs
+09:07:55.514621 [debug]: reader.schema() took 0ns
+09:07:55.514625 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 119.875µs
+09:07:55.514627 [debug]: concat_batches + normalize_result_column_names took 667ns
+09:07:55.514629 [debug]: record_current_span_status_from_attrs took 166ns
+09:07:55.514631 [debug]: Query executed on node model.dbt_reusability.stg_users:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.stg_users", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."stg_users" rename to "stg_users__dbt_backup"
+09:07:55.514636 [debug]: drop(query_span_guard) (span exit/export) took 5.75µs
+09:07:55.514720 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 89.667µs
+09:07:55.514723 [debug]: reader.schema() took 42ns
+09:07:55.514727 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 156.75µs
+09:07:55.514729 [debug]: concat_batches + normalize_result_column_names took 542ns
+09:07:55.514731 [debug]: record_current_span_status_from_attrs took 166ns
+09:07:55.514734 [debug]: Query executed on node model.dbt_reusability.stg_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.stg_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."stg_orders" rename to "stg_orders__dbt_backup"
+09:07:55.514738 [debug]: drop(query_span_guard) (span exit/export) took 5.042µs
+09:07:55.515026 [debug]: create_debug_span(...).entered() took 1.291µs
+09:07:55.515104 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 56.583µs
+09:07:55.515108 [debug]: reader.schema() took 42ns
+09:07:55.515110 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 80.917µs
+09:07:55.515113 [debug]: concat_batches + normalize_result_column_names took 375ns
+09:07:55.515115 [debug]: record_current_span_status_from_attrs took 125ns
+09:07:55.515117 [debug]: Query executed on node model.dbt_reusability.stg_users:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.stg_users", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."stg_users__dbt_tmp" rename to "stg_users"
+09:07:55.515121 [debug]: drop(query_span_guard) (span exit/export) took 4.541µs
+09:07:55.515184 [debug]: create_debug_span(...).entered() took 1.667µs
+09:07:55.515283 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 76µs
+09:07:55.515288 [debug]: reader.schema() took 42ns
+09:07:55.515293 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 105.583µs
+09:07:55.515296 [debug]: concat_batches + normalize_result_column_names took 625ns
+09:07:55.515299 [debug]: record_current_span_status_from_attrs took 375ns
+09:07:55.515301 [debug]: Query executed on node model.dbt_reusability.stg_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.stg_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."stg_orders__dbt_tmp" rename to "stg_orders"
+09:07:55.515307 [debug]: drop(query_span_guard) (span exit/export) took 5.916µs
+09:07:55.515759 [debug]: create_debug_span(...).entered() took 1.208µs
+09:07:55.515861 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 72.166µs
+09:07:55.515865 [debug]: reader.schema() took 0ns
+09:07:55.515868 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 105.666µs
+09:07:55.515872 [debug]: concat_batches + normalize_result_column_names took 500ns
+09:07:55.515874 [debug]: record_current_span_status_from_attrs took 209ns
+09:07:55.515876 [debug]: Query executed on node model.dbt_reusability.stg_users:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.stg_users", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop view if exists "dev"."main"."stg_users__dbt_backup" cascade
+    
+09:07:55.515881 [debug]: drop(query_span_guard) (span exit/export) took 4.625µs
+09:07:55.516048 [debug]: create_debug_span(...).entered() took 1.958µs
+09:07:55.516091 [info ]: Finished running [  0.01s] model main.stg_users [success]
+09:07:55.516098 [info ]:  Succeeded model main.stg_users (view) [1 of 13 in 0.01s]
+09:07:55.516124 [info ]: Started test main_dbt_test__audit.unique_stg_users_customer_id
+09:07:55.516128 [debug]: Started rendering test main_dbt_test__audit.unique_stg_users_customer_id
+09:07:55.516136 [info ]: Started test main_dbt_test__audit.not_null_stg_users_customer_id
+09:07:55.516140 [debug]: Started rendering test main_dbt_test__audit.not_null_stg_users_customer_id
+09:07:55.516209 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 130.666µs
+09:07:55.516213 [debug]: reader.schema() took 41ns
+09:07:55.516217 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 164.083µs
+09:07:55.516219 [debug]: concat_batches + normalize_result_column_names took 459ns
+09:07:55.516222 [debug]: record_current_span_status_from_attrs took 208ns
+09:07:55.516224 [debug]: Query executed on node model.dbt_reusability.stg_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.stg_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."stg_orders__dbt_backup" cascade
+    
+09:07:55.516227 [debug]: drop(query_span_guard) (span exit/export) took 4µs
+09:07:55.516356 [info ]: Finished running [  0.01s] model main.stg_orders [success]
+09:07:55.516360 [info ]:  Succeeded model main.stg_orders (view) [2 of 13 in 0.01s]
+09:07:55.516370 [info ]: Started test main_dbt_test__audit.not_null_stg_orders_amount
+09:07:55.516373 [debug]: Started rendering test main_dbt_test__audit.not_null_stg_orders_amount
+09:07:55.516379 [info ]: Started test main_dbt_test__audit.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded
+09:07:55.516382 [debug]: Started rendering test main_dbt_test__audit.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded
+09:07:55.516386 [info ]: Started test main_dbt_test__audit.relationships_stg_orders_customer_id__customer_id__ref_stg_users_
+09:07:55.516389 [debug]: Started rendering test main_dbt_test__audit.relationships_stg_orders_customer_id__customer_id__ref_stg_users_
+09:07:55.516395 [info ]: Started test main_dbt_test__audit.not_null_stg_orders_order_id
+09:07:55.516397 [debug]: Started rendering test main_dbt_test__audit.not_null_stg_orders_order_id
+09:07:55.516401 [info ]: Started model main.user_orders
+09:07:55.516404 [debug]: Started rendering model main.user_orders
+09:07:55.516408 [info ]: Started test main_dbt_test__audit.unique_stg_orders_order_id
+09:07:55.516410 [debug]: Started rendering test main_dbt_test__audit.unique_stg_orders_order_id
+09:07:55.516414 [info ]: Started test main_dbt_test__audit.not_null_stg_orders_customer_id
+09:07:55.516416 [debug]: Started rendering test main_dbt_test__audit.not_null_stg_orders_customer_id
+09:07:55.517269 [debug]: Compiled SQL for node test.dbt_reusability.unique_stg_users_customer_id.7074f9b54f at target/compiled/dbt_reusability/target/generic_tests/unique_stg_users_customer_id.sql
+09:07:55.517372 [debug]: Compiled SQL for node test.dbt_reusability.not_null_stg_users_customer_id.300e3d6eae at target/compiled/dbt_reusability/target/generic_tests/not_null_stg_users_customer_id.sql
+09:07:55.517469 [debug]: Compiled SQL for node test.dbt_reusability.relationships_stg_orders_customer_id__customer_id__ref_stg_users_.901a8ae09f at target/compiled/dbt_reusability/target/generic_tests/relationships_stg_orders_46ea207d857a6f3e55ee0b2c74691204.sql
+09:07:55.517488 [debug]: Compiled SQL for node test.dbt_reusability.not_null_stg_orders_amount.2546645448 at target/compiled/dbt_reusability/target/generic_tests/not_null_stg_orders_amount.sql
+09:07:55.517513 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.unique_stg_users_customer_id [success]
+09:07:55.517542 [debug]: Started analyzing test main_dbt_test__audit.unique_stg_users_customer_id
+09:07:55.517640 [debug]: Compiled SQL for node test.dbt_reusability.not_null_stg_orders_order_id.81cfe2fe64 at target/compiled/dbt_reusability/target/generic_tests/not_null_stg_orders_order_id.sql
+09:07:55.517684 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.not_null_stg_users_customer_id [success]
+09:07:55.517695 [debug]: Started analyzing test main_dbt_test__audit.not_null_stg_users_customer_id
+09:07:55.517701 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.relationships_stg_orders_customer_id__customer_id__ref_stg_users_ [success]
+09:07:55.517708 [debug]: Started analyzing test main_dbt_test__audit.relationships_stg_orders_customer_id__customer_id__ref_stg_users_
+09:07:55.517713 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.not_null_stg_orders_order_id [success]
+09:07:55.517718 [debug]: Started analyzing test main_dbt_test__audit.not_null_stg_orders_order_id
+09:07:55.517722 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.not_null_stg_orders_amount [success]
+09:07:55.517727 [debug]: Started analyzing test main_dbt_test__audit.not_null_stg_orders_amount
+09:07:55.517827 [debug]: Compiled SQL for node model.dbt_reusability.user_orders at target/compiled/dbt_reusability/models/user_orders.sql
+09:07:55.517827 [debug]: Compiled SQL for node test.dbt_reusability.unique_stg_orders_order_id.e3b841c71a at target/compiled/dbt_reusability/target/generic_tests/unique_stg_orders_order_id.sql
+09:07:55.517870 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:07:55.517877 [debug]: Started analyzing model main.user_orders
+09:07:55.517970 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.unique_stg_orders_order_id [success]
+09:07:55.518020 [debug]: Started analyzing test main_dbt_test__audit.unique_stg_orders_order_id
+09:07:55.518143 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.not_null_stg_orders_order_id [success]
+09:07:55.518155 [info ]: Started running test main_dbt_test__audit.not_null_stg_orders_order_id
+09:07:55.518226 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.not_null_stg_users_customer_id [success]
+09:07:55.518255 [info ]: Started running test main_dbt_test__audit.not_null_stg_users_customer_id
+09:07:55.518334 [debug]: Compiled SQL for node test.dbt_reusability.not_null_stg_orders_customer_id.af79d5e4b5 at target/compiled/dbt_reusability/target/generic_tests/not_null_stg_orders_customer_id.sql
+09:07:55.518370 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.not_null_stg_orders_customer_id [success]
+09:07:55.518378 [debug]: Started analyzing test main_dbt_test__audit.not_null_stg_orders_customer_id
+09:07:55.518412 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.not_null_stg_orders_customer_id [success]
+09:07:55.518419 [info ]: Started running test main_dbt_test__audit.not_null_stg_orders_customer_id
+09:07:55.518440 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.not_null_stg_orders_amount [success]
+09:07:55.518487 [info ]: Started running test main_dbt_test__audit.not_null_stg_orders_amount
+09:07:55.518506 [debug]: Compiled SQL for node test.dbt_reusability.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded.c796f576f9 at target/compiled/dbt_reusability/target/generic_tests/accepted_values_stg_orders_140f5c1c0d5da1362bd8aed7a924aa4e.sql
+09:07:55.518704 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded [success]
+09:07:55.518761 [debug]: Started analyzing test main_dbt_test__audit.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded
+09:07:55.519143 [debug]: Writing runtime sql for node "test.dbt_reusability.not_null_stg_users_customer_id.300e3d6eae"
+09:07:55.519215 [debug]: Writing runtime sql for node "test.dbt_reusability.not_null_stg_orders_order_id.81cfe2fe64"
+09:07:55.519245 [debug]: Writing runtime sql for node "test.dbt_reusability.not_null_stg_orders_amount.2546645448"
+09:07:55.519622 [debug]: create_debug_span(...).entered() took 6.459µs
+09:07:55.519628 [debug]: create_debug_span(...).entered() took 4.583µs
+09:07:55.519634 [debug]: create_debug_span(...).entered() took 4.666µs
+09:07:55.519880 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.unique_stg_orders_order_id [success]
+09:07:55.519893 [info ]: Started running test main_dbt_test__audit.unique_stg_orders_order_id
+09:07:55.519902 [debug]: Writing runtime sql for node "test.dbt_reusability.not_null_stg_orders_customer_id.af79d5e4b5"
+09:07:55.519905 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.unique_stg_users_customer_id [success]
+09:07:55.519911 [info ]: Started running test main_dbt_test__audit.unique_stg_users_customer_id
+09:07:55.519988 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 154.666µs
+09:07:55.519993 [debug]: reader.schema() took 41ns
+09:07:55.520013 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 38.458µs
+09:07:55.520016 [debug]: reader.schema() took 42ns
+09:07:55.520017 [debug]: batch-consume loop (for res in reader) took 21.459µs
+09:07:55.520024 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 397.292µs
+09:07:55.520028 [debug]: concat_batches + normalize_result_column_names took 2.083µs
+09:07:55.520029 [debug]: batch-consume loop (for res in reader) took 10.458µs
+09:07:55.520030 [debug]: record_current_span_status_from_attrs took 500ns
+09:07:55.520033 [debug]: Query executed on node test.dbt_reusability.not_null_stg_orders_order_id.81cfe2fe64:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.not_null_stg_orders_order_id.81cfe2fe64", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from "dev"."main"."stg_orders"
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.520035 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 405.292µs
+09:07:55.520038 [debug]: concat_batches + normalize_result_column_names took 792ns
+09:07:55.520040 [debug]: drop(query_span_guard) (span exit/export) took 7.625µs
+09:07:55.520041 [debug]: record_current_span_status_from_attrs took 208ns
+09:07:55.520044 [debug]: Query executed on node test.dbt_reusability.not_null_stg_users_customer_id.300e3d6eae:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.not_null_stg_users_customer_id.300e3d6eae", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from "dev"."main"."stg_users"
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.520048 [debug]: drop(query_span_guard) (span exit/export) took 4.75µs
+09:07:55.520117 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 120.791µs
+09:07:55.520134 [debug]: reader.schema() took 42ns
+09:07:55.520169 [debug]: batch-consume loop (for res in reader) took 29.375µs
+09:07:55.520175 [debug]: create_debug_span(...).entered() took 5.208µs
+09:07:55.520178 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:07:55.520205 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 566.375µs
+09:07:55.520214 [info ]: Finished running [  0.00s] test main_dbt_test__audit.not_null_stg_users_customer_id [pass]
+09:07:55.520217 [debug]: concat_batches + normalize_result_column_names took 2.709µs
+09:07:55.520219 [info ]:     Passed test  not_null_stg_users_customer_id [4 of 13 in 0.00s]
+09:07:55.520232 [info ]: Finished running [  0.00s] test main_dbt_test__audit.not_null_stg_orders_order_id [pass]
+09:07:55.520235 [info ]:     Passed test  not_null_stg_orders_order_id [8 of 13 in 0.00s]
+09:07:55.520243 [debug]: record_current_span_status_from_attrs took 20.959µs
+09:07:55.520246 [debug]: Query executed on node test.dbt_reusability.not_null_stg_orders_amount.2546645448:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.not_null_stg_orders_amount.2546645448", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount
+from "dev"."main"."stg_orders"
+where amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.520251 [debug]: drop(query_span_guard) (span exit/export) took 5.542µs
+09:07:55.520382 [info ]: Finished running [  0.00s] test main_dbt_test__audit.not_null_stg_orders_amount [pass]
+09:07:55.520386 [info ]:     Passed test  not_null_stg_orders_amount [5 of 13 in 0.00s]
+09:07:55.520381 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 80.833µs
+09:07:55.520394 [debug]: reader.schema() took 84ns
+09:07:55.520447 [debug]: batch-consume loop (for res in reader) took 37.166µs
+09:07:55.520467 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 289.208µs
+09:07:55.520476 [debug]: concat_batches + normalize_result_column_names took 2.625µs
+09:07:55.520481 [debug]: record_current_span_status_from_attrs took 1.542µs
+09:07:55.520487 [debug]: Query executed on node test.dbt_reusability.not_null_stg_orders_customer_id.af79d5e4b5:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.not_null_stg_orders_customer_id.af79d5e4b5", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from "dev"."main"."stg_orders"
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.520502 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded [success]
+09:07:55.520510 [info ]: Started running test main_dbt_test__audit.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded
+09:07:55.520543 [debug]: drop(query_span_guard) (span exit/export) took 56.25µs
+09:07:55.520761 [debug]: Writing runtime sql for node "test.dbt_reusability.unique_stg_users_customer_id.7074f9b54f"
+09:07:55.520877 [info ]: Finished running [  0.00s] test main_dbt_test__audit.not_null_stg_orders_customer_id [pass]
+09:07:55.520896 [info ]:     Passed test  not_null_stg_orders_customer_id [11 of 13 in 0.00s]
+09:07:55.521038 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.relationships_stg_orders_customer_id__customer_id__ref_stg_users_ [success]
+09:07:55.521048 [info ]: Started running test main_dbt_test__audit.relationships_stg_orders_customer_id__customer_id__ref_stg_users_
+09:07:55.521049 [debug]: create_debug_span(...).entered() took 2.291µs
+09:07:55.521065 [debug]: Writing runtime sql for node "test.dbt_reusability.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded.c796f576f9"
+09:07:55.521089 [debug]: Writing runtime sql for node "test.dbt_reusability.unique_stg_orders_order_id.e3b841c71a"
+09:07:55.521357 [debug]: create_debug_span(...).entered() took 4µs
+09:07:55.521363 [debug]: create_debug_span(...).entered() took 5.083µs
+09:07:55.521507 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 256.875µs
+09:07:55.521511 [debug]: reader.schema() took 0ns
+09:07:55.521526 [debug]: batch-consume loop (for res in reader) took 12.5µs
+09:07:55.521538 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 485.291µs
+09:07:55.521543 [debug]: concat_batches + normalize_result_column_names took 1.041µs
+09:07:55.521545 [debug]: record_current_span_status_from_attrs took 209ns
+09:07:55.521547 [debug]: Query executed on node test.dbt_reusability.unique_stg_users_customer_id.7074f9b54f:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.unique_stg_users_customer_id.7074f9b54f", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main"."stg_users"
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.521553 [debug]: drop(query_span_guard) (span exit/export) took 6.458µs
+09:07:55.521614 [debug]: Writing runtime sql for node "test.dbt_reusability.relationships_stg_orders_customer_id__customer_id__ref_stg_users_.901a8ae09f"
+09:07:55.521681 [info ]: Finished running [  0.00s] test main_dbt_test__audit.unique_stg_users_customer_id [pass]
+09:07:55.521686 [info ]:     Passed test  unique_stg_users_customer_id [3 of 13 in 0.00s]
+09:07:55.521880 [debug]: create_debug_span(...).entered() took 1.917µs
+09:07:55.521942 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 404.333µs
+09:07:55.521947 [debug]: reader.schema() took 0ns
+09:07:55.521958 [debug]: batch-consume loop (for res in reader) took 8.291µs
+09:07:55.521966 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 600.333µs
+09:07:55.521968 [debug]: concat_batches + normalize_result_column_names took 500ns
+09:07:55.521970 [debug]: record_current_span_status_from_attrs took 250ns
+09:07:55.521973 [debug]: Query executed on node test.dbt_reusability.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded.c796f576f9:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded.c796f576f9", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        order_status as value_field,
+        count(*) as n_records
+
+    from "dev"."main"."stg_orders"
+    group by order_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'completed','processing','cancelled','refunded'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.521978 [debug]: drop(query_span_guard) (span exit/export) took 5.875µs
+09:07:55.521997 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 501.375µs
+09:07:55.522000 [debug]: reader.schema() took 41ns
+09:07:55.522014 [debug]: batch-consume loop (for res in reader) took 11µs
+09:07:55.522023 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 662.416µs
+09:07:55.522026 [debug]: concat_batches + normalize_result_column_names took 750ns
+09:07:55.522029 [debug]: record_current_span_status_from_attrs took 167ns
+09:07:55.522031 [debug]: Query executed on node test.dbt_reusability.unique_stg_orders_order_id.e3b841c71a:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.unique_stg_orders_order_id.e3b841c71a", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main"."stg_orders"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.522037 [debug]: drop(query_span_guard) (span exit/export) took 6.417µs
+09:07:55.522094 [info ]: Finished running [  0.00s] test main_dbt_test__audit.accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded [pass]
+09:07:55.522099 [info ]:     Passed test  accepted_values_stg_orders_order_status__completed__processing__cancelled__refunded [6 of 13 in 0.00s]
+09:07:55.522155 [info ]: Finished running [  0.00s] test main_dbt_test__audit.unique_stg_orders_order_id [pass]
+09:07:55.522159 [info ]:     Passed test  unique_stg_orders_order_id [10 of 13 in 0.00s]
+09:07:55.522350 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 255.833µs
+09:07:55.522354 [debug]: reader.schema() took 42ns
+09:07:55.522367 [debug]: batch-consume loop (for res in reader) took 10.75µs
+09:07:55.522384 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 498.667µs
+09:07:55.522387 [debug]: concat_batches + normalize_result_column_names took 708ns
+09:07:55.522389 [debug]: record_current_span_status_from_attrs took 250ns
+09:07:55.522392 [debug]: Query executed on node test.dbt_reusability.relationships_stg_orders_customer_id__customer_id__ref_stg_users_.901a8ae09f:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.relationships_stg_orders_customer_id__customer_id__ref_stg_users_.901a8ae09f", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_id as from_field
+    from "dev"."main"."stg_orders"
+    where customer_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from "dev"."main"."stg_users"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.522398 [debug]: drop(query_span_guard) (span exit/export) took 6.083µs
+09:07:55.522527 [info ]: Finished running [  0.00s] test main_dbt_test__audit.relationships_stg_orders_customer_id__customer_id__ref_stg_users_ [pass]
+09:07:55.522532 [info ]:     Passed test  relationships_stg_orders_customer_id__customer_id__ref_stg_users_ [7 of 13 in 0.01s]
+09:07:55.522545 [info ]: Started running model main.user_orders
+09:07:55.523487 [debug]: Writing runtime sql for node "model.dbt_reusability.user_orders"
+09:07:55.523730 [debug]: create_debug_span(...).entered() took 1.916µs
+09:07:55.524644 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 749.292µs
+09:07:55.524648 [debug]: reader.schema() took 41ns
+09:07:55.524664 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 929.416µs
+09:07:55.524669 [debug]: concat_batches + normalize_result_column_names took 1.958µs
+09:07:55.524672 [debug]: record_current_span_status_from_attrs took 875ns
+09:07:55.524675 [debug]: Query executed on node model.dbt_reusability.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."user_orders__dbt_tmp"
+  
+    as (
+      
+
+select
+    o.order_id,
+    o.customer_id,
+    u.customer_name,
+    o.amount,
+    o.order_status,
+    o.order_date
+from "dev"."main"."stg_orders" o
+join "dev"."main"."stg_users" u on o.customer_id = u.customer_id
+    );
+  
+    
+  
+09:07:55.524681 [debug]: drop(query_span_guard) (span exit/export) took 6.5µs
+09:07:55.524944 [debug]: create_debug_span(...).entered() took 1.917µs
+09:07:55.525054 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 32.458µs
+09:07:55.525057 [debug]: reader.schema() took 42ns
+09:07:55.525064 [debug]: batch-consume loop (for res in reader) took 4.709µs
+09:07:55.525069 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 121.833µs
+09:07:55.525073 [debug]: concat_batches + normalize_result_column_names took 1.959µs
+09:07:55.525076 [debug]: record_current_span_status_from_attrs took 166ns
+09:07:55.525078 [debug]: Query executed on node model.dbt_reusability.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'user_orders'
+  
+09:07:55.525082 [debug]: drop(query_span_guard) (span exit/export) took 4.834µs
+09:07:55.525313 [debug]: create_debug_span(...).entered() took 1.5µs
+09:07:55.525418 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 39.375µs
+09:07:55.525421 [debug]: reader.schema() took 42ns
+09:07:55.525432 [debug]: batch-consume loop (for res in reader) took 8.542µs
+09:07:55.525439 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 123.417µs
+09:07:55.525443 [debug]: concat_batches + normalize_result_column_names took 875ns
+09:07:55.525446 [debug]: record_current_span_status_from_attrs took 209ns
+09:07:55.525448 [debug]: Query executed on node model.dbt_reusability.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'user_orders'
+  
+09:07:55.525453 [debug]: drop(query_span_guard) (span exit/export) took 5.792µs
+09:07:55.525919 [debug]: create_debug_span(...).entered() took 1.583µs
+09:07:55.526026 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 77.666µs
+09:07:55.526030 [debug]: reader.schema() took 42ns
+09:07:55.526033 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 111.375µs
+09:07:55.526037 [debug]: concat_batches + normalize_result_column_names took 666ns
+09:07:55.526039 [debug]: record_current_span_status_from_attrs took 125ns
+09:07:55.526041 [debug]: Query executed on node model.dbt_reusability.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."user_orders" rename to "user_orders__dbt_backup"
+09:07:55.526045 [debug]: drop(query_span_guard) (span exit/export) took 4.792µs
+09:07:55.526463 [debug]: create_debug_span(...).entered() took 1.25µs
+09:07:55.526548 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 65.625µs
+09:07:55.526552 [debug]: reader.schema() took 0ns
+09:07:55.526555 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 88.5µs
+09:07:55.526557 [debug]: concat_batches + normalize_result_column_names took 292ns
+09:07:55.526559 [debug]: record_current_span_status_from_attrs took 166ns
+09:07:55.526561 [debug]: Query executed on node model.dbt_reusability.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."user_orders__dbt_tmp" rename to "user_orders"
+09:07:55.526565 [debug]: drop(query_span_guard) (span exit/export) took 3.583µs
+09:07:55.527239 [debug]: create_debug_span(...).entered() took 1µs
+09:07:55.527319 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 57.958µs
+09:07:55.527323 [debug]: reader.schema() took 0ns
+09:07:55.527326 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 83.333µs
+09:07:55.527328 [debug]: concat_batches + normalize_result_column_names took 334ns
+09:07:55.527330 [debug]: record_current_span_status_from_attrs took 84ns
+09:07:55.527333 [debug]: Query executed on node model.dbt_reusability.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_reusability.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop view if exists "dev"."main"."user_orders__dbt_backup" cascade
+    
+09:07:55.527336 [debug]: drop(query_span_guard) (span exit/export) took 3.75µs
+09:07:55.527473 [info ]: Finished running [  0.00s] model main.user_orders [success]
+09:07:55.527483 [info ]:  Succeeded model main.user_orders (table) [9 of 13 in 0.01s]
+09:07:55.527503 [info ]: Started test main_dbt_test__audit.unique_user_orders_order_id
+09:07:55.527508 [debug]: Started rendering test main_dbt_test__audit.unique_user_orders_order_id
+09:07:55.527518 [info ]: Started test main_dbt_test__audit.not_null_user_orders_order_id
+09:07:55.527522 [debug]: Started rendering test main_dbt_test__audit.not_null_user_orders_order_id
+09:07:55.527964 [debug]: Compiled SQL for node test.dbt_reusability.not_null_user_orders_order_id.30ed18842c at target/compiled/dbt_reusability/target/generic_tests/not_null_user_orders_order_id.sql
+09:07:55.527970 [debug]: Compiled SQL for node test.dbt_reusability.unique_user_orders_order_id.95f1522a60 at target/compiled/dbt_reusability/target/generic_tests/unique_user_orders_order_id.sql
+09:07:55.527985 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.not_null_user_orders_order_id [success]
+09:07:55.527996 [debug]: Started analyzing test main_dbt_test__audit.not_null_user_orders_order_id
+09:07:55.528003 [debug]: Finished rendering [  0.00s] test main_dbt_test__audit.unique_user_orders_order_id [success]
+09:07:55.528007 [info ]: Finished rendering [  0.02s] (13 nodes, 0 skipped, 0 errors)
+09:07:55.528015 [debug]: Started analyzing test main_dbt_test__audit.unique_user_orders_order_id
+09:07:55.528082 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.not_null_user_orders_order_id [success]
+09:07:55.528091 [info ]: Started running test main_dbt_test__audit.not_null_user_orders_order_id
+09:07:55.528214 [debug]: Finished analyzing [  0.00s] test main_dbt_test__audit.unique_user_orders_order_id [success]
+09:07:55.528218 [info ]: Finished analyzing [  0.02s] (13 nodes, 0 skipped, 0 errors)
+09:07:55.528224 [info ]: Started running test main_dbt_test__audit.unique_user_orders_order_id
+09:07:55.528571 [debug]: Writing runtime sql for node "test.dbt_reusability.not_null_user_orders_order_id.30ed18842c"
+09:07:55.528691 [debug]: Writing runtime sql for node "test.dbt_reusability.unique_user_orders_order_id.95f1522a60"
+09:07:55.528826 [debug]: create_debug_span(...).entered() took 1.708µs
+09:07:55.528925 [debug]: create_debug_span(...).entered() took 2.083µs
+09:07:55.528989 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 65.541µs
+09:07:55.528993 [debug]: reader.schema() took 42ns
+09:07:55.529005 [debug]: batch-consume loop (for res in reader) took 10.083µs
+09:07:55.529011 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 181.75µs
+09:07:55.529014 [debug]: concat_batches + normalize_result_column_names took 917ns
+09:07:55.529016 [debug]: record_current_span_status_from_attrs took 250ns
+09:07:55.529018 [debug]: Query executed on node test.dbt_reusability.not_null_user_orders_order_id.30ed18842c:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.not_null_user_orders_order_id.30ed18842c", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from "dev"."main"."user_orders"
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.529023 [debug]: drop(query_span_guard) (span exit/export) took 5.708µs
+09:07:55.529140 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 90.209µs
+09:07:55.529143 [debug]: reader.schema() took 0ns
+09:07:55.529146 [info ]: Finished running [  0.00s] test main_dbt_test__audit.not_null_user_orders_order_id [pass]
+09:07:55.529154 [debug]: batch-consume loop (for res in reader) took 8.542µs
+09:07:55.529150 [info ]:     Passed test  not_null_user_orders_order_id [13 of 13 in 0.00s]
+09:07:55.529162 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 232.042µs
+09:07:55.529166 [debug]: concat_batches + normalize_result_column_names took 584ns
+09:07:55.529167 [debug]: record_current_span_status_from_attrs took 166ns
+09:07:55.529170 [debug]: Query executed on node test.dbt_reusability.unique_user_orders_order_id.95f1522a60:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.dbt_reusability.unique_user_orders_order_id.95f1522a60", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "dev"."main"."user_orders"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:07:55.529174 [debug]: drop(query_span_guard) (span exit/export) took 5.25µs
+09:07:55.529286 [info ]: Finished running [  0.00s] test main_dbt_test__audit.unique_user_orders_order_id [pass]
+09:07:55.529291 [info ]: Finished running [  0.02s] (13 nodes, 0 skipped, 0 errors)
+09:07:55.529295 [info ]:     Passed test  unique_user_orders_order_id [12 of 13 in 0.00s]
+09:07:56.852584 [info ]: 
+==================== Execution Summary =====================
+Finished 'build' successfully for target 'dev' [1.5s]
+Processed: 3 models | 10 tests
+Summary: 13 total | 13 success

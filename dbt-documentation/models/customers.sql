@@ -1,0 +1,6 @@
+{{ config(materialized='table') }}
+
+select
+    id as customer_id,
+    name as customer_name
+from users

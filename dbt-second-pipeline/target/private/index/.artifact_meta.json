@@ -1,0 +1,21 @@
+{
+  "target_dir": "/Users/seal/Desktop/dbt-duckdb/dbt-second-pipeline/target",
+  "fingerprints": {
+    "run_results.json": {
+      "size": 5040,
+      "modified_secs": 1792840417
+    },
+    "manifest.json": {
+      "size": 511339,
+      "modified_secs": 1792840417
+    },
+    "semantic_manifest.json": {
+      "size": 234,
+      "modified_secs": 1792840416
+    }
+  },
+  "write_source": "DirectWrite",
+  "context_dir": null,
+  "context_fingerprints": {},
+  "source_identity": null
+}

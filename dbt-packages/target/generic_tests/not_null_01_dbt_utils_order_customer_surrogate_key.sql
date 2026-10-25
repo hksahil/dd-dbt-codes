@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="order_customer_surrogate_key", model=get_where_subquery(ref('01_dbt_utils'))) }}

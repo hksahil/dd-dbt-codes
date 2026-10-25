@@ -1,0 +1,15 @@
+name: 'dbt_custom'
+version: '1.0.0'
+profile: 'dbt_custom'
+model-paths: ['models']
+seed-paths: ['seeds']
+
+# Seed configuration
+seeds:
+  dbt_custom:
+    # Explicitly configure column types (e.g. preserve leading zeros or exact data types)
+    country_codes:
+      +column_types:
+        country_code: varchar
+        country_name: varchar
+        continent: varchar

@@ -1,0 +1,10 @@
+name: 'dbt_custom'
+version: '1.0.0'
+profile: 'dbt_custom'
+model-paths: ['models']
+
+# 1. Global Variables configuration
+vars:
+  discount_rate: 0.10
+  enable_discount: true
+  environment: 'development'

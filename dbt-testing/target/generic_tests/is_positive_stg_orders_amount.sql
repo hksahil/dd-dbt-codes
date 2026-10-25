@@ -1,0 +1,1 @@
+{{ test_is_positive(column_name="amount", model=get_where_subquery(ref('stg_orders'))) }}

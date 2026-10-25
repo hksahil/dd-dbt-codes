@@ -1,0 +1,1138 @@
+==================== 2026-10-24T08:13:34.244298Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-24T08:13:34.244373Z | e7105c95-ec44-42af-b517-29a8675c6e01 ====================
+08:13:34.244384 [info ]: Starting dbt LSP server
+08:13:34.244396 [info ]: Connecting to LSP client on port 8000
+08:13:34.244515 [info ]: Successfully connected to LSP client
+08:13:34.244522 [info ]: Creating LSP service...
+08:13:34.245049 [info ]: Creating LSP server...
+08:13:34.245055 [info ]: Starting LSP server...
+08:13:34.248989 [info ]: Loading profiles.yml
+==================== 2026-10-24T08:13:34.257817Z | 1a306187-6c68-47fa-a2a3-a103f26ac9c2 ====================
+08:13:34.257912 [info ]: Started loading project
+08:13:34.258244 [info ]: Loading profiles.yml
+08:13:34.394138 [debug]:    Started loading packages
+08:13:34.394471 [debug]:     Loaded [  0.00s] packages
+08:13:34.394881 [info ]: Finished loading project [  0.14s]
+08:13:34.395037 [info ]: Started parsing (5 nodes)
+08:13:34.409409 [debug]: Finished parsing models/schema.yml [  0.00s]
+08:13:34.409611 [debug]:    Started building model nodes
+08:13:34.409611 [debug]:    Started building model nodes
+08:13:34.409624 [debug]:   Finished [  0.00s] building model nodes
+08:13:34.409626 [debug]:   Finished [  0.00s] building model nodes
+08:13:34.409884 [debug]:    Started resolving data tests
+08:13:34.409903 [debug]:   Finished [  0.00s] resolving data tests
+08:13:34.409967 [debug]:    Started resolving data tests
+08:13:34.409978 [debug]:   Finished [  0.00s] resolving data tests
+08:13:34.410463 [debug]: Finished parsing models/stg_customers.sql [  0.00s]
+08:13:34.410850 [debug]:    Started building model nodes
+08:13:34.411350 [debug]:   Finished [  0.00s] building model nodes
+08:13:34.411618 [debug]:    Started resolving data tests
+08:13:34.411651 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+08:13:34.412610 [debug]: Finished parsing tests/assert_no_future_orders.sql [  0.00s]
+08:13:34.413808 [debug]: Finished parsing tests/assert_total_order_amount_positive.sql [  0.00s]
+08:13:34.413820 [debug]:   Finished [  0.00s] resolving data tests
+08:13:34.414144 [debug]:    Started typechecking macros
+08:13:34.496931 [debug]:   Finished [  0.08s] typechecking macros
+08:13:34.497355 [info ]: Finished parsing [  0.10s] (5 nodes, 0 skipped, 0 errors)
+08:13:34.497467 [info ]: Cached model count updated: 2 models (estimate)
+08:13:34.497474 [info ]: Cached model count updated: 2 models (accurate)
+08:13:34.497508 [info ]: Started scheduling
+08:13:34.497834 [info ]: Finished scheduling [  0.00s]
+08:13:34.497842 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:13:34.497867 [info ]: Started scheduling
+08:13:34.497881 [info ]: Finished scheduling [  0.00s]
+08:13:34.498608 [info ]: Started building task graph
+08:13:34.498647 [info ]: Finished building task graph [  0.00s]
+08:13:34.499230 [info ]: Started rendering (2 nodes)
+08:13:34.499239 [info ]: Started model main.stg_orders
+08:13:34.499248 [debug]: Started rendering model main.stg_orders
+08:13:34.499262 [info ]: Started model main.stg_customers
+08:13:34.499267 [debug]: Started rendering model main.stg_customers
+08:13:34.499810 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:13:34.499810 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:13:34.499893 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:13:34.499914 [info ]: Started analyzing (2 nodes)
+08:13:34.499920 [debug]: Started analyzing model main.stg_customers
+08:13:34.499932 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:13:34.499937 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:34.499942 [debug]: Started analyzing model main.stg_orders
+08:13:34.502201 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:13:34.502209 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:13:34.502998 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:13:34.503003 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:34.503007 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:13:34.505254 [info ]: Started scheduling
+08:13:34.505270 [info ]: Finished scheduling [  0.00s]
+08:13:34.505318 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [247ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:13:34.505354 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:13:35.688156Z | 9c21966e-7550-48fa-885e-2084b1722649 ====================
+08:13:35.688199 [info ]: Started loading project
+08:13:35.688424 [info ]: Loading profiles.yml
+08:13:35.690089 [info ]: Finished loading project [  0.00s]
+08:13:35.703731 [info ]: Cached model count updated: 2 models (estimate)
+08:13:35.703746 [info ]: Cached model count updated: 2 models (accurate)
+08:13:35.703762 [info ]: Started scheduling
+08:13:35.703796 [info ]: Finished scheduling [  0.00s]
+08:13:35.703806 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:13:35.704446 [info ]: Started building task graph
+08:13:35.704471 [info ]: Finished building task graph [  0.00s]
+08:13:35.704972 [info ]: Started rendering (2 nodes)
+08:13:35.704986 [info ]: Started model main.stg_orders
+08:13:35.704994 [debug]: Started rendering model main.stg_orders
+08:13:35.705009 [info ]: Started model main.stg_customers
+08:13:35.705015 [debug]: Started rendering model main.stg_customers
+08:13:35.705130 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:13:35.705131 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:13:35.705179 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:13:35.705195 [info ]: Started analyzing (2 nodes)
+08:13:35.705200 [debug]: Started analyzing model main.stg_customers
+08:13:35.705211 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:13:35.705218 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:35.705223 [debug]: Started analyzing model main.stg_orders
+08:13:35.705294 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:13:35.705305 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:13:35.705673 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:13:35.705679 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:35.705683 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:13:35.707995 [info ]: Started scheduling
+08:13:35.708015 [info ]: Finished scheduling [  0.00s]
+08:13:35.708047 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [19ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:13:35.708112 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:13:36.650579Z | 9a308dda-19a5-4ac4-a2b5-91d0e60d31eb ====================
+08:13:36.650616 [info ]: Started loading project
+08:13:36.650809 [info ]: Loading profiles.yml
+08:13:36.655010 [info ]: Started parsing (3 nodes)
+08:13:36.680195 [info ]: Finished loading project [  0.03s]
+08:13:36.680380 [debug]:    Started building model nodes
+08:13:36.680388 [debug]:   Finished [  0.00s] building model nodes
+08:13:36.680388 [debug]:    Started building model nodes
+08:13:36.680395 [debug]:   Finished [  0.00s] building model nodes
+08:13:36.680409 [debug]: Finished parsing models/schema.yml [  0.00s]
+08:13:36.680656 [debug]:    Started resolving data tests
+08:13:36.680692 [debug]:   Finished [  0.00s] resolving data tests
+08:13:36.680699 [debug]:    Started resolving data tests
+08:13:36.680711 [debug]:   Finished [  0.00s] resolving data tests
+08:13:36.681330 [debug]: Finished parsing models/stg_customers.sql [  0.00s]
+08:13:36.681523 [debug]:    Started building model nodes
+08:13:36.682045 [debug]:   Finished [  0.00s] building model nodes
+08:13:36.682295 [debug]:    Started resolving data tests
+08:13:36.682307 [debug]:   Finished [  0.00s] resolving data tests
+08:13:36.682333 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+08:13:36.682620 [debug]:    Started typechecking macros
+08:13:36.762775 [debug]:   Finished [  0.08s] typechecking macros
+08:13:36.763169 [info ]: Finished parsing [  0.11s] (3 nodes, 0 skipped, 0 errors)
+08:13:36.763873 [info ]: Cached model count updated: 2 models (estimate)
+08:13:36.763880 [info ]: Cached model count updated: 2 models (accurate)
+08:13:36.763893 [info ]: Started scheduling
+08:13:36.763912 [info ]: Finished scheduling [  0.00s]
+08:13:36.763917 [debug]: Compilation - 0 nodes selected: {}
+08:13:36.763929 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:13:36.763939 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:13:36.764320 [info ]: Started building task graph
+08:13:36.764329 [info ]: Finished building task graph [  0.00s]
+08:13:36.766914 [info ]: Started scheduling
+08:13:36.766926 [info ]: Finished scheduling [  0.00s]
+08:13:36.767218 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [116ms]
+08:13:36.768018 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:13:37.940700Z | 0f7b8438-21fe-4050-83aa-8646b6aa7aa4 ====================
+08:13:37.940735 [info ]: Started loading project
+08:13:37.940937 [info ]: Loading profiles.yml
+08:13:37.942655 [info ]: Finished loading project [  0.00s]
+08:13:37.956131 [info ]: Cached model count updated: 2 models (estimate)
+08:13:37.956146 [info ]: Cached model count updated: 2 models (accurate)
+08:13:37.956163 [info ]: Started scheduling
+08:13:37.956196 [info ]: Finished scheduling [  0.00s]
+08:13:37.956206 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:13:37.956883 [info ]: Started building task graph
+08:13:37.956907 [info ]: Finished building task graph [  0.00s]
+08:13:37.957432 [info ]: Started rendering (2 nodes)
+08:13:37.957441 [info ]: Started model main.stg_orders
+08:13:37.957449 [debug]: Started rendering model main.stg_orders
+08:13:37.957464 [info ]: Started model main.stg_customers
+08:13:37.957470 [debug]: Started rendering model main.stg_customers
+08:13:37.958058 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:13:37.958132 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:13:37.958154 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:13:37.958165 [info ]: Started analyzing (2 nodes)
+08:13:37.958170 [debug]: Started analyzing model main.stg_customers
+08:13:37.958211 [debug]: Started analyzing model main.stg_orders
+08:13:37.958220 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:13:37.958242 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:37.958315 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:13:37.958325 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:13:37.958732 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:13:37.958739 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:37.958744 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:13:37.961575 [info ]: Started scheduling
+08:13:37.961594 [info ]: Finished scheduling [  0.00s]
+08:13:37.961625 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [20ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:13:37.961680 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:13:48.609645Z | 9b554acb-e8f3-4463-97ac-66e1b597c32e ====================
+08:13:48.609674 [info ]: Started loading project
+08:13:48.609813 [info ]: Loading profiles.yml
+08:13:48.611026 [info ]: Finished loading project [  0.00s]
+08:13:48.623412 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [13ms]
+08:13:48.623446 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:13:49.803916Z | 84583f98-571a-4ce8-b41e-6a9ee617a80e ====================
+08:13:49.803960 [info ]: Started loading project
+08:13:49.804167 [info ]: Loading profiles.yml
+08:13:49.805828 [info ]: Finished loading project [  0.00s]
+08:13:49.819244 [info ]: Cached model count updated: 2 models (estimate)
+08:13:49.819260 [info ]: Cached model count updated: 2 models (accurate)
+08:13:49.819276 [info ]: Started scheduling
+08:13:49.819310 [info ]: Finished scheduling [  0.00s]
+08:13:49.819320 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:13:49.819995 [info ]: Started building task graph
+08:13:49.820018 [info ]: Finished building task graph [  0.00s]
+08:13:49.820709 [info ]: Started rendering (2 nodes)
+08:13:49.820718 [info ]: Started model main.stg_orders
+08:13:49.820727 [debug]: Started rendering model main.stg_orders
+08:13:49.820741 [info ]: Started model main.stg_customers
+08:13:49.820747 [debug]: Started rendering model main.stg_customers
+08:13:49.821023 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:13:49.821058 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:13:49.821060 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:13:49.821076 [info ]: Started analyzing (2 nodes)
+08:13:49.821082 [debug]: Started analyzing model main.stg_customers
+08:13:49.821113 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:13:49.821120 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:49.821127 [debug]: Started analyzing model main.stg_orders
+08:13:49.821171 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:13:49.821179 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:13:49.821585 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:13:49.821592 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:49.821597 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:13:49.823754 [info ]: Started scheduling
+08:13:49.823769 [info ]: Finished scheduling [  0.00s]
+08:13:49.823788 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [19ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:13:49.823824 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:13:54.432806Z | bb677615-2823-4bb1-8e08-073c0063e58b ====================
+08:13:54.432836 [info ]: Started loading project
+08:13:54.433014 [info ]: Loading profiles.yml
+08:13:54.434471 [info ]: Finished loading project [  0.00s]
+08:13:54.449149 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [16ms]
+08:13:54.449182 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:13:55.627504Z | a4fadab5-f5df-406e-b101-c0eeb0af5c13 ====================
+08:13:55.627568 [info ]: Started loading project
+08:13:55.627888 [info ]: Loading profiles.yml
+08:13:55.630195 [info ]: Finished loading project [  0.00s]
+08:13:55.646817 [info ]: Cached model count updated: 2 models (estimate)
+08:13:55.646832 [info ]: Cached model count updated: 2 models (accurate)
+08:13:55.646848 [info ]: Started scheduling
+08:13:55.646885 [info ]: Finished scheduling [  0.00s]
+08:13:55.646898 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:13:55.647568 [info ]: Started building task graph
+08:13:55.647591 [info ]: Finished building task graph [  0.00s]
+08:13:55.648333 [info ]: Started rendering (2 nodes)
+08:13:55.648344 [info ]: Started model main.stg_orders
+08:13:55.648353 [debug]: Started rendering model main.stg_orders
+08:13:55.648368 [info ]: Started model main.stg_customers
+08:13:55.648374 [debug]: Started rendering model main.stg_customers
+08:13:55.648499 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:13:55.648499 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:13:55.648552 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:13:55.648567 [info ]: Started analyzing (2 nodes)
+08:13:55.648573 [debug]: Started analyzing model main.stg_orders
+08:13:55.648586 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:13:55.648594 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:55.648601 [debug]: Started analyzing model main.stg_customers
+08:13:55.648679 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:13:55.648687 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:13:55.649070 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:13:55.649079 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:13:55.649085 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:13:55.651561 [info ]: Started scheduling
+08:13:55.651581 [info ]: Finished scheduling [  0.00s]
+08:13:55.651602 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [24ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:13:55.651645 [info ]: Cached model count updated: 2 models (accurate)
+08:44:34.528997 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+08:44:34.532885 [info ]:    Started formatting models/stg_orders.sql
+08:44:34.556916 [info ]:  Formatted [  0.02s] models/stg_orders.sql
+==================== 2026-10-24T08:44:34.578024Z | 5270b274-03e8-493e-be32-ecb5b157829c ====================
+08:44:34.578079 [info ]: Started loading project
+08:44:34.578349 [info ]: Loading profiles.yml
+08:44:34.581514 [info ]: Started parsing (3 nodes)
+08:44:34.604603 [info ]: Finished loading project [  0.03s]
+08:44:34.604825 [debug]:    Started building model nodes
+08:44:34.604838 [debug]:   Finished [  0.00s] building model nodes
+08:44:34.604845 [debug]: Finished parsing models/schema.yml [  0.00s]
+08:44:34.605098 [debug]:    Started building model nodes
+08:44:34.605103 [debug]:    Started resolving data tests
+08:44:34.605108 [debug]:   Finished [  0.00s] building model nodes
+08:44:34.605119 [debug]:   Finished [  0.00s] resolving data tests
+08:44:34.605337 [debug]:    Started resolving data tests
+08:44:34.605349 [debug]:   Finished [  0.00s] resolving data tests
+08:44:34.605836 [debug]: Finished parsing models/stg_customers.sql [  0.00s]
+08:44:34.606054 [debug]:    Started building model nodes
+08:44:34.606464 [debug]:   Finished [  0.00s] building model nodes
+08:44:34.606661 [debug]:    Started resolving data tests
+08:44:34.606668 [debug]:   Finished [  0.00s] resolving data tests
+08:44:34.606691 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+08:44:34.607305 [debug]:    Started typechecking macros
+08:44:34.682619 [debug]:   Finished [  0.08s] typechecking macros
+08:44:34.683057 [info ]: Finished parsing [  0.10s] (3 nodes, 0 skipped, 0 errors)
+08:44:34.683855 [info ]: Cached model count updated: 2 models (estimate)
+08:44:34.683862 [info ]: Cached model count updated: 2 models (accurate)
+08:44:34.683892 [info ]: Started scheduling
+08:44:34.683948 [info ]: Finished scheduling [  0.00s]
+08:44:34.683955 [debug]: Compilation - 1 nodes selected: {"model.dbt_testing_pipeline.stg_orders"}
+08:44:34.685342 [info ]: Started building task graph
+08:44:34.685390 [info ]: Finished building task graph [  0.00s]
+08:44:34.687217 [info ]: Started rendering (1 nodes)
+08:44:34.687230 [info ]: Started model main.stg_orders
+08:44:34.687237 [debug]: Started rendering model main.stg_orders
+08:44:34.687678 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:44:34.687731 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:44:34.687738 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:44:34.687756 [info ]: Started analyzing (1 nodes)
+08:44:34.687762 [debug]: Started analyzing model main.stg_orders
+08:44:34.688384 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:44:34.688390 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:44:34.688394 [info ]:  Succeeded model main.stg_orders (table) [1 of 1 in 0.00s]
+08:44:34.690723 [info ]: Started scheduling
+08:44:34.690746 [info ]: Finished scheduling [  0.00s]
+08:44:34.691082 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [113ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:44:34.691120 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:44:35.878995Z | 246342ab-58a8-4217-b1cc-4a4e15c4fe96 ====================
+08:44:35.879081 [info ]: Started loading project
+08:44:35.879496 [info ]: Loading profiles.yml
+08:44:35.883463 [info ]: Finished loading project [  0.00s]
+08:44:35.906166 [info ]: Cached model count updated: 2 models (estimate)
+08:44:35.906203 [info ]: Cached model count updated: 2 models (accurate)
+08:44:35.906242 [info ]: Started scheduling
+08:44:35.906308 [info ]: Finished scheduling [  0.00s]
+08:44:35.906331 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:44:35.907494 [info ]: Started building task graph
+08:44:35.907538 [info ]: Finished building task graph [  0.00s]
+08:44:35.908743 [info ]: Started rendering (2 nodes)
+08:44:35.908759 [info ]: Started model main.stg_orders
+08:44:35.908772 [debug]: Started rendering model main.stg_orders
+08:44:35.908801 [info ]: Started model main.stg_customers
+08:44:35.908809 [debug]: Started rendering model main.stg_customers
+08:44:35.909058 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:44:35.909114 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:44:35.909136 [info ]: Started analyzing (2 nodes)
+08:44:35.909141 [debug]: Started analyzing model main.stg_orders
+08:44:35.909315 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:44:35.909375 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:44:35.909391 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:44:35.909402 [debug]: Started analyzing model main.stg_customers
+08:44:35.909501 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:44:35.909511 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:44:35.910324 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:44:35.910333 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:44:35.910340 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:44:35.915059 [info ]: Started scheduling
+08:44:35.915086 [info ]: Finished scheduling [  0.00s]
+08:44:35.915138 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [36ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:44:35.915223 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:44:36.187957Z | 5fa59e40-8f25-4e05-89b0-17c5dad01c62 ====================
+08:44:36.188032 [info ]: Started loading project
+08:44:36.188491 [info ]: Loading profiles.yml
+08:44:36.191604 [info ]: Finished loading project [  0.00s]
+08:44:36.213083 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [25ms]
+08:44:36.213149 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-24T08:44:37.392506Z | b247c996-7169-481c-ba19-68f3393fbd75 ====================
+08:44:37.392530 [info ]: Started loading project
+08:44:37.392655 [info ]: Loading profiles.yml
+08:44:37.393722 [info ]: Finished loading project [  0.00s]
+08:44:37.403300 [info ]: Cached model count updated: 2 models (estimate)
+08:44:37.403315 [info ]: Cached model count updated: 2 models (accurate)
+08:44:37.403329 [info ]: Started scheduling
+08:44:37.403357 [info ]: Finished scheduling [  0.00s]
+08:44:37.403365 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:44:37.403900 [info ]: Started building task graph
+08:44:37.403920 [info ]: Finished building task graph [  0.00s]
+08:44:37.404513 [info ]: Started rendering (2 nodes)
+08:44:37.404521 [info ]: Started model main.stg_orders
+08:44:37.404527 [debug]: Started rendering model main.stg_orders
+08:44:37.404539 [info ]: Started model main.stg_customers
+08:44:37.404543 [debug]: Started rendering model main.stg_customers
+08:44:37.404645 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:44:37.404646 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:44:37.404696 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:44:37.404710 [info ]: Started analyzing (2 nodes)
+08:44:37.404715 [debug]: Started analyzing model main.stg_orders
+08:44:37.404726 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:44:37.404733 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:44:37.404737 [debug]: Started analyzing model main.stg_customers
+08:44:37.404809 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:44:37.404817 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:44:37.405131 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:44:37.405137 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:44:37.405141 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:44:37.407560 [info ]: Started scheduling
+08:44:37.407579 [info ]: Finished scheduling [  0.00s]
+08:44:37.407598 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [15ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:44:37.407632 [info ]: Cached model count updated: 2 models (accurate)
+10:24:43.929546 [debug]: Ignoring unsupported LSP notification
+10:24:43.952324 [debug]: Ignoring unsupported LSP notification
+10:49:52.693474 [debug]: Ignoring unsupported LSP notification
+10:50:42.797304 [debug]: Ignoring unsupported LSP notification
+10:50:42.833425 [debug]: Ignoring unsupported LSP notification
+11:13:32.913296 [debug]: Ignoring unsupported LSP notification
+11:14:19.608934 [debug]: Ignoring unsupported LSP notification
+07:05:08.337640 [debug]: Ignoring unsupported LSP notification
+07:18:35.904943 [debug]: Ignoring unsupported LSP notification
+07:18:35.926737 [debug]: Ignoring unsupported LSP notification
+07:21:06.954781 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-25T08:46:06.510257Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-25T08:46:06.510361Z | 659389ee-2cdd-4e11-a557-cdf859a0b721 ====================
+08:46:06.510374 [info ]: Starting dbt LSP server
+08:46:06.510387 [info ]: Connecting to LSP client on port 8000
+08:46:06.510631 [info ]: Successfully connected to LSP client
+08:46:06.510651 [info ]: Creating LSP service...
+08:46:06.512258 [info ]: Creating LSP server...
+08:46:06.512601 [info ]: Starting LSP server...
+08:46:06.536499 [info ]: Loading profiles.yml
+==================== 2026-10-25T08:46:06.556828Z | 41cb4a6a-1c26-473d-9392-18bb5ab4e58f ====================
+08:46:06.556874 [info ]: Started loading project
+08:46:06.557076 [info ]: Loading profiles.yml
+08:46:06.710920 [debug]:    Started loading packages
+08:46:06.711254 [debug]:     Loaded [  0.00s] packages
+08:46:06.711661 [info ]: Finished loading project [  0.15s]
+08:46:06.711851 [info ]: Started parsing (5 nodes)
+08:46:06.727354 [debug]: Finished parsing models/schema.yml [  0.00s]
+08:46:06.727375 [debug]:    Started building model nodes
+08:46:06.727379 [debug]:    Started building model nodes
+08:46:06.727384 [debug]:   Finished [  0.00s] building model nodes
+08:46:06.727385 [debug]:   Finished [  0.00s] building model nodes
+08:46:06.727641 [debug]:    Started resolving data tests
+08:46:06.727655 [debug]:    Started resolving data tests
+08:46:06.727659 [debug]:   Finished [  0.00s] resolving data tests
+08:46:06.727665 [debug]:   Finished [  0.00s] resolving data tests
+08:46:06.729523 [debug]: Finished parsing models/stg_customers.sql [  0.00s]
+08:46:06.729934 [debug]:    Started building model nodes
+08:46:06.730486 [debug]:   Finished [  0.00s] building model nodes
+08:46:06.730772 [debug]:    Started resolving data tests
+08:46:06.730802 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+08:46:06.731594 [debug]: Finished parsing tests/assert_no_future_orders.sql [  0.00s]
+08:46:06.732300 [debug]: Finished parsing tests/assert_total_order_amount_positive.sql [  0.00s]
+08:46:06.732353 [debug]:   Finished [  0.00s] resolving data tests
+08:46:06.732704 [debug]:    Started typechecking macros
+08:46:06.816752 [debug]:   Finished [  0.08s] typechecking macros
+08:46:06.817235 [info ]: Finished parsing [  0.11s] (5 nodes, 0 skipped, 0 errors)
+08:46:06.817362 [info ]: Cached model count updated: 2 models (estimate)
+08:46:06.817372 [info ]: Cached model count updated: 2 models (accurate)
+08:46:06.817416 [info ]: Started scheduling
+08:46:06.817501 [info ]: Finished scheduling [  0.00s]
+08:46:06.817510 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:46:06.817536 [info ]: Started scheduling
+08:46:06.817549 [info ]: Finished scheduling [  0.00s]
+08:46:06.818142 [info ]: Started building task graph
+08:46:06.818180 [info ]: Finished building task graph [  0.00s]
+08:46:06.820252 [info ]: Started rendering (2 nodes)
+08:46:06.820261 [info ]: Started model main.stg_orders
+08:46:06.820269 [debug]: Started rendering model main.stg_orders
+08:46:06.820288 [info ]: Started model main.stg_customers
+08:46:06.820294 [debug]: Started rendering model main.stg_customers
+08:46:06.821110 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:46:06.821116 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:46:06.821175 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:46:06.821193 [info ]: Started analyzing (2 nodes)
+08:46:06.821198 [debug]: Started analyzing model main.stg_customers
+08:46:06.821210 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:46:06.821215 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:46:06.821220 [debug]: Started analyzing model main.stg_orders
+08:46:06.823374 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:46:06.823383 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:46:06.824190 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:46:06.824197 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:46:06.824201 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:46:06.826616 [info ]: Started scheduling
+08:46:06.826632 [info ]: Finished scheduling [  0.00s]
+08:46:06.826685 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [269ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:46:06.826725 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:46:08.009376Z | 0860dee0-840c-443a-9a46-897af15d20a4 ====================
+08:46:08.009466 [info ]: Started loading project
+08:46:08.009880 [info ]: Loading profiles.yml
+08:46:08.012575 [info ]: Finished loading project [  0.00s]
+08:46:08.032970 [info ]: Cached model count updated: 2 models (estimate)
+08:46:08.032990 [info ]: Cached model count updated: 2 models (accurate)
+08:46:08.033010 [info ]: Started scheduling
+08:46:08.033050 [info ]: Finished scheduling [  0.00s]
+08:46:08.033062 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:46:08.033897 [info ]: Started building task graph
+08:46:08.033923 [info ]: Finished building task graph [  0.00s]
+08:46:08.034752 [info ]: Started rendering (2 nodes)
+08:46:08.034767 [info ]: Started model main.stg_orders
+08:46:08.034777 [debug]: Started rendering model main.stg_orders
+08:46:08.034795 [info ]: Started model main.stg_customers
+08:46:08.034804 [debug]: Started rendering model main.stg_customers
+08:46:08.034943 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:46:08.034941 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:46:08.035002 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:46:08.035019 [info ]: Started analyzing (2 nodes)
+08:46:08.035025 [debug]: Started analyzing model main.stg_customers
+08:46:08.035038 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:46:08.035050 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:46:08.035059 [debug]: Started analyzing model main.stg_orders
+08:46:08.035165 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:46:08.035175 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:46:08.035637 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:46:08.035647 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:46:08.035653 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:46:08.039459 [info ]: Started scheduling
+08:46:08.039487 [info ]: Finished scheduling [  0.00s]
+08:46:08.039524 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [30ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:46:08.039585 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:48:21.103980Z | c99928d4-6ef0-4250-8f99-60c926c5dec8 ====================
+08:48:21.104059 [info ]: Started loading project
+08:48:21.104349 [info ]: Loading profiles.yml
+08:48:21.108887 [info ]: Started parsing (3 nodes)
+08:48:21.134690 [info ]: Finished loading project [  0.03s]
+08:48:21.134858 [debug]:    Started building model nodes
+08:48:21.134864 [debug]:    Started building model nodes
+08:48:21.134867 [debug]:   Finished [  0.00s] building model nodes
+08:48:21.134871 [debug]:   Finished [  0.00s] building model nodes
+08:48:21.134872 [debug]: Finished parsing models/schema.yml [  0.00s]
+08:48:21.135125 [debug]:    Started resolving data tests
+08:48:21.135138 [debug]:    Started resolving data tests
+08:48:21.135140 [debug]:   Finished [  0.00s] resolving data tests
+08:48:21.135148 [debug]:   Finished [  0.00s] resolving data tests
+08:48:21.135895 [debug]: Finished parsing models/stg_customers.sql [  0.00s]
+08:48:21.136093 [debug]:    Started building model nodes
+08:48:21.136606 [debug]:   Finished [  0.00s] building model nodes
+08:48:21.136888 [debug]:    Started resolving data tests
+08:48:21.136899 [debug]:   Finished [  0.00s] resolving data tests
+08:48:21.136927 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+08:48:21.137184 [debug]:    Started typechecking macros
+08:48:21.218652 [debug]:   Finished [  0.08s] typechecking macros
+08:48:21.219055 [info ]: Finished parsing [  0.11s] (3 nodes, 0 skipped, 0 errors)
+08:48:21.219745 [info ]: Cached model count updated: 2 models (estimate)
+08:48:21.219753 [info ]: Cached model count updated: 2 models (accurate)
+08:48:21.219772 [info ]: Started scheduling
+08:48:21.219790 [info ]: Finished scheduling [  0.00s]
+08:48:21.219795 [debug]: Compilation - 0 nodes selected: {}
+08:48:21.219813 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:48:21.219826 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:48:21.220954 [info ]: Started building task graph
+08:48:21.220975 [info ]: Finished building task graph [  0.00s]
+08:48:21.225332 [info ]: Started scheduling
+08:48:21.225363 [info ]: Finished scheduling [  0.00s]
+08:48:21.225620 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [121ms]
+08:48:21.226388 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:48:22.404895Z | 670fb671-5acd-46a1-bcf8-536a5fc7a10f ====================
+08:48:22.404926 [info ]: Started loading project
+08:48:22.405081 [info ]: Loading profiles.yml
+08:48:22.406400 [info ]: Finished loading project [  0.00s]
+08:48:22.417252 [info ]: Cached model count updated: 2 models (estimate)
+08:48:22.417262 [info ]: Cached model count updated: 2 models (accurate)
+08:48:22.417275 [info ]: Started scheduling
+08:48:22.417302 [info ]: Finished scheduling [  0.00s]
+08:48:22.417310 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+08:48:22.417856 [info ]: Started building task graph
+08:48:22.417880 [info ]: Finished building task graph [  0.00s]
+08:48:22.418514 [info ]: Started rendering (2 nodes)
+08:48:22.418522 [info ]: Started model main.stg_orders
+08:48:22.418529 [debug]: Started rendering model main.stg_orders
+08:48:22.418544 [info ]: Started model main.stg_customers
+08:48:22.418550 [debug]: Started rendering model main.stg_customers
+08:48:22.418968 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+08:48:22.419004 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+08:48:22.419018 [info ]: Started analyzing (2 nodes)
+08:48:22.419022 [debug]: Started analyzing model main.stg_customers
+08:48:22.419204 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+08:48:22.419210 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+08:48:22.419591 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+08:48:22.419636 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+08:48:22.419641 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:48:22.419646 [debug]: Started analyzing model main.stg_orders
+08:48:22.419793 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+08:48:22.419797 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:48:22.419800 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+08:48:22.421822 [info ]: Started scheduling
+08:48:22.421836 [info ]: Finished scheduling [  0.00s]
+08:48:22.421862 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [16ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:48:22.421915 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:14:32.714001Z | a65cd7a8-731a-424d-b264-af541e4438f9 ====================
+11:14:32.715510 [info ]: Started loading project
+11:14:32.719724 [info ]: Loading profiles.yml
+11:14:32.739152 [info ]: Finished loading project [  0.02s]
+11:14:32.795499 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [81ms]
+11:14:32.796348 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:14:33.975591Z | 66d05b3b-7df8-4422-8132-7e5437f509ed ====================
+11:14:33.975710 [info ]: Started loading project
+11:14:33.976144 [info ]: Loading profiles.yml
+11:14:33.979833 [info ]: Finished loading project [  0.00s]
+11:14:34.014259 [info ]: Cached model count updated: 2 models (estimate)
+11:14:34.014298 [info ]: Cached model count updated: 2 models (accurate)
+11:14:34.014655 [info ]: Started scheduling
+11:14:34.014872 [info ]: Finished scheduling [  0.00s]
+11:14:34.014936 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+11:14:34.019380 [info ]: Started building task graph
+11:14:34.019588 [info ]: Finished building task graph [  0.00s]
+11:14:34.025759 [info ]: Started rendering (2 nodes)
+11:14:34.025914 [info ]: Started model main.stg_orders
+11:14:34.026059 [debug]: Started rendering model main.stg_orders
+11:14:34.026147 [info ]: Started model main.stg_customers
+11:14:34.026165 [debug]: Started rendering model main.stg_customers
+11:14:34.027878 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:14:34.027878 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+11:14:34.028532 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+11:14:34.028610 [info ]: Started analyzing (2 nodes)
+11:14:34.028631 [debug]: Started analyzing model main.stg_customers
+11:14:34.028666 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:14:34.028678 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:14:34.028695 [debug]: Started analyzing model main.stg_orders
+11:14:34.030384 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:14:34.030425 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+11:14:34.032820 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+11:14:34.032850 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:14:34.032861 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.01s]
+11:14:34.039475 [info ]: Started scheduling
+11:14:34.039547 [info ]: Finished scheduling [  0.00s]
+11:14:34.039637 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [64ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+11:14:34.039806 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:14:43.801451Z | be18dcee-6d4a-4ca3-940f-83c3b2e4d8e0 ====================
+11:14:43.801518 [info ]: Started loading project
+11:14:43.801803 [info ]: Loading profiles.yml
+11:14:43.804717 [info ]: Finished loading project [  0.00s]
+11:14:43.820522 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [19ms]
+11:14:43.820584 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:14:45.005330Z | 52c213dd-dcb1-4cf7-a9f2-fed3bd5395c6 ====================
+11:14:45.005436 [info ]: Started loading project
+11:14:45.005795 [info ]: Loading profiles.yml
+11:14:45.008449 [info ]: Finished loading project [  0.00s]
+11:14:45.029697 [info ]: Cached model count updated: 2 models (estimate)
+11:14:45.029726 [info ]: Cached model count updated: 2 models (accurate)
+11:14:45.029748 [info ]: Started scheduling
+11:14:45.029792 [info ]: Finished scheduling [  0.00s]
+11:14:45.029806 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+11:14:45.030794 [info ]: Started building task graph
+11:14:45.030833 [info ]: Finished building task graph [  0.00s]
+11:14:45.032013 [info ]: Started rendering (2 nodes)
+11:14:45.032027 [info ]: Started model main.stg_orders
+11:14:45.032037 [debug]: Started rendering model main.stg_orders
+11:14:45.032055 [info ]: Started model main.stg_customers
+11:14:45.032062 [debug]: Started rendering model main.stg_customers
+11:14:45.032649 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+11:14:45.032697 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+11:14:45.032701 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:14:45.032721 [info ]: Started analyzing (2 nodes)
+11:14:45.032726 [debug]: Started analyzing model main.stg_customers
+11:14:45.032750 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:14:45.032759 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:14:45.032774 [debug]: Started analyzing model main.stg_orders
+11:14:45.032866 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+11:14:45.032876 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+11:14:45.032892 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:14:45.032898 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:14:45.032903 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+11:14:45.037100 [info ]: Started scheduling
+11:14:45.037230 [info ]: Finished scheduling [  0.00s]
+11:14:45.037287 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [31ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+11:14:45.037399 [info ]: Cached model count updated: 2 models (accurate)
+11:15:50.765397 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+==================== 2026-10-25T11:15:50.916044Z | 0ea8ffb6-5f83-4e98-8751-c5fcbadef3db ====================
+11:15:50.916095 [info ]: Started loading project
+11:15:50.916314 [info ]: Loading profiles.yml
+11:15:50.921791 [info ]: Started parsing (3 nodes)
+11:15:50.953133 [info ]: Finished loading project [  0.04s]
+11:15:50.953513 [debug]:    Started building model nodes
+11:15:50.953530 [debug]:   Finished [  0.00s] building model nodes
+11:15:50.953555 [debug]:    Started building model nodes
+11:15:50.953609 [debug]:   Finished [  0.00s] building model nodes
+11:15:50.953869 [debug]:    Started resolving data tests
+11:15:50.953894 [debug]:   Finished [  0.00s] resolving data tests
+11:15:50.953948 [debug]:    Started resolving data tests
+11:15:50.953953 [debug]: Finished parsing models/schema.yml [  0.00s]
+11:15:50.953965 [debug]:   Finished [  0.00s] resolving data tests
+11:15:50.961934 [debug]: Finished parsing models/stg_customers.sql [  0.00s]
+11:15:50.962572 [debug]:    Started building model nodes
+11:15:50.964022 [debug]:   Finished [  0.00s] building model nodes
+11:15:50.964324 [debug]:    Started resolving data tests
+11:15:50.964337 [debug]:   Finished [  0.00s] resolving data tests
+11:15:50.964387 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+11:15:50.964741 [debug]:    Started typechecking macros
+11:15:51.058259 [debug]:   Finished [  0.09s] typechecking macros
+11:15:51.060268 [info ]: Finished parsing [  0.14s] (3 nodes, 0 skipped, 0 errors)
+11:15:51.062615 [info ]: Cached model count updated: 2 models (estimate)
+11:15:51.062646 [info ]: Cached model count updated: 2 models (accurate)
+11:15:51.062701 [info ]: Started scheduling
+11:15:51.062804 [info ]: Finished scheduling [  0.00s]
+11:15:51.062853 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+11:15:51.064703 [info ]: Started building task graph
+11:15:51.064741 [info ]: Finished building task graph [  0.00s]
+11:15:51.066681 [info ]: Started rendering (2 nodes)
+11:15:51.066691 [info ]: Started model main.stg_orders
+11:15:51.066698 [debug]: Started rendering model main.stg_orders
+11:15:51.066718 [info ]: Started model main.stg_customers
+11:15:51.066723 [debug]: Started rendering model main.stg_customers
+11:15:51.067444 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+11:15:51.067469 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:15:51.067507 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+11:15:51.067528 [info ]: Started analyzing (2 nodes)
+11:15:51.067533 [debug]: Started analyzing model main.stg_customers
+11:15:51.067545 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:15:51.067551 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:15:51.067556 [debug]: Started analyzing model main.stg_orders
+11:15:51.068079 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+11:15:51.068087 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+11:15:51.068100 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:15:51.068105 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:15:51.068109 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+11:15:51.070498 [info ]: Started scheduling
+11:15:51.070522 [info ]: Finished scheduling [  0.00s]
+11:15:51.070842 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [154ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+11:15:51.070882 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:15:52.250098Z | d35dbac5-e25d-406b-bb0a-ecebdd609cc6 ====================
+11:15:52.250157 [info ]: Started loading project
+11:15:52.250539 [info ]: Loading profiles.yml
+11:15:52.253656 [info ]: Finished loading project [  0.00s]
+11:15:52.271817 [info ]: Cached model count updated: 2 models (estimate)
+11:15:52.271875 [info ]: Cached model count updated: 2 models (accurate)
+11:15:52.271922 [info ]: Started scheduling
+11:15:52.271991 [info ]: Finished scheduling [  0.00s]
+11:15:52.272006 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+11:15:52.273149 [info ]: Started building task graph
+11:15:52.273182 [info ]: Finished building task graph [  0.00s]
+11:15:52.274148 [info ]: Started rendering (2 nodes)
+11:15:52.274160 [info ]: Started model main.stg_orders
+11:15:52.274169 [debug]: Started rendering model main.stg_orders
+11:15:52.274186 [info ]: Started model main.stg_customers
+11:15:52.274192 [debug]: Started rendering model main.stg_customers
+11:15:52.274449 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:15:52.274449 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+11:15:52.274578 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+11:15:52.274603 [info ]: Started analyzing (2 nodes)
+11:15:52.274609 [debug]: Started analyzing model main.stg_customers
+11:15:52.274634 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:15:52.274639 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:15:52.274645 [debug]: Started analyzing model main.stg_orders
+11:15:52.274890 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+11:15:52.274901 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+11:15:52.274938 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:15:52.274942 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:15:52.274946 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+11:15:52.279743 [info ]: Started scheduling
+11:15:52.279781 [info ]: Finished scheduling [  0.00s]
+11:15:52.279824 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [29ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+11:15:52.279892 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:15:52.541254Z | 06cc1a64-a526-41b6-83e4-c55c4b6e2a1d ====================
+11:15:52.541305 [info ]: Started loading project
+11:15:52.541509 [info ]: Loading profiles.yml
+11:15:52.543044 [info ]: Finished loading project [  0.00s]
+11:15:52.557103 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [15ms]
+11:15:52.557154 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:15:53.735560Z | 46f621ff-5c17-4182-8250-69ad05d7f3e1 ====================
+11:15:53.735642 [info ]: Started loading project
+11:15:53.735992 [info ]: Loading profiles.yml
+11:15:53.739110 [info ]: Finished loading project [  0.00s]
+11:15:53.760766 [info ]: Cached model count updated: 2 models (estimate)
+11:15:53.760812 [info ]: Cached model count updated: 2 models (accurate)
+11:15:53.760850 [info ]: Started scheduling
+11:15:53.760936 [info ]: Finished scheduling [  0.00s]
+11:15:53.760956 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+11:15:53.762411 [info ]: Started building task graph
+11:15:53.762507 [info ]: Finished building task graph [  0.00s]
+11:15:53.763754 [info ]: Started rendering (2 nodes)
+11:15:53.763774 [info ]: Started model main.stg_orders
+11:15:53.763788 [debug]: Started rendering model main.stg_orders
+11:15:53.763812 [info ]: Started model main.stg_customers
+11:15:53.763820 [debug]: Started rendering model main.stg_customers
+11:15:53.764027 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+11:15:53.764028 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:15:53.764130 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+11:15:53.764155 [info ]: Started analyzing (2 nodes)
+11:15:53.764161 [debug]: Started analyzing model main.stg_customers
+11:15:53.764175 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:15:53.764184 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:15:53.764192 [debug]: Started analyzing model main.stg_orders
+11:15:53.764342 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:15:53.764354 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+11:15:53.764378 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+11:15:53.764386 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:15:53.764392 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+11:15:53.769070 [info ]: Started scheduling
+11:15:53.769104 [info ]: Finished scheduling [  0.00s]
+11:15:53.769140 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [33ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+11:15:53.769205 [info ]: Cached model count updated: 2 models (accurate)
+11:23:07.369481 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+11:23:07.375143 [info ]:    Started formatting tests/assert_total_order_amount_positive.sql
+11:23:07.423511 [info ]:  Formatted [  0.05s] tests/assert_total_order_amount_positive.sql
+11:23:07.426854 [debug]: Ignoring unsupported LSP notification
+11:23:46.500015 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+11:23:46.503928 [info ]:    Started formatting tests/assert_no_future_orders.sql
+11:23:46.524433 [info ]:  Formatted [  0.02s] tests/assert_no_future_orders.sql
+==================== 2026-10-25T11:23:46.581795Z | bcbc8224-f3a2-4f3f-8073-e37c676faac3 ====================
+11:23:46.581928 [info ]: Started loading project
+11:23:46.582511 [info ]: Loading profiles.yml
+11:23:46.589003 [info ]: Finished loading project [  0.01s]
+==================== 2026-10-25T11:23:46.591050Z | 3eea8e2e-0c78-431f-b21c-178cb81c9001 ====================
+11:23:46.591535 [info ]: Started loading project
+11:23:46.592616 [info ]: Loading profiles.yml
+11:23:46.814994 [debug]:    Started loading packages
+11:23:46.815997 [debug]:     Loaded [  0.00s] packages
+11:23:46.816684 [info ]: Finished loading project [  0.23s]
+11:23:46.816956 [info ]: Started parsing (5 nodes)
+11:23:46.845307 [debug]:    Started building model nodes
+11:23:46.845341 [debug]:   Finished [  0.00s] building model nodes
+11:23:46.845531 [debug]:    Started building model nodes
+11:23:46.845545 [debug]:   Finished [  0.00s] building model nodes
+11:23:46.845833 [debug]:    Started resolving data tests
+11:23:46.845875 [debug]:   Finished [  0.00s] resolving data tests
+11:23:46.845935 [debug]:    Started resolving data tests
+11:23:46.845953 [debug]:   Finished [  0.00s] resolving data tests
+11:23:46.846141 [debug]: Finished parsing models/schema.yml [  0.00s]
+11:23:46.847811 [debug]: Finished parsing models/stg_customers.sql [  0.00s]
+11:23:46.848373 [debug]:    Started building model nodes
+11:23:46.849376 [debug]:   Finished [  0.00s] building model nodes
+11:23:46.850435 [debug]:    Started resolving data tests
+11:23:46.850806 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+11:23:46.852093 [debug]: Finished parsing tests/assert_no_future_orders.sql [  0.00s]
+11:23:46.853541 [debug]: Finished parsing tests/assert_total_order_amount_positive.sql [  0.00s]
+11:23:46.853550 [debug]:   Finished [  0.00s] resolving data tests
+11:23:46.854257 [debug]:    Started typechecking macros
+11:23:47.037260 [debug]:   Finished [  0.18s] typechecking macros
+11:23:47.038486 [info ]: Finished parsing [  0.22s] (5 nodes, 0 skipped, 0 errors)
+11:23:47.038750 [info ]: Cached model count updated: 2 models (estimate)
+11:23:47.038765 [info ]: Cached model count updated: 2 models (accurate)
+11:23:47.038860 [info ]: Started scheduling
+11:23:47.039028 [info ]: Finished scheduling [  0.00s]
+11:23:47.039040 [debug]: Compilation - 1 nodes selected: {"model.dbt_testing_pipeline.stg_orders"}
+11:23:47.039095 [info ]: Started scheduling
+11:23:47.039121 [info ]: Finished scheduling [  0.00s]
+11:23:47.042255 [info ]: Started building task graph
+11:23:47.042363 [info ]: Finished building task graph [  0.00s]
+11:23:47.046373 [info ]: Started rendering (1 nodes)
+11:23:47.046408 [info ]: Started model main.stg_orders
+11:23:47.046425 [debug]: Started rendering model main.stg_orders
+11:23:47.048233 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:23:47.048446 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:23:47.048472 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:23:47.048587 [info ]: Started analyzing (1 nodes)
+11:23:47.048626 [debug]: Started analyzing model main.stg_orders
+11:23:47.049664 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:23:47.049694 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:23:47.049705 [info ]:  Succeeded model main.stg_orders (table) [1 of 1 in 0.00s]
+11:23:47.055818 [info ]: Started scheduling
+11:23:47.055869 [info ]: Finished scheduling [  0.00s]
+11:23:47.055983 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [464ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+11:23:47.056050 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [474ms]
+11:23:47.056095 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:23:48.232132Z | 1d485168-34f6-406d-89fd-04b427564c7a ====================
+11:23:48.232185 [info ]: Started loading project
+11:23:48.232483 [info ]: Loading profiles.yml
+11:23:48.236136 [info ]: Finished loading project [  0.00s]
+11:23:48.258428 [info ]: Cached model count updated: 2 models (estimate)
+11:23:48.258502 [info ]: Cached model count updated: 2 models (accurate)
+11:23:48.258565 [info ]: Started scheduling
+11:23:48.258705 [info ]: Finished scheduling [  0.00s]
+11:23:48.258749 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+11:23:48.260104 [info ]: Started building task graph
+11:23:48.260148 [info ]: Finished building task graph [  0.00s]
+11:23:48.261314 [info ]: Started rendering (2 nodes)
+11:23:48.261334 [info ]: Started model main.stg_orders
+11:23:48.261346 [debug]: Started rendering model main.stg_orders
+11:23:48.261376 [info ]: Started model main.stg_customers
+11:23:48.261386 [debug]: Started rendering model main.stg_customers
+11:23:48.261775 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:23:48.261906 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:23:48.261941 [info ]: Started analyzing (2 nodes)
+11:23:48.261952 [debug]: Started analyzing model main.stg_orders
+11:23:48.262262 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:23:48.262277 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+11:23:48.263190 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+11:23:48.263368 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+11:23:48.263385 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:23:48.263404 [debug]: Started analyzing model main.stg_customers
+11:23:48.263572 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+11:23:48.263581 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:23:48.263589 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+11:23:48.268192 [info ]: Started scheduling
+11:23:48.268239 [info ]: Finished scheduling [  0.00s]
+11:23:48.268295 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [36ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+11:23:48.268420 [info ]: Cached model count updated: 2 models (accurate)
+11:24:13.320786 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+11:24:13.321776 [info ]:    Started formatting tests/assert_total_order_amount_positive.sql
+11:24:13.333715 [info ]:  Formatted [  0.01s] tests/assert_total_order_amount_positive.sql
+==================== 2026-10-25T11:24:13.423006Z | 9cf83b02-b404-4ca7-ae4c-1fbb3c065d20 ====================
+11:24:13.423182 [info ]: Started loading project
+11:24:13.423818 [info ]: Loading profiles.yml
+11:24:13.426254 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T11:24:13.427727Z | 1f6799d3-fe9b-4aef-a2cd-7918bcceee60 ====================
+11:24:13.427768 [info ]: Started loading project
+11:24:13.427943 [info ]: Loading profiles.yml
+11:24:13.664767 [debug]:    Started loading packages
+11:24:13.665624 [debug]:     Loaded [  0.00s] packages
+11:24:13.666401 [info ]: Finished loading project [  0.24s]
+11:24:13.666583 [info ]: Started parsing (5 nodes)
+11:24:13.699788 [debug]:    Started building model nodes
+11:24:13.699823 [debug]:   Finished [  0.00s] building model nodes
+11:24:13.699850 [debug]:    Started building model nodes
+11:24:13.699869 [debug]:   Finished [  0.00s] building model nodes
+11:24:13.700073 [debug]: Finished parsing models/schema.yml [  0.00s]
+11:24:13.700320 [debug]:    Started resolving data tests
+11:24:13.700329 [debug]:    Started resolving data tests
+11:24:13.700353 [debug]:   Finished [  0.00s] resolving data tests
+11:24:13.700353 [debug]:   Finished [  0.00s] resolving data tests
+11:24:13.701440 [debug]: Finished parsing models/stg_customers.sql [  0.00s]
+11:24:13.702174 [debug]:    Started building model nodes
+11:24:13.704400 [debug]:   Finished [  0.00s] building model nodes
+11:24:13.704940 [debug]:    Started resolving data tests
+11:24:13.705004 [debug]: Finished parsing models/stg_orders.sql [  0.00s]
+11:24:13.705609 [debug]: Finished parsing tests/assert_no_future_orders.sql [  0.00s]
+11:24:13.706693 [debug]: Finished parsing tests/assert_total_order_amount_positive.sql [  0.00s]
+11:24:13.706704 [debug]:   Finished [  0.00s] resolving data tests
+11:24:13.707257 [debug]:    Started typechecking macros
+11:24:13.933750 [debug]:   Finished [  0.23s] typechecking macros
+11:24:13.934869 [info ]: Finished parsing [  0.27s] (5 nodes, 0 skipped, 0 errors)
+11:24:13.935019 [info ]: Cached model count updated: 2 models (estimate)
+11:24:13.935034 [info ]: Cached model count updated: 2 models (accurate)
+11:24:13.935061 [info ]: Started scheduling
+11:24:13.935164 [info ]: Finished scheduling [  0.00s]
+11:24:13.935183 [debug]: Compilation - 1 nodes selected: {"model.dbt_testing_pipeline.stg_orders"}
+11:24:13.935233 [info ]: Started scheduling
+11:24:13.935285 [info ]: Finished scheduling [  0.00s]
+11:24:13.936469 [info ]: Started building task graph
+11:24:13.936503 [info ]: Finished building task graph [  0.00s]
+11:24:13.938653 [info ]: Started rendering (1 nodes)
+11:24:13.938681 [info ]: Started model main.stg_orders
+11:24:13.938698 [debug]: Started rendering model main.stg_orders
+11:24:13.939915 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:24:13.940087 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:24:13.940110 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:24:13.940143 [info ]: Started analyzing (1 nodes)
+11:24:13.940156 [debug]: Started analyzing model main.stg_orders
+11:24:13.940363 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:24:13.940378 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:24:13.940385 [info ]:  Succeeded model main.stg_orders (table) [1 of 1 in 0.00s]
+11:24:13.945957 [info ]: Started scheduling
+11:24:13.946011 [info ]: Finished scheduling [  0.00s]
+11:24:13.946231 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [518ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+11:24:13.946308 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [523ms]
+11:24:13.946358 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:24:15.127669Z | 3d8811a3-cf6e-4f5b-9f0b-fca086d6af8d ====================
+11:24:15.127772 [info ]: Started loading project
+11:24:15.128126 [info ]: Loading profiles.yml
+11:24:15.132112 [info ]: Finished loading project [  0.00s]
+11:24:15.166911 [info ]: Cached model count updated: 2 models (estimate)
+11:24:15.166944 [info ]: Cached model count updated: 2 models (accurate)
+11:24:15.166981 [info ]: Started scheduling
+11:24:15.167053 [info ]: Finished scheduling [  0.00s]
+11:24:15.167071 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+11:24:15.168896 [info ]: Started building task graph
+11:24:15.168939 [info ]: Finished building task graph [  0.00s]
+11:24:15.170278 [info ]: Started rendering (2 nodes)
+11:24:15.170301 [info ]: Started model main.stg_orders
+11:24:15.170316 [debug]: Started rendering model main.stg_orders
+11:24:15.170410 [info ]: Started model main.stg_customers
+11:24:15.170437 [debug]: Started rendering model main.stg_customers
+11:24:15.170740 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:24:15.170864 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:24:15.170927 [info ]: Started analyzing (2 nodes)
+11:24:15.170939 [debug]: Started analyzing model main.stg_orders
+11:24:15.171271 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:24:15.171315 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+11:24:15.172317 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+11:24:15.172542 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+11:24:15.172582 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:24:15.172691 [debug]: Started analyzing model main.stg_customers
+11:24:15.172924 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+11:24:15.172944 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:24:15.173003 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+11:24:15.181087 [info ]: Started scheduling
+11:24:15.181173 [info ]: Finished scheduling [  0.00s]
+11:24:15.181358 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [53ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+11:24:15.181589 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:32:15.155765Z | 6dc4eb9d-76ee-4407-a8eb-7c758057e2af ====================
+11:32:15.155852 [info ]: Started loading project
+11:32:15.156214 [info ]: Loading profiles.yml
+11:32:15.158052 [info ]: Finished loading project [  0.00s]
+11:32:15.174676 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [18ms]
+11:32:15.174738 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:32:16.348542Z | 3df1e66f-0f34-475a-9e6e-2937c1c8dcef ====================
+11:32:16.348637 [info ]: Started loading project
+11:32:16.348934 [info ]: Loading profiles.yml
+11:32:16.352211 [info ]: Finished loading project [  0.00s]
+11:32:16.368144 [info ]: Cached model count updated: 2 models (estimate)
+11:32:16.368174 [info ]: Cached model count updated: 2 models (accurate)
+11:32:16.368195 [info ]: Started scheduling
+11:32:16.368234 [info ]: Finished scheduling [  0.00s]
+11:32:16.368245 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+11:32:16.369753 [info ]: Started building task graph
+11:32:16.369865 [info ]: Finished building task graph [  0.00s]
+11:32:16.372348 [info ]: Started rendering (2 nodes)
+11:32:16.372360 [info ]: Started model main.stg_orders
+11:32:16.372369 [debug]: Started rendering model main.stg_orders
+11:32:16.372386 [info ]: Started model main.stg_customers
+11:32:16.372392 [debug]: Started rendering model main.stg_customers
+11:32:16.372709 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+11:32:16.372753 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+11:32:16.372753 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:32:16.372777 [info ]: Started analyzing (2 nodes)
+11:32:16.372782 [debug]: Started analyzing model main.stg_customers
+11:32:16.372802 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:32:16.372809 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:32:16.372817 [debug]: Started analyzing model main.stg_orders
+11:32:16.373067 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+11:32:16.373073 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+11:32:16.373085 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:32:16.373090 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:32:16.373094 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+11:32:16.376010 [info ]: Started scheduling
+11:32:16.376066 [info ]: Finished scheduling [  0.00s]
+11:32:16.376126 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [27ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+11:32:16.376210 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:32:16.645154Z | d0ac7fee-2fbc-4691-a0a7-7fa82e96b630 ====================
+11:32:16.645220 [info ]: Started loading project
+11:32:16.645526 [info ]: Loading profiles.yml
+11:32:16.647461 [info ]: Finished loading project [  0.00s]
+11:32:16.671188 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [26ms]
+11:32:16.671259 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T11:32:17.849065Z | 5816482c-fe2e-498e-b8a3-9b54c856573d ====================
+11:32:17.849108 [info ]: Started loading project
+11:32:17.849457 [info ]: Loading profiles.yml
+11:32:17.852388 [info ]: Finished loading project [  0.00s]
+11:32:17.862099 [info ]: Cached model count updated: 2 models (estimate)
+11:32:17.862114 [info ]: Cached model count updated: 2 models (accurate)
+11:32:17.862128 [info ]: Started scheduling
+11:32:17.862157 [info ]: Finished scheduling [  0.00s]
+11:32:17.862166 [debug]: Compilation - 2 nodes selected: {"model.dbt_testing_pipeline.stg_customers", "model.dbt_testing_pipeline.stg_orders"}
+11:32:17.862739 [info ]: Started building task graph
+11:32:17.862762 [info ]: Finished building task graph [  0.00s]
+11:32:17.863395 [info ]: Started rendering (2 nodes)
+11:32:17.863406 [info ]: Started model main.stg_orders
+11:32:17.863413 [debug]: Started rendering model main.stg_orders
+11:32:17.863427 [info ]: Started model main.stg_customers
+11:32:17.863431 [debug]: Started rendering model main.stg_customers
+11:32:17.863640 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_orders at target/.lsp/compiled/dbt_testing_pipeline/models/stg_orders.sql
+11:32:17.863726 [debug]: Compiled SQL for node model.dbt_testing_pipeline.stg_customers at target/.lsp/compiled/dbt_testing_pipeline/models/stg_customers.sql
+11:32:17.863710 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+11:32:17.863784 [info ]: Started analyzing (2 nodes)
+11:32:17.863799 [debug]: Started analyzing model main.stg_orders
+11:32:17.863826 [debug]: Finished rendering [  0.00s] model main.stg_customers [success]
+11:32:17.863854 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:32:17.863867 [debug]: Started analyzing model main.stg_customers
+11:32:17.864000 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+11:32:17.864009 [info ]:  Succeeded model main.stg_orders (table) [1 of 2 in 0.00s]
+11:32:17.864052 [debug]: Finished analyzing [  0.00s] model main.stg_customers [success]
+11:32:17.864065 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:32:17.864082 [info ]:  Succeeded model main.stg_customers (table) [2 of 2 in 0.00s]
+11:32:17.867142 [info ]: Started scheduling
+11:32:17.867173 [info ]: Finished scheduling [  0.00s]
+11:32:17.867197 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [18ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+11:32:17.867239 [info ]: Cached model count updated: 2 models (accurate)
+11:57:21.851314 [debug]: Ignoring unsupported LSP notification
+11:57:21.852159 [debug]: Ignoring unsupported LSP notification
+11:57:21.892444 [debug]: Ignoring unsupported LSP notification
+11:57:21.894269 [debug]: Ignoring unsupported LSP notification
+11:58:04.547057 [debug]: Ignoring unsupported LSP notification
+11:58:04.560286 [debug]: Ignoring unsupported LSP notification
+11:59:09.798158 [debug]: Ignoring unsupported LSP notification
+11:59:09.800516 [debug]: Ignoring unsupported LSP notification
+11:59:58.022494 [debug]: Ignoring unsupported LSP notification
+11:59:58.021043 [debug]: Ignoring unsupported LSP notification

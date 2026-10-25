@@ -1,0 +1,52 @@
+version: 2
+
+# ========================================================
+# REUSABILITY: schema.yml
+# ========================================================
+# 1. YAML Anchors & Aliases (&anchor and *alias):
+#    Define test sets ONCE and reuse them across multiple models!
+#
+# 2. Reusable Doc Blocks:
+#    Reference descriptions from docs.md using {{ doc(...) }}.
+# ========================================================
+
+models:
+  - name: stg_users
+    description: "Cleaned staging view of raw users"
+    columns:
+      - name: customer_id
+        description: "{{ doc('customer_id') }}"
+        tests: &pk_tests                       # 👈 Define Anchor once here!
+          - unique
+          - not_null
+
+      - name: customer_name
+        description: "Registered customer display name"
+
+  - name: stg_orders
+    description: "Cleaned staging view of raw orders"
+    columns:
+      - name: order_id
+        description: "Unique transaction identifier"
+
+      - name: customer_id
+        description: "{{ doc('customer_id') }}" 
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_users')
+                field: customer_id
+
+      - name: amount
+        description: "{{ doc('order_amount') }}"
+        tests:
+          - not_null
+
+      - name: order_status
+        description: "{{ doc('order_status') }}"
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['completed', 'processing', 'cancelled', 'refunded']
+

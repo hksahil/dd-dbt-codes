@@ -1,0 +1,68 @@
+version: 2
+
+# ========================================================
+# TEACHING TOPIC: dbt Semantic Layer
+# 
+# 1. semantic_models: Connects to a physical table (ref('orders'))
+#    - entities: Join keys (order_id, user_id)
+#    - dimensions: Slicing attributes (status)
+#    - measures: Raw column aggregations (order_total, order_count)
+# 
+# 2. metrics: Centralized business KPI definitions
+#    - total_revenue (simple metric)
+#    - total_orders (simple metric)
+#    - average_order_value (derived ratio metric)
+# ========================================================
+
+semantic_models:
+  - name: orders_semantic_model
+    description: "Semantic model for customer order transactions"
+    model: ref('orders')
+
+    # --- 1. ENTITIES (Keys for joins) ---
+    entities:
+      - name: order_id
+        type: primary
+      - name: user_id
+        type: foreign
+
+    # --- 2. DIMENSIONS (Attributes to filter/group by) ---
+    dimensions:
+      - name: status
+        type: categorical
+
+    # --- 3. MEASURES (Raw aggregations) ---
+    measures:
+      - name: order_total
+        agg: sum
+        expr: amount
+
+      - name: order_count
+        agg: count
+        expr: order_id
+
+# --- 4. METRICS (Business metrics for BI tools) ---
+metrics:
+  # A. Simple Metric
+  - name: total_revenue
+    label: "Total Revenue ($)"
+    type: simple
+    type_params:
+      measure: order_total
+
+  # B. Simple Metric
+  - name: total_orders
+    label: "Total Orders Count"
+    type: simple
+    type_params:
+      measure: order_count
+
+  # C. Derived Metric (Ratio Formula)
+  - name: average_order_value
+    label: "Average Order Value ($)"
+    type: derived
+    type_params:
+      expr: total_revenue / total_orders
+      metrics:
+        - name: total_revenue
+        - name: total_orders

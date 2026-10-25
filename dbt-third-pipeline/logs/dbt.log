@@ -1,0 +1,3278 @@
+==================== 2026-10-25T09:14:51.140437Z | 01a17257-5f83-7bc0-9c76-eca72bf3c655 ====================
+09:14:51.140525 [info ]: dbt 2.0.9
+09:14:51.140656 [info ]: Started loading project
+09:14:51.141189 [info ]: Loading profiles.yml
+09:14:51.233308 [debug]:    Started loading packages
+09:14:51.233620 [debug]:     Loaded [  0.00s] packages
+09:14:51.233955 [info ]: Finished loading project [  0.09s]
+09:14:51.234236 [info ]: Started parsing (10 nodes)
+09:14:51.244886 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:14:51.245039 [debug]:    Started building model nodes
+09:14:51.245043 [debug]:    Started building model nodes
+09:14:51.245051 [debug]:   Finished [  0.00s] building model nodes
+09:14:51.245051 [debug]:   Finished [  0.00s] building model nodes
+09:14:51.245259 [debug]:    Started resolving data tests
+09:14:51.245276 [debug]:   Finished [  0.00s] resolving data tests
+09:14:51.245303 [debug]:    Started resolving data tests
+09:14:51.245313 [debug]:   Finished [  0.00s] resolving data tests
+09:14:51.245682 [debug]: Finished parsing models/demo_ephemeral.sql [  0.00s]
+09:14:51.246268 [debug]: Finished parsing models/demo_incremental.sql [  0.00s]
+09:14:51.246542 [debug]: Finished parsing models/demo_source_and_ref.sql [  0.00s]
+09:14:51.246788 [debug]: Finished parsing models/demo_table.sql [  0.00s]
+09:14:51.247002 [debug]: Finished parsing models/demo_view.sql [  0.00s]
+09:14:51.247322 [debug]: Finished parsing models/inc_strategy_append.sql [  0.00s]
+09:14:51.247445 [debug]: Finished parsing models/inc_strategy_delete_insert.sql [  0.00s]
+09:14:51.247683 [debug]: Finished parsing models/inc_strategy_merge.sql [  0.00s]
+09:14:51.247891 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:14:51.247904 [debug]:    Started building model nodes
+09:14:51.249007 [debug]:   Finished [  0.00s] building model nodes
+09:14:51.249553 [debug]:    Started resolving data tests
+09:14:51.249562 [debug]:   Finished [  0.00s] resolving data tests
+09:14:51.249713 [debug]:    Started typechecking macros
+09:14:51.302326 [debug]:   Finished [  0.05s] typechecking macros
+09:14:51.302984 [info ]: Finished parsing [  0.07s] (10 nodes, 0 skipped, 0 errors)
+09:14:51.303207 [info ]: Started scheduling
+09:14:51.303285 [info ]: Finished scheduling [  0.00s]
+09:14:51.303843 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+09:14:51.304515 [info ]:    Started downloading referenced relations (1 items)
+09:14:51.305750 [debug]: DuckDB driver resolved: duckdb 1.5.4
+09:14:51.319640 [debug]:    Started downloading "dev"."main"
+09:14:51.319683 [debug]: create_debug_span(...).entered() took 3.917µs
+09:14:51.321226 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 933.666µs
+09:14:51.321234 [debug]: reader.schema() took 42ns
+09:14:51.321291 [debug]: batch-consume loop (for res in reader) took 54.584µs
+09:14:51.321305 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.615417ms
+09:14:51.321384 [debug]: concat_batches + normalize_result_column_names took 76.25µs
+09:14:51.321389 [debug]: record_current_span_status_from_attrs took 2.208µs
+09:14:51.321393 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:14:51.321400 [debug]: drop(query_span_guard) (span exit/export) took 9µs
+09:14:51.321440 [debug]: Downloaded [  0.00s] "dev"."main"
+09:14:51.321944 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+09:14:51.322137 [info ]: Started building task graph
+09:14:51.322215 [info ]: Finished building task graph [  0.00s]
+09:14:51.323035 [info ]: Started rendering (9 nodes)
+09:14:51.323053 [info ]: Started model main.user_orders
+09:14:51.323061 [debug]: Started rendering model main.user_orders
+09:14:51.323076 [info ]: Started model main.inc_strategy_merge
+09:14:51.323079 [debug]: Started rendering model main.inc_strategy_merge
+09:14:51.323084 [info ]: Started model main.inc_strategy_delete_insert
+09:14:51.323087 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:14:51.323093 [info ]: Started model main.inc_strategy_append
+09:14:51.323095 [debug]: Started rendering model main.inc_strategy_append
+09:14:51.323099 [info ]: Started model main.demo_table
+09:14:51.323100 [debug]: Started rendering model main.demo_table
+09:14:51.323104 [info ]: Started model main.demo_source_and_ref
+09:14:51.323105 [debug]: Started rendering model main.demo_source_and_ref
+09:14:51.323109 [info ]: Started model main.demo_incremental
+09:14:51.323110 [debug]: Started rendering model main.demo_incremental
+09:14:51.323115 [info ]: Started model main.demo_ephemeral
+09:14:51.323123 [debug]: Started rendering model main.demo_ephemeral
+09:14:51.324179 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/compiled/dbt_custom/models/demo_table.sql
+09:14:51.324287 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:14:51.324324 [info ]: Started analyzing (9 nodes)
+09:14:51.324354 [debug]: Started analyzing model main.demo_table
+09:14:51.324436 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/compiled/dbt_custom/models/user_orders.sql
+09:14:51.324503 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/compiled/dbt_custom/models/inc_strategy_append.sql
+09:14:51.324510 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:14:51.324568 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:14:51.324581 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/compiled/dbt_custom/models/demo_source_and_ref.sql
+09:14:51.324593 [debug]: Started analyzing model main.user_orders
+09:14:51.324623 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:14:51.324645 [debug]: Started analyzing model main.inc_strategy_append
+09:14:51.324661 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:14:51.324673 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:14:51.324672 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/compiled/dbt_custom/models/demo_incremental.sql
+09:14:51.324673 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:14:51.324695 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/compiled/dbt_custom/models/demo_ephemeral.sql
+09:14:51.324712 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+09:14:51.324740 [debug]: Started analyzing model main.demo_source_and_ref
+09:14:51.324771 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:14:51.324784 [debug]: Started analyzing model main.demo_incremental
+09:14:51.324792 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:14:51.324799 [debug]: Started analyzing model main.inc_strategy_merge
+09:14:51.324804 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:14:51.324813 [info ]: Started model main.demo_view
+09:14:51.324819 [debug]: Started rendering model main.demo_view
+09:14:51.324826 [debug]: Started analyzing model main.demo_ephemeral
+09:14:51.326537 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/compiled/dbt_custom/models/demo_view.sql
+09:14:51.326610 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:14:51.326618 [info ]: Finished rendering [  0.00s] (9 nodes, 0 skipped, 0 errors)
+09:14:51.326628 [debug]: Started analyzing model main.demo_view
+09:14:51.328202 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:14:51.328218 [info ]:  Succeeded model main.demo_ephemeral (ephemeral) [0.00s]
+09:14:51.328228 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:14:51.328231 [info ]:  Succeeded model main.user_orders (table) [1 of 8 in 0.00s]
+09:14:51.328656 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:14:51.328662 [info ]:  Succeeded model main.demo_table (table) [5 of 8 in 0.01s]
+09:14:51.328667 [warn ]: [BaselineIntrospectionSyntaxInvalid (dbt1070)]: Syntax error after rendering with introspection (see docs.getdbt.com/docs/fusion/new-concepts):
+mismatched input 'id' expecting one of <EOF>, ';'
+  --> models/demo_incremental.sql:8:12 (target/compiled/dbt_custom/models/demo_incremental.sql:5:12)
+09:14:51.328763 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:14:51.328771 [info ]:  Succeeded model main.inc_strategy_append (incremental) [4 of 8 in 0.01s]
+09:14:51.328778 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:14:51.328781 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [3 of 8 in 0.01s]
+09:14:51.328786 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:14:51.328790 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [2 of 8 in 0.00s]
+09:14:51.328828 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:14:51.328833 [info ]:  Succeeded model main.demo_incremental (incremental) [7 of 8 in 0.01s]
+09:14:51.328996 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:14:51.329018 [info ]:  Succeeded model main.demo_view (view) [8 of 8 in 0.00s]
+09:14:51.330846 [debug]: Finished analyzing [  0.01s] model main.demo_source_and_ref [success]
+09:14:51.330854 [info ]: Finished analyzing [  0.01s] (9 nodes, 0 skipped, 0 errors)
+09:14:51.330861 [info ]:  Succeeded model main.demo_source_and_ref (view) [6 of 8 in 0.01s]
+09:14:52.318197 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [1.2s]
+Processed: 9 models
+Summary: 9 total | 9 success
+==================== 2026-10-25T09:16:28.851417Z | 01a17258-dd32-7cb0-83e9-25e91163227f ====================
+09:16:28.851491 [info ]: dbt 2.0.9
+09:16:28.851591 [info ]: Started loading project
+09:16:28.852083 [info ]: Loading profiles.yml
+09:16:28.945068 [debug]:    Started loading packages
+09:16:28.945362 [debug]:     Loaded [  0.00s] packages
+09:16:28.945687 [info ]: Finished loading project [  0.09s]
+09:16:28.946558 [info ]: Started parsing (10 nodes)
+09:16:28.956736 [debug]:    Started building model nodes
+09:16:28.956738 [debug]:    Started building model nodes
+09:16:28.956750 [debug]:   Finished [  0.00s] building model nodes
+09:16:28.956750 [debug]:   Finished [  0.00s] building model nodes
+09:16:28.956970 [debug]:    Started resolving data tests
+09:16:28.956984 [debug]:    Started resolving data tests
+09:16:28.956984 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:16:28.957006 [debug]:   Finished [  0.00s] resolving data tests
+09:16:28.957016 [debug]:   Finished [  0.00s] resolving data tests
+09:16:28.957704 [debug]: Finished parsing models/demo_ephemeral.sql [  0.00s]
+09:16:28.958066 [debug]: Finished parsing models/demo_incremental.sql [  0.00s]
+09:16:28.958350 [debug]: Finished parsing models/demo_source_and_ref.sql [  0.00s]
+09:16:28.958669 [debug]: Finished parsing models/demo_table.sql [  0.00s]
+09:16:28.959094 [debug]: Finished parsing models/demo_view.sql [  0.00s]
+09:16:28.959403 [debug]: Finished parsing models/inc_strategy_append.sql [  0.00s]
+09:16:28.959678 [debug]: Finished parsing models/inc_strategy_delete_insert.sql [  0.00s]
+09:16:28.959959 [debug]: Finished parsing models/inc_strategy_merge.sql [  0.00s]
+09:16:28.960056 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:16:28.960071 [debug]:    Started building model nodes
+09:16:28.961217 [debug]:   Finished [  0.00s] building model nodes
+09:16:28.961924 [debug]:    Started resolving data tests
+09:16:28.961933 [debug]:   Finished [  0.00s] resolving data tests
+09:16:28.962132 [debug]:    Started typechecking macros
+09:16:29.012862 [debug]:   Finished [  0.05s] typechecking macros
+09:16:29.013186 [info ]: Finished parsing [  0.07s] (10 nodes, 0 skipped, 0 errors)
+09:16:29.020298 [info ]: Started scheduling
+09:16:29.020376 [info ]: Finished scheduling [  0.00s]
+09:16:29.021342 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+09:16:29.021794 [info ]:    Started downloading referenced relations (1 items)
+09:16:29.022816 [debug]: DuckDB driver resolved: duckdb 1.5.4
+09:16:29.036272 [debug]:    Started downloading "dev"."main"
+09:16:29.036304 [debug]: create_debug_span(...).entered() took 3.834µs
+09:16:29.037713 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 833.709µs
+09:16:29.037721 [debug]: reader.schema() took 167ns
+09:16:29.037756 [debug]: batch-consume loop (for res in reader) took 32.708µs
+09:16:29.037771 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.46025ms
+09:16:29.037830 [debug]: concat_batches + normalize_result_column_names took 56.375µs
+09:16:29.037835 [debug]: record_current_span_status_from_attrs took 1.958µs
+09:16:29.037839 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:16:29.037847 [debug]: drop(query_span_guard) (span exit/export) took 9.458µs
+09:16:29.037878 [debug]: Downloaded [  0.00s] "dev"."main"
+09:16:29.037968 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+09:16:29.038167 [info ]: Started building task graph
+09:16:29.038276 [info ]: Finished building task graph [  0.00s]
+09:16:29.039748 [debug]: create_debug_span(...).entered() took 2.25µs
+09:16:29.039928 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 45.25µs
+09:16:29.039931 [debug]: reader.schema() took 41ns
+09:16:29.039937 [debug]: batch-consume loop (for res in reader) took 4.834µs
+09:16:29.039942 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 189.917µs
+09:16:29.039948 [debug]: concat_batches + normalize_result_column_names took 2.625µs
+09:16:29.039951 [debug]: record_current_span_status_from_attrs took 375ns
+09:16:29.039954 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+09:16:29.039959 [debug]: drop(query_span_guard) (span exit/export) took 5.166µs
+09:16:29.040142 [debug]: create_debug_span(...).entered() took 1.666µs
+09:16:29.040245 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 33.833µs
+09:16:29.040248 [debug]: reader.schema() took 42ns
+09:16:29.040256 [debug]: batch-consume loop (for res in reader) took 6.375µs
+09:16:29.040262 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 115.583µs
+09:16:29.040265 [debug]: concat_batches + normalize_result_column_names took 708ns
+09:16:29.040267 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:29.040269 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+09:16:29.040272 [debug]: drop(query_span_guard) (span exit/export) took 3.709µs
+09:16:29.040347 [debug]: create_debug_span(...).entered() took 1.291µs
+09:16:29.040402 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 19.5µs
+09:16:29.040405 [debug]: reader.schema() took 0ns
+09:16:29.040411 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 60.791µs
+09:16:29.040414 [debug]: concat_batches + normalize_result_column_names took 792ns
+09:16:29.040417 [debug]: record_current_span_status_from_attrs took 208ns
+09:16:29.040419 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+09:16:29.040422 [debug]: drop(query_span_guard) (span exit/export) took 3.209µs
+09:16:29.040474 [info ]: Started rendering (9 nodes)
+09:16:29.040492 [info ]: Started model main.user_orders
+09:16:29.040500 [debug]: Started rendering model main.user_orders
+09:16:29.040513 [info ]: Started model main.inc_strategy_merge
+09:16:29.040516 [debug]: Started rendering model main.inc_strategy_merge
+09:16:29.040522 [info ]: Started model main.inc_strategy_delete_insert
+09:16:29.040527 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:16:29.040532 [info ]: Started model main.inc_strategy_append
+09:16:29.040534 [debug]: Started rendering model main.inc_strategy_append
+09:16:29.040537 [info ]: Started model main.demo_incremental
+09:16:29.040539 [debug]: Started rendering model main.demo_incremental
+09:16:29.040542 [info ]: Started model main.demo_ephemeral
+09:16:29.040544 [debug]: Started rendering model main.demo_ephemeral
+09:16:29.040962 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/compiled/dbt_custom/models/user_orders.sql
+09:16:29.041052 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:16:29.041097 [info ]: Started analyzing (9 nodes)
+09:16:29.041137 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/compiled/dbt_custom/models/inc_strategy_append.sql
+09:16:29.041136 [debug]: Started analyzing model main.user_orders
+09:16:29.041146 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:16:29.041164 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:16:29.041173 [debug]: Started analyzing model main.inc_strategy_append
+09:16:29.041197 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:16:29.041206 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:16:29.041251 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:16:29.041293 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:16:29.041300 [debug]: Started analyzing model main.inc_strategy_merge
+09:16:29.041305 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/compiled/dbt_custom/models/demo_ephemeral.sql
+09:16:29.041345 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:16:29.041355 [debug]: Started analyzing model main.demo_ephemeral
+09:16:29.041361 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/compiled/dbt_custom/models/demo_incremental.sql
+09:16:29.041396 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:16:29.041401 [debug]: Started analyzing model main.demo_incremental
+09:16:29.044035 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:16:29.044046 [info ]: Started running (9 nodes)
+09:16:29.044060 [info ]: Started running model main.user_orders
+09:16:29.044070 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:16:29.044075 [info ]: Started running model main.demo_ephemeral
+09:16:29.044248 [info ]: Finished running [  0.00s] model main.demo_ephemeral [no-op]
+09:16:29.044285 [info ]:    Skipped model main.demo_ephemeral (ephemeral)
+09:16:29.044341 [info ]: Started model main.demo_view
+09:16:29.044354 [debug]: Started rendering model main.demo_view
+09:16:29.044774 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:16:29.044782 [info ]: Started running model main.inc_strategy_delete_insert
+09:16:29.044789 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:16:29.044793 [info ]: Started running model main.inc_strategy_merge
+09:16:29.044798 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:16:29.044802 [info ]: Started running model main.inc_strategy_append
+09:16:29.044984 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:16:29.044991 [info ]: Started running model main.demo_incremental
+09:16:29.045180 [debug]: Writing runtime sql for node "model.dbt_custom.user_orders"
+09:16:29.045263 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/compiled/dbt_custom/models/demo_view.sql
+09:16:29.045323 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:16:29.045352 [debug]: Started analyzing model main.demo_view
+09:16:29.045641 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:29.045661 [debug]: create_debug_span(...).entered() took 5.916µs
+09:16:29.045697 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:29.045949 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:29.046190 [debug]: create_debug_span(...).entered() took 5.875µs
+09:16:29.046200 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:16:29.046206 [info ]: Started running model main.demo_view
+09:16:29.046213 [debug]: create_debug_span(...).entered() took 5.083µs
+09:16:29.046273 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:29.046915 [debug]: create_debug_span(...).entered() took 2.042µs
+09:16:29.046932 [debug]: create_debug_span(...).entered() took 4.791µs
+09:16:29.047252 [debug]: Writing runtime sql for node "model.dbt_custom.demo_view"
+09:16:29.047526 [debug]: create_debug_span(...).entered() took 5.334µs
+09:16:29.047688 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.750375ms
+09:16:29.047693 [debug]: reader.schema() took 42ns
+09:16:29.047717 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.053208ms
+09:16:29.047724 [debug]: concat_batches + normalize_result_column_names took 3.042µs
+09:16:29.047727 [debug]: record_current_span_status_from_attrs took 1µs
+09:16:29.047730 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."user_orders__dbt_tmp"
+  
+    as (
+      
+
+select
+    u.name,
+    o.order_id,
+    o.amount
+from users u
+join orders o on u.id = o.user_id
+    );
+  
+    
+  
+09:16:29.047738 [debug]: drop(query_span_guard) (span exit/export) took 9µs
+09:16:29.047831 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 197.958µs
+09:16:29.047836 [debug]: reader.schema() took 0ns
+09:16:29.047843 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 312.583µs
+09:16:29.047846 [debug]: concat_batches + normalize_result_column_names took 541ns
+09:16:29.047848 [debug]: record_current_span_status_from_attrs took 292ns
+09:16:29.047851 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+  create view "dev"."main"."demo_view__dbt_tmp" as (
+    with __dbt__cte__demo_ephemeral as (
+
+
+-- Ephemeral: Exists ONLY within dbt as a reusable CTE (Common Table Expression).
+-- It is NEVER created as a table or view in DuckDB.
+select
+    id as user_id,
+    name as user_name,
+    upper(name) as user_name_clean
+from users
+)
+--EPHEMERAL-SELECT-WRAPPER-START
+select * from (
+
+
+-- View: Recomputed on each query; created in DuckDB as a VIEW.
+-- Notice how referencing an ephemeral model embeds it as an inline CTE.
+select
+    u.user_id,
+    u.user_name_clean,
+    o.order_id,
+    o.amount
+from __dbt__cte__demo_ephemeral u
+join orders o
+    on u.user_id = o.user_id
+--EPHEMERAL-SELECT-WRAPPER-END
+)
+  );
+
+09:16:29.047858 [debug]: drop(query_span_guard) (span exit/export) took 7.375µs
+09:16:29.047975 [debug]: create_debug_span(...).entered() took 1.916µs
+09:16:29.048107 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 51.125µs
+09:16:29.048112 [debug]: reader.schema() took 0ns
+09:16:29.048120 [debug]: batch-consume loop (for res in reader) took 6.292µs
+09:16:29.048125 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 145.834µs
+09:16:29.048128 [debug]: concat_batches + normalize_result_column_names took 1.583µs
+09:16:29.048130 [debug]: record_current_span_status_from_attrs took 167ns
+09:16:29.048132 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'user_orders'
+  
+09:16:29.048137 [debug]: drop(query_span_guard) (span exit/export) took 5.625µs
+09:16:29.048332 [debug]: create_debug_span(...).entered() took 1.542µs
+09:16:29.048355 [debug]: create_debug_span(...).entered() took 2.083µs
+09:16:29.048477 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 90.208µs
+09:16:29.048481 [debug]: reader.schema() took 0ns
+09:16:29.048485 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 126.5µs
+09:16:29.048487 [debug]: concat_batches + normalize_result_column_names took 917ns
+09:16:29.048489 [debug]: record_current_span_status_from_attrs took 166ns
+09:16:29.048491 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_view" rename to "demo_view__dbt_backup"
+09:16:29.048496 [debug]: drop(query_span_guard) (span exit/export) took 4.666µs
+09:16:29.048513 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 108.208µs
+09:16:29.048516 [debug]: reader.schema() took 42ns
+09:16:29.048528 [debug]: batch-consume loop (for res in reader) took 10.875µs
+09:16:29.048533 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 197.958µs
+09:16:29.048536 [debug]: concat_batches + normalize_result_column_names took 792ns
+09:16:29.048537 [debug]: record_current_span_status_from_attrs took 167ns
+09:16:29.048540 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'user_orders'
+  
+09:16:29.048544 [debug]: drop(query_span_guard) (span exit/export) took 4.666µs
+09:16:29.048855 [debug]: create_debug_span(...).entered() took 1.5µs
+09:16:29.048890 [debug]: create_debug_span(...).entered() took 1.542µs
+09:16:29.048940 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 62.583µs
+09:16:29.048943 [debug]: reader.schema() took 42ns
+09:16:29.048946 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 87.625µs
+09:16:29.048948 [debug]: concat_batches + normalize_result_column_names took 334ns
+09:16:29.048950 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:29.048952 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_view__dbt_tmp" rename to "demo_view"
+09:16:29.048957 [debug]: drop(query_span_guard) (span exit/export) took 5.125µs
+09:16:29.049022 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 81.125µs
+09:16:29.049025 [debug]: reader.schema() took 0ns
+09:16:29.049029 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 136.125µs
+09:16:29.049031 [debug]: concat_batches + normalize_result_column_names took 250ns
+09:16:29.049033 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:29.049034 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."user_orders" rename to "user_orders__dbt_backup"
+09:16:29.049039 [debug]: drop(query_span_guard) (span exit/export) took 4.458µs
+09:16:29.049371 [debug]: create_debug_span(...).entered() took 1.375µs
+09:16:29.049456 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 63.125µs
+09:16:29.049463 [debug]: reader.schema() took 42ns
+09:16:29.049473 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 98.208µs
+09:16:29.049476 [debug]: concat_batches + normalize_result_column_names took 542ns
+09:16:29.049478 [debug]: record_current_span_status_from_attrs took 292ns
+09:16:29.049480 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."user_orders__dbt_tmp" rename to "user_orders"
+09:16:29.049485 [debug]: drop(query_span_guard) (span exit/export) took 5.583µs
+09:16:29.049522 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.815791ms
+09:16:29.049525 [debug]: reader.schema() took 41ns
+09:16:29.049587 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 2.6135ms
+09:16:29.049591 [debug]: reader.schema() took 41ns
+09:16:29.049610 [debug]: batch-consume loop (for res in reader) took 83.291µs
+09:16:29.049614 [debug]: batch-consume loop (for res in reader) took 21.125µs
+09:16:29.049607 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 2.335375ms
+09:16:29.049626 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.431083ms
+09:16:29.049626 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.690708ms
+09:16:29.049626 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 3.012583ms
+09:16:29.049642 [debug]: reader.schema() took 0ns
+09:16:29.049662 [debug]: batch-consume loop (for res in reader) took 17.25µs
+09:16:29.049657 [debug]: reader.schema() took 417ns
+09:16:29.049662 [debug]: concat_batches + normalize_result_column_names took 4.041µs
+09:16:29.049663 [debug]: concat_batches + normalize_result_column_names took 11µs
+09:16:29.049672 [debug]: record_current_span_status_from_attrs took 1.416µs
+09:16:29.049674 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.754625ms
+09:16:29.049680 [debug]: concat_batches + normalize_result_column_names took 2.667µs
+09:16:29.049688 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'inc_strategy_merge'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'dev'
+      
+      order by ordinal_position
+
+    
+  
+09:16:29.049689 [debug]: record_current_span_status_from_attrs took 1.417µs
+09:16:29.049692 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'inc_strategy_delete_insert'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'dev'
+      
+      order by ordinal_position
+
+    
+  
+09:16:29.049697 [debug]: drop(query_span_guard) (span exit/export) took 5.75µs
+09:16:29.049698 [debug]: record_current_span_status_from_attrs took 292ns
+09:16:29.049701 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'demo_incremental'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'dev'
+      
+      order by ordinal_position
+
+    
+  
+09:16:29.049705 [debug]: drop(query_span_guard) (span exit/export) took 4.708µs
+09:16:29.049746 [debug]: drop(query_span_guard) (span exit/export) took 67.584µs
+09:16:29.049825 [debug]: create_debug_span(...).entered() took 1.833µs
+09:16:29.049856 [debug]: batch-consume loop (for res in reader) took 153.333µs
+09:16:29.049908 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.692375ms
+09:16:29.049927 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 67.75µs
+09:16:29.049926 [debug]: concat_batches + normalize_result_column_names took 2.625µs
+09:16:29.049932 [debug]: reader.schema() took 41ns
+09:16:29.049936 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 106.916µs
+09:16:29.049955 [debug]: record_current_span_status_from_attrs took 875ns
+09:16:29.049963 [debug]: concat_batches + normalize_result_column_names took 2.125µs
+09:16:29.049966 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'inc_strategy_append'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'dev'
+      
+      order by ordinal_position
+
+    
+  
+09:16:29.049972 [debug]: record_current_span_status_from_attrs took 625ns
+09:16:29.049978 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop view if exists "dev"."main"."demo_view__dbt_backup" cascade
+    
+09:16:29.049981 [debug]: drop(query_span_guard) (span exit/export) took 16.167µs
+09:16:29.049988 [debug]: drop(query_span_guard) (span exit/export) took 11.916µs
+09:16:29.050132 [debug]: create_debug_span(...).entered() took 2µs
+09:16:29.050256 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 96.5µs
+09:16:29.050261 [debug]: reader.schema() took 42ns
+09:16:29.050264 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 126.75µs
+09:16:29.050267 [debug]: concat_batches + normalize_result_column_names took 375ns
+09:16:29.050269 [debug]: record_current_span_status_from_attrs took 167ns
+09:16:29.050271 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."user_orders__dbt_backup" cascade
+    
+09:16:29.050276 [debug]: drop(query_span_guard) (span exit/export) took 5.542µs
+09:16:29.050384 [info ]: Finished running [  0.00s] model main.demo_view [success]
+09:16:29.050410 [info ]:  Succeeded model main.demo_view (view) [6 of 8 in 0.00s]
+09:16:29.050436 [info ]: Started model main.demo_table
+09:16:29.050442 [debug]: Started rendering model main.demo_table
+09:16:29.050474 [info ]: Finished running [  0.01s] model main.user_orders [success]
+09:16:29.050491 [info ]:  Succeeded model main.user_orders (table) [1 of 8 in 0.01s]
+09:16:29.050610 [debug]: Writing runtime sql for node "model.dbt_custom.demo_incremental"
+09:16:29.050764 [debug]: Writing runtime sql for node "model.dbt_custom.inc_strategy_delete_insert"
+09:16:29.050793 [debug]: Writing runtime sql for node "model.dbt_custom.inc_strategy_merge"
+09:16:29.050834 [debug]: Writing runtime sql for node "model.dbt_custom.inc_strategy_append"
+09:16:29.051040 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/compiled/dbt_custom/models/demo_table.sql
+09:16:29.051114 [debug]: create_debug_span(...).entered() took 2.167µs
+09:16:29.051111 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:16:29.051131 [debug]: create_debug_span(...).entered() took 2.25µs
+09:16:29.051137 [debug]: create_debug_span(...).entered() took 2.083µs
+09:16:29.051139 [debug]: Started analyzing model main.demo_table
+09:16:29.051259 [debug]: create_debug_span(...).entered() took 1.834µs
+09:16:29.052009 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:16:29.052019 [info ]: Started running model main.demo_table
+09:16:29.052287 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create temporary table
+      "demo_incremental__dbt_tmp_b9fa0650_42dd_4bad_8931_febd1baa8f96"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    -- Watermark filter: only fetch records modified on or after our table's latest date
+    where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."demo_incremental")
+
+    );
+  
+    
+  ;
+
+        
+            delete from "dev"."main"."demo_incremental"
+            where (
+                order_id) in (
+                select (order_id)
+                from "demo_incremental__dbt_tmp_b9fa0650_42dd_4bad_8931_febd1baa8f96"
+            );
+
+        
+    
+
+    insert into "dev"."main"."demo_incremental" ("order_id", "user_id", "amount")
+    (
+        select "order_id", "user_id", "amount"
+        from "demo_incremental__dbt_tmp_b9fa0650_42dd_4bad_8931_febd1baa8f96"
+    )
+  
+09:16:29.052287 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create temporary table
+      "inc_strategy_append__dbt_tmp_6a43f596_bf10_4302_bc81_c0c74aeb2bfd"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    -- In an immutable table, filtering on max(order_id) or max(order_date) is valid
+    where order_date > (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_strategy_append")
+
+    );
+  
+    
+  ;
+insert into "dev"."main"."inc_strategy_append" ("order_id", "user_id", "amount")
+    (
+        select "order_id", "user_id", "amount"
+        from "inc_strategy_append__dbt_tmp_6a43f596_bf10_4302_bc81_c0c74aeb2bfd"
+    )
+
+
+  
+09:16:29.052287 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create temporary table
+      "inc_strategy_merge__dbt_tmp_92cb2ac3_c6a7_4fb1_ba05_8f3a9a0aaa70"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    -- Filter candidate batch using timestamp watermark
+    where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_strategy_merge")
+
+    );
+  
+    
+  ;
+
+
+    MERGE INTO "dev"."main"."inc_strategy_merge" AS DBT_INTERNAL_DEST
+        USING "inc_strategy_merge__dbt_tmp_92cb2ac3_c6a7_4fb1_ba05_8f3a9a0aaa70" AS DBT_INTERNAL_SOURCE
+        
+            
+                
+            
+        
+        ON (DBT_INTERNAL_SOURCE.order_id = DBT_INTERNAL_DEST.order_id)
+    
+    WHEN MATCHED
+    THEN
+        UPDATE BY NAME
+    WHEN NOT MATCHED
+        
+    THEN
+        INSERT BY NAME
+
+  
+09:16:29.052325 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create temporary table
+      "inc_strategy_delete_insert__dbt_tmp_31444cd1_4764_40af_919b_37d0e117a10a"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    -- Filter candidate batch using timestamp watermark
+    where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_strategy_delete_insert")
+
+    );
+  
+    
+  ;
+
+        
+            delete from "dev"."main"."inc_strategy_delete_insert"
+            where (
+                order_id) in (
+                select (order_id)
+                from "inc_strategy_delete_insert__dbt_tmp_31444cd1_4764_40af_919b_37d0e117a10a"
+            );
+
+        
+    
+
+    insert into "dev"."main"."inc_strategy_delete_insert" ("order_id", "user_id", "amount")
+    (
+        select "order_id", "user_id", "amount"
+        from "inc_strategy_delete_insert__dbt_tmp_31444cd1_4764_40af_919b_37d0e117a10a"
+    )
+  
+09:16:29.052972 [debug]: Writing runtime sql for node "model.dbt_custom.demo_table"
+09:16:29.053201 [debug]: create_debug_span(...).entered() took 2µs
+09:16:29.054212 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 731.083µs
+09:16:29.054217 [debug]: reader.schema() took 84ns
+09:16:29.054237 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.03175ms
+09:16:29.054243 [debug]: concat_batches + normalize_result_column_names took 2.75µs
+09:16:29.054245 [debug]: record_current_span_status_from_attrs took 292ns
+09:16:29.054248 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."demo_table__dbt_tmp"
+  
+    as (
+      
+
+-- Table: Physically created and saved on disk in DuckDB as a BASE TABLE.
+-- Pre-aggregates data so queries are fast and don't recompute joins every time.
+select
+    user_id,
+    user_name_clean,
+    count(order_id) as total_orders,
+    sum(amount) as total_spent
+from "dev"."main"."demo_view"
+group by
+    user_id,
+    user_name_clean
+    );
+  
+    
+  
+09:16:29.054253 [debug]: drop(query_span_guard) (span exit/export) took 5.416µs
+09:16:29.054480 [debug]: create_debug_span(...).entered() took 1.917µs
+09:16:29.054590 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 33.209µs
+09:16:29.054593 [debug]: reader.schema() took 42ns
+09:16:29.054600 [debug]: batch-consume loop (for res in reader) took 4.917µs
+09:16:29.054605 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 121.834µs
+09:16:29.054609 [debug]: concat_batches + normalize_result_column_names took 1.75µs
+09:16:29.054612 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:29.054614 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_table'
+  
+09:16:29.054618 [debug]: drop(query_span_guard) (span exit/export) took 4.666µs
+09:16:29.054809 [debug]: create_debug_span(...).entered() took 1.5µs
+09:16:29.054910 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 34.916µs
+09:16:29.054913 [debug]: reader.schema() took 41ns
+09:16:29.054925 [debug]: batch-consume loop (for res in reader) took 9.5µs
+09:16:29.054930 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 117.25µs
+09:16:29.054933 [debug]: concat_batches + normalize_result_column_names took 1.083µs
+09:16:29.054936 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:29.054938 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_table'
+  
+09:16:29.054941 [debug]: drop(query_span_guard) (span exit/export) took 3.833µs
+09:16:29.055297 [debug]: create_debug_span(...).entered() took 1.333µs
+09:16:29.055401 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 79.916µs
+09:16:29.055405 [debug]: reader.schema() took 42ns
+09:16:29.055409 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 108.084µs
+09:16:29.055412 [debug]: concat_batches + normalize_result_column_names took 667ns
+09:16:29.055415 [debug]: record_current_span_status_from_attrs took 209ns
+09:16:29.055417 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."demo_table" rename to "demo_table__dbt_backup"
+09:16:29.055421 [debug]: drop(query_span_guard) (span exit/export) took 4.958µs
+09:16:29.055794 [debug]: create_debug_span(...).entered() took 1.542µs
+09:16:29.055882 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 66.167µs
+09:16:29.055885 [debug]: reader.schema() took 42ns
+09:16:29.055887 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 90.083µs
+09:16:29.055890 [debug]: concat_batches + normalize_result_column_names took 292ns
+09:16:29.055893 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:29.055896 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."demo_table__dbt_tmp" rename to "demo_table"
+09:16:29.055899 [debug]: drop(query_span_guard) (span exit/export) took 3.709µs
+09:16:29.056502 [debug]: create_debug_span(...).entered() took 1.25µs
+09:16:29.056604 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 75.459µs
+09:16:29.056607 [debug]: reader.schema() took 0ns
+09:16:29.056610 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 103.875µs
+09:16:29.056613 [debug]: concat_batches + normalize_result_column_names took 334ns
+09:16:29.056615 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:29.056617 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."demo_table__dbt_backup" cascade
+    
+09:16:29.056621 [debug]: drop(query_span_guard) (span exit/export) took 4µs
+09:16:29.056754 [info ]: Finished running [  0.00s] model main.demo_table [success]
+09:16:29.056763 [info ]:  Succeeded model main.demo_table (table) [7 of 8 in 0.00s]
+09:16:30.055510 [error]: [DbDriverFailed (dbt1308)]: Database Error in model demo_incremental (target/run/dbt_custom/models/demo_incremental.sql)
+  Binder Error: WHERE clause cannot contain aggregates!
+  
+  LINE 24:     where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."demo_incr...
+                                                    ^
+  (in run/dbt_custom/models/demo_incremental.sql)
+09:16:30.055514 [error]: [DbDriverFailed (dbt1308)]: Database Error in model inc_strategy_delete_insert (target/run/dbt_custom/models/inc_strategy_delete_insert.sql)
+  Binder Error: WHERE clause cannot contain aggregates!
+  
+  LINE 24:     where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_strat...
+                                                    ^
+  (in run/dbt_custom/models/inc_strategy_delete_insert.sql)
+09:16:30.055757 [info ]: Finished running [  1.01s] model main.demo_incremental [error]
+09:16:30.055808 [info ]:     Failed model main.demo_incremental (incremental) [5 of 8 in 1.01s]
+09:16:30.055931 [info ]: Started model main.demo_source_and_ref
+09:16:30.055951 [debug]: Started rendering model main.demo_source_and_ref
+09:16:30.055968 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [skipped]
+09:16:30.055980 [info ]: Finished rendering [  1.02s] (9 nodes, 1 skipped, 0 errors)
+09:16:30.056002 [debug]: Started analyzing model main.demo_source_and_ref
+09:16:30.056017 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [skipped]
+09:16:30.056026 [info ]: Finished analyzing [  1.01s] (9 nodes, 1 skipped, 0 errors)
+09:16:30.056038 [info ]: Started running model main.demo_source_and_ref
+09:16:30.056045 [info ]: Finished running [  0.00s] model main.demo_source_and_ref [skipped]
+09:16:30.056052 [info ]:    Skipped model main.demo_source_and_ref (view) [8 of 8]
+09:16:30.056071 [info ]: Finished running [  1.01s] model main.inc_strategy_delete_insert [error]
+09:16:30.056080 [info ]:     Failed model main.inc_strategy_delete_insert (incremental) [3 of 8 in 1.01s]
+09:16:30.057884 [error]: [DbDriverFailed (dbt1308)]: Database Error in model inc_strategy_append (target/run/dbt_custom/models/inc_strategy_append.sql)
+  Binder Error: WHERE clause cannot contain aggregates!
+  
+  LINE 24:     where order_date > (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_strat...
+                                                   ^
+  (in run/dbt_custom/models/inc_strategy_append.sql)
+09:16:30.058079 [error]: [DbDriverFailed (dbt1308)]: Database Error in model inc_strategy_merge (target/run/dbt_custom/models/inc_strategy_merge.sql)
+  Binder Error: WHERE clause cannot contain aggregates!
+  
+  LINE 24:     where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_strat...
+                                                    ^
+  (in run/dbt_custom/models/inc_strategy_merge.sql)
+09:16:30.058097 [info ]: Finished running [  1.01s] model main.inc_strategy_append [error]
+09:16:30.058129 [info ]:     Failed model main.inc_strategy_append (incremental) [4 of 8 in 1.02s]
+09:16:30.058182 [info ]: Finished running [  1.01s] model main.inc_strategy_merge [error]
+09:16:30.058190 [info ]: Finished running [  1.01s] (9 nodes, 2 skipped, 4 errors)
+09:16:30.058212 [info ]:     Failed model main.inc_strategy_merge (incremental) [2 of 8 in 1.02s]
+09:16:30.603896 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 4 errors for target 'dev' [1.8s]
+Processed: 9 models
+Summary: 9 total | 3 success | 4 error | 1 skipped | 1 no-op
+==================== 2026-10-25T09:16:51.979370Z | 01a17259-378a-7680-883f-85534bb47162 ====================
+09:16:51.979433 [info ]: dbt 2.0.9
+09:16:51.979546 [info ]: Started loading project
+09:16:51.979991 [info ]: Loading profiles.yml
+09:16:52.065417 [debug]:    Started loading packages
+09:16:52.065693 [debug]:     Loaded [  0.00s] packages
+09:16:52.066010 [info ]: Finished loading project [  0.09s]
+09:16:52.066965 [info ]: Started parsing (10 nodes)
+09:16:52.077479 [debug]:    Started building model nodes
+09:16:52.077489 [debug]:   Finished [  0.00s] building model nodes
+09:16:52.077576 [debug]:    Started building model nodes
+09:16:52.077586 [debug]:   Finished [  0.00s] building model nodes
+09:16:52.077633 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:16:52.077719 [debug]:    Started resolving data tests
+09:16:52.077737 [debug]:   Finished [  0.00s] resolving data tests
+09:16:52.077905 [debug]:    Started resolving data tests
+09:16:52.077918 [debug]:   Finished [  0.00s] resolving data tests
+09:16:52.078362 [debug]: Finished parsing models/demo_ephemeral.sql [  0.00s]
+09:16:52.078733 [debug]: Finished parsing models/demo_incremental.sql [  0.00s]
+09:16:52.079160 [debug]: Finished parsing models/demo_source_and_ref.sql [  0.00s]
+09:16:52.079417 [debug]: Finished parsing models/demo_table.sql [  0.00s]
+09:16:52.079623 [debug]: Finished parsing models/demo_view.sql [  0.00s]
+09:16:52.079858 [debug]: Finished parsing models/inc_strategy_append.sql [  0.00s]
+09:16:52.080079 [debug]: Finished parsing models/inc_strategy_delete_insert.sql [  0.00s]
+09:16:52.080289 [debug]: Finished parsing models/inc_strategy_merge.sql [  0.00s]
+09:16:52.080471 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:16:52.080484 [debug]:    Started building model nodes
+09:16:52.081574 [debug]:   Finished [  0.00s] building model nodes
+09:16:52.082114 [debug]:    Started resolving data tests
+09:16:52.082123 [debug]:   Finished [  0.00s] resolving data tests
+09:16:52.082266 [debug]:    Started typechecking macros
+09:16:52.133421 [debug]:   Finished [  0.05s] typechecking macros
+09:16:52.133766 [info ]: Finished parsing [  0.07s] (10 nodes, 0 skipped, 0 errors)
+09:16:52.138786 [info ]: Started scheduling
+09:16:52.138863 [info ]: Finished scheduling [  0.00s]
+09:16:52.139382 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+09:16:52.139787 [info ]:    Started downloading referenced relations (1 items)
+09:16:52.140138 [debug]: DuckDB driver resolved: duckdb 1.5.4
+09:16:52.151265 [debug]:    Started downloading "dev"."main"
+09:16:52.151293 [debug]: create_debug_span(...).entered() took 5µs
+09:16:52.152767 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 902.25µs
+09:16:52.152772 [debug]: reader.schema() took 125ns
+09:16:52.152803 [debug]: batch-consume loop (for res in reader) took 28.791µs
+09:16:52.152817 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.518667ms
+09:16:52.152872 [debug]: concat_batches + normalize_result_column_names took 52.041µs
+09:16:52.152877 [debug]: record_current_span_status_from_attrs took 2.125µs
+09:16:52.152880 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:16:52.152888 [debug]: drop(query_span_guard) (span exit/export) took 8.709µs
+09:16:52.152919 [debug]: Downloaded [  0.00s] "dev"."main"
+09:16:52.152999 [info ]:   Finished [  0.01s] downloading referenced relations (1 items)
+09:16:52.153193 [info ]: Started building task graph
+09:16:52.153304 [info ]: Finished building task graph [  0.00s]
+09:16:52.154828 [debug]: create_debug_span(...).entered() took 2.208µs
+09:16:52.155022 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 56.25µs
+09:16:52.155026 [debug]: reader.schema() took 0ns
+09:16:52.155035 [debug]: batch-consume loop (for res in reader) took 6.541µs
+09:16:52.155042 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 209.417µs
+09:16:52.155047 [debug]: concat_batches + normalize_result_column_names took 2.625µs
+09:16:52.155051 [debug]: record_current_span_status_from_attrs took 1.042µs
+09:16:52.155053 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+09:16:52.155059 [debug]: drop(query_span_guard) (span exit/export) took 5.5µs
+09:16:52.155228 [debug]: create_debug_span(...).entered() took 1.416µs
+09:16:52.155366 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 52.166µs
+09:16:52.155370 [debug]: reader.schema() took 42ns
+09:16:52.155379 [debug]: batch-consume loop (for res in reader) took 7.042µs
+09:16:52.155384 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 153.167µs
+09:16:52.155388 [debug]: concat_batches + normalize_result_column_names took 1.041µs
+09:16:52.155390 [debug]: record_current_span_status_from_attrs took 208ns
+09:16:52.155393 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+09:16:52.155397 [debug]: drop(query_span_guard) (span exit/export) took 4.5µs
+09:16:52.155476 [debug]: create_debug_span(...).entered() took 1.083µs
+09:16:52.155537 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 21.916µs
+09:16:52.155539 [debug]: reader.schema() took 0ns
+09:16:52.155547 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 68.375µs
+09:16:52.155551 [debug]: concat_batches + normalize_result_column_names took 875ns
+09:16:52.155553 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.155556 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+09:16:52.155560 [debug]: drop(query_span_guard) (span exit/export) took 3.875µs
+09:16:52.155615 [info ]: Started rendering (9 nodes)
+09:16:52.155634 [info ]: Started model main.user_orders
+09:16:52.155643 [debug]: Started rendering model main.user_orders
+09:16:52.155658 [info ]: Started model main.inc_strategy_merge
+09:16:52.155662 [debug]: Started rendering model main.inc_strategy_merge
+09:16:52.155667 [info ]: Started model main.inc_strategy_delete_insert
+09:16:52.155669 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:16:52.155673 [info ]: Started model main.inc_strategy_append
+09:16:52.155675 [debug]: Started rendering model main.inc_strategy_append
+09:16:52.155679 [info ]: Started model main.demo_incremental
+09:16:52.155681 [debug]: Started rendering model main.demo_incremental
+09:16:52.155684 [info ]: Started model main.demo_ephemeral
+09:16:52.155686 [debug]: Started rendering model main.demo_ephemeral
+09:16:52.156247 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/compiled/dbt_custom/models/user_orders.sql
+09:16:52.156313 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/compiled/dbt_custom/models/demo_ephemeral.sql
+09:16:52.156372 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:16:52.156398 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:16:52.156414 [info ]: Started analyzing (9 nodes)
+09:16:52.156426 [debug]: Started analyzing model main.demo_ephemeral
+09:16:52.156430 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/compiled/dbt_custom/models/inc_strategy_append.sql
+09:16:52.156436 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:16:52.156440 [debug]: Started analyzing model main.user_orders
+09:16:52.156444 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:16:52.156447 [debug]: Started analyzing model main.inc_strategy_merge
+09:16:52.156482 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:16:52.156490 [debug]: Started analyzing model main.inc_strategy_append
+09:16:52.156517 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:16:52.156555 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/compiled/dbt_custom/models/demo_incremental.sql
+09:16:52.156560 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:16:52.156569 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:16:52.156577 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:16:52.156581 [debug]: Started analyzing model main.demo_incremental
+09:16:52.159152 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:16:52.159166 [info ]: Started running (9 nodes)
+09:16:52.159180 [info ]: Started running model main.inc_strategy_append
+09:16:52.159188 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:16:52.159195 [info ]: Started running model main.inc_strategy_merge
+09:16:52.159199 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:16:52.159202 [info ]: Started running model main.inc_strategy_delete_insert
+09:16:52.159207 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:16:52.159209 [info ]: Started running model main.demo_incremental
+09:16:52.159601 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:16:52.159608 [info ]: Started running model main.demo_ephemeral
+09:16:52.159785 [info ]: Finished running [  0.00s] model main.demo_ephemeral [no-op]
+09:16:52.159819 [info ]:    Skipped model main.demo_ephemeral (ephemeral)
+09:16:52.159854 [info ]: Started model main.demo_view
+09:16:52.159864 [debug]: Started rendering model main.demo_view
+09:16:52.159880 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:16:52.159893 [info ]: Started running model main.user_orders
+09:16:52.159969 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:52.160038 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:52.160088 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:52.160202 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:52.160491 [debug]: Writing runtime sql for node "model.dbt_custom.demo_incremental"
+09:16:52.160550 [debug]: Writing runtime sql for node "model.dbt_custom.inc_strategy_append"
+09:16:52.160634 [debug]: Writing runtime sql for node "model.dbt_custom.inc_strategy_delete_insert"
+09:16:52.160699 [debug]: Writing runtime sql for node "model.dbt_custom.inc_strategy_merge"
+09:16:52.160803 [debug]: create_debug_span(...).entered() took 6.916µs
+09:16:52.160833 [debug]: create_debug_span(...).entered() took 4.75µs
+09:16:52.160846 [debug]: create_debug_span(...).entered() took 5.208µs
+09:16:52.160955 [debug]: create_debug_span(...).entered() took 2.791µs
+09:16:52.161055 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/compiled/dbt_custom/models/demo_view.sql
+09:16:52.161085 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:16:52.161091 [debug]: Started analyzing model main.demo_view
+09:16:52.161428 [debug]: Writing runtime sql for node "model.dbt_custom.user_orders"
+09:16:52.161644 [debug]: create_debug_span(...).entered() took 5.083µs
+09:16:52.161825 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:16:52.161834 [info ]: Started running model main.demo_view
+09:16:52.162042 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 980.959µs
+09:16:52.162047 [debug]: reader.schema() took 83ns
+09:16:52.162056 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.207333ms
+09:16:52.162062 [debug]: concat_batches + normalize_result_column_names took 4.041µs
+09:16:52.162064 [debug]: record_current_span_status_from_attrs took 625ns
+09:16:52.162067 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."inc_strategy_delete_insert__dbt_tmp"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    );
+  
+    
+  
+  
+09:16:52.162073 [debug]: drop(query_span_guard) (span exit/export) took 7.25µs
+09:16:52.162095 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.1205ms
+09:16:52.162098 [debug]: reader.schema() took 42ns
+09:16:52.162105 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.297292ms
+09:16:52.162108 [debug]: concat_batches + normalize_result_column_names took 584ns
+09:16:52.162110 [debug]: record_current_span_status_from_attrs took 250ns
+09:16:52.162112 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."inc_strategy_append__dbt_tmp"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    );
+  
+    
+  
+  
+09:16:52.162118 [debug]: drop(query_span_guard) (span exit/export) took 6.167µs
+09:16:52.162140 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.112625ms
+09:16:52.162143 [debug]: reader.schema() took 0ns
+09:16:52.162151 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.192542ms
+09:16:52.162155 [debug]: concat_batches + normalize_result_column_names took 333ns
+09:16:52.162157 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.162159 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."inc_strategy_merge__dbt_tmp"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    );
+  
+    
+  
+  
+09:16:52.162166 [debug]: drop(query_span_guard) (span exit/export) took 7.583µs
+09:16:52.162312 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.340208ms
+09:16:52.162316 [debug]: reader.schema() took 42ns
+09:16:52.162321 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.486ms
+09:16:52.162324 [debug]: concat_batches + normalize_result_column_names took 334ns
+09:16:52.162326 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.162328 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."demo_incremental__dbt_tmp"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    );
+  
+    
+  
+  
+09:16:52.162332 [debug]: drop(query_span_guard) (span exit/export) took 4.916µs
+09:16:52.162385 [debug]: create_debug_span(...).entered() took 5.5µs
+09:16:52.162397 [debug]: create_debug_span(...).entered() took 2.208µs
+09:16:52.162530 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 53.25µs
+09:16:52.162534 [debug]: reader.schema() took 0ns
+09:16:52.162540 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 63.917µs
+09:16:52.162541 [debug]: batch-consume loop (for res in reader) took 5.5µs
+09:16:52.162542 [debug]: create_debug_span(...).entered() took 2.25µs
+09:16:52.162543 [debug]: reader.schema() took 42ns
+09:16:52.162546 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 146.667µs
+09:16:52.162550 [debug]: concat_batches + normalize_result_column_names took 1.625µs
+09:16:52.162552 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.162554 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_merge'
+  
+09:16:52.162553 [debug]: batch-consume loop (for res in reader) took 7.375µs
+09:16:52.162559 [debug]: drop(query_span_guard) (span exit/export) took 5.458µs
+09:16:52.162559 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 167.125µs
+09:16:52.162562 [debug]: concat_batches + normalize_result_column_names took 875ns
+09:16:52.162564 [debug]: record_current_span_status_from_attrs took 208ns
+09:16:52.162566 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_append'
+  
+09:16:52.162571 [debug]: drop(query_span_guard) (span exit/export) took 4.75µs
+09:16:52.162678 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 870.958µs
+09:16:52.162682 [debug]: reader.schema() took 42ns
+09:16:52.162701 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.053458ms
+09:16:52.162704 [debug]: concat_batches + normalize_result_column_names took 458ns
+09:16:52.162706 [debug]: record_current_span_status_from_attrs took 250ns
+09:16:52.162708 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."user_orders__dbt_tmp"
+  
+    as (
+      
+
+select
+    u.name,
+    o.order_id,
+    o.amount
+from users u
+join orders o on u.id = o.user_id
+    );
+  
+    
+  
+09:16:52.162714 [debug]: drop(query_span_guard) (span exit/export) took 5.792µs
+09:16:52.162765 [debug]: create_debug_span(...).entered() took 1.459µs
+09:16:52.162804 [debug]: create_debug_span(...).entered() took 1.916µs
+09:16:52.162803 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 184.292µs
+09:16:52.162809 [debug]: create_debug_span(...).entered() took 10.417µs
+09:16:52.162822 [debug]: reader.schema() took 41ns
+09:16:52.162843 [debug]: batch-consume loop (for res in reader) took 16.042µs
+09:16:52.162883 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 336.084µs
+09:16:52.162895 [debug]: concat_batches + normalize_result_column_names took 3µs
+09:16:52.162901 [debug]: record_current_span_status_from_attrs took 958ns
+09:16:52.162908 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_incremental'
+  
+09:16:52.162923 [debug]: drop(query_span_guard) (span exit/export) took 17.209µs
+09:16:52.162973 [debug]: create_debug_span(...).entered() took 2.458µs
+09:16:52.162987 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 36.708µs
+09:16:52.162991 [debug]: reader.schema() took 41ns
+09:16:52.162998 [debug]: batch-consume loop (for res in reader) took 4.584µs
+09:16:52.162999 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 124.541µs
+09:16:52.163005 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 182.417µs
+09:16:52.163005 [debug]: reader.schema() took 41ns
+09:16:52.163011 [debug]: concat_batches + normalize_result_column_names took 958ns
+09:16:52.163014 [debug]: record_current_span_status_from_attrs took 333ns
+09:16:52.163017 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_delete_insert'
+  
+09:16:52.163017 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 172.708µs
+09:16:52.163023 [debug]: reader.schema() took 42ns
+09:16:52.163023 [debug]: drop(query_span_guard) (span exit/export) took 7.042µs
+09:16:52.163041 [debug]: batch-consume loop (for res in reader) took 27.5µs
+09:16:52.163047 [debug]: batch-consume loop (for res in reader) took 19.917µs
+09:16:52.163061 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 252.25µs
+09:16:52.163064 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 294.084µs
+09:16:52.163068 [debug]: concat_batches + normalize_result_column_names took 750ns
+09:16:52.163068 [debug]: concat_batches + normalize_result_column_names took 1.584µs
+09:16:52.163072 [debug]: record_current_span_status_from_attrs took 500ns
+09:16:52.163073 [debug]: record_current_span_status_from_attrs took 625ns
+09:16:52.163078 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_append'
+  
+09:16:52.163076 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_merge'
+  
+09:16:52.163091 [debug]: drop(query_span_guard) (span exit/export) took 15.209µs
+09:16:52.163091 [debug]: drop(query_span_guard) (span exit/export) took 14.041µs
+09:16:52.163121 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 73.458µs
+09:16:52.163131 [debug]: reader.schema() took 84ns
+09:16:52.163152 [debug]: batch-consume loop (for res in reader) took 16.291µs
+09:16:52.163169 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 189.125µs
+09:16:52.163177 [debug]: concat_batches + normalize_result_column_names took 2.417µs
+09:16:52.163182 [debug]: record_current_span_status_from_attrs took 709ns
+09:16:52.163188 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'user_orders'
+  
+09:16:52.163192 [debug]: create_debug_span(...).entered() took 2.084µs
+09:16:52.163201 [debug]: drop(query_span_guard) (span exit/export) took 14.291µs
+09:16:52.163266 [debug]: create_debug_span(...).entered() took 2.209µs
+09:16:52.163311 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 52.542µs
+09:16:52.163316 [debug]: reader.schema() took 0ns
+09:16:52.163329 [debug]: batch-consume loop (for res in reader) took 8.708µs
+09:16:52.163334 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 137.25µs
+09:16:52.163337 [debug]: concat_batches + normalize_result_column_names took 625ns
+09:16:52.163339 [debug]: record_current_span_status_from_attrs took 209ns
+09:16:52.163341 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_incremental'
+  
+09:16:52.163347 [debug]: drop(query_span_guard) (span exit/export) took 6.125µs
+09:16:52.163455 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 111.083µs
+09:16:52.163470 [debug]: reader.schema() took 166ns
+09:16:52.163473 [debug]: Writing runtime sql for node "model.dbt_custom.demo_view"
+09:16:52.163499 [debug]: batch-consume loop (for res in reader) took 23.417µs
+09:16:52.163519 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 246.042µs
+09:16:52.163526 [debug]: concat_batches + normalize_result_column_names took 1.5µs
+09:16:52.163531 [debug]: record_current_span_status_from_attrs took 1.084µs
+09:16:52.163537 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_delete_insert'
+  
+09:16:52.163551 [debug]: drop(query_span_guard) (span exit/export) took 15.25µs
+09:16:52.163565 [debug]: create_debug_span(...).entered() took 1.833µs
+09:16:52.163683 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 86.708µs
+09:16:52.163686 [debug]: reader.schema() took 0ns
+09:16:52.163690 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 121.333µs
+09:16:52.163691 [debug]: create_debug_span(...).entered() took 4.125µs
+09:16:52.163693 [debug]: concat_batches + normalize_result_column_names took 834ns
+09:16:52.163695 [debug]: record_current_span_status_from_attrs took 166ns
+09:16:52.163697 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."inc_strategy_merge" rename to "inc_strategy_merge__dbt_backup"
+09:16:52.163702 [debug]: drop(query_span_guard) (span exit/export) took 5.75µs
+09:16:52.163749 [debug]: create_debug_span(...).entered() took 1.709µs
+09:16:52.163766 [debug]: create_debug_span(...).entered() took 7.875µs
+09:16:52.163826 [debug]: create_debug_span(...).entered() took 1.708µs
+09:16:52.163857 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 76.708µs
+09:16:52.163861 [debug]: reader.schema() took 41ns
+09:16:52.163865 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 111.209µs
+09:16:52.163867 [debug]: concat_batches + normalize_result_column_names took 417ns
+09:16:52.163869 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.163871 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."inc_strategy_append" rename to "inc_strategy_append__dbt_backup"
+09:16:52.163876 [debug]: drop(query_span_guard) (span exit/export) took 5.25µs
+09:16:52.163950 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 131.875µs
+09:16:52.163954 [debug]: reader.schema() took 41ns
+09:16:52.163960 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 266.041µs
+09:16:52.163962 [debug]: concat_batches + normalize_result_column_names took 291ns
+09:16:52.163964 [debug]: record_current_span_status_from_attrs took 250ns
+09:16:52.163966 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+  create view "dev"."main"."demo_view__dbt_tmp" as (
+    with __dbt__cte__demo_ephemeral as (
+
+
+-- Ephemeral: Exists ONLY within dbt as a reusable CTE (Common Table Expression).
+-- It is NEVER created as a table or view in DuckDB.
+select
+    id as user_id,
+    name as user_name,
+    upper(name) as user_name_clean
+from users
+)
+--EPHEMERAL-SELECT-WRAPPER-START
+select * from (
+
+
+-- View: Recomputed on each query; created in DuckDB as a VIEW.
+-- Notice how referencing an ephemeral model embeds it as an inline CTE.
+select
+    u.user_id,
+    u.user_name_clean,
+    o.order_id,
+    o.amount
+from __dbt__cte__demo_ephemeral u
+join orders o
+    on u.user_id = o.user_id
+--EPHEMERAL-SELECT-WRAPPER-END
+)
+  );
+
+09:16:52.163972 [debug]: drop(query_span_guard) (span exit/export) took 5.916µs
+09:16:52.164065 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 105.792µs
+09:16:52.164075 [debug]: reader.schema() took 42ns
+09:16:52.164077 [debug]: create_debug_span(...).entered() took 1.459µs
+09:16:52.164135 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 169.25µs
+09:16:52.164138 [debug]: reader.schema() took 42ns
+09:16:52.164142 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 311.625µs
+09:16:52.164144 [debug]: concat_batches + normalize_result_column_names took 292ns
+09:16:52.164147 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.164148 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."demo_incremental" rename to "demo_incremental__dbt_backup"
+09:16:52.164153 [debug]: drop(query_span_guard) (span exit/export) took 4.709µs
+09:16:52.164160 [debug]: batch-consume loop (for res in reader) took 80µs
+09:16:52.164164 [debug]: create_debug_span(...).entered() took 1.958µs
+09:16:52.164181 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 403.208µs
+09:16:52.164189 [debug]: concat_batches + normalize_result_column_names took 1.583µs
+09:16:52.164194 [debug]: record_current_span_status_from_attrs took 792ns
+09:16:52.164200 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'user_orders'
+  
+09:16:52.164212 [debug]: drop(query_span_guard) (span exit/export) took 14.125µs
+09:16:52.164259 [debug]: create_debug_span(...).entered() took 1.459µs
+09:16:52.164324 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 145.625µs
+09:16:52.164329 [debug]: reader.schema() took 42ns
+09:16:52.164334 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 253.333µs
+09:16:52.164336 [debug]: concat_batches + normalize_result_column_names took 583ns
+09:16:52.164339 [debug]: record_current_span_status_from_attrs took 250ns
+09:16:52.164341 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."inc_strategy_merge__dbt_tmp" rename to "inc_strategy_merge"
+09:16:52.164347 [debug]: drop(query_span_guard) (span exit/export) took 5.833µs
+09:16:52.164377 [debug]: create_debug_span(...).entered() took 1.5µs
+09:16:52.164450 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 258µs
+09:16:52.164474 [debug]: reader.schema() took 125ns
+09:16:52.164487 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 317.208µs
+09:16:52.164512 [debug]: concat_batches + normalize_result_column_names took 1.791µs
+09:16:52.164511 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 177.542µs
+09:16:52.164515 [debug]: reader.schema() took 0ns
+09:16:52.164516 [debug]: record_current_span_status_from_attrs took 958ns
+09:16:52.164519 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 253.584µs
+09:16:52.164522 [debug]: concat_batches + normalize_result_column_names took 292ns
+09:16:52.164525 [debug]: record_current_span_status_from_attrs took 167ns
+09:16:52.164523 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."inc_strategy_delete_insert" rename to "inc_strategy_delete_insert__dbt_backup"
+09:16:52.164524 [debug]: create_debug_span(...).entered() took 1.958µs
+09:16:52.164526 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."inc_strategy_append__dbt_tmp" rename to "inc_strategy_append"
+09:16:52.164533 [debug]: drop(query_span_guard) (span exit/export) took 6.584µs
+09:16:52.164537 [debug]: drop(query_span_guard) (span exit/export) took 15.708µs
+09:16:52.164633 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 179.125µs
+09:16:52.164637 [debug]: reader.schema() took 41ns
+09:16:52.164641 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 260.417µs
+09:16:52.164644 [debug]: concat_batches + normalize_result_column_names took 209ns
+09:16:52.164646 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.164648 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_view" rename to "demo_view__dbt_backup"
+09:16:52.164653 [debug]: drop(query_span_guard) (span exit/export) took 4.709µs
+09:16:52.164690 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 142.417µs
+09:16:52.164694 [debug]: reader.schema() took 83ns
+09:16:52.164697 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 169.709µs
+09:16:52.164699 [debug]: concat_batches + normalize_result_column_names took 208ns
+09:16:52.164701 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.164703 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."demo_incremental__dbt_tmp" rename to "demo_incremental"
+09:16:52.164705 [debug]: create_debug_span(...).entered() took 1.333µs
+09:16:52.164708 [debug]: drop(query_span_guard) (span exit/export) took 4.958µs
+09:16:52.164792 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 69.042µs
+09:16:52.164796 [debug]: reader.schema() took 42ns
+09:16:52.164799 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 91.084µs
+09:16:52.164801 [debug]: concat_batches + normalize_result_column_names took 250ns
+09:16:52.164803 [debug]: record_current_span_status_from_attrs took 166ns
+09:16:52.164805 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."user_orders" rename to "user_orders__dbt_backup"
+09:16:52.164810 [debug]: drop(query_span_guard) (span exit/export) took 4.5µs
+09:16:52.164973 [debug]: create_debug_span(...).entered() took 1.542µs
+09:16:52.165018 [debug]: create_debug_span(...).entered() took 1.333µs
+09:16:52.165076 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 39.334µs
+09:16:52.165080 [debug]: reader.schema() took 0ns
+09:16:52.165086 [debug]: batch-consume loop (for res in reader) took 3.958µs
+09:16:52.165091 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 114.167µs
+09:16:52.165094 [debug]: concat_batches + normalize_result_column_names took 708ns
+09:16:52.165097 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.165099 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_merge__dbt_backup'
+  
+09:16:52.165104 [debug]: drop(query_span_guard) (span exit/export) took 5.458µs
+09:16:52.165124 [debug]: create_debug_span(...).entered() took 1.208µs
+09:16:52.165182 [debug]: create_debug_span(...).entered() took 1.417µs
+09:16:52.165243 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 203.5µs
+09:16:52.165247 [debug]: reader.schema() took 41ns
+09:16:52.165250 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 227.042µs
+09:16:52.165252 [debug]: concat_batches + normalize_result_column_names took 208ns
+09:16:52.165254 [debug]: record_current_span_status_from_attrs took 167ns
+09:16:52.165256 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."inc_strategy_delete_insert__dbt_tmp" rename to "inc_strategy_delete_insert"
+09:16:52.165261 [debug]: drop(query_span_guard) (span exit/export) took 5.125µs
+09:16:52.165294 [debug]: create_debug_span(...).entered() took 1.417µs
+09:16:52.165302 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 158.209µs
+09:16:52.165304 [debug]: reader.schema() took 0ns
+09:16:52.165307 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 178.417µs
+09:16:52.165309 [debug]: concat_batches + normalize_result_column_names took 208ns
+09:16:52.165312 [debug]: record_current_span_status_from_attrs took 208ns
+09:16:52.165314 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_view__dbt_tmp" rename to "demo_view"
+09:16:52.165319 [debug]: drop(query_span_guard) (span exit/export) took 4.959µs
+09:16:52.165419 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 63.625µs
+09:16:52.165431 [debug]: reader.schema() took 167ns
+09:16:52.165460 [debug]: batch-consume loop (for res in reader) took 25.667µs
+09:16:52.165480 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 181.333µs
+09:16:52.165481 [debug]: create_debug_span(...).entered() took 1.625µs
+09:16:52.165488 [debug]: concat_batches + normalize_result_column_names took 1.375µs
+09:16:52.165493 [debug]: record_current_span_status_from_attrs took 875ns
+09:16:52.165508 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_merge__dbt_backup'
+  
+09:16:52.165523 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 174.375µs
+09:16:52.165527 [debug]: reader.schema() took 0ns
+09:16:52.165531 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 344.417µs
+09:16:52.165533 [debug]: concat_batches + normalize_result_column_names took 209ns
+09:16:52.165535 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.165537 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."user_orders__dbt_tmp" rename to "user_orders"
+09:16:52.165534 [debug]: drop(query_span_guard) (span exit/export) took 36.375µs
+09:16:52.165543 [debug]: drop(query_span_guard) (span exit/export) took 5.542µs
+09:16:52.165580 [debug]: create_debug_span(...).entered() took 1.459µs
+09:16:52.165691 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 48.125µs
+09:16:52.165696 [debug]: reader.schema() took 41ns
+09:16:52.165703 [debug]: batch-consume loop (for res in reader) took 4.709µs
+09:16:52.165711 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 127µs
+09:16:52.165717 [debug]: concat_batches + normalize_result_column_names took 1µs
+09:16:52.165719 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.165723 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_append__dbt_backup'
+  
+09:16:52.165734 [debug]: drop(query_span_guard) (span exit/export) took 11.125µs
+09:16:52.165761 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 73.667µs
+09:16:52.165770 [debug]: reader.schema() took 41ns
+09:16:52.165784 [debug]: batch-consume loop (for res in reader) took 9.417µs
+09:16:52.165798 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 311.375µs
+09:16:52.165807 [debug]: concat_batches + normalize_result_column_names took 2.666µs
+09:16:52.165812 [debug]: record_current_span_status_from_attrs took 625ns
+09:16:52.165817 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_incremental__dbt_backup'
+  
+09:16:52.165823 [debug]: create_debug_span(...).entered() took 1.916µs
+09:16:52.165829 [debug]: drop(query_span_guard) (span exit/export) took 13.166µs
+09:16:52.165928 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 40.042µs
+09:16:52.165928 [debug]: create_debug_span(...).entered() took 1.541µs
+09:16:52.165933 [debug]: reader.schema() took 0ns
+09:16:52.165939 [debug]: batch-consume loop (for res in reader) took 4.208µs
+09:16:52.165944 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 116.083µs
+09:16:52.165948 [debug]: concat_batches + normalize_result_column_names took 667ns
+09:16:52.165950 [debug]: record_current_span_status_from_attrs took 84ns
+09:16:52.165955 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_delete_insert__dbt_backup'
+  
+09:16:52.165957 [debug]: create_debug_span(...).entered() took 1.584µs
+09:16:52.165959 [debug]: drop(query_span_guard) (span exit/export) took 4.875µs
+09:16:52.166089 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 76.208µs
+09:16:52.166100 [debug]: reader.schema() took 0ns
+09:16:52.166125 [debug]: create_debug_span(...).entered() took 1.75µs
+09:16:52.166135 [debug]: create_debug_span(...).entered() took 1.291µs
+09:16:52.166135 [debug]: batch-consume loop (for res in reader) took 30.5µs
+09:16:52.166154 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 194.084µs
+09:16:52.166153 [debug]: create_debug_span(...).entered() took 1.625µs
+09:16:52.166156 [debug]: concat_batches + normalize_result_column_names took 875ns
+09:16:52.166159 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.166161 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_append__dbt_backup'
+  
+09:16:52.166166 [debug]: drop(query_span_guard) (span exit/export) took 5.167µs
+09:16:52.166220 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 183.916µs
+09:16:52.166224 [debug]: reader.schema() took 0ns
+09:16:52.166229 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 288.834µs
+09:16:52.166232 [debug]: concat_batches + normalize_result_column_names took 250ns
+09:16:52.166233 [debug]: record_current_span_status_from_attrs took 209ns
+09:16:52.166235 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop view if exists "dev"."main"."demo_view__dbt_backup" cascade
+    
+09:16:52.166240 [debug]: drop(query_span_guard) (span exit/export) took 4.792µs
+09:16:52.166251 [debug]: create_debug_span(...).entered() took 1.958µs
+09:16:52.166339 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 65.625µs
+09:16:52.166357 [debug]: reader.schema() took 83ns
+09:16:52.166397 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 138.708µs
+09:16:52.166399 [debug]: batch-consume loop (for res in reader) took 9.583µs
+09:16:52.166401 [debug]: reader.schema() took 0ns
+09:16:52.166404 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 274.125µs
+09:16:52.166406 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 268.208µs
+09:16:52.166407 [debug]: concat_batches + normalize_result_column_names took 458ns
+09:16:52.166408 [debug]: concat_batches + normalize_result_column_names took 416ns
+09:16:52.166409 [debug]: record_current_span_status_from_attrs took 166ns
+09:16:52.166411 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_incremental__dbt_backup'
+  
+09:16:52.166411 [debug]: record_current_span_status_from_attrs took 84ns
+09:16:52.166413 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."user_orders__dbt_backup" cascade
+    
+09:16:52.166416 [debug]: drop(query_span_guard) (span exit/export) took 5.208µs
+09:16:52.166417 [debug]: drop(query_span_guard) (span exit/export) took 4.416µs
+09:16:52.166440 [info ]: Finished running [  0.00s] model main.demo_view [success]
+09:16:52.166447 [info ]:  Succeeded model main.demo_view (view) [6 of 8 in 0.01s]
+09:16:52.166472 [info ]: Started model main.demo_table
+09:16:52.166478 [debug]: Started rendering model main.demo_table
+09:16:52.166493 [debug]: create_debug_span(...).entered() took 1.292µs
+09:16:52.166509 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 233.291µs
+09:16:52.166511 [debug]: reader.schema() took 0ns
+09:16:52.166514 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 259.666µs
+09:16:52.166516 [debug]: concat_batches + normalize_result_column_names took 166ns
+09:16:52.166518 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:52.166520 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."inc_strategy_merge__dbt_backup" cascade
+    
+09:16:52.166525 [debug]: drop(query_span_guard) (span exit/export) took 5.542µs
+09:16:52.166562 [info ]: Finished running [  0.01s] model main.user_orders [success]
+09:16:52.166568 [info ]:  Succeeded model main.user_orders (table) [1 of 8 in 0.01s]
+09:16:52.166696 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 149.834µs
+09:16:52.166700 [debug]: reader.schema() took 41ns
+09:16:52.166775 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 207.25µs
+09:16:52.166779 [debug]: reader.schema() took 41ns
+09:16:52.166783 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 283.125µs
+09:16:52.166785 [debug]: concat_batches + normalize_result_column_names took 166ns
+09:16:52.166787 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:52.166789 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."inc_strategy_append__dbt_backup" cascade
+    
+09:16:52.166794 [debug]: drop(query_span_guard) (span exit/export) took 4.583µs
+09:16:52.166818 [debug]: batch-consume loop (for res in reader) took 113.834µs
+09:16:52.166796 [info ]: Finished running [  0.01s] model main.inc_strategy_merge [success]
+09:16:52.166851 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/compiled/dbt_custom/models/demo_table.sql
+09:16:52.166850 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 688.666µs
+09:16:52.166846 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [2 of 8 in 0.01s]
+09:16:52.166860 [debug]: concat_batches + normalize_result_column_names took 1.959µs
+09:16:52.166865 [debug]: record_current_span_status_from_attrs took 875ns
+09:16:52.166880 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'inc_strategy_delete_insert__dbt_backup'
+  
+09:16:52.166890 [debug]: drop(query_span_guard) (span exit/export) took 21.25µs
+09:16:52.166893 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:16:52.166934 [debug]: Started analyzing model main.demo_table
+09:16:52.166954 [debug]: create_debug_span(...).entered() took 1.625µs
+09:16:52.166970 [info ]: Finished running [  0.01s] model main.inc_strategy_append [success]
+09:16:52.166978 [info ]:  Succeeded model main.inc_strategy_append (incremental) [4 of 8 in 0.01s]
+09:16:52.167054 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 77.083µs
+09:16:52.167059 [debug]: reader.schema() took 0ns
+09:16:52.167062 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 104.292µs
+09:16:52.167064 [debug]: concat_batches + normalize_result_column_names took 250ns
+09:16:52.167066 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.167068 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."demo_incremental__dbt_backup" cascade
+    
+09:16:52.167073 [debug]: drop(query_span_guard) (span exit/export) took 5.5µs
+09:16:52.167220 [info ]: Finished running [  0.01s] model main.demo_incremental [success]
+09:16:52.167226 [info ]:  Succeeded model main.demo_incremental (incremental) [5 of 8 in 0.01s]
+09:16:52.167239 [info ]: Started model main.demo_source_and_ref
+09:16:52.167244 [debug]: Started rendering model main.demo_source_and_ref
+09:16:52.167292 [debug]: create_debug_span(...).entered() took 1.375µs
+09:16:52.167391 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 75.458µs
+09:16:52.167395 [debug]: reader.schema() took 42ns
+09:16:52.167399 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 102.25µs
+09:16:52.167401 [debug]: concat_batches + normalize_result_column_names took 417ns
+09:16:52.167403 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:52.167405 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."inc_strategy_delete_insert__dbt_backup" cascade
+    
+09:16:52.167410 [debug]: drop(query_span_guard) (span exit/export) took 5.333µs
+09:16:52.167557 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/compiled/dbt_custom/models/demo_source_and_ref.sql
+09:16:52.167584 [info ]: Finished running [  0.01s] model main.inc_strategy_delete_insert [success]
+09:16:52.167588 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [3 of 8 in 0.01s]
+09:16:52.167598 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+09:16:52.167602 [info ]: Finished rendering [  0.01s] (9 nodes, 0 skipped, 0 errors)
+09:16:52.167608 [debug]: Started analyzing model main.demo_source_and_ref
+09:16:52.167910 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:16:52.167917 [info ]: Started running model main.demo_table
+09:16:52.168768 [debug]: Writing runtime sql for node "model.dbt_custom.demo_table"
+09:16:52.168966 [debug]: create_debug_span(...).entered() took 1.916µs
+09:16:52.169814 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 542.75µs
+09:16:52.169819 [debug]: reader.schema() took 125ns
+09:16:52.169840 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 869.75µs
+09:16:52.169845 [debug]: concat_batches + normalize_result_column_names took 2.333µs
+09:16:52.169848 [debug]: record_current_span_status_from_attrs took 584ns
+09:16:52.169851 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."demo_table__dbt_tmp"
+  
+    as (
+      
+
+-- Table: Physically created and saved on disk in DuckDB as a BASE TABLE.
+-- Pre-aggregates data so queries are fast and don't recompute joins every time.
+select
+    user_id,
+    user_name_clean,
+    count(order_id) as total_orders,
+    sum(amount) as total_spent
+from "dev"."main"."demo_view"
+group by
+    user_id,
+    user_name_clean
+    );
+  
+    
+  
+09:16:52.169857 [debug]: drop(query_span_guard) (span exit/export) took 7.25µs
+09:16:52.170092 [debug]: create_debug_span(...).entered() took 2.041µs
+09:16:52.170195 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 28.416µs
+09:16:52.170198 [debug]: reader.schema() took 0ns
+09:16:52.170204 [debug]: batch-consume loop (for res in reader) took 4.292µs
+09:16:52.170209 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 113.125µs
+09:16:52.170212 [debug]: concat_batches + normalize_result_column_names took 1.542µs
+09:16:52.170215 [debug]: record_current_span_status_from_attrs took 208ns
+09:16:52.170217 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_table'
+  
+09:16:52.170222 [debug]: drop(query_span_guard) (span exit/export) took 5.417µs
+09:16:52.170411 [debug]: create_debug_span(...).entered() took 1.5µs
+09:16:52.170506 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 34.709µs
+09:16:52.170509 [debug]: reader.schema() took 0ns
+09:16:52.170520 [debug]: batch-consume loop (for res in reader) took 8.708µs
+09:16:52.170527 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 112.583µs
+09:16:52.170529 [debug]: concat_batches + normalize_result_column_names took 834ns
+09:16:52.170531 [debug]: record_current_span_status_from_attrs took 208ns
+09:16:52.170533 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_table'
+  
+09:16:52.170537 [debug]: drop(query_span_guard) (span exit/export) took 4.083µs
+09:16:52.170679 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [success]
+09:16:52.170689 [info ]: Finished analyzing [  0.01s] (9 nodes, 0 skipped, 0 errors)
+09:16:52.170698 [info ]: Started running model main.demo_source_and_ref
+09:16:52.170891 [debug]: create_debug_span(...).entered() took 1.292µs
+09:16:52.170997 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 82.708µs
+09:16:52.171002 [debug]: reader.schema() took 0ns
+09:16:52.171006 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 111.833µs
+09:16:52.171009 [debug]: concat_batches + normalize_result_column_names took 1.167µs
+09:16:52.171011 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:52.171013 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."demo_table" rename to "demo_table__dbt_backup"
+09:16:52.171017 [debug]: drop(query_span_guard) (span exit/export) took 4.167µs
+09:16:52.171380 [debug]: create_debug_span(...).entered() took 1.208µs
+09:16:52.171478 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 77.542µs
+09:16:52.171480 [debug]: reader.schema() took 41ns
+09:16:52.171484 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 99.833µs
+09:16:52.171487 [debug]: concat_batches + normalize_result_column_names took 459ns
+09:16:52.171489 [debug]: record_current_span_status_from_attrs took 167ns
+09:16:52.171491 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."demo_table__dbt_tmp" rename to "demo_table"
+09:16:52.171494 [debug]: drop(query_span_guard) (span exit/export) took 3.542µs
+09:16:52.171534 [debug]: Writing runtime sql for node "model.dbt_custom.demo_source_and_ref"
+09:16:52.171781 [debug]: create_debug_span(...).entered() took 2.084µs
+09:16:52.171960 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 78.667µs
+09:16:52.171963 [debug]: reader.schema() took 0ns
+09:16:52.171967 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 183.083µs
+09:16:52.171970 [debug]: concat_batches + normalize_result_column_names took 541ns
+09:16:52.171973 [debug]: record_current_span_status_from_attrs took 167ns
+09:16:52.171975 [debug]: Query executed on node model.dbt_custom.demo_source_and_ref:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_source_and_ref", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+  create view "dev"."main"."demo_source_and_ref__dbt_tmp" as (
+    
+
+
+
+with raw_users as (
+    -- Accessing raw source data
+    select
+        id as user_id,
+        name as user_name
+    from "dev"."main"."users"
+),
+
+staged_orders as (
+    -- Accessing a dbt model
+    select
+        order_id,
+        user_id,
+        amount
+    from "dev"."main"."demo_incremental"
+)
+
+select
+    u.user_id,
+    u.user_name,
+    o.order_id,
+    o.amount,
+    case
+        when o.amount >= 100 then 'VIP Tier'
+        else 'Standard Tier'
+    end as user_tier
+from raw_users u
+join staged_orders o
+    on u.user_id = o.user_id
+  );
+
+09:16:52.171980 [debug]: drop(query_span_guard) (span exit/export) took 5.625µs
+09:16:52.172093 [debug]: create_debug_span(...).entered() took 1.125µs
+09:16:52.172208 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 93.375µs
+09:16:52.172211 [debug]: reader.schema() took 41ns
+09:16:52.172215 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 117.458µs
+09:16:52.172217 [debug]: concat_batches + normalize_result_column_names took 250ns
+09:16:52.172219 [debug]: record_current_span_status_from_attrs took 84ns
+09:16:52.172221 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."demo_table__dbt_backup" cascade
+    
+09:16:52.172225 [debug]: drop(query_span_guard) (span exit/export) took 3.542µs
+09:16:52.172354 [info ]: Finished running [  0.00s] model main.demo_table [success]
+09:16:52.172361 [info ]:  Succeeded model main.demo_table (table) [7 of 8 in 0.00s]
+09:16:52.172404 [debug]: create_debug_span(...).entered() took 1.583µs
+09:16:52.172501 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 76.875µs
+09:16:52.172504 [debug]: reader.schema() took 0ns
+09:16:52.172507 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 100.334µs
+09:16:52.172509 [debug]: concat_batches + normalize_result_column_names took 333ns
+09:16:52.172511 [debug]: record_current_span_status_from_attrs took 250ns
+09:16:52.172513 [debug]: Query executed on node model.dbt_custom.demo_source_and_ref:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_source_and_ref", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_source_and_ref" rename to "demo_source_and_ref__dbt_backup"
+09:16:52.172517 [debug]: drop(query_span_guard) (span exit/export) took 4.25µs
+09:16:52.172880 [debug]: create_debug_span(...).entered() took 1.208µs
+09:16:52.172985 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 81.875µs
+09:16:52.172988 [debug]: reader.schema() took 0ns
+09:16:52.172991 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 107.458µs
+09:16:52.172993 [debug]: concat_batches + normalize_result_column_names took 250ns
+09:16:52.172995 [debug]: record_current_span_status_from_attrs took 42ns
+09:16:52.172997 [debug]: Query executed on node model.dbt_custom.demo_source_and_ref:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_source_and_ref", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_source_and_ref__dbt_tmp" rename to "demo_source_and_ref"
+09:16:52.173000 [debug]: drop(query_span_guard) (span exit/export) took 3.542µs
+09:16:52.173532 [debug]: create_debug_span(...).entered() took 1.041µs
+09:16:52.173606 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 50.875µs
+09:16:52.173609 [debug]: reader.schema() took 0ns
+09:16:52.173612 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 77.042µs
+09:16:52.173615 [debug]: concat_batches + normalize_result_column_names took 209ns
+09:16:52.173617 [debug]: record_current_span_status_from_attrs took 84ns
+09:16:52.173619 [debug]: Query executed on node model.dbt_custom.demo_source_and_ref:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_source_and_ref", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop view if exists "dev"."main"."demo_source_and_ref__dbt_backup" cascade
+    
+09:16:52.173622 [debug]: drop(query_span_guard) (span exit/export) took 3.584µs
+09:16:52.173740 [info ]: Finished running [  0.00s] model main.demo_source_and_ref [success]
+09:16:52.173746 [info ]: Finished running [  0.01s] (9 nodes, 1 skipped, 0 errors)
+09:16:52.173751 [info ]:  Succeeded model main.demo_source_and_ref (view) [8 of 8 in 0.01s]
+09:16:53.308061 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' successfully for target 'dev' [1.3s]
+Processed: 9 models
+Summary: 9 total | 8 success | 1 no-op
+==================== 2026-10-25T09:16:59.181957Z | 01a17259-53ad-7011-b3c5-cd6cd4e783b0 ====================
+09:16:59.182032 [info ]: dbt 2.0.9
+09:16:59.182126 [info ]: Started loading project
+09:16:59.182627 [info ]: Loading profiles.yml
+09:16:59.270875 [debug]:    Started loading packages
+09:16:59.271150 [debug]:     Loaded [  0.00s] packages
+09:16:59.271483 [info ]: Finished loading project [  0.09s]
+09:16:59.271646 [info ]: Started parsing (10 nodes)
+09:16:59.281534 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:16:59.281559 [debug]:    Started building model nodes
+09:16:59.281561 [debug]:    Started building model nodes
+09:16:59.281568 [debug]:   Finished [  0.00s] building model nodes
+09:16:59.281568 [debug]:   Finished [  0.00s] building model nodes
+09:16:59.281780 [debug]:    Started resolving data tests
+09:16:59.281795 [debug]:    Started resolving data tests
+09:16:59.281796 [debug]:   Finished [  0.00s] resolving data tests
+09:16:59.281806 [debug]:   Finished [  0.00s] resolving data tests
+09:16:59.282130 [debug]: Finished parsing models/demo_ephemeral.sql [  0.00s]
+09:16:59.282311 [debug]: Finished parsing models/demo_incremental.sql [  0.00s]
+09:16:59.282453 [debug]: Finished parsing models/demo_source_and_ref.sql [  0.00s]
+09:16:59.282622 [debug]: Finished parsing models/demo_table.sql [  0.00s]
+09:16:59.282787 [debug]: Finished parsing models/demo_view.sql [  0.00s]
+09:16:59.282955 [debug]: Finished parsing models/inc_strategy_append.sql [  0.00s]
+09:16:59.283089 [debug]: Finished parsing models/inc_strategy_delete_insert.sql [  0.00s]
+09:16:59.283215 [debug]: Finished parsing models/inc_strategy_merge.sql [  0.00s]
+09:16:59.283335 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:16:59.283346 [debug]:    Started building model nodes
+09:16:59.284411 [debug]:   Finished [  0.00s] building model nodes
+09:16:59.284896 [debug]:    Started resolving data tests
+09:16:59.284910 [debug]:   Finished [  0.00s] resolving data tests
+09:16:59.285057 [debug]:    Started typechecking macros
+09:16:59.335734 [debug]:   Finished [  0.05s] typechecking macros
+09:16:59.336051 [info ]: Finished parsing [  0.06s] (10 nodes, 0 skipped, 0 errors)
+09:16:59.340922 [info ]: Started scheduling
+09:16:59.340997 [info ]: Finished scheduling [  0.00s]
+09:16:59.341497 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+09:16:59.341848 [info ]:    Started downloading referenced relations (1 items)
+09:16:59.342137 [debug]: DuckDB driver resolved: duckdb 1.5.4
+09:16:59.353038 [debug]:    Started downloading "dev"."main"
+09:16:59.353071 [debug]: create_debug_span(...).entered() took 4µs
+09:16:59.354534 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 895.875µs
+09:16:59.354540 [debug]: reader.schema() took 125ns
+09:16:59.354577 [debug]: batch-consume loop (for res in reader) took 34.333µs
+09:16:59.354592 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.514666ms
+09:16:59.354649 [debug]: concat_batches + normalize_result_column_names took 54.417µs
+09:16:59.354654 [debug]: record_current_span_status_from_attrs took 2.167µs
+09:16:59.354658 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:16:59.354665 [debug]: drop(query_span_guard) (span exit/export) took 8.292µs
+09:16:59.354696 [debug]: Downloaded [  0.00s] "dev"."main"
+09:16:59.354769 [info ]:   Finished [  0.01s] downloading referenced relations (1 items)
+09:16:59.354957 [info ]: Started building task graph
+09:16:59.355063 [info ]: Finished building task graph [  0.00s]
+09:16:59.356371 [debug]: create_debug_span(...).entered() took 2.541µs
+09:16:59.356577 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 75.917µs
+09:16:59.356582 [debug]: reader.schema() took 0ns
+09:16:59.356589 [debug]: batch-consume loop (for res in reader) took 4.917µs
+09:16:59.356594 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 218.709µs
+09:16:59.356598 [debug]: concat_batches + normalize_result_column_names took 2.541µs
+09:16:59.356601 [debug]: record_current_span_status_from_attrs took 625ns
+09:16:59.356603 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+09:16:59.356608 [debug]: drop(query_span_guard) (span exit/export) took 5.458µs
+09:16:59.356797 [debug]: create_debug_span(...).entered() took 1.875µs
+09:16:59.356924 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 52.583µs
+09:16:59.356928 [debug]: reader.schema() took 41ns
+09:16:59.356937 [debug]: batch-consume loop (for res in reader) took 6.75µs
+09:16:59.356942 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 141.083µs
+09:16:59.356945 [debug]: concat_batches + normalize_result_column_names took 833ns
+09:16:59.356947 [debug]: record_current_span_status_from_attrs took 167ns
+09:16:59.356950 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+09:16:59.356954 [debug]: drop(query_span_guard) (span exit/export) took 4.25µs
+09:16:59.357039 [debug]: create_debug_span(...).entered() took 1.375µs
+09:16:59.357113 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 34.125µs
+09:16:59.357117 [debug]: reader.schema() took 41ns
+09:16:59.357125 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 82.5µs
+09:16:59.357129 [debug]: concat_batches + normalize_result_column_names took 750ns
+09:16:59.357131 [debug]: record_current_span_status_from_attrs took 375ns
+09:16:59.357133 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+09:16:59.357138 [debug]: drop(query_span_guard) (span exit/export) took 5.042µs
+09:16:59.357202 [info ]: Started rendering (9 nodes)
+09:16:59.357221 [info ]: Started model main.user_orders
+09:16:59.357229 [debug]: Started rendering model main.user_orders
+09:16:59.357245 [info ]: Started model main.inc_strategy_merge
+09:16:59.357249 [debug]: Started rendering model main.inc_strategy_merge
+09:16:59.357255 [info ]: Started model main.inc_strategy_delete_insert
+09:16:59.357257 [debug]: Started rendering model main.inc_strategy_delete_insert
+09:16:59.357261 [info ]: Started model main.inc_strategy_append
+09:16:59.357263 [debug]: Started rendering model main.inc_strategy_append
+09:16:59.357267 [info ]: Started model main.demo_incremental
+09:16:59.357269 [debug]: Started rendering model main.demo_incremental
+09:16:59.357273 [info ]: Started model main.demo_ephemeral
+09:16:59.357275 [debug]: Started rendering model main.demo_ephemeral
+09:16:59.357626 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/compiled/dbt_custom/models/user_orders.sql
+09:16:59.357662 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:16:59.357676 [info ]: Started analyzing (9 nodes)
+09:16:59.357688 [debug]: Started analyzing model main.user_orders
+09:16:59.357882 [debug]: Compiled SQL for node model.dbt_custom.demo_ephemeral at target/compiled/dbt_custom/models/demo_ephemeral.sql
+09:16:59.357903 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_delete_insert at target/compiled/dbt_custom/models/inc_strategy_delete_insert.sql
+09:16:59.357914 [debug]: Finished rendering [  0.00s] model main.demo_ephemeral [success]
+09:16:59.357922 [debug]: Started analyzing model main.demo_ephemeral
+09:16:59.357960 [debug]: Finished rendering [  0.00s] model main.inc_strategy_delete_insert [success]
+09:16:59.357969 [debug]: Started analyzing model main.inc_strategy_delete_insert
+09:16:59.357991 [debug]: Compiled SQL for node model.dbt_custom.demo_incremental at target/compiled/dbt_custom/models/demo_incremental.sql
+09:16:59.358028 [debug]: Finished rendering [  0.00s] model main.demo_incremental [success]
+09:16:59.358036 [debug]: Started analyzing model main.demo_incremental
+09:16:59.358071 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_append at target/compiled/dbt_custom/models/inc_strategy_append.sql
+09:16:59.358107 [debug]: Finished rendering [  0.00s] model main.inc_strategy_append [success]
+09:16:59.358115 [debug]: Started analyzing model main.inc_strategy_append
+09:16:59.358173 [debug]: Compiled SQL for node model.dbt_custom.inc_strategy_merge at target/compiled/dbt_custom/models/inc_strategy_merge.sql
+09:16:59.358210 [debug]: Finished rendering [  0.00s] model main.inc_strategy_merge [success]
+09:16:59.358218 [debug]: Started analyzing model main.inc_strategy_merge
+09:16:59.360465 [debug]: Finished analyzing [  0.00s] model main.demo_ephemeral [success]
+09:16:59.360472 [info ]: Started running (9 nodes)
+09:16:59.360486 [info ]: Started running model main.demo_ephemeral
+09:16:59.360571 [info ]: Finished running [  0.00s] model main.demo_ephemeral [no-op]
+09:16:59.360575 [info ]:    Skipped model main.demo_ephemeral (ephemeral)
+09:16:59.360585 [info ]: Started model main.demo_view
+09:16:59.360587 [debug]: Started rendering model main.demo_view
+09:16:59.360674 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:16:59.360681 [info ]: Started running model main.user_orders
+09:16:59.361086 [debug]: Compiled SQL for node model.dbt_custom.demo_view at target/compiled/dbt_custom/models/demo_view.sql
+09:16:59.361110 [debug]: Finished rendering [  0.00s] model main.demo_view [success]
+09:16:59.361116 [debug]: Started analyzing model main.demo_view
+09:16:59.361363 [debug]: Finished analyzing [  0.00s] model main.demo_incremental [success]
+09:16:59.361369 [info ]: Started running model main.demo_incremental
+09:16:59.361420 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_delete_insert [success]
+09:16:59.361429 [info ]: Started running model main.inc_strategy_delete_insert
+09:16:59.361437 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_merge [success]
+09:16:59.361441 [info ]: Started running model main.inc_strategy_merge
+09:16:59.361549 [debug]: Finished analyzing [  0.00s] model main.inc_strategy_append [success]
+09:16:59.361572 [info ]: Started running model main.inc_strategy_append
+09:16:59.361857 [debug]: Writing runtime sql for node "model.dbt_custom.user_orders"
+09:16:59.361995 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:59.362049 [debug]: Finished analyzing [  0.00s] model main.demo_view [success]
+09:16:59.362054 [info ]: Started running model main.demo_view
+09:16:59.362086 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:59.362090 [debug]: create_debug_span(...).entered() took 5.792µs
+09:16:59.362143 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:59.362543 [debug]: create_debug_span(...).entered() took 4.917µs
+09:16:59.362609 [debug]: create_debug_span(...).entered() took 4.792µs
+09:16:59.362667 [debug]: create_debug_span(...).entered() took 5.208µs
+09:16:59.363213 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:16:59.363368 [debug]: Writing runtime sql for node "model.dbt_custom.demo_view"
+09:16:59.363468 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.149958ms
+09:16:59.363473 [debug]: reader.schema() took 83ns
+09:16:59.363499 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.406291ms
+09:16:59.363504 [debug]: concat_batches + normalize_result_column_names took 2.583µs
+09:16:59.363507 [debug]: record_current_span_status_from_attrs took 791ns
+09:16:59.363510 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."user_orders__dbt_tmp"
+  
+    as (
+      
+
+select
+    u.name,
+    o.order_id,
+    o.amount
+from users u
+join orders o on u.id = o.user_id
+    );
+  
+    
+  
+09:16:59.363517 [debug]: drop(query_span_guard) (span exit/export) took 8.167µs
+09:16:59.363582 [debug]: create_debug_span(...).entered() took 4.375µs
+09:16:59.363760 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 81.458µs
+09:16:59.363763 [debug]: create_debug_span(...).entered() took 2.083µs
+09:16:59.363765 [debug]: reader.schema() took 42ns
+09:16:59.363772 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 185.125µs
+09:16:59.363775 [debug]: concat_batches + normalize_result_column_names took 583ns
+09:16:59.363777 [debug]: record_current_span_status_from_attrs took 292ns
+09:16:59.363779 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+  create view "dev"."main"."demo_view__dbt_tmp" as (
+    with __dbt__cte__demo_ephemeral as (
+
+
+-- Ephemeral: Exists ONLY within dbt as a reusable CTE (Common Table Expression).
+-- It is NEVER created as a table or view in DuckDB.
+select
+    id as user_id,
+    name as user_name,
+    upper(name) as user_name_clean
+from users
+)
+--EPHEMERAL-SELECT-WRAPPER-START
+select * from (
+
+
+-- View: Recomputed on each query; created in DuckDB as a VIEW.
+-- Notice how referencing an ephemeral model embeds it as an inline CTE.
+select
+    u.user_id,
+    u.user_name_clean,
+    o.order_id,
+    o.amount
+from __dbt__cte__demo_ephemeral u
+join orders o
+    on u.user_id = o.user_id
+--EPHEMERAL-SELECT-WRAPPER-END
+)
+  );
+
+09:16:59.363785 [debug]: drop(query_span_guard) (span exit/export) took 6.625µs
+09:16:59.363816 [debug]: create_debug_span(...).entered() took 3.625µs
+09:16:59.363877 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 46.209µs
+09:16:59.363882 [debug]: reader.schema() took 42ns
+09:16:59.363890 [debug]: batch-consume loop (for res in reader) took 6µs
+09:16:59.363895 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 129.083µs
+09:16:59.363899 [debug]: concat_batches + normalize_result_column_names took 1.375µs
+09:16:59.363901 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:59.363903 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'user_orders'
+  
+09:16:59.363908 [debug]: drop(query_span_guard) (span exit/export) took 5.333µs
+09:16:59.364100 [debug]: create_debug_span(...).entered() took 1.458µs
+09:16:59.364240 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 72.291µs
+09:16:59.364244 [debug]: reader.schema() took 0ns
+09:16:59.364256 [debug]: batch-consume loop (for res in reader) took 10.042µs
+09:16:59.364262 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 157.167µs
+09:16:59.364265 [debug]: concat_batches + normalize_result_column_names took 792ns
+09:16:59.364267 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:59.364269 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'user_orders'
+  
+09:16:59.364268 [debug]: create_debug_span(...).entered() took 3.583µs
+09:16:59.364273 [debug]: drop(query_span_guard) (span exit/export) took 4.958µs
+09:16:59.364378 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 78.5µs
+09:16:59.364382 [debug]: reader.schema() took 0ns
+09:16:59.364386 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 115.875µs
+09:16:59.364389 [debug]: concat_batches + normalize_result_column_names took 833ns
+09:16:59.364391 [debug]: record_current_span_status_from_attrs took 208ns
+09:16:59.364393 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_view" rename to "demo_view__dbt_backup"
+09:16:59.364399 [debug]: drop(query_span_guard) (span exit/export) took 6.625µs
+09:16:59.364614 [debug]: create_debug_span(...).entered() took 1.334µs
+09:16:59.364717 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 74.708µs
+09:16:59.364721 [debug]: reader.schema() took 0ns
+09:16:59.364724 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 105.583µs
+09:16:59.364727 [debug]: concat_batches + normalize_result_column_names took 333ns
+09:16:59.364728 [debug]: record_current_span_status_from_attrs took 166ns
+09:16:59.364730 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."user_orders" rename to "user_orders__dbt_backup"
+09:16:59.364736 [debug]: drop(query_span_guard) (span exit/export) took 6.083µs
+09:16:59.364798 [debug]: create_debug_span(...).entered() took 1.417µs
+09:16:59.364873 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 53.625µs
+09:16:59.364876 [debug]: reader.schema() took 42ns
+09:16:59.364880 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 78.584µs
+09:16:59.364882 [debug]: concat_batches + normalize_result_column_names took 458ns
+09:16:59.364884 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:59.364886 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_view__dbt_tmp" rename to "demo_view"
+09:16:59.364891 [debug]: drop(query_span_guard) (span exit/export) took 5.125µs
+09:16:59.365078 [debug]: create_debug_span(...).entered() took 1.5µs
+09:16:59.365178 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 74.959µs
+09:16:59.365182 [debug]: reader.schema() took 0ns
+09:16:59.365186 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 103.167µs
+09:16:59.365188 [debug]: concat_batches + normalize_result_column_names took 417ns
+09:16:59.365190 [debug]: record_current_span_status_from_attrs took 167ns
+09:16:59.365192 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."user_orders__dbt_tmp" rename to "user_orders"
+09:16:59.365197 [debug]: drop(query_span_guard) (span exit/export) took 5.75µs
+09:16:59.365486 [debug]: create_debug_span(...).entered() took 1.292µs
+09:16:59.365580 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 65.334µs
+09:16:59.365583 [debug]: reader.schema() took 42ns
+09:16:59.365587 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 96.833µs
+09:16:59.365589 [debug]: concat_batches + normalize_result_column_names took 375ns
+09:16:59.365591 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:59.365593 [debug]: Query executed on node model.dbt_custom.demo_view:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_view", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop view if exists "dev"."main"."demo_view__dbt_backup" cascade
+    
+09:16:59.365597 [debug]: drop(query_span_guard) (span exit/export) took 4.209µs
+09:16:59.365729 [info ]: Finished running [  0.00s] model main.demo_view [success]
+09:16:59.365735 [info ]:  Succeeded model main.demo_view (view) [6 of 8 in 0.00s]
+09:16:59.365757 [info ]: Started model main.demo_table
+09:16:59.365760 [debug]: Started rendering model main.demo_table
+09:16:59.365810 [debug]: create_debug_span(...).entered() took 1.417µs
+09:16:59.365917 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 80.958µs
+09:16:59.365924 [debug]: reader.schema() took 0ns
+09:16:59.365928 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 114.166µs
+09:16:59.365930 [debug]: concat_batches + normalize_result_column_names took 500ns
+09:16:59.365933 [debug]: record_current_span_status_from_attrs took 250ns
+09:16:59.365935 [debug]: Query executed on node model.dbt_custom.user_orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.user_orders", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."user_orders__dbt_backup" cascade
+    
+09:16:59.365941 [debug]: drop(query_span_guard) (span exit/export) took 6.083µs
+09:16:59.366033 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 3.079167ms
+09:16:59.366040 [debug]: reader.schema() took 0ns
+09:16:59.366034 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.914125ms
+09:16:59.366066 [debug]: batch-consume loop (for res in reader) took 23.625µs
+09:16:59.366092 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 3.127542ms
+09:16:59.366096 [info ]: Finished running [  0.01s] model main.user_orders [success]
+09:16:59.366102 [info ]:  Succeeded model main.user_orders (table) [1 of 8 in 0.01s]
+09:16:59.366118 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.569791ms
+09:16:59.366113 [debug]: reader.schema() took 167ns
+09:16:59.366108 [debug]: reader.schema() took 167ns
+09:16:59.366127 [debug]: concat_batches + normalize_result_column_names took 5.417µs
+09:16:59.366129 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:59.366131 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'demo_incremental'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'dev'
+      
+      order by ordinal_position
+
+    
+  
+09:16:59.366137 [debug]: drop(query_span_guard) (span exit/export) took 6.042µs
+09:16:59.366129 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 3.094875ms
+09:16:59.366155 [debug]: reader.schema() took 84ns
+09:16:59.366221 [debug]: Compiled SQL for node model.dbt_custom.demo_table at target/compiled/dbt_custom/models/demo_table.sql
+09:16:59.366247 [debug]: batch-consume loop (for res in reader) took 120.875µs
+09:16:59.366253 [debug]: Finished rendering [  0.00s] model main.demo_table [success]
+09:16:59.366259 [debug]: Started analyzing model main.demo_table
+09:16:59.366260 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.646542ms
+09:16:59.366266 [debug]: concat_batches + normalize_result_column_names took 3.666µs
+09:16:59.366268 [debug]: record_current_span_status_from_attrs took 208ns
+09:16:59.366270 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'inc_strategy_delete_insert'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'dev'
+      
+      order by ordinal_position
+
+    
+  
+09:16:59.366267 [debug]: batch-consume loop (for res in reader) took 105.208µs
+09:16:59.366277 [debug]: drop(query_span_guard) (span exit/export) took 6.916µs
+09:16:59.366302 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.6305ms
+09:16:59.366322 [debug]: concat_batches + normalize_result_column_names took 13.667µs
+09:16:59.366328 [debug]: record_current_span_status_from_attrs took 1.333µs
+09:16:59.366335 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'inc_strategy_merge'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'dev'
+      
+      order by ordinal_position
+
+    
+  
+09:16:59.366350 [debug]: batch-consume loop (for res in reader) took 221.209µs
+09:16:59.366380 [debug]: drop(query_span_guard) (span exit/export) took 25.375µs
+09:16:59.366406 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.586959ms
+09:16:59.366414 [debug]: concat_batches + normalize_result_column_names took 2.375µs
+09:16:59.366416 [debug]: record_current_span_status_from_attrs took 250ns
+09:16:59.366418 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'inc_strategy_append'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'dev'
+      
+      order by ordinal_position
+
+    
+  
+09:16:59.366424 [debug]: drop(query_span_guard) (span exit/export) took 6.292µs
+09:16:59.366918 [debug]: Finished analyzing [  0.00s] model main.demo_table [success]
+09:16:59.366925 [info ]: Started running model main.demo_table
+09:16:59.367081 [debug]: Writing runtime sql for node "model.dbt_custom.demo_incremental"
+09:16:59.367122 [debug]: Writing runtime sql for node "model.dbt_custom.inc_strategy_delete_insert"
+09:16:59.367124 [debug]: Writing runtime sql for node "model.dbt_custom.inc_strategy_append"
+09:16:59.367316 [debug]: create_debug_span(...).entered() took 1.791µs
+09:16:59.367342 [debug]: create_debug_span(...).entered() took 2.292µs
+09:16:59.367351 [debug]: create_debug_span(...).entered() took 1.667µs
+09:16:59.367547 [debug]: Writing runtime sql for node "model.dbt_custom.inc_strategy_merge"
+09:16:59.367794 [debug]: create_debug_span(...).entered() took 1.417µs
+09:16:59.368394 [debug]: Writing runtime sql for node "model.dbt_custom.demo_table"
+09:16:59.368664 [debug]: create_debug_span(...).entered() took 3.709µs
+09:16:59.369190 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 382.125µs
+09:16:59.369196 [debug]: reader.schema() took 125ns
+09:16:59.369205 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.850833ms
+09:16:59.369209 [debug]: concat_batches + normalize_result_column_names took 2.791µs
+09:16:59.369212 [debug]: record_current_span_status_from_attrs took 583ns
+09:16:59.369215 [debug]: Query executed on node model.dbt_custom.inc_strategy_append:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_append", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create temporary table
+      "inc_strategy_append__dbt_tmp_d1cc80ed_b46a_45f2_95b1_58677f55df20"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    -- In an immutable table, filtering on max(order_id) or max(order_date) is valid
+    where order_date > (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_strategy_append")
+
+    );
+  
+    
+  ;
+insert into "dev"."main"."inc_strategy_append" ("order_id", "user_id", "amount", "status", "order_date")
+    (
+        select "order_id", "user_id", "amount", "status", "order_date"
+        from "inc_strategy_append__dbt_tmp_d1cc80ed_b46a_45f2_95b1_58677f55df20"
+    )
+
+
+  
+09:16:59.369224 [debug]: drop(query_span_guard) (span exit/export) took 10.25µs
+09:16:59.370083 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.143584ms
+09:16:59.370089 [debug]: reader.schema() took 42ns
+09:16:59.370083 [info ]: Finished running [  0.01s] model main.inc_strategy_append [success]
+09:16:59.370110 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.440666ms
+09:16:59.370114 [debug]: concat_batches + normalize_result_column_names took 1.542µs
+09:16:59.370117 [debug]: record_current_span_status_from_attrs took 1.042µs
+09:16:59.370120 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."demo_table__dbt_tmp"
+  
+    as (
+      
+
+-- Table: Physically created and saved on disk in DuckDB as a BASE TABLE.
+-- Pre-aggregates data so queries are fast and don't recompute joins every time.
+select
+    user_id,
+    user_name_clean,
+    count(order_id) as total_orders,
+    sum(amount) as total_spent
+from "dev"."main"."demo_view"
+group by
+    user_id,
+    user_name_clean
+    );
+  
+    
+  
+09:16:59.370127 [debug]: drop(query_span_guard) (span exit/export) took 8.125µs
+09:16:59.370111 [info ]:  Succeeded model main.inc_strategy_append (incremental) [4 of 8 in 0.01s]
+09:16:59.370402 [debug]: create_debug_span(...).entered() took 2.916µs
+09:16:59.370532 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 40.167µs
+09:16:59.370537 [debug]: reader.schema() took 0ns
+09:16:59.370544 [debug]: batch-consume loop (for res in reader) took 4.833µs
+09:16:59.370549 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 142.625µs
+09:16:59.370553 [debug]: concat_batches + normalize_result_column_names took 2.709µs
+09:16:59.370555 [debug]: record_current_span_status_from_attrs took 250ns
+09:16:59.370557 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_table'
+  
+09:16:59.370563 [debug]: drop(query_span_guard) (span exit/export) took 5.542µs
+09:16:59.370672 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 626.25µs
+09:16:59.370677 [debug]: reader.schema() took 0ns
+09:16:59.370682 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.336375ms
+09:16:59.370684 [debug]: concat_batches + normalize_result_column_names took 542ns
+09:16:59.370687 [debug]: record_current_span_status_from_attrs took 375ns
+09:16:59.370689 [debug]: Query executed on node model.dbt_custom.inc_strategy_delete_insert:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_delete_insert", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create temporary table
+      "inc_strategy_delete_insert__dbt_tmp_93f411bd_f324_41cd_a741_1c46764eb107"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    -- Filter candidate batch using timestamp watermark
+    where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_strategy_delete_insert")
+
+    );
+  
+    
+  ;
+
+        
+            delete from "dev"."main"."inc_strategy_delete_insert"
+            where (
+                order_id) in (
+                select (order_id)
+                from "inc_strategy_delete_insert__dbt_tmp_93f411bd_f324_41cd_a741_1c46764eb107"
+            );
+
+        
+    
+
+    insert into "dev"."main"."inc_strategy_delete_insert" ("order_id", "user_id", "amount", "status", "order_date")
+    (
+        select "order_id", "user_id", "amount", "status", "order_date"
+        from "inc_strategy_delete_insert__dbt_tmp_93f411bd_f324_41cd_a741_1c46764eb107"
+    )
+  
+09:16:59.370696 [debug]: drop(query_span_guard) (span exit/export) took 7.5µs
+09:16:59.370797 [debug]: create_debug_span(...).entered() took 1.833µs
+09:16:59.371073 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.20975ms
+09:16:59.371078 [debug]: reader.schema() took 42ns
+09:16:59.371113 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 742.542µs
+09:16:59.371116 [debug]: reader.schema() took 0ns
+09:16:59.371121 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.80125ms
+09:16:59.371122 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.323ms
+09:16:59.371123 [debug]: concat_batches + normalize_result_column_names took 417ns
+09:16:59.371125 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:59.371125 [debug]: concat_batches + normalize_result_column_names took 583ns
+09:16:59.371134 [debug]: Query executed on node model.dbt_custom.demo_incremental:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_incremental", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create temporary table
+      "demo_incremental__dbt_tmp_3f8ee93e_43a1_44ef_93e4_3feaf165384a"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    -- Watermark filter: only fetch records modified on or after our table's latest date
+    where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."demo_incremental")
+
+    );
+  
+    
+  ;
+
+        
+            delete from "dev"."main"."demo_incremental"
+            where (
+                order_id) in (
+                select (order_id)
+                from "demo_incremental__dbt_tmp_3f8ee93e_43a1_44ef_93e4_3feaf165384a"
+            );
+
+        
+    
+
+    insert into "dev"."main"."demo_incremental" ("order_id", "user_id", "amount", "status", "order_date")
+    (
+        select "order_id", "user_id", "amount", "status", "order_date"
+        from "demo_incremental__dbt_tmp_3f8ee93e_43a1_44ef_93e4_3feaf165384a"
+    )
+  
+09:16:59.371135 [debug]: record_current_span_status_from_attrs took 250ns
+09:16:59.371138 [debug]: Query executed on node model.dbt_custom.inc_strategy_merge:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_strategy_merge", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create temporary table
+      "inc_strategy_merge__dbt_tmp_aea3ffa1_368f_4a67_ba18_d36fb3c63a5e"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date
+from orders
+
+
+    -- Filter candidate batch using timestamp watermark
+    where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_strategy_merge")
+
+    );
+  
+    
+  ;
+
+
+    MERGE INTO "dev"."main"."inc_strategy_merge" AS DBT_INTERNAL_DEST
+        USING "inc_strategy_merge__dbt_tmp_aea3ffa1_368f_4a67_ba18_d36fb3c63a5e" AS DBT_INTERNAL_SOURCE
+        
+            
+                
+            
+        
+        ON (DBT_INTERNAL_SOURCE.order_id = DBT_INTERNAL_DEST.order_id)
+    
+    WHEN MATCHED
+    THEN
+        UPDATE BY NAME
+    WHEN NOT MATCHED
+        
+    THEN
+        INSERT BY NAME
+
+  
+09:16:59.371139 [debug]: drop(query_span_guard) (span exit/export) took 6.709µs
+09:16:59.371143 [debug]: drop(query_span_guard) (span exit/export) took 5.75µs
+09:16:59.371170 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 293.875µs
+09:16:59.371176 [debug]: reader.schema() took 125ns
+09:16:59.371191 [debug]: batch-consume loop (for res in reader) took 13.25µs
+09:16:59.371200 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 399.083µs
+09:16:59.371203 [debug]: concat_batches + normalize_result_column_names took 1.084µs
+09:16:59.371205 [debug]: record_current_span_status_from_attrs took 166ns
+09:16:59.371208 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'demo_table'
+  
+09:16:59.371194 [info ]: Finished running [  0.01s] model main.inc_strategy_delete_insert [success]
+09:16:59.371213 [debug]: drop(query_span_guard) (span exit/export) took 5.541µs
+09:16:59.371219 [info ]:  Succeeded model main.inc_strategy_delete_insert (incremental) [3 of 8 in 0.01s]
+09:16:59.371481 [info ]: Finished running [  0.01s] model main.demo_incremental [success]
+09:16:59.371489 [info ]:  Succeeded model main.demo_incremental (incremental) [5 of 8 in 0.01s]
+09:16:59.371509 [info ]: Started model main.demo_source_and_ref
+09:16:59.371513 [debug]: Started rendering model main.demo_source_and_ref
+09:16:59.371521 [info ]: Finished running [  0.01s] model main.inc_strategy_merge [success]
+09:16:59.371527 [info ]:  Succeeded model main.inc_strategy_merge (incremental) [2 of 8 in 0.01s]
+09:16:59.371607 [debug]: create_debug_span(...).entered() took 2µs
+09:16:59.371719 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 77.292µs
+09:16:59.371723 [debug]: reader.schema() took 42ns
+09:16:59.371727 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 116.5µs
+09:16:59.371729 [debug]: concat_batches + normalize_result_column_names took 625ns
+09:16:59.371731 [debug]: record_current_span_status_from_attrs took 208ns
+09:16:59.371733 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."demo_table" rename to "demo_table__dbt_backup"
+09:16:59.371737 [debug]: drop(query_span_guard) (span exit/export) took 4.541µs
+09:16:59.371863 [debug]: Compiled SQL for node model.dbt_custom.demo_source_and_ref at target/compiled/dbt_custom/models/demo_source_and_ref.sql
+09:16:59.371905 [debug]: Finished rendering [  0.00s] model main.demo_source_and_ref [success]
+09:16:59.371912 [info ]: Finished rendering [  0.01s] (9 nodes, 0 skipped, 0 errors)
+09:16:59.371920 [debug]: Started analyzing model main.demo_source_and_ref
+09:16:59.372110 [debug]: create_debug_span(...).entered() took 1.708µs
+09:16:59.372202 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 67.25µs
+09:16:59.372205 [debug]: reader.schema() took 41ns
+09:16:59.372208 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 94.042µs
+09:16:59.372211 [debug]: concat_batches + normalize_result_column_names took 541ns
+09:16:59.372213 [debug]: record_current_span_status_from_attrs took 83ns
+09:16:59.372216 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter table "dev"."main"."demo_table__dbt_tmp" rename to "demo_table"
+09:16:59.372220 [debug]: drop(query_span_guard) (span exit/export) took 4.417µs
+09:16:59.372809 [debug]: create_debug_span(...).entered() took 1.417µs
+09:16:59.372924 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 89.709µs
+09:16:59.372926 [debug]: reader.schema() took 0ns
+09:16:59.372930 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 117.584µs
+09:16:59.372932 [debug]: concat_batches + normalize_result_column_names took 417ns
+09:16:59.372935 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:59.372936 [debug]: Query executed on node model.dbt_custom.demo_table:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_table", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop table if exists "dev"."main"."demo_table__dbt_backup" cascade
+    
+09:16:59.372941 [debug]: drop(query_span_guard) (span exit/export) took 4.625µs
+09:16:59.373085 [info ]: Finished running [  0.01s] model main.demo_table [success]
+09:16:59.373092 [info ]:  Succeeded model main.demo_table (table) [7 of 8 in 0.01s]
+09:16:59.374758 [debug]: Finished analyzing [  0.00s] model main.demo_source_and_ref [success]
+09:16:59.374763 [info ]: Finished analyzing [  0.02s] (9 nodes, 0 skipped, 0 errors)
+09:16:59.374770 [info ]: Started running model main.demo_source_and_ref
+09:16:59.375661 [debug]: Writing runtime sql for node "model.dbt_custom.demo_source_and_ref"
+09:16:59.375932 [debug]: create_debug_span(...).entered() took 3.25µs
+09:16:59.376191 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 105.542µs
+09:16:59.376195 [debug]: reader.schema() took 83ns
+09:16:59.376202 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 264.916µs
+09:16:59.376206 [debug]: concat_batches + normalize_result_column_names took 1.708µs
+09:16:59.376209 [debug]: record_current_span_status_from_attrs took 500ns
+09:16:59.376211 [debug]: Query executed on node model.dbt_custom.demo_source_and_ref:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_source_and_ref", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+  create view "dev"."main"."demo_source_and_ref__dbt_tmp" as (
+    
+
+
+
+with raw_users as (
+    -- Accessing raw source data
+    select
+        id as user_id,
+        name as user_name
+    from "dev"."main"."users"
+),
+
+staged_orders as (
+    -- Accessing a dbt model
+    select
+        order_id,
+        user_id,
+        amount
+    from "dev"."main"."demo_incremental"
+)
+
+select
+    u.user_id,
+    u.user_name,
+    o.order_id,
+    o.amount,
+    case
+        when o.amount >= 100 then 'VIP Tier'
+        else 'Standard Tier'
+    end as user_tier
+from raw_users u
+join staged_orders o
+    on u.user_id = o.user_id
+  );
+
+09:16:59.376217 [debug]: drop(query_span_guard) (span exit/export) took 6µs
+09:16:59.376669 [debug]: create_debug_span(...).entered() took 1.666µs
+09:16:59.376788 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 90.5µs
+09:16:59.376791 [debug]: reader.schema() took 42ns
+09:16:59.376795 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 121.791µs
+09:16:59.376797 [debug]: concat_batches + normalize_result_column_names took 500ns
+09:16:59.376799 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:59.376802 [debug]: Query executed on node model.dbt_custom.demo_source_and_ref:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_source_and_ref", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_source_and_ref" rename to "demo_source_and_ref__dbt_backup"
+09:16:59.376806 [debug]: drop(query_span_guard) (span exit/export) took 4.541µs
+09:16:59.377178 [debug]: create_debug_span(...).entered() took 1.417µs
+09:16:59.377278 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 78.042µs
+09:16:59.377281 [debug]: reader.schema() took 42ns
+09:16:59.377284 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 101.959µs
+09:16:59.377287 [debug]: concat_batches + normalize_result_column_names took 333ns
+09:16:59.377289 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:59.377291 [debug]: Query executed on node model.dbt_custom.demo_source_and_ref:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_source_and_ref", "profile_name": "dbt_custom", "target_name": "dev"} */
+alter view "dev"."main"."demo_source_and_ref__dbt_tmp" rename to "demo_source_and_ref"
+09:16:59.377295 [debug]: drop(query_span_guard) (span exit/export) took 4.125µs
+09:16:59.377844 [debug]: create_debug_span(...).entered() took 1.25µs
+09:16:59.377921 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 56.167µs
+09:16:59.377924 [debug]: reader.schema() took 42ns
+09:16:59.377927 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 79.75µs
+09:16:59.377929 [debug]: concat_batches + normalize_result_column_names took 250ns
+09:16:59.377932 [debug]: record_current_span_status_from_attrs took 125ns
+09:16:59.377933 [debug]: Query executed on node model.dbt_custom.demo_source_and_ref:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.demo_source_and_ref", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+      drop view if exists "dev"."main"."demo_source_and_ref__dbt_backup" cascade
+    
+09:16:59.377937 [debug]: drop(query_span_guard) (span exit/export) took 3.667µs
+09:16:59.378054 [info ]: Finished running [  0.00s] model main.demo_source_and_ref [success]
+09:16:59.378060 [info ]: Finished running [  0.02s] (9 nodes, 1 skipped, 0 errors)
+09:16:59.378066 [info ]:  Succeeded model main.demo_source_and_ref (view) [8 of 8 in 0.01s]
+09:17:00.594769 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' successfully for target 'dev' [1.4s]
+Processed: 9 models
+Summary: 9 total | 8 success | 1 no-op
+==================== 2026-10-25T09:19:43.756691Z | 01a1725b-d68b-7122-8848-ffd1d87d4eff ====================
+09:19:43.756802 [info ]: dbt 2.0.9
+09:19:43.756912 [info ]: Started loading project
+09:19:43.757438 [info ]: Loading profiles.yml
+09:19:43.964671 [debug]:    Started loading packages
+09:19:43.964965 [debug]:     Loaded [  0.00s] packages
+09:19:43.965301 [info ]: Finished loading project [  0.21s]
+09:19:43.966276 [info ]: Started parsing (11 nodes)
+09:19:43.977217 [debug]:    Started building model nodes
+09:19:43.977219 [debug]:    Started building model nodes
+09:19:43.977230 [debug]:   Finished [  0.00s] building model nodes
+09:19:43.977230 [debug]:   Finished [  0.00s] building model nodes
+09:19:43.977351 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:19:43.977438 [debug]:    Started resolving data tests
+09:19:43.977438 [debug]:    Started resolving data tests
+09:19:43.977457 [debug]:   Finished [  0.00s] resolving data tests
+09:19:43.977477 [debug]:   Finished [  0.00s] resolving data tests
+09:19:43.978148 [debug]: Finished parsing models/demo_ephemeral.sql [  0.00s]
+09:19:43.978589 [debug]: Finished parsing models/demo_incremental.sql [  0.00s]
+09:19:43.978902 [debug]: Finished parsing models/demo_source_and_ref.sql [  0.00s]
+09:19:43.979135 [debug]: Finished parsing models/demo_table.sql [  0.00s]
+09:19:43.979364 [debug]: Finished parsing models/demo_view.sql [  0.00s]
+09:19:43.979669 [debug]: Finished parsing models/inc_strategy_append.sql [  0.00s]
+09:19:43.979956 [debug]: Finished parsing models/inc_strategy_delete_insert.sql [  0.00s]
+09:19:43.980239 [debug]: Finished parsing models/inc_strategy_merge.sql [  0.00s]
+09:19:43.980459 [debug]: Finished parsing models/inc_timestamp_watermark.sql [  0.00s]
+09:19:43.980736 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:19:43.980758 [debug]:    Started building model nodes
+09:19:43.981991 [debug]:   Finished [  0.00s] building model nodes
+09:19:43.982594 [debug]:    Started resolving data tests
+09:19:43.982604 [debug]:   Finished [  0.00s] resolving data tests
+09:19:43.982768 [debug]:    Started typechecking macros
+09:19:44.034235 [debug]:   Finished [  0.05s] typechecking macros
+09:19:44.034544 [info ]: Finished parsing [  0.07s] (11 nodes, 0 skipped, 0 errors)
+09:19:44.040124 [info ]: Started scheduling
+09:19:44.040208 [info ]: Finished scheduling [  0.00s]
+09:19:44.040731 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+09:19:44.041740 [info ]:    Started downloading referenced relations (1 items)
+09:19:44.042401 [debug]: DuckDB driver resolved: duckdb 1.5.4
+09:19:44.055865 [debug]:    Started downloading "dev"."main"
+09:19:44.055900 [debug]: create_debug_span(...).entered() took 4.125µs
+09:19:44.057297 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 839.125µs
+09:19:44.057303 [debug]: reader.schema() took 125ns
+09:19:44.057337 [debug]: batch-consume loop (for res in reader) took 31.334µs
+09:19:44.057351 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.445542ms
+09:19:44.057411 [debug]: concat_batches + normalize_result_column_names took 56.417µs
+09:19:44.057416 [debug]: record_current_span_status_from_attrs took 1.875µs
+09:19:44.057420 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:19:44.057428 [debug]: drop(query_span_guard) (span exit/export) took 9.5µs
+09:19:44.057458 [debug]: Downloaded [  0.00s] "dev"."main"
+09:19:44.057548 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+09:19:44.057794 [info ]: Started building task graph
+09:19:44.057872 [info ]: Finished building task graph [  0.00s]
+09:19:44.060040 [debug]: create_debug_span(...).entered() took 2.667µs
+09:19:44.060221 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 52.542µs
+09:19:44.060225 [debug]: reader.schema() took 41ns
+09:19:44.060232 [debug]: batch-consume loop (for res in reader) took 5.5µs
+09:19:44.060238 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 193.792µs
+09:19:44.060243 [debug]: concat_batches + normalize_result_column_names took 2.542µs
+09:19:44.060246 [debug]: record_current_span_status_from_attrs took 708ns
+09:19:44.060249 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+09:19:44.060254 [debug]: drop(query_span_guard) (span exit/export) took 5.542µs
+09:19:44.060430 [debug]: create_debug_span(...).entered() took 1.458µs
+09:19:44.060541 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 42.333µs
+09:19:44.060544 [debug]: reader.schema() took 0ns
+09:19:44.060552 [debug]: batch-consume loop (for res in reader) took 6.333µs
+09:19:44.060557 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 124.583µs
+09:19:44.060560 [debug]: concat_batches + normalize_result_column_names took 666ns
+09:19:44.060562 [debug]: record_current_span_status_from_attrs took 208ns
+09:19:44.060565 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+09:19:44.060568 [debug]: drop(query_span_guard) (span exit/export) took 3.792µs
+09:19:44.060638 [debug]: create_debug_span(...).entered() took 1.167µs
+09:19:44.060700 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 27.375µs
+09:19:44.060704 [debug]: reader.schema() took 83ns
+09:19:44.060712 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 71.208µs
+09:19:44.060716 [debug]: concat_batches + normalize_result_column_names took 1µs
+09:19:44.060718 [debug]: record_current_span_status_from_attrs took 375ns
+09:19:44.060720 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+09:19:44.060726 [debug]: drop(query_span_guard) (span exit/export) took 6.541µs
+09:19:44.060787 [info ]: Started rendering (1 nodes)
+09:19:44.060810 [info ]: Started model main.inc_timestamp_watermark
+09:19:44.060817 [debug]: Started rendering model main.inc_timestamp_watermark
+09:19:44.061459 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+09:19:44.061498 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+09:19:44.061506 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:19:44.061524 [info ]: Started analyzing (1 nodes)
+09:19:44.061537 [debug]: Started analyzing model main.inc_timestamp_watermark
+09:19:44.063572 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+09:19:44.063578 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:19:44.063583 [info ]: Started running (1 nodes)
+09:19:44.063592 [info ]: Started running model main.inc_timestamp_watermark
+09:19:44.064307 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:19:44.064788 [debug]: Writing runtime sql for node "model.dbt_custom.inc_timestamp_watermark"
+09:19:44.065015 [debug]: create_debug_span(...).entered() took 2.416µs
+09:19:44.066077 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 837.459µs
+09:19:44.066083 [debug]: reader.schema() took 41ns
+09:19:44.066089 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.069584ms
+09:19:44.066093 [debug]: concat_batches + normalize_result_column_names took 1.125µs
+09:19:44.066096 [debug]: record_current_span_status_from_attrs took 458ns
+09:19:44.066098 [debug]: Query executed on node model.dbt_custom.inc_timestamp_watermark:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_timestamp_watermark", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create  table
+      "dev"."main"."inc_timestamp_watermark"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date,
+    -- Tracks when dbt processed/updated this version in the warehouse:
+    current_timestamp as dbt_loaded_at
+from "dev"."main"."orders"
+
+
+    );
+  
+    
+  
+  
+09:19:44.066104 [debug]: drop(query_span_guard) (span exit/export) took 6.584µs
+09:19:44.066516 [info ]: Finished running [  0.00s] model main.inc_timestamp_watermark [success]
+09:19:44.066521 [info ]: Finished running [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:19:44.066524 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [1 of 1 in 0.00s]
+09:19:45.015138 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' successfully for target 'dev' [1.3s]
+Processed: 1 model
+Summary: 1 total | 1 success
+==================== 2026-10-25T09:19:49.284352Z | 01a1725b-ec23-7de2-9a07-e4010c4c5ecc ====================
+09:19:49.284420 [info ]: dbt 2.0.9
+09:19:49.284513 [info ]: Started loading project
+09:19:49.284934 [info ]: Loading profiles.yml
+09:19:49.373895 [debug]:    Started loading packages
+09:19:49.374178 [debug]:     Loaded [  0.00s] packages
+09:19:49.374519 [info ]: Finished loading project [  0.09s]
+09:19:49.375433 [info ]: Started parsing (11 nodes)
+09:19:49.386251 [debug]:    Started building model nodes
+09:19:49.386254 [debug]:    Started building model nodes
+09:19:49.386262 [debug]:   Finished [  0.00s] building model nodes
+09:19:49.386262 [debug]:   Finished [  0.00s] building model nodes
+09:19:49.386359 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:19:49.386471 [debug]:    Started resolving data tests
+09:19:49.386471 [debug]:    Started resolving data tests
+09:19:49.386489 [debug]:   Finished [  0.00s] resolving data tests
+09:19:49.386489 [debug]:   Finished [  0.00s] resolving data tests
+09:19:49.387054 [debug]: Finished parsing models/demo_ephemeral.sql [  0.00s]
+09:19:49.387263 [debug]: Finished parsing models/demo_incremental.sql [  0.00s]
+09:19:49.387559 [debug]: Finished parsing models/demo_source_and_ref.sql [  0.00s]
+09:19:49.387789 [debug]: Finished parsing models/demo_table.sql [  0.00s]
+09:19:49.387990 [debug]: Finished parsing models/demo_view.sql [  0.00s]
+09:19:49.388175 [debug]: Finished parsing models/inc_strategy_append.sql [  0.00s]
+09:19:49.388368 [debug]: Finished parsing models/inc_strategy_delete_insert.sql [  0.00s]
+09:19:49.388497 [debug]: Finished parsing models/inc_strategy_merge.sql [  0.00s]
+09:19:49.388640 [debug]: Finished parsing models/inc_timestamp_watermark.sql [  0.00s]
+09:19:49.388861 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:19:49.388878 [debug]:    Started building model nodes
+09:19:49.390039 [debug]:   Finished [  0.00s] building model nodes
+09:19:49.390642 [debug]:    Started resolving data tests
+09:19:49.390651 [debug]:   Finished [  0.00s] resolving data tests
+09:19:49.390823 [debug]:    Started typechecking macros
+09:19:49.442423 [debug]:   Finished [  0.05s] typechecking macros
+09:19:49.442756 [info ]: Finished parsing [  0.07s] (11 nodes, 0 skipped, 0 errors)
+09:19:49.447724 [info ]: Started scheduling
+09:19:49.447802 [info ]: Finished scheduling [  0.00s]
+09:19:49.448300 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+09:19:49.448651 [info ]:    Started downloading referenced relations (1 items)
+09:19:49.449015 [debug]: DuckDB driver resolved: duckdb 1.5.4
+09:19:49.462491 [debug]:    Started downloading "dev"."main"
+09:19:49.462526 [debug]: create_debug_span(...).entered() took 4.792µs
+09:19:49.464007 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 905.041µs
+09:19:49.464017 [debug]: reader.schema() took 125ns
+09:19:49.464048 [debug]: batch-consume loop (for res in reader) took 29.334µs
+09:19:49.464062 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.531167ms
+09:19:49.464124 [debug]: concat_batches + normalize_result_column_names took 59.333µs
+09:19:49.464129 [debug]: record_current_span_status_from_attrs took 2.166µs
+09:19:49.464134 [debug]: Query executed on node unknown:
+SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'main' AND lower(table_catalog) = lower('dev')
+09:19:49.464144 [debug]: drop(query_span_guard) (span exit/export) took 12.208µs
+09:19:49.464175 [debug]: Downloaded [  0.00s] "dev"."main"
+09:19:49.464266 [info ]:   Finished [  0.02s] downloading referenced relations (1 items)
+09:19:49.464524 [info ]: Started building task graph
+09:19:49.464599 [info ]: Finished building task graph [  0.00s]
+09:19:49.465962 [debug]: create_debug_span(...).entered() took 2.5µs
+09:19:49.466146 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 50.708µs
+09:19:49.466150 [debug]: reader.schema() took 0ns
+09:19:49.466157 [debug]: batch-consume loop (for res in reader) took 4.666µs
+09:19:49.466162 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 194.125µs
+09:19:49.466166 [debug]: concat_batches + normalize_result_column_names took 2.291µs
+09:19:49.466169 [debug]: record_current_span_status_from_attrs took 291ns
+09:19:49.466171 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+09:19:49.466175 [debug]: drop(query_span_guard) (span exit/export) took 4.917µs
+09:19:49.466366 [debug]: create_debug_span(...).entered() took 1.333µs
+09:19:49.466462 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 32µs
+09:19:49.466465 [debug]: reader.schema() took 0ns
+09:19:49.466473 [debug]: batch-consume loop (for res in reader) took 6.458µs
+09:19:49.466477 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 107.25µs
+09:19:49.466479 [debug]: concat_batches + normalize_result_column_names took 625ns
+09:19:49.466481 [debug]: record_current_span_status_from_attrs took 167ns
+09:19:49.466483 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+09:19:49.466486 [debug]: drop(query_span_guard) (span exit/export) took 3.584µs
+09:19:49.466559 [debug]: create_debug_span(...).entered() took 1.125µs
+09:19:49.466621 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 27.042µs
+09:19:49.466624 [debug]: reader.schema() took 42ns
+09:19:49.466632 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 69.125µs
+09:19:49.466634 [debug]: concat_batches + normalize_result_column_names took 792ns
+09:19:49.466636 [debug]: record_current_span_status_from_attrs took 125ns
+09:19:49.466638 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+09:19:49.466641 [debug]: drop(query_span_guard) (span exit/export) took 3.375µs
+09:19:49.466695 [info ]: Started rendering (1 nodes)
+09:19:49.466718 [info ]: Started model main.inc_timestamp_watermark
+09:19:49.466725 [debug]: Started rendering model main.inc_timestamp_watermark
+09:19:49.469890 [debug]: Compiled SQL for node model.dbt_custom.inc_timestamp_watermark at target/compiled/dbt_custom/models/inc_timestamp_watermark.sql
+09:19:49.469958 [debug]: Finished rendering [  0.00s] model main.inc_timestamp_watermark [success]
+09:19:49.469966 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:19:49.469981 [info ]: Started analyzing (1 nodes)
+09:19:49.469996 [debug]: Started analyzing model main.inc_timestamp_watermark
+09:19:49.474061 [debug]: Finished analyzing [  0.00s] model main.inc_timestamp_watermark [success]
+09:19:49.474067 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:19:49.474072 [info ]: Started running (1 nodes)
+09:19:49.474082 [info ]: Started running model main.inc_timestamp_watermark
+09:19:49.474801 [debug]: Invalid value for on_schema_change (None) specified. Setting default value of ignore.
+09:19:49.475267 [debug]: create_debug_span(...).entered() took 1.875µs
+09:19:49.477872 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 2.296875ms
+09:19:49.477876 [debug]: reader.schema() took 42ns
+09:19:49.477897 [debug]: batch-consume loop (for res in reader) took 18.583µs
+09:19:49.477912 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.640708ms
+09:19:49.477919 [debug]: concat_batches + normalize_result_column_names took 4.125µs
+09:19:49.477922 [debug]: record_current_span_status_from_attrs took 291ns
+09:19:49.477924 [debug]: Query executed on node model.dbt_custom.inc_timestamp_watermark:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_timestamp_watermark", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+    
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'inc_timestamp_watermark'
+      
+      and lower(table_schema) = 'main'
+      
+      
+      and lower(table_catalog) = 'dev'
+      
+      order by ordinal_position
+
+    
+  
+09:19:49.477929 [debug]: drop(query_span_guard) (span exit/export) took 5.833µs
+09:19:49.479058 [debug]: Writing runtime sql for node "model.dbt_custom.inc_timestamp_watermark"
+09:19:49.479294 [debug]: create_debug_span(...).entered() took 2.583µs
+09:19:49.481545 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 969.583µs
+09:19:49.481551 [debug]: reader.schema() took 42ns
+09:19:49.481566 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.267916ms
+09:19:49.481570 [debug]: concat_batches + normalize_result_column_names took 1.25µs
+09:19:49.481572 [debug]: record_current_span_status_from_attrs took 417ns
+09:19:49.481575 [debug]: Query executed on node model.dbt_custom.inc_timestamp_watermark:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.dbt_custom.inc_timestamp_watermark", "profile_name": "dbt_custom", "target_name": "dev"} */
+
+  
+    
+    
+    create temporary table
+      "inc_timestamp_watermark__dbt_tmp_6f140437_296d_408f_ae5a_f40617f4a1e5"
+  
+    as (
+      
+
+
+
+select
+    order_id,
+    user_id,
+    amount,
+    status,
+    order_date,
+    -- Tracks when dbt processed/updated this version in the warehouse:
+    current_timestamp as dbt_loaded_at
+from "dev"."main"."orders"
+
+
+    -- WATERMARK FILTER:
+    -- Only scan source records whose date is on or after the max date in this table.
+    -- In production with high data volumes, add a lookback window (e.g. - 3 days):
+    where order_date >= (select coalesce(max(order_date), '1970-01-01') from "dev"."main"."inc_timestamp_watermark")
+
+    );
+  
+    
+  ;
+
+
+    MERGE INTO "dev"."main"."inc_timestamp_watermark" AS DBT_INTERNAL_DEST
+        USING "inc_timestamp_watermark__dbt_tmp_6f140437_296d_408f_ae5a_f40617f4a1e5" AS DBT_INTERNAL_SOURCE
+        
+            
+                
+            
+        
+        ON (DBT_INTERNAL_SOURCE.order_id = DBT_INTERNAL_DEST.order_id)
+    
+    WHEN MATCHED
+    THEN
+        UPDATE BY NAME
+    WHEN NOT MATCHED
+        
+    THEN
+        INSERT BY NAME
+
+  
+09:19:49.481582 [debug]: drop(query_span_guard) (span exit/export) took 7.083µs
+09:19:49.482020 [info ]: Finished running [  0.01s] model main.inc_timestamp_watermark [success]
+09:19:49.482027 [info ]: Finished running [  0.01s] (1 nodes, 0 skipped, 0 errors)
+09:19:49.482031 [info ]:  Succeeded model main.inc_timestamp_watermark (incremental) [1 of 1 in 0.01s]
+09:19:50.446204 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' successfully for target 'dev' [1.2s]
+Processed: 1 model
+Summary: 1 total | 1 success
+==================== 2026-10-25T09:20:51.030381Z | 01a1725c-dd55-71c1-b566-ef5d3d9f3b6b ====================
+09:20:51.783687 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [753ms]

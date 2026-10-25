@@ -1,0 +1,1308 @@
+==================== 2026-10-25T08:19:39.541076Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-25T08:19:39.541606Z | 9ada4493-d6fc-4013-b623-64f5193c1582 ====================
+08:19:39.541776 [info ]: Starting dbt LSP server
+08:19:39.541804 [info ]: Connecting to LSP client on port 8000
+08:19:39.541973 [info ]: Successfully connected to LSP client
+08:19:39.541987 [info ]: Creating LSP service...
+08:19:39.543260 [info ]: Creating LSP server...
+08:19:39.543292 [info ]: Starting LSP server...
+08:19:39.558396 [info ]: Loading profiles.yml
+==================== 2026-10-25T08:19:39.574556Z | 05852492-deb6-4015-adbd-db1f6207715c ====================
+08:19:39.574623 [info ]: Started loading project
+08:19:39.575528 [info ]: Loading profiles.yml
+08:19:39.749719 [debug]:    Started loading packages
+08:19:39.750049 [debug]:     Loaded [  0.00s] packages
+08:19:39.750457 [info ]: Finished loading project [  0.18s]
+08:19:39.750614 [info ]: Started parsing (3 nodes)
+08:19:39.765906 [debug]:    Started building model nodes
+08:19:39.765912 [debug]:    Started building model nodes
+08:19:39.765910 [debug]: Finished parsing models/sources.yml [  0.00s]
+08:19:39.765921 [debug]:   Finished [  0.00s] building model nodes
+08:19:39.765921 [debug]:   Finished [  0.00s] building model nodes
+08:19:39.766176 [debug]:    Started resolving data tests
+08:19:39.766194 [debug]:   Finished [  0.00s] resolving data tests
+08:19:39.766226 [debug]:    Started resolving data tests
+08:19:39.766253 [debug]:   Finished [  0.00s] resolving data tests
+08:19:39.767446 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+08:19:39.768027 [debug]:    Started building model nodes
+08:19:39.768954 [debug]:   Finished [  0.00s] building model nodes
+08:19:39.769294 [debug]:    Started resolving data tests
+08:19:39.769309 [debug]:   Finished [  0.00s] resolving data tests
+08:19:39.769360 [debug]: Finished parsing models/demo_macro_pivot.sql [  0.00s]
+08:19:39.769746 [debug]:    Started typechecking macros
+08:19:39.852179 [debug]:   Finished [  0.08s] typechecking macros
+08:19:39.852561 [info ]: Finished parsing [  0.10s] (3 nodes, 0 skipped, 0 errors)
+08:19:39.852680 [info ]: Cached model count updated: 2 models (estimate)
+08:19:39.852687 [info ]: Cached model count updated: 2 models (accurate)
+08:19:39.852716 [info ]: Started scheduling
+08:19:39.852757 [info ]: Finished scheduling [  0.00s]
+08:19:39.852762 [debug]: Compilation - 0 nodes selected: {}
+08:19:39.852780 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:19:39.852789 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:19:39.852807 [info ]: Started scheduling
+08:19:39.852833 [info ]: Finished scheduling [  0.00s]
+08:19:39.852895 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+08:19:39.852901 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+08:19:39.853554 [info ]: Started building task graph
+08:19:39.853572 [info ]: Finished building task graph [  0.00s]
+08:19:39.856785 [info ]: Started scheduling
+08:19:39.856795 [info ]: Finished scheduling [  0.00s]
+08:19:39.856845 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [282ms]
+08:19:39.856886 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:19:41.041450Z | 23800b54-4e56-4a25-83a0-5c1c99f6b9cc ====================
+08:19:41.041549 [info ]: Started loading project
+08:19:41.042056 [info ]: Loading profiles.yml
+08:19:41.045074 [info ]: Finished loading project [  0.00s]
+08:19:41.067700 [info ]: Cached model count updated: 2 models (estimate)
+08:19:41.067744 [info ]: Cached model count updated: 2 models (accurate)
+08:19:41.067821 [info ]: Started scheduling
+08:19:41.067903 [info ]: Finished scheduling [  0.00s]
+08:19:41.067923 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:19:41.069496 [info ]: Started building task graph
+08:19:41.069562 [info ]: Finished building task graph [  0.00s]
+08:19:41.070680 [info ]: Started rendering (2 nodes)
+08:19:41.070696 [info ]: Started model main.demo_macro_pivot
+08:19:41.070709 [debug]: Started rendering model main.demo_macro_pivot
+08:19:41.070738 [info ]: Started model main.demo_macro_conversions
+08:19:41.070745 [debug]: Started rendering model main.demo_macro_conversions
+08:19:41.071839 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_pivot at target/.lsp/compiled/dbt_macros/models/demo_macro_pivot.sql
+08:19:41.071839 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:19:41.071952 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [success]
+08:19:41.071985 [info ]: Started analyzing (2 nodes)
+08:19:41.071993 [debug]: Started analyzing model main.demo_macro_pivot
+08:19:41.072012 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:19:41.072020 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:19:41.072028 [debug]: Started analyzing model main.demo_macro_conversions
+08:19:41.080646 [debug]: Finished analyzing [  0.01s] model main.demo_macro_pivot [success]
+08:19:41.080662 [info ]:  Succeeded model main.demo_macro_pivot (table) [1 of 2 in 0.01s]
+08:19:41.081396 [debug]: Finished analyzing [  0.01s] model main.demo_macro_conversions [success]
+08:19:41.081410 [info ]: Finished analyzing [  0.01s] (2 nodes, 0 skipped, 0 errors)
+08:19:41.081416 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.01s]
+08:19:41.083872 [info ]: Started scheduling
+08:19:41.083893 [info ]: Finished scheduling [  0.00s]
+08:19:41.083925 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [42ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:19:41.083985 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:21:22.473756Z | 82e0c4ea-b8e7-45b7-804e-6c2350cac18f ====================
+08:21:22.473804 [info ]: Started loading project
+08:21:22.473982 [info ]: Loading profiles.yml
+08:21:22.475509 [info ]: Finished loading project [  0.00s]
+08:21:22.489589 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [15ms]
+08:21:22.489627 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:21:23.666802Z | 56265e39-af8f-45d5-81dc-a563a49df85d ====================
+08:21:23.666921 [info ]: Started loading project
+08:21:23.667370 [info ]: Loading profiles.yml
+08:21:23.670427 [info ]: Finished loading project [  0.00s]
+08:21:23.692532 [info ]: Cached model count updated: 2 models (estimate)
+08:21:23.692566 [info ]: Cached model count updated: 2 models (accurate)
+08:21:23.692596 [info ]: Started scheduling
+08:21:23.692664 [info ]: Finished scheduling [  0.00s]
+08:21:23.692686 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:21:23.694958 [info ]: Started building task graph
+08:21:23.695005 [info ]: Finished building task graph [  0.00s]
+08:21:23.696373 [info ]: Started rendering (2 nodes)
+08:21:23.696390 [info ]: Started model main.demo_macro_pivot
+08:21:23.696403 [debug]: Started rendering model main.demo_macro_pivot
+08:21:23.696430 [info ]: Started model main.demo_macro_conversions
+08:21:23.696437 [debug]: Started rendering model main.demo_macro_conversions
+08:21:23.696882 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_pivot at target/.lsp/compiled/dbt_macros/models/demo_macro_pivot.sql
+08:21:23.696940 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [success]
+08:21:23.696964 [info ]: Started analyzing (2 nodes)
+08:21:23.696971 [debug]: Started analyzing model main.demo_macro_pivot
+08:21:23.697333 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:21:23.697456 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:21:23.697469 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:21:23.697478 [debug]: Started analyzing model main.demo_macro_conversions
+08:21:23.697956 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [success]
+08:21:23.697970 [info ]:  Succeeded model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:21:23.698391 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:21:23.698400 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:21:23.698405 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:21:23.702091 [info ]: Started scheduling
+08:21:23.702118 [info ]: Finished scheduling [  0.00s]
+08:21:23.702151 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [35ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:21:23.702216 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:21:30.553701Z | b6b1b6bd-3ce8-47bf-8582-fe5efb1d53bb ====================
+08:21:30.553736 [info ]: Started loading project
+08:21:30.553922 [info ]: Loading profiles.yml
+08:21:30.555258 [info ]: Finished loading project [  0.00s]
+08:21:30.570661 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [16ms]
+08:21:30.570700 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:21:31.750195Z | b393521c-be9b-459b-a4c9-5def37f64414 ====================
+08:21:31.750241 [info ]: Started loading project
+08:21:31.750573 [info ]: Loading profiles.yml
+08:21:31.752639 [info ]: Finished loading project [  0.00s]
+08:21:31.769113 [info ]: Cached model count updated: 2 models (estimate)
+08:21:31.769129 [info ]: Cached model count updated: 2 models (accurate)
+08:21:31.769147 [info ]: Started scheduling
+08:21:31.769193 [info ]: Finished scheduling [  0.00s]
+08:21:31.769205 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:21:31.770728 [info ]: Started building task graph
+08:21:31.770756 [info ]: Finished building task graph [  0.00s]
+08:21:31.771452 [info ]: Started rendering (2 nodes)
+08:21:31.771462 [info ]: Started model main.demo_macro_pivot
+08:21:31.771470 [debug]: Started rendering model main.demo_macro_pivot
+08:21:31.771484 [info ]: Started model main.demo_macro_conversions
+08:21:31.771491 [debug]: Started rendering model main.demo_macro_conversions
+08:21:31.771729 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_pivot at target/.lsp/compiled/dbt_macros/models/demo_macro_pivot.sql
+08:21:31.771733 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:21:31.771783 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [success]
+08:21:31.771799 [info ]: Started analyzing (2 nodes)
+08:21:31.771804 [debug]: Started analyzing model main.demo_macro_pivot
+08:21:31.771816 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:21:31.771823 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:21:31.771829 [debug]: Started analyzing model main.demo_macro_conversions
+08:21:31.772140 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [success]
+08:21:31.772148 [info ]:  Succeeded model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:21:31.772570 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:21:31.772579 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:21:31.772584 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:21:31.775273 [info ]: Started scheduling
+08:21:31.775291 [info ]: Finished scheduling [  0.00s]
+08:21:31.775310 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [25ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:21:31.775348 [info ]: Cached model count updated: 2 models (accurate)
+08:21:49.898411 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+08:21:49.902866 [info ]:    Started formatting models/demo_macro_conversions.sql
+08:21:49.935339 [info ]:  Formatted [  0.03s] models/demo_macro_conversions.sql
+==================== 2026-10-25T08:21:49.953977Z | 237206a6-9947-42d7-afc3-561f4d504ba3 ====================
+08:21:49.954003 [info ]: Started loading project
+08:21:49.954154 [info ]: Loading profiles.yml
+08:21:49.956389 [info ]: Started parsing (1 nodes)
+08:21:49.973723 [info ]: Finished loading project [  0.02s]
+08:21:49.973883 [debug]:    Started building model nodes
+08:21:49.973883 [debug]:    Started building model nodes
+08:21:49.973892 [debug]:   Finished [  0.00s] building model nodes
+08:21:49.973892 [debug]:   Finished [  0.00s] building model nodes
+08:21:49.974146 [debug]:    Started resolving data tests
+08:21:49.974161 [debug]:   Finished [  0.00s] resolving data tests
+08:21:49.974162 [debug]:    Started resolving data tests
+08:21:49.974172 [debug]:   Finished [  0.00s] resolving data tests
+08:21:49.974325 [debug]:    Started building model nodes
+08:21:49.974575 [debug]:   Finished [  0.00s] building model nodes
+08:21:49.974788 [debug]:    Started resolving data tests
+08:21:49.974799 [debug]:   Finished [  0.00s] resolving data tests
+08:21:49.974824 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+08:21:49.975125 [debug]:    Started typechecking macros
+08:21:50.055237 [debug]:   Finished [  0.08s] typechecking macros
+08:21:50.055649 [info ]: Finished parsing [  0.10s] (1 nodes, 0 skipped, 0 errors)
+08:21:50.056295 [info ]: Cached model count updated: 2 models (estimate)
+08:21:50.056302 [info ]: Cached model count updated: 2 models (accurate)
+08:21:50.056315 [info ]: Started scheduling
+08:21:50.056350 [info ]: Finished scheduling [  0.00s]
+08:21:50.056357 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+08:21:50.057984 [info ]: Started building task graph
+08:21:50.058005 [info ]: Finished building task graph [  0.00s]
+08:21:50.058491 [info ]: Started rendering (1 nodes)
+08:21:50.058499 [info ]: Started model main.demo_macro_conversions
+08:21:50.058506 [debug]: Started rendering model main.demo_macro_conversions
+08:21:50.058965 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:21:50.059024 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:21:50.059032 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:21:50.059042 [info ]: Started analyzing (1 nodes)
+08:21:50.059046 [debug]: Started analyzing model main.demo_macro_conversions
+08:21:50.059524 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:21:50.059531 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:21:50.059534 [info ]:  Succeeded model main.demo_macro_conversions (table) [1 of 1 in 0.00s]
+08:21:50.061460 [info ]: Started scheduling
+08:21:50.061486 [info ]: Finished scheduling [  0.00s]
+08:21:50.061887 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [107ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:21:50.061922 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:21:51.241555Z | 79f5e6da-2f07-496b-80eb-4e4b9ab542a9 ====================
+08:21:51.241636 [info ]: Started loading project
+08:21:51.242071 [info ]: Loading profiles.yml
+08:21:51.244877 [info ]: Finished loading project [  0.00s]
+08:21:51.264427 [info ]: Cached model count updated: 2 models (estimate)
+08:21:51.264454 [info ]: Cached model count updated: 2 models (accurate)
+08:21:51.264482 [info ]: Started scheduling
+08:21:51.264544 [info ]: Finished scheduling [  0.00s]
+08:21:51.264565 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:21:51.265893 [info ]: Started building task graph
+08:21:51.265940 [info ]: Finished building task graph [  0.00s]
+08:21:51.266995 [info ]: Started rendering (2 nodes)
+08:21:51.267014 [info ]: Started model main.demo_macro_pivot
+08:21:51.267029 [debug]: Started rendering model main.demo_macro_pivot
+08:21:51.267053 [info ]: Started model main.demo_macro_conversions
+08:21:51.267061 [debug]: Started rendering model main.demo_macro_conversions
+08:21:51.267326 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:21:51.267402 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:21:51.267429 [info ]: Started analyzing (2 nodes)
+08:21:51.267435 [debug]: Started analyzing model main.demo_macro_conversions
+08:21:51.267754 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_pivot at target/.lsp/compiled/dbt_macros/models/demo_macro_pivot.sql
+08:21:51.267882 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [success]
+08:21:51.267909 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:21:51.267943 [debug]: Started analyzing model main.demo_macro_pivot
+08:21:51.268407 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [success]
+08:21:51.268420 [info ]:  Succeeded model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:21:51.268664 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:21:51.268674 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:21:51.268680 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:21:51.272005 [info ]: Started scheduling
+08:21:51.272026 [info ]: Finished scheduling [  0.00s]
+08:21:51.272058 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [30ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:21:51.272120 [info ]: Cached model count updated: 2 models (accurate)
+08:22:04.090863 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+08:22:04.091254 [debug]: Skipped file macros/clean_string.sql because it is a macro
+==================== 2026-10-25T08:22:04.117388Z | 0da82c82-4f84-4dc6-8ef5-d866db2fc178 ====================
+08:22:04.117418 [info ]: Started loading project
+08:22:04.117558 [info ]: Loading profiles.yml
+08:22:04.118687 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T08:22:04.119433Z | 683df3b1-0477-4aec-a9fb-8b02f9f0e266 ====================
+08:22:04.119454 [info ]: Started loading project
+08:22:04.119617 [info ]: Loading profiles.yml
+08:22:04.213007 [debug]:    Started loading packages
+08:22:04.213827 [debug]:     Loaded [  0.00s] packages
+08:22:04.214574 [info ]: Finished loading project [  0.10s]
+08:22:04.214744 [info ]: Started parsing (3 nodes)
+08:22:04.231135 [debug]:    Started building model nodes
+08:22:04.231148 [debug]:    Started building model nodes
+08:22:04.231156 [debug]:   Finished [  0.00s] building model nodes
+08:22:04.231153 [debug]:   Finished [  0.00s] building model nodes
+08:22:04.231329 [debug]: Finished parsing models/sources.yml [  0.00s]
+08:22:04.231418 [debug]:    Started resolving data tests
+08:22:04.231441 [debug]:   Finished [  0.00s] resolving data tests
+08:22:04.231665 [debug]:    Started resolving data tests
+08:22:04.231690 [debug]:   Finished [  0.00s] resolving data tests
+08:22:04.232735 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+08:22:04.233902 [debug]:    Started building model nodes
+08:22:04.234476 [debug]:   Finished [  0.00s] building model nodes
+08:22:04.234755 [debug]:    Started resolving data tests
+08:22:04.234771 [debug]:   Finished [  0.00s] resolving data tests
+08:22:04.234824 [debug]: Finished parsing models/demo_macro_pivot.sql [  0.00s]
+08:22:04.235206 [debug]:    Started typechecking macros
+08:22:04.318332 [debug]:   Finished [  0.08s] typechecking macros
+08:22:04.318864 [info ]: Finished parsing [  0.10s] (3 nodes, 0 skipped, 0 errors)
+08:22:04.318958 [info ]: Cached model count updated: 2 models (estimate)
+08:22:04.318967 [info ]: Cached model count updated: 2 models (accurate)
+08:22:04.318980 [info ]: Started scheduling
+08:22:04.319000 [info ]: Finished scheduling [  0.00s]
+08:22:04.319006 [debug]: Compilation - 0 nodes selected: {}
+08:22:04.319017 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:22:04.319028 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:22:04.319040 [info ]: Started scheduling
+08:22:04.319060 [info ]: Finished scheduling [  0.00s]
+08:22:04.319094 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+08:22:04.319099 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+08:22:04.319846 [info ]: Started building task graph
+08:22:04.319857 [info ]: Finished building task graph [  0.00s]
+08:22:04.323010 [info ]: Started scheduling
+08:22:04.323034 [info ]: Finished scheduling [  0.00s]
+08:22:04.323088 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [203ms]
+08:22:04.323122 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [205ms]
+08:22:04.323150 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:05.510153Z | 607e0d26-ef9d-483b-ad64-3f75826e50e3 ====================
+08:22:05.510241 [info ]: Started loading project
+08:22:05.510683 [info ]: Loading profiles.yml
+08:22:05.513477 [info ]: Finished loading project [  0.00s]
+08:22:05.535776 [info ]: Cached model count updated: 2 models (estimate)
+08:22:05.535810 [info ]: Cached model count updated: 2 models (accurate)
+08:22:05.535845 [info ]: Started scheduling
+08:22:05.535916 [info ]: Finished scheduling [  0.00s]
+08:22:05.535934 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:22:05.537371 [info ]: Started building task graph
+08:22:05.537419 [info ]: Finished building task graph [  0.00s]
+08:22:05.538508 [info ]: Started rendering (2 nodes)
+08:22:05.538529 [info ]: Started model main.demo_macro_pivot
+08:22:05.538544 [debug]: Started rendering model main.demo_macro_pivot
+08:22:05.538580 [info ]: Started model main.demo_macro_conversions
+08:22:05.538587 [debug]: Started rendering model main.demo_macro_conversions
+08:22:05.539643 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:22:05.539665 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_pivot at target/.lsp/compiled/dbt_macros/models/demo_macro_pivot.sql
+08:22:05.539815 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:22:05.539842 [info ]: Started analyzing (2 nodes)
+08:22:05.539849 [debug]: Started analyzing model main.demo_macro_conversions
+08:22:05.539871 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [success]
+08:22:05.539880 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:22:05.539887 [debug]: Started analyzing model main.demo_macro_pivot
+08:22:05.540495 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [success]
+08:22:05.540506 [info ]:  Succeeded model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:22:05.540885 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:22:05.540897 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:22:05.540902 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:22:05.544380 [info ]: Started scheduling
+08:22:05.544407 [info ]: Finished scheduling [  0.00s]
+08:22:05.544450 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [34ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:22:05.544523 [info ]: Cached model count updated: 2 models (accurate)
+08:22:15.711794 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+08:22:15.712209 [debug]: Skipped file macros/dynamic_pivot.sql because it is a macro
+==================== 2026-10-25T08:22:15.736094Z | c068e904-4a8b-4acd-a364-7a370c7c0acb ====================
+08:22:15.736124 [info ]: Started loading project
+08:22:15.736272 [info ]: Loading profiles.yml
+08:22:15.737355 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T08:22:15.738159Z | f222bcb9-bf8c-4b52-bee0-b7c240e80250 ====================
+08:22:15.738172 [info ]: Started loading project
+08:22:15.738245 [info ]: Loading profiles.yml
+08:22:15.832106 [debug]:    Started loading packages
+08:22:15.832416 [debug]:     Loaded [  0.00s] packages
+08:22:15.832743 [info ]: Finished loading project [  0.09s]
+08:22:15.832828 [info ]: Started parsing (3 nodes)
+08:22:15.845795 [debug]: Finished parsing models/sources.yml [  0.00s]
+08:22:15.845836 [debug]:    Started building model nodes
+08:22:15.845836 [debug]:    Started building model nodes
+08:22:15.845844 [debug]:   Finished [  0.00s] building model nodes
+08:22:15.845845 [debug]:   Finished [  0.00s] building model nodes
+08:22:15.846084 [debug]:    Started resolving data tests
+08:22:15.846084 [debug]:    Started resolving data tests
+08:22:15.846098 [debug]:   Finished [  0.00s] resolving data tests
+08:22:15.846104 [debug]:   Finished [  0.00s] resolving data tests
+08:22:15.846343 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+08:22:15.846675 [debug]:    Started building model nodes
+08:22:15.847019 [debug]:   Finished [  0.00s] building model nodes
+08:22:15.847217 [debug]:    Started resolving data tests
+08:22:15.847225 [debug]:   Finished [  0.00s] resolving data tests
+08:22:15.847253 [debug]: Finished parsing models/demo_macro_pivot.sql [  0.00s]
+08:22:15.847537 [debug]:    Started typechecking macros
+08:22:15.924856 [debug]:   Finished [  0.08s] typechecking macros
+08:22:15.925220 [info ]: Finished parsing [  0.09s] (3 nodes, 0 skipped, 0 errors)
+08:22:15.925293 [info ]: Cached model count updated: 2 models (estimate)
+08:22:15.925299 [info ]: Cached model count updated: 2 models (accurate)
+08:22:15.925311 [info ]: Started scheduling
+08:22:15.925329 [info ]: Finished scheduling [  0.00s]
+08:22:15.925334 [debug]: Compilation - 0 nodes selected: {}
+08:22:15.925342 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:22:15.925349 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:22:15.925361 [info ]: Started scheduling
+08:22:15.925380 [info ]: Finished scheduling [  0.00s]
+08:22:15.925403 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+08:22:15.925408 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+08:22:15.925939 [info ]: Started building task graph
+08:22:15.925948 [info ]: Finished building task graph [  0.00s]
+08:22:15.928424 [info ]: Started scheduling
+08:22:15.928435 [info ]: Finished scheduling [  0.00s]
+08:22:15.928486 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [190ms]
+08:22:15.928517 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [192ms]
+08:22:15.928543 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:17.118597Z | dd774059-c635-441f-8649-0cb471307434 ====================
+08:22:17.118674 [info ]: Started loading project
+08:22:17.119085 [info ]: Loading profiles.yml
+08:22:17.121800 [info ]: Finished loading project [  0.00s]
+08:22:17.143831 [info ]: Cached model count updated: 2 models (estimate)
+08:22:17.143876 [info ]: Cached model count updated: 2 models (accurate)
+08:22:17.143914 [info ]: Started scheduling
+08:22:17.143993 [info ]: Finished scheduling [  0.00s]
+08:22:17.144023 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:22:17.145850 [info ]: Started building task graph
+08:22:17.145897 [info ]: Finished building task graph [  0.00s]
+08:22:17.146820 [info ]: Started rendering (2 nodes)
+08:22:17.146837 [info ]: Started model main.demo_macro_pivot
+08:22:17.146851 [debug]: Started rendering model main.demo_macro_pivot
+08:22:17.146880 [info ]: Started model main.demo_macro_conversions
+08:22:17.146888 [debug]: Started rendering model main.demo_macro_conversions
+08:22:17.147783 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_pivot at target/.lsp/compiled/dbt_macros/models/demo_macro_pivot.sql
+08:22:17.147793 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:22:17.147893 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:22:17.147916 [info ]: Started analyzing (2 nodes)
+08:22:17.147922 [debug]: Started analyzing model main.demo_macro_conversions
+08:22:17.147938 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [success]
+08:22:17.147947 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:22:17.147954 [debug]: Started analyzing model main.demo_macro_pivot
+08:22:17.148381 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [success]
+08:22:17.148390 [info ]:  Succeeded model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:22:17.148813 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:22:17.148826 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:22:17.148832 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:22:17.152667 [info ]: Started scheduling
+08:22:17.152703 [info ]: Finished scheduling [  0.00s]
+08:22:17.152761 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [34ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+08:22:17.152837 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:20.482138Z | a195a685-b9e7-4788-8a53-00501d791a86 ====================
+08:22:20.482166 [info ]: Started loading project
+08:22:20.482320 [info ]: Loading profiles.yml
+08:22:20.483549 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T08:22:20.484594Z | f5631462-a80e-4a25-af81-0c8806bea6cb ====================
+08:22:20.484614 [info ]: Started loading project
+08:22:20.484746 [info ]: Loading profiles.yml
+08:22:20.583076 [debug]:    Started loading packages
+08:22:20.583339 [debug]:     Loaded [  0.00s] packages
+08:22:20.583684 [info ]: Finished loading project [  0.10s]
+08:22:20.583783 [info ]: Started parsing (3 nodes)
+08:22:20.597072 [debug]: Finished parsing models/sources.yml [  0.00s]
+08:22:20.597102 [debug]:    Started building model nodes
+08:22:20.597102 [debug]:    Started building model nodes
+08:22:20.597112 [debug]:   Finished [  0.00s] building model nodes
+08:22:20.597111 [debug]:   Finished [  0.00s] building model nodes
+08:22:20.597346 [debug]:    Started resolving data tests
+08:22:20.597348 [debug]:    Started resolving data tests
+08:22:20.597358 [debug]:   Finished [  0.00s] resolving data tests
+08:22:20.597359 [debug]:   Finished [  0.00s] resolving data tests
+08:22:20.597629 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+08:22:20.597883 [debug]: Failed to render SQL unknown function: Jinja macro or function `pivot_sum` is unknown
+(in models/demo_macro_pivot.sql:15:5)
+  --> models/demo_macro_pivot.sql:15:5
+08:22:20.597922 [debug]:    Started building model nodes
+08:22:20.598278 [debug]:   Finished [  0.00s] building model nodes
+08:22:20.598499 [debug]:    Started resolving data tests
+08:22:20.598508 [debug]:   Finished [  0.00s] resolving data tests
+08:22:20.598546 [debug]: Finished parsing models/demo_macro_pivot.sql [  0.00s]
+08:22:20.598821 [debug]:    Started typechecking macros
+08:22:20.679017 [debug]:   Finished [  0.08s] typechecking macros
+08:22:20.679387 [info ]: Finished parsing [  0.10s] (3 nodes, 0 skipped, 0 errors)
+08:22:20.679470 [info ]: Cached model count updated: 2 models (estimate)
+08:22:20.679477 [info ]: Cached model count updated: 2 models (accurate)
+08:22:20.679488 [info ]: Started scheduling
+08:22:20.679505 [info ]: Finished scheduling [  0.00s]
+08:22:20.679510 [debug]: Compilation - 0 nodes selected: {}
+08:22:20.679519 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:22:20.679528 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:22:20.679540 [info ]: Started scheduling
+08:22:20.679559 [info ]: Finished scheduling [  0.00s]
+08:22:20.679579 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+08:22:20.679583 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+08:22:20.680109 [info ]: Started building task graph
+08:22:20.680117 [info ]: Finished building task graph [  0.00s]
+08:22:20.682690 [info ]: Started scheduling
+08:22:20.682705 [info ]: Finished scheduling [  0.00s]
+08:22:20.682770 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [198ms]
+08:22:20.682807 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [200ms]
+08:22:20.683514 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:21.865980Z | 39af254d-ab68-475f-9842-a919fd4de9f5 ====================
+08:22:21.866012 [info ]: Started loading project
+08:22:21.866214 [info ]: Loading profiles.yml
+08:22:21.867762 [info ]: Finished loading project [  0.00s]
+08:22:21.881505 [info ]: Cached model count updated: 2 models (estimate)
+08:22:21.881528 [info ]: Cached model count updated: 2 models (accurate)
+08:22:21.881544 [info ]: Started scheduling
+08:22:21.881581 [info ]: Finished scheduling [  0.00s]
+08:22:21.881593 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:22:21.882390 [info ]: Started building task graph
+08:22:21.882417 [info ]: Finished building task graph [  0.00s]
+08:22:21.883158 [info ]: Started rendering (2 nodes)
+08:22:21.883170 [info ]: Started model main.demo_macro_pivot
+08:22:21.883190 [debug]: Started rendering model main.demo_macro_pivot
+08:22:21.883209 [info ]: Started model main.demo_macro_conversions
+08:22:21.883216 [debug]: Started rendering model main.demo_macro_conversions
+08:22:21.883567 [error]: [JinjaError (dbt1501)]: Failed to render SQL unknown function: Jinja macro or function `pivot_sum` is unknown
+(in models/demo_macro_pivot.sql:15:5)
+  --> models/demo_macro_pivot.sql:15:5
+08:22:21.883592 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [error]
+08:22:21.883617 [info ]: Started analyzing (2 nodes)
+08:22:21.883624 [debug]: Started analyzing model main.demo_macro_pivot
+08:22:21.883633 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [skipped]
+08:22:21.883640 [info ]:     Failed model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:22:21.883778 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:22:21.883883 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:22:21.883893 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 1 errors)
+08:22:21.883901 [debug]: Started analyzing model main.demo_macro_conversions
+08:22:21.884585 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:22:21.884593 [info ]: Finished analyzing [  0.00s] (2 nodes, 1 skipped, 0 errors)
+08:22:21.884598 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:22:21.887938 [info ]: Started scheduling
+08:22:21.887965 [info ]: Finished scheduling [  0.00s]
+08:22:21.887998 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error for target 'dev' [22ms]
+Processed: 2 models
+Summary: 2 total | 1 success | 1 error
+08:22:21.888063 [info ]: Cached model count updated: 2 models (accurate)
+08:22:29.743140 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+08:22:29.743474 [debug]: Skipped file macros/money_conversions.sql because it is a macro
+==================== 2026-10-25T08:22:29.765690Z | 675b4ef0-1456-4f28-8836-70abdc4a7269 ====================
+08:22:29.765722 [info ]: Started loading project
+08:22:29.765871 [info ]: Loading profiles.yml
+08:22:29.767035 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T08:22:29.767809Z | c406ff2c-ece7-489d-ac44-3f78bda9ce80 ====================
+08:22:29.767827 [info ]: Started loading project
+08:22:29.767916 [info ]: Loading profiles.yml
+08:22:29.892004 [debug]:    Started loading packages
+08:22:29.892355 [debug]:     Loaded [  0.00s] packages
+08:22:29.892688 [info ]: Finished loading project [  0.12s]
+08:22:29.892788 [info ]: Started parsing (3 nodes)
+08:22:29.908480 [debug]: Finished parsing models/sources.yml [  0.00s]
+08:22:29.908557 [debug]:    Started building model nodes
+08:22:29.908567 [debug]:   Finished [  0.00s] building model nodes
+08:22:29.908604 [debug]:    Started building model nodes
+08:22:29.908609 [debug]:   Finished [  0.00s] building model nodes
+08:22:29.908873 [debug]:    Started resolving data tests
+08:22:29.908874 [debug]:    Started resolving data tests
+08:22:29.908893 [debug]:   Finished [  0.00s] resolving data tests
+08:22:29.908916 [debug]:   Finished [  0.00s] resolving data tests
+08:22:29.909175 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+08:22:29.909458 [debug]: Failed to render SQL unknown function: Jinja macro or function `pivot_sum` is unknown
+(in models/demo_macro_pivot.sql:15:5)
+  --> models/demo_macro_pivot.sql:15:5
+08:22:29.909495 [debug]:    Started building model nodes
+08:22:29.909886 [debug]:   Finished [  0.00s] building model nodes
+08:22:29.910160 [debug]:    Started resolving data tests
+08:22:29.910173 [debug]:   Finished [  0.00s] resolving data tests
+08:22:29.910209 [debug]: Finished parsing models/demo_macro_pivot.sql [  0.00s]
+08:22:29.910573 [debug]:    Started typechecking macros
+08:22:30.001701 [debug]:   Finished [  0.09s] typechecking macros
+08:22:30.002060 [info ]: Finished parsing [  0.11s] (3 nodes, 0 skipped, 0 errors)
+08:22:30.002137 [info ]: Cached model count updated: 2 models (estimate)
+08:22:30.002144 [info ]: Cached model count updated: 2 models (accurate)
+08:22:30.002158 [info ]: Started scheduling
+08:22:30.002175 [info ]: Finished scheduling [  0.00s]
+08:22:30.002180 [debug]: Compilation - 0 nodes selected: {}
+08:22:30.002190 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:22:30.002197 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:22:30.002209 [info ]: Started scheduling
+08:22:30.002227 [info ]: Finished scheduling [  0.00s]
+08:22:30.002255 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+08:22:30.002259 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+08:22:30.002696 [info ]: Started building task graph
+08:22:30.002704 [info ]: Finished building task graph [  0.00s]
+08:22:30.005172 [info ]: Started scheduling
+08:22:30.005182 [info ]: Finished scheduling [  0.00s]
+08:22:30.005233 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [237ms]
+08:22:30.005262 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [239ms]
+08:22:30.005286 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:31.191104Z | 669adfc6-400e-467c-b9b6-4dad9aa8c0fd ====================
+08:22:31.191180 [info ]: Started loading project
+08:22:31.191615 [info ]: Loading profiles.yml
+08:22:31.195023 [info ]: Finished loading project [  0.00s]
+08:22:31.217023 [info ]: Cached model count updated: 2 models (estimate)
+08:22:31.217064 [info ]: Cached model count updated: 2 models (accurate)
+08:22:31.217095 [info ]: Started scheduling
+08:22:31.217166 [info ]: Finished scheduling [  0.00s]
+08:22:31.217189 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:22:31.218430 [info ]: Started building task graph
+08:22:31.218481 [info ]: Finished building task graph [  0.00s]
+08:22:31.219586 [info ]: Started rendering (2 nodes)
+08:22:31.219603 [info ]: Started model main.demo_macro_pivot
+08:22:31.219617 [debug]: Started rendering model main.demo_macro_pivot
+08:22:31.219643 [info ]: Started model main.demo_macro_conversions
+08:22:31.219651 [debug]: Started rendering model main.demo_macro_conversions
+08:22:31.220139 [error]: [JinjaError (dbt1501)]: Failed to render SQL unknown function: Jinja macro or function `pivot_sum` is unknown
+(in models/demo_macro_pivot.sql:15:5)
+  --> models/demo_macro_pivot.sql:15:5
+08:22:31.220180 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [error]
+08:22:31.220207 [info ]: Started analyzing (2 nodes)
+08:22:31.220213 [debug]: Started analyzing model main.demo_macro_pivot
+08:22:31.220228 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [skipped]
+08:22:31.220238 [info ]:     Failed model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:22:31.220513 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:22:31.220594 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:22:31.220607 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 1 errors)
+08:22:31.220616 [debug]: Started analyzing model main.demo_macro_conversions
+08:22:31.221705 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:22:31.221714 [info ]: Finished analyzing [  0.00s] (2 nodes, 1 skipped, 0 errors)
+08:22:31.221720 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:22:31.224643 [info ]: Started scheduling
+08:22:31.224665 [info ]: Finished scheduling [  0.00s]
+08:22:31.224696 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error for target 'dev' [33ms]
+Processed: 2 models
+Summary: 2 total | 1 success | 1 error
+08:22:31.224767 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:37.810368Z | 96e3132b-732a-47c4-ad59-a9d215a55849 ====================
+08:22:37.810402 [info ]: Started loading project
+08:22:37.810599 [info ]: Loading profiles.yml
+08:22:37.811944 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T08:22:37.813025Z | 62531921-0d33-4e97-a486-825dd7d06d9b ====================
+08:22:37.813042 [info ]: Started loading project
+08:22:37.813141 [info ]: Loading profiles.yml
+08:22:37.913976 [debug]:    Started loading packages
+08:22:37.914217 [debug]:     Loaded [  0.00s] packages
+08:22:37.914536 [info ]: Finished loading project [  0.10s]
+08:22:37.914623 [info ]: Started parsing (3 nodes)
+08:22:37.927977 [debug]: Finished parsing models/sources.yml [  0.00s]
+08:22:37.927986 [debug]:    Started building model nodes
+08:22:37.927987 [debug]:    Started building model nodes
+08:22:37.927992 [debug]:   Finished [  0.00s] building model nodes
+08:22:37.927992 [debug]:   Finished [  0.00s] building model nodes
+08:22:37.928224 [debug]:    Started resolving data tests
+08:22:37.928224 [debug]:    Started resolving data tests
+08:22:37.928239 [debug]:   Finished [  0.00s] resolving data tests
+08:22:37.928239 [debug]:   Finished [  0.00s] resolving data tests
+08:22:37.928570 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+08:22:37.928833 [debug]: Failed to render SQL unknown function: Jinja macro or function `pivot_sum` is unknown
+(in models/demo_macro_pivot.sql:15:5)
+  --> models/demo_macro_pivot.sql:15:5
+08:22:37.928872 [debug]:    Started building model nodes
+08:22:37.929226 [debug]:   Finished [  0.00s] building model nodes
+08:22:37.929439 [debug]:    Started resolving data tests
+08:22:37.929448 [debug]:   Finished [  0.00s] resolving data tests
+08:22:37.929479 [debug]: Finished parsing models/demo_macro_pivot.sql [  0.00s]
+08:22:37.929776 [debug]:    Started typechecking macros
+08:22:38.009674 [debug]:   Finished [  0.08s] typechecking macros
+08:22:38.010093 [info ]: Finished parsing [  0.10s] (3 nodes, 0 skipped, 0 errors)
+08:22:38.010179 [info ]: Cached model count updated: 2 models (estimate)
+08:22:38.010185 [info ]: Cached model count updated: 2 models (accurate)
+08:22:38.010198 [info ]: Started scheduling
+08:22:38.010215 [info ]: Finished scheduling [  0.00s]
+08:22:38.010220 [debug]: Compilation - 0 nodes selected: {}
+08:22:38.010228 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:22:38.010236 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:22:38.010247 [info ]: Started scheduling
+08:22:38.010266 [info ]: Finished scheduling [  0.00s]
+08:22:38.010287 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+08:22:38.010292 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+08:22:38.010707 [info ]: Started building task graph
+08:22:38.010714 [info ]: Finished building task graph [  0.00s]
+08:22:38.013486 [info ]: Started scheduling
+08:22:38.013497 [info ]: Finished scheduling [  0.00s]
+08:22:38.013550 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [200ms]
+08:22:38.013580 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [203ms]
+08:22:38.014330 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:39.191521Z | 22effc5d-a124-433d-ad29-c4b09d5f9a02 ====================
+08:22:39.191556 [info ]: Started loading project
+08:22:39.191779 [info ]: Loading profiles.yml
+08:22:39.193563 [info ]: Finished loading project [  0.00s]
+08:22:39.208462 [info ]: Cached model count updated: 2 models (estimate)
+08:22:39.208477 [info ]: Cached model count updated: 2 models (accurate)
+08:22:39.208494 [info ]: Started scheduling
+08:22:39.208532 [info ]: Finished scheduling [  0.00s]
+08:22:39.208542 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:22:39.209323 [info ]: Started building task graph
+08:22:39.209351 [info ]: Finished building task graph [  0.00s]
+08:22:39.210131 [info ]: Started rendering (2 nodes)
+08:22:39.210144 [info ]: Started model main.demo_macro_pivot
+08:22:39.210152 [debug]: Started rendering model main.demo_macro_pivot
+08:22:39.210167 [info ]: Started model main.demo_macro_conversions
+08:22:39.210174 [debug]: Started rendering model main.demo_macro_conversions
+08:22:39.210510 [error]: [JinjaError (dbt1501)]: Failed to render SQL unknown function: Jinja macro or function `pivot_sum` is unknown
+(in models/demo_macro_pivot.sql:15:5)
+  --> models/demo_macro_pivot.sql:15:5
+08:22:39.210539 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [error]
+08:22:39.210558 [info ]: Started analyzing (2 nodes)
+08:22:39.210564 [debug]: Started analyzing model main.demo_macro_pivot
+08:22:39.210595 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [skipped]
+08:22:39.210604 [info ]:     Failed model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:22:39.210772 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:22:39.210849 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:22:39.210857 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 1 errors)
+08:22:39.210864 [debug]: Started analyzing model main.demo_macro_conversions
+08:22:39.211606 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:22:39.211613 [info ]: Finished analyzing [  0.00s] (2 nodes, 1 skipped, 0 errors)
+08:22:39.211618 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:22:39.214282 [info ]: Started scheduling
+08:22:39.214303 [info ]: Finished scheduling [  0.00s]
+08:22:39.214336 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error for target 'dev' [22ms]
+Processed: 2 models
+Summary: 2 total | 1 success | 1 error
+08:22:39.214398 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:50.568391Z | c219d031-7597-44fa-acd9-9fea9c1b264a ====================
+08:22:50.568419 [info ]: Started loading project
+08:22:50.568578 [info ]: Loading profiles.yml
+08:22:50.569709 [info ]: Finished loading project [  0.00s]
+08:22:50.582956 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [14ms]
+08:22:50.582990 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:51.762924Z | 43bf7b10-bb62-4970-8afa-bb08b975441e ====================
+08:22:51.763045 [info ]: Started loading project
+08:22:51.763481 [info ]: Loading profiles.yml
+08:22:51.766430 [info ]: Finished loading project [  0.00s]
+08:22:51.787722 [info ]: Cached model count updated: 2 models (estimate)
+08:22:51.787761 [info ]: Cached model count updated: 2 models (accurate)
+08:22:51.787794 [info ]: Started scheduling
+08:22:51.787861 [info ]: Finished scheduling [  0.00s]
+08:22:51.787884 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:22:51.788953 [info ]: Started building task graph
+08:22:51.789000 [info ]: Finished building task graph [  0.00s]
+08:22:51.790030 [info ]: Started rendering (2 nodes)
+08:22:51.790046 [info ]: Started model main.demo_macro_pivot
+08:22:51.790058 [debug]: Started rendering model main.demo_macro_pivot
+08:22:51.790082 [info ]: Started model main.demo_macro_conversions
+08:22:51.790090 [debug]: Started rendering model main.demo_macro_conversions
+08:22:51.790647 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:22:51.790752 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:22:51.790779 [info ]: Started analyzing (2 nodes)
+08:22:51.790788 [debug]: Started analyzing model main.demo_macro_conversions
+08:22:51.790813 [error]: [JinjaError (dbt1501)]: Failed to render SQL unknown function: Jinja macro or function `pivot_sum` is unknown
+(in models/demo_macro_pivot.sql:15:5)
+  --> models/demo_macro_pivot.sql:15:5
+08:22:51.790849 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [error]
+08:22:51.790856 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 1 errors)
+08:22:51.790921 [debug]: Started analyzing model main.demo_macro_pivot
+08:22:51.790937 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [skipped]
+08:22:51.790946 [info ]:     Failed model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:22:51.792079 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:22:51.792093 [info ]: Finished analyzing [  0.00s] (2 nodes, 1 skipped, 0 errors)
+08:22:51.792101 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:22:51.796279 [info ]: Started scheduling
+08:22:51.796319 [info ]: Finished scheduling [  0.00s]
+08:22:51.796385 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error for target 'dev' [33ms]
+Processed: 2 models
+Summary: 2 total | 1 success | 1 error
+08:22:51.796460 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:58.265242Z | 6c206e37-b5ac-4182-ba4b-5a0857c61de7 ====================
+08:22:58.265273 [info ]: Started loading project
+08:22:58.265459 [info ]: Loading profiles.yml
+08:22:58.266859 [info ]: Finished loading project [  0.00s]
+08:22:58.281533 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [16ms]
+08:22:58.281568 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:22:59.459577Z | d87de980-246b-466a-beff-ad0f2a44c220 ====================
+08:22:59.459612 [info ]: Started loading project
+08:22:59.459808 [info ]: Loading profiles.yml
+08:22:59.461121 [info ]: Finished loading project [  0.00s]
+08:22:59.474962 [info ]: Cached model count updated: 2 models (estimate)
+08:22:59.474977 [info ]: Cached model count updated: 2 models (accurate)
+08:22:59.474994 [info ]: Started scheduling
+08:22:59.475034 [info ]: Finished scheduling [  0.00s]
+08:22:59.475046 [debug]: Compilation - 2 nodes selected: {"model.dbt_macros.demo_macro_conversions", "model.dbt_macros.demo_macro_pivot"}
+08:22:59.475837 [info ]: Started building task graph
+08:22:59.475866 [info ]: Finished building task graph [  0.00s]
+08:22:59.476708 [info ]: Started rendering (2 nodes)
+08:22:59.476718 [info ]: Started model main.demo_macro_pivot
+08:22:59.476728 [debug]: Started rendering model main.demo_macro_pivot
+08:22:59.476744 [info ]: Started model main.demo_macro_conversions
+08:22:59.476751 [debug]: Started rendering model main.demo_macro_conversions
+08:22:59.477052 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:22:59.477092 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:22:59.477109 [info ]: Started analyzing (2 nodes)
+08:22:59.477113 [debug]: Started analyzing model main.demo_macro_conversions
+08:22:59.477131 [error]: [JinjaError (dbt1501)]: Failed to render SQL unknown function: Jinja macro or function `pivot_sum` is unknown
+(in models/demo_macro_pivot.sql:15:5)
+  --> models/demo_macro_pivot.sql:15:5
+08:22:59.477153 [debug]: Finished rendering [  0.00s] model main.demo_macro_pivot [error]
+08:22:59.477161 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 1 errors)
+08:22:59.477172 [debug]: Started analyzing model main.demo_macro_pivot
+08:22:59.477183 [debug]: Finished analyzing [  0.00s] model main.demo_macro_pivot [skipped]
+08:22:59.477191 [info ]:     Failed model main.demo_macro_pivot (table) [1 of 2 in 0.00s]
+08:22:59.478000 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:22:59.478010 [info ]: Finished analyzing [  0.00s] (2 nodes, 1 skipped, 0 errors)
+08:22:59.478016 [info ]:  Succeeded model main.demo_macro_conversions (table) [2 of 2 in 0.00s]
+08:22:59.481034 [info ]: Started scheduling
+08:22:59.481059 [info ]: Finished scheduling [  0.00s]
+08:22:59.481096 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error for target 'dev' [21ms]
+Processed: 2 models
+Summary: 2 total | 1 success | 1 error
+08:22:59.481147 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-25T08:23:03.155713Z | dc445f7d-aa99-4c5b-8857-6d2392ce5439 ====================
+08:23:03.155737 [info ]: Started loading project
+08:23:03.155870 [info ]: Loading profiles.yml
+08:23:03.156878 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T08:23:03.157633Z | 1e9d7eec-9b76-497d-b27f-f18fadacc809 ====================
+08:23:03.157645 [info ]: Started loading project
+08:23:03.157717 [info ]: Loading profiles.yml
+08:23:03.252748 [debug]:    Started loading packages
+08:23:03.252987 [debug]:     Loaded [  0.00s] packages
+08:23:03.253320 [info ]: Finished loading project [  0.10s]
+08:23:03.253404 [info ]: Started parsing (2 nodes)
+08:23:03.266436 [debug]:    Started building model nodes
+08:23:03.266447 [debug]:   Finished [  0.00s] building model nodes
+08:23:03.266490 [debug]:    Started building model nodes
+08:23:03.266502 [debug]:   Finished [  0.00s] building model nodes
+08:23:03.266697 [debug]:    Started resolving data tests
+08:23:03.266710 [debug]:   Finished [  0.00s] resolving data tests
+08:23:03.266746 [debug]:    Started resolving data tests
+08:23:03.266757 [debug]:   Finished [  0.00s] resolving data tests
+08:23:03.267006 [debug]: Finished parsing models/sources.yml [  0.00s]
+08:23:03.267618 [debug]:    Started building model nodes
+08:23:03.267807 [debug]:   Finished [  0.00s] building model nodes
+08:23:03.268004 [debug]:    Started resolving data tests
+08:23:03.268013 [debug]:   Finished [  0.00s] resolving data tests
+08:23:03.268043 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+08:23:03.268326 [debug]:    Started typechecking macros
+08:23:03.345225 [debug]:   Finished [  0.08s] typechecking macros
+08:23:03.345584 [info ]: Finished parsing [  0.09s] (2 nodes, 0 skipped, 0 errors)
+08:23:03.345668 [info ]: Cached model count updated: 1 models (estimate)
+08:23:03.345676 [info ]: Cached model count updated: 1 models (accurate)
+08:23:03.345688 [info ]: Started scheduling
+08:23:03.345706 [info ]: Finished scheduling [  0.00s]
+08:23:03.345711 [debug]: Compilation - 0 nodes selected: {}
+08:23:03.345721 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:23:03.345730 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:23:03.345741 [info ]: Started scheduling
+08:23:03.345757 [info ]: Finished scheduling [  0.00s]
+08:23:03.345777 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+08:23:03.345781 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+08:23:03.346214 [info ]: Started building task graph
+08:23:03.346222 [info ]: Finished building task graph [  0.00s]
+08:23:03.348708 [info ]: Started scheduling
+08:23:03.348718 [info ]: Finished scheduling [  0.00s]
+08:23:03.348772 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [191ms]
+08:23:03.348802 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [193ms]
+08:23:03.349575 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T08:23:04.535083Z | eecfc0f8-2b9c-4351-a89a-22d17be7dd55 ====================
+08:23:04.535159 [info ]: Started loading project
+08:23:04.535603 [info ]: Loading profiles.yml
+08:23:04.538459 [info ]: Finished loading project [  0.00s]
+08:23:04.561563 [info ]: Cached model count updated: 1 models (estimate)
+08:23:04.561597 [info ]: Cached model count updated: 1 models (accurate)
+08:23:04.561628 [info ]: Started scheduling
+08:23:04.561693 [info ]: Finished scheduling [  0.00s]
+08:23:04.561710 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+08:23:04.562894 [info ]: Started building task graph
+08:23:04.562936 [info ]: Finished building task graph [  0.00s]
+08:23:04.564168 [info ]: Started rendering (1 nodes)
+08:23:04.564184 [info ]: Started model main.demo_macro_conversions
+08:23:04.564200 [debug]: Started rendering model main.demo_macro_conversions
+08:23:04.565118 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:23:04.565219 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:23:04.565235 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:23:04.565250 [info ]: Started analyzing (1 nodes)
+08:23:04.565256 [debug]: Started analyzing model main.demo_macro_conversions
+08:23:04.566387 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:23:04.566396 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:23:04.566401 [info ]:  Succeeded model main.demo_macro_conversions (table) [1 of 1 in 0.00s]
+08:23:04.570141 [info ]: Started scheduling
+08:23:04.570171 [info ]: Finished scheduling [  0.00s]
+08:23:04.570224 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [35ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:23:04.570310 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T08:23:04.837498Z | 09160e2d-988b-42eb-8873-5ad791a9b5d9 ====================
+08:23:04.837559 [info ]: Started loading project
+08:23:04.837867 [info ]: Loading profiles.yml
+08:23:04.839684 [info ]: Finished loading project [  0.00s]
+08:23:04.857426 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [19ms]
+08:23:04.857467 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T08:23:06.043494Z | acd3af5e-02d4-47c7-9841-a78de6dbea99 ====================
+08:23:06.043593 [info ]: Started loading project
+08:23:06.044075 [info ]: Loading profiles.yml
+08:23:06.047113 [info ]: Finished loading project [  0.00s]
+08:23:06.069040 [info ]: Cached model count updated: 1 models (estimate)
+08:23:06.069085 [info ]: Cached model count updated: 1 models (accurate)
+08:23:06.069119 [info ]: Started scheduling
+08:23:06.069180 [info ]: Finished scheduling [  0.00s]
+08:23:06.069203 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+08:23:06.070388 [info ]: Started building task graph
+08:23:06.070435 [info ]: Finished building task graph [  0.00s]
+08:23:06.071589 [info ]: Started rendering (1 nodes)
+08:23:06.071605 [info ]: Started model main.demo_macro_conversions
+08:23:06.071620 [debug]: Started rendering model main.demo_macro_conversions
+08:23:06.071859 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+08:23:06.071924 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+08:23:06.071939 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:23:06.071956 [info ]: Started analyzing (1 nodes)
+08:23:06.071963 [debug]: Started analyzing model main.demo_macro_conversions
+08:23:06.072962 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+08:23:06.072972 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:23:06.072977 [info ]:  Succeeded model main.demo_macro_conversions (table) [1 of 1 in 0.00s]
+08:23:06.076687 [info ]: Started scheduling
+08:23:06.076716 [info ]: Finished scheduling [  0.00s]
+08:23:06.076750 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [33ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:23:06.076825 [info ]: Cached model count updated: 1 models (accurate)
+10:55:45.702499 [debug]: Ignoring unsupported LSP notification
+10:56:19.508071 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+10:56:19.508893 [debug]: Skipped file macros/clean_string.sql because it is a macro
+==================== 2026-10-25T10:56:19.573620Z | ff780372-a9c6-4b59-a1f0-fdf301eff8c7 ====================
+10:56:19.573841 [info ]: Started loading project
+10:56:19.574537 [info ]: Loading profiles.yml
+10:56:19.577381 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T10:56:19.578609Z | 7b6cc3ca-e882-4aa6-a3a9-5ef35db5a1ba ====================
+10:56:19.578644 [info ]: Started loading project
+10:56:19.578817 [info ]: Loading profiles.yml
+10:56:19.843038 [debug]:    Started loading packages
+10:56:19.843696 [debug]:     Loaded [  0.00s] packages
+10:56:19.844427 [info ]: Finished loading project [  0.27s]
+10:56:19.844707 [info ]: Started parsing (2 nodes)
+10:56:19.881029 [debug]: Finished parsing models/sources.yml [  0.00s]
+10:56:19.881475 [debug]:    Started building model nodes
+10:56:19.881506 [debug]:   Finished [  0.00s] building model nodes
+10:56:19.881567 [debug]:    Started building model nodes
+10:56:19.881589 [debug]:   Finished [  0.00s] building model nodes
+10:56:19.883436 [debug]:    Started resolving data tests
+10:56:19.883723 [debug]:   Finished [  0.00s] resolving data tests
+10:56:19.883867 [debug]:    Started resolving data tests
+10:56:19.883962 [debug]:   Finished [  0.00s] resolving data tests
+10:56:19.885482 [debug]:    Started building model nodes
+10:56:19.886382 [debug]:   Finished [  0.00s] building model nodes
+10:56:19.887344 [debug]:    Started resolving data tests
+10:56:19.887522 [debug]:   Finished [  0.00s] resolving data tests
+10:56:19.887782 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.01s]
+10:56:19.888921 [debug]:    Started typechecking macros
+10:56:20.142230 [debug]:   Finished [  0.25s] typechecking macros
+10:56:20.143552 [info ]: Finished parsing [  0.30s] (2 nodes, 0 skipped, 0 errors)
+10:56:20.144610 [info ]: Cached model count updated: 1 models (estimate)
+10:56:20.144630 [info ]: Cached model count updated: 1 models (accurate)
+10:56:20.144703 [info ]: Started scheduling
+10:56:20.144828 [info ]: Finished scheduling [  0.00s]
+10:56:20.144840 [debug]: Compilation - 0 nodes selected: {}
+10:56:20.145772 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+10:56:20.146099 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+10:56:20.146164 [info ]: Started scheduling
+10:56:20.146235 [info ]: Finished scheduling [  0.00s]
+10:56:20.146407 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+10:56:20.146421 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+10:56:20.148489 [info ]: Started building task graph
+10:56:20.148555 [info ]: Finished building task graph [  0.00s]
+10:56:20.160239 [info ]: Started scheduling
+10:56:20.160305 [info ]: Finished scheduling [  0.00s]
+10:56:20.160445 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [581ms]
+10:56:20.160521 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [586ms]
+10:56:20.160592 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T10:56:21.335864Z | b952aad7-9a95-4eca-a262-0902c4e9686b ====================
+10:56:21.335949 [info ]: Started loading project
+10:56:21.336305 [info ]: Loading profiles.yml
+10:56:21.338356 [info ]: Finished loading project [  0.00s]
+10:56:21.359170 [info ]: Cached model count updated: 1 models (estimate)
+10:56:21.359213 [info ]: Cached model count updated: 1 models (accurate)
+10:56:21.359238 [info ]: Started scheduling
+10:56:21.359305 [info ]: Finished scheduling [  0.00s]
+10:56:21.359331 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+10:56:21.360911 [info ]: Started building task graph
+10:56:21.360996 [info ]: Finished building task graph [  0.00s]
+10:56:21.362254 [info ]: Started rendering (1 nodes)
+10:56:21.362282 [info ]: Started model main.demo_macro_conversions
+10:56:21.362296 [debug]: Started rendering model main.demo_macro_conversions
+10:56:21.364096 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+10:56:21.364233 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+10:56:21.364251 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+10:56:21.364285 [info ]: Started analyzing (1 nodes)
+10:56:21.364297 [debug]: Started analyzing model main.demo_macro_conversions
+10:56:21.366507 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+10:56:21.366523 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+10:56:21.366531 [info ]:  Succeeded model main.demo_macro_conversions (table) [1 of 1 in 0.00s]
+10:56:21.376792 [info ]: Started scheduling
+10:56:21.376844 [info ]: Finished scheduling [  0.00s]
+10:56:21.376920 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [41ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+10:56:21.377044 [info ]: Cached model count updated: 1 models (accurate)
+10:58:19.497722 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+10:58:19.498760 [debug]: Skipped file macros/money_conversions.sql because it is a macro
+==================== 2026-10-25T10:58:19.585097Z | 09c74b95-561f-4e0d-bd8d-79c7336f533b ====================
+10:58:19.585237 [info ]: Started loading project
+10:58:19.585593 [info ]: Loading profiles.yml
+10:58:19.588073 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-25T10:58:19.589896Z | 8b20eb9c-76d6-4fd8-b3b1-0afa955bd793 ====================
+10:58:19.589975 [info ]: Started loading project
+10:58:19.590224 [info ]: Loading profiles.yml
+10:58:19.804395 [debug]:    Started loading packages
+10:58:19.805255 [debug]:     Loaded [  0.00s] packages
+10:58:19.806025 [info ]: Finished loading project [  0.22s]
+10:58:19.806227 [info ]: Started parsing (2 nodes)
+10:58:19.839857 [debug]:    Started building model nodes
+10:58:19.839887 [debug]:    Started building model nodes
+10:58:19.839903 [debug]:   Finished [  0.00s] building model nodes
+10:58:19.839894 [debug]:   Finished [  0.00s] building model nodes
+10:58:19.840711 [debug]: Finished parsing models/sources.yml [  0.00s]
+10:58:19.841117 [debug]:    Started resolving data tests
+10:58:19.841128 [debug]:    Started resolving data tests
+10:58:19.841145 [debug]:   Finished [  0.00s] resolving data tests
+10:58:19.841153 [debug]:   Finished [  0.00s] resolving data tests
+10:58:19.842391 [debug]:    Started building model nodes
+10:58:19.842857 [debug]:   Finished [  0.00s] building model nodes
+10:58:19.843288 [debug]:    Started resolving data tests
+10:58:19.843306 [debug]:   Finished [  0.00s] resolving data tests
+10:58:19.843364 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+10:58:19.843856 [debug]:    Started typechecking macros
+10:58:20.044441 [debug]:   Finished [  0.20s] typechecking macros
+10:58:20.045465 [info ]: Finished parsing [  0.24s] (2 nodes, 0 skipped, 0 errors)
+10:58:20.045637 [info ]: Cached model count updated: 1 models (estimate)
+10:58:20.045652 [info ]: Cached model count updated: 1 models (accurate)
+10:58:20.045686 [info ]: Started scheduling
+10:58:20.045718 [info ]: Finished scheduling [  0.00s]
+10:58:20.045729 [debug]: Compilation - 0 nodes selected: {}
+10:58:20.045764 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+10:58:20.045784 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+10:58:20.045807 [info ]: Started scheduling
+10:58:20.045848 [info ]: Finished scheduling [  0.00s]
+10:58:20.045920 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+10:58:20.045929 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+10:58:20.047092 [info ]: Started building task graph
+10:58:20.047110 [info ]: Finished building task graph [  0.00s]
+10:58:20.056521 [info ]: Started scheduling
+10:58:20.056574 [info ]: Finished scheduling [  0.00s]
+10:58:20.056707 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [466ms]
+10:58:20.056779 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [471ms]
+10:58:20.056829 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T10:58:20.650178Z | 3059e68a-bd17-4996-9dc6-26f60371d3c9 ====================
+10:58:20.650422 [info ]: Started loading project
+10:58:20.651543 [info ]: Loading profiles.yml
+10:58:20.658321 [info ]: Finished loading project [  0.01s]
+10:58:20.697316 [info ]: Cached model count updated: 1 models (estimate)
+10:58:20.697363 [info ]: Cached model count updated: 1 models (accurate)
+10:58:20.697406 [info ]: Started scheduling
+10:58:20.697516 [info ]: Finished scheduling [  0.00s]
+10:58:20.697544 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+10:58:20.701218 [info ]: Started building task graph
+10:58:20.701376 [info ]: Finished building task graph [  0.00s]
+10:58:20.704027 [info ]: Started rendering (1 nodes)
+10:58:20.704083 [info ]: Started model main.demo_macro_conversions
+10:58:20.704100 [debug]: Started rendering model main.demo_macro_conversions
+10:58:20.706573 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+10:58:20.706897 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+10:58:20.706946 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+10:58:20.706987 [info ]: Started analyzing (1 nodes)
+10:58:20.707005 [debug]: Started analyzing model main.demo_macro_conversions
+10:58:20.711302 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+10:58:20.711375 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+10:58:20.711401 [info ]:  Succeeded model main.demo_macro_conversions (table) [1 of 1 in 0.01s]
+10:58:20.719091 [info ]: Started scheduling
+10:58:20.719207 [info ]: Finished scheduling [  0.00s]
+10:58:20.719296 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [69ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+10:58:20.719395 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T10:58:20.988465Z | 8f404708-7177-40fd-9ebd-3b3402840d8e ====================
+10:58:20.988531 [info ]: Started loading project
+10:58:20.988859 [info ]: Loading profiles.yml
+10:58:20.992323 [info ]: Finished loading project [  0.00s]
+10:58:21.023628 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [35ms]
+10:58:21.023715 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T10:58:22.203531Z | 371325ba-d672-4406-96b4-6b6054ea1ba4 ====================
+10:58:22.203612 [info ]: Started loading project
+10:58:22.203978 [info ]: Loading profiles.yml
+10:58:22.207044 [info ]: Finished loading project [  0.00s]
+10:58:22.230578 [info ]: Cached model count updated: 1 models (estimate)
+10:58:22.230625 [info ]: Cached model count updated: 1 models (accurate)
+10:58:22.230665 [info ]: Started scheduling
+10:58:22.230746 [info ]: Finished scheduling [  0.00s]
+10:58:22.230770 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+10:58:22.232587 [info ]: Started building task graph
+10:58:22.232676 [info ]: Finished building task graph [  0.00s]
+10:58:22.234137 [info ]: Started rendering (1 nodes)
+10:58:22.234160 [info ]: Started model main.demo_macro_conversions
+10:58:22.234175 [debug]: Started rendering model main.demo_macro_conversions
+10:58:22.234461 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+10:58:22.234602 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+10:58:22.234625 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+10:58:22.234661 [info ]: Started analyzing (1 nodes)
+10:58:22.234671 [debug]: Started analyzing model main.demo_macro_conversions
+10:58:22.236156 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+10:58:22.236175 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+10:58:22.236182 [info ]:  Succeeded model main.demo_macro_conversions (table) [1 of 1 in 0.00s]
+10:58:22.242012 [info ]: Started scheduling
+10:58:22.242089 [info ]: Finished scheduling [  0.00s]
+10:58:22.242166 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [38ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+10:58:22.242352 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T10:58:22.509483Z | 6d2f4e30-f554-474f-8de8-a081ff6823bb ====================
+10:58:22.509547 [info ]: Started loading project
+10:58:22.509881 [info ]: Loading profiles.yml
+10:58:22.511846 [info ]: Finished loading project [  0.00s]
+10:58:22.540356 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [30ms]
+10:58:22.540431 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T10:58:23.718415Z | e273f7c6-d661-42a6-a6cb-8c5a20f43c96 ====================
+10:58:23.718484 [info ]: Started loading project
+10:58:23.719011 [info ]: Loading profiles.yml
+10:58:23.721077 [info ]: Finished loading project [  0.00s]
+10:58:23.744072 [info ]: Cached model count updated: 1 models (estimate)
+10:58:23.744106 [info ]: Cached model count updated: 1 models (accurate)
+10:58:23.744133 [info ]: Started scheduling
+10:58:23.744191 [info ]: Finished scheduling [  0.00s]
+10:58:23.744207 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+10:58:23.745311 [info ]: Started building task graph
+10:58:23.745375 [info ]: Finished building task graph [  0.00s]
+10:58:23.746567 [info ]: Started rendering (1 nodes)
+10:58:23.746584 [info ]: Started model main.demo_macro_conversions
+10:58:23.746596 [debug]: Started rendering model main.demo_macro_conversions
+10:58:23.746859 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+10:58:23.746950 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+10:58:23.746968 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+10:58:23.746984 [info ]: Started analyzing (1 nodes)
+10:58:23.746990 [debug]: Started analyzing model main.demo_macro_conversions
+10:58:23.748090 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+10:58:23.748100 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+10:58:23.748106 [info ]:  Succeeded model main.demo_macro_conversions (table) [1 of 1 in 0.00s]
+10:58:23.753623 [info ]: Started scheduling
+10:58:23.753709 [info ]: Finished scheduling [  0.00s]
+10:58:23.753763 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [35ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+10:58:23.753889 [info ]: Cached model count updated: 1 models (accurate)
+10:59:10.997282 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+10:59:10.999090 [info ]:    Started formatting models/demo_macro_conversions.sql
+10:59:11.050914 [info ]:  Formatted [  0.05s] models/demo_macro_conversions.sql
+10:59:11.062372 [debug]: Ignoring unsupported LSP notification
+11:00:52.920785 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+11:00:52.922157 [info ]:    Started formatting models/demo_macro_conversions.sql
+11:00:52.937548 [info ]:  Formatted [  0.02s] models/demo_macro_conversions.sql
+==================== 2026-10-25T11:00:52.975878Z | 897a887c-6c0e-450c-89ba-ad58a4fdbc41 ====================
+11:00:52.975976 [info ]: Started loading project
+11:00:52.976548 [info ]: Loading profiles.yml
+11:00:52.981451 [info ]: Started parsing (1 nodes)
+11:00:53.005300 [info ]: Finished loading project [  0.03s]
+11:00:53.005582 [debug]:    Started building model nodes
+11:00:53.005603 [debug]:   Finished [  0.00s] building model nodes
+11:00:53.005601 [debug]:    Started building model nodes
+11:00:53.005616 [debug]:   Finished [  0.00s] building model nodes
+11:00:53.005879 [debug]:    Started resolving data tests
+11:00:53.005899 [debug]:   Finished [  0.00s] resolving data tests
+11:00:53.005945 [debug]:    Started resolving data tests
+11:00:53.005960 [debug]:   Finished [  0.00s] resolving data tests
+11:00:53.006244 [debug]:    Started building model nodes
+11:00:53.006508 [debug]:   Finished [  0.00s] building model nodes
+11:00:53.006741 [debug]:    Started resolving data tests
+11:00:53.006754 [debug]:   Finished [  0.00s] resolving data tests
+11:00:53.006781 [debug]: Finished parsing models/demo_macro_conversions.sql [  0.00s]
+11:00:53.007110 [debug]:    Started typechecking macros
+11:00:53.101430 [debug]:   Finished [  0.09s] typechecking macros
+11:00:53.101985 [info ]: Finished parsing [  0.12s] (1 nodes, 0 skipped, 0 errors)
+11:00:53.102899 [info ]: Cached model count updated: 1 models (estimate)
+11:00:53.102908 [info ]: Cached model count updated: 1 models (accurate)
+11:00:53.102930 [info ]: Started scheduling
+11:00:53.102969 [info ]: Finished scheduling [  0.00s]
+11:00:53.102975 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+11:00:53.103780 [info ]: Started building task graph
+11:00:53.103812 [info ]: Finished building task graph [  0.00s]
+11:00:53.104768 [info ]: Started rendering (1 nodes)
+11:00:53.104777 [info ]: Started model main.demo_macro_conversions
+11:00:53.104785 [debug]: Started rendering model main.demo_macro_conversions
+11:00:53.105340 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+11:00:53.105404 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+11:00:53.105414 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:00:53.105432 [info ]: Started analyzing (1 nodes)
+11:00:53.105435 [debug]: Started analyzing model main.demo_macro_conversions
+11:00:53.106288 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+11:00:53.106295 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:00:53.106298 [info ]:  Succeeded model main.demo_macro_conversions (view) [1 of 1 in 0.00s]
+11:00:53.109382 [info ]: Started scheduling
+11:00:53.109428 [info ]: Finished scheduling [  0.00s]
+11:00:53.109816 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [133ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+11:00:53.109869 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T11:00:54.294073Z | 93707e67-3f8d-4167-adfa-acc12fa5e9cd ====================
+11:00:54.294113 [info ]: Started loading project
+11:00:54.294349 [info ]: Loading profiles.yml
+11:00:54.295750 [info ]: Finished loading project [  0.00s]
+11:00:54.309927 [info ]: Cached model count updated: 1 models (estimate)
+11:00:54.309952 [info ]: Cached model count updated: 1 models (accurate)
+11:00:54.309972 [info ]: Started scheduling
+11:00:54.310011 [info ]: Finished scheduling [  0.00s]
+11:00:54.310023 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+11:00:54.310809 [info ]: Started building task graph
+11:00:54.310845 [info ]: Finished building task graph [  0.00s]
+11:00:54.311582 [info ]: Started rendering (1 nodes)
+11:00:54.311597 [info ]: Started model main.demo_macro_conversions
+11:00:54.311605 [debug]: Started rendering model main.demo_macro_conversions
+11:00:54.312137 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+11:00:54.312237 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+11:00:54.312256 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:00:54.312305 [info ]: Started analyzing (1 nodes)
+11:00:54.312314 [debug]: Started analyzing model main.demo_macro_conversions
+11:00:54.313880 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+11:00:54.313893 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:00:54.313898 [info ]:  Succeeded model main.demo_macro_conversions (view) [1 of 1 in 0.00s]
+11:00:54.318347 [info ]: Started scheduling
+11:00:54.318399 [info ]: Finished scheduling [  0.00s]
+11:00:54.318454 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [24ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+11:00:54.318540 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T11:00:54.584726Z | 9ca63f99-ce76-4350-95d8-b0541c98e389 ====================
+11:00:54.584880 [info ]: Started loading project
+11:00:54.585331 [info ]: Loading profiles.yml
+11:00:54.587338 [info ]: Finished loading project [  0.00s]
+11:00:54.604940 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [20ms]
+11:00:54.604997 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T11:00:55.778266Z | 83c9e251-6ff9-4fb8-8b03-15cab181cd0e ====================
+11:00:55.778369 [info ]: Started loading project
+11:00:55.778771 [info ]: Loading profiles.yml
+11:00:55.783208 [info ]: Finished loading project [  0.00s]
+11:00:55.803282 [info ]: Cached model count updated: 1 models (estimate)
+11:00:55.803350 [info ]: Cached model count updated: 1 models (accurate)
+11:00:55.803397 [info ]: Started scheduling
+11:00:55.803515 [info ]: Finished scheduling [  0.00s]
+11:00:55.803542 [debug]: Compilation - 1 nodes selected: {"model.dbt_macros.demo_macro_conversions"}
+11:00:55.805369 [info ]: Started building task graph
+11:00:55.805410 [info ]: Finished building task graph [  0.00s]
+11:00:55.806445 [info ]: Started rendering (1 nodes)
+11:00:55.806460 [info ]: Started model main.demo_macro_conversions
+11:00:55.806472 [debug]: Started rendering model main.demo_macro_conversions
+11:00:55.806639 [debug]: Compiled SQL for node model.dbt_macros.demo_macro_conversions at target/.lsp/compiled/dbt_macros/models/demo_macro_conversions.sql
+11:00:55.806700 [debug]: Finished rendering [  0.00s] model main.demo_macro_conversions [success]
+11:00:55.806711 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:00:55.806723 [info ]: Started analyzing (1 nodes)
+11:00:55.806728 [debug]: Started analyzing model main.demo_macro_conversions
+11:00:55.807531 [debug]: Finished analyzing [  0.00s] model main.demo_macro_conversions [success]
+11:00:55.807540 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:00:55.807545 [info ]:  Succeeded model main.demo_macro_conversions (view) [1 of 1 in 0.00s]
+11:00:55.811892 [info ]: Started scheduling
+11:00:55.811955 [info ]: Finished scheduling [  0.00s]
+11:00:55.812044 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [33ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+11:00:55.812187 [info ]: Cached model count updated: 1 models (accurate)
+11:57:21.853761 [debug]: Ignoring unsupported LSP notification
+11:57:21.892806 [debug]: Ignoring unsupported LSP notification
+11:58:04.558377 [debug]: Ignoring unsupported LSP notification
+11:59:09.801267 [debug]: Ignoring unsupported LSP notification
+11:59:58.018762 [debug]: Ignoring unsupported LSP notification

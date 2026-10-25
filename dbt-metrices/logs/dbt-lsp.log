@@ -1,0 +1,987 @@
+==================== 2026-10-25T07:34:18.508842Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-25T07:34:18.508984Z | 6e1761f2-5a60-4420-87f0-fb131b538622 ====================
+07:34:18.509003 [info ]: Starting dbt LSP server
+07:34:18.509031 [info ]: Connecting to LSP client on port 8000
+07:34:18.509184 [info ]: Successfully connected to LSP client
+07:34:18.509190 [info ]: Creating LSP service...
+07:34:18.509723 [info ]: Creating LSP server...
+07:34:18.509728 [info ]: Starting LSP server...
+07:34:18.517661 [info ]: Loading profiles.yml
+==================== 2026-10-25T07:34:18.526712Z | 527275e5-fe3e-48d7-9695-7eca755c2e2e ====================
+07:34:18.526761 [info ]: Started loading project
+07:34:18.526985 [info ]: Loading profiles.yml
+07:34:18.633894 [debug]:    Started loading packages
+07:34:18.634315 [debug]:     Loaded [  0.00s] packages
+07:34:18.634727 [info ]: Finished loading project [  0.11s]
+07:34:18.634887 [info ]: Started parsing (6 nodes)
+07:34:18.648887 [debug]:    Started building model nodes
+07:34:18.648886 [debug]:    Started building model nodes
+07:34:18.648902 [debug]:   Finished [  0.00s] building model nodes
+07:34:18.648902 [debug]:   Finished [  0.00s] building model nodes
+07:34:18.649135 [debug]: Finished parsing models/sources.yml [  0.00s]
+07:34:18.649163 [debug]:    Started resolving data tests
+07:34:18.649180 [debug]:   Finished [  0.00s] resolving data tests
+07:34:18.649185 [debug]:    Started resolving data tests
+07:34:18.649195 [debug]:   Finished [  0.00s] resolving data tests
+07:34:18.650810 [debug]: Finished parsing models/intermediate/int_customer_orders.sql [  0.00s]
+07:34:18.651147 [debug]: Finished parsing models/marts/fct_customer_lifetime_value.sql [  0.00s]
+07:34:18.651408 [debug]: Finished parsing models/marts/fct_orders_summary.sql [  0.00s]
+07:34:18.651635 [debug]: Finished parsing models/staging/stg_orders.sql [  0.00s]
+07:34:18.651953 [debug]:    Started building model nodes
+07:34:18.652893 [debug]:   Finished [  0.00s] building model nodes
+07:34:18.653151 [debug]:    Started resolving data tests
+07:34:18.653163 [debug]:   Finished [  0.00s] resolving data tests
+07:34:18.653214 [debug]: Finished parsing models/staging/stg_users.sql [  0.00s]
+07:34:18.653462 [debug]:    Started typechecking macros
+07:34:18.732695 [debug]:   Finished [  0.08s] typechecking macros
+07:34:18.733104 [info ]: Finished parsing [  0.10s] (6 nodes, 0 skipped, 0 errors)
+07:34:18.733261 [info ]: Cached model count updated: 5 models (estimate)
+07:34:18.733268 [info ]: Cached model count updated: 5 models (accurate)
+07:34:18.733298 [info ]: Started scheduling
+07:34:18.733367 [info ]: Finished scheduling [  0.00s]
+07:34:18.733373 [debug]: Compilation - 1 nodes selected: {"model.dbt_dag.stg_orders"}
+07:34:18.733396 [info ]: Started scheduling
+07:34:18.733427 [info ]: Finished scheduling [  0.00s]
+07:34:18.733491 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+07:34:18.733496 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+07:34:18.734151 [info ]: Started building task graph
+07:34:18.734195 [info ]: Finished building task graph [  0.00s]
+07:34:18.737042 [info ]: Started rendering (1 nodes)
+07:34:18.737053 [info ]: Started model main.stg_orders
+07:34:18.737060 [debug]: Started rendering model main.stg_orders
+07:34:18.737583 [debug]: Compiled SQL for node model.dbt_dag.stg_orders at target/.lsp/compiled/dbt_dag/models/staging/stg_orders.sql
+07:34:18.737641 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+07:34:18.737648 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:34:18.737662 [info ]: Started analyzing (1 nodes)
+07:34:18.737667 [debug]: Started analyzing model main.stg_orders
+07:34:18.739715 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+07:34:18.739721 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:34:18.739725 [info ]:  Succeeded model main.stg_orders (view) [1 of 1 in 0.00s]
+07:34:18.742341 [info ]: Started scheduling
+07:34:18.742357 [info ]: Finished scheduling [  0.00s]
+07:34:18.742410 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [215ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+07:34:18.742447 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:19.012294Z | 3e8cde67-2ac2-444e-a9a8-9a4d5e847e26 ====================
+07:34:19.012326 [info ]: Started loading project
+07:34:19.012481 [info ]: Loading profiles.yml
+07:34:19.013731 [info ]: Finished loading project [  0.00s]
+07:34:19.027976 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [15ms]
+07:34:19.028026 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:20.210319Z | af861d1d-22ef-448b-8578-b77dc7c3a8fd ====================
+07:34:20.210347 [info ]: Started loading project
+07:34:20.210482 [info ]: Loading profiles.yml
+07:34:20.211447 [info ]: Finished loading project [  0.00s]
+07:34:20.220625 [info ]: Cached model count updated: 5 models (estimate)
+07:34:20.220633 [info ]: Cached model count updated: 5 models (accurate)
+07:34:20.220648 [info ]: Started scheduling
+07:34:20.220698 [info ]: Finished scheduling [  0.00s]
+07:34:20.220706 [debug]: Compilation - 5 nodes selected: {"model.dbt_dag.fct_customer_lifetime_value", "model.dbt_dag.fct_orders_summary", "model.dbt_dag.int_customer_orders", "model.dbt_dag.stg_orders", "model.dbt_dag.stg_users"}
+07:34:20.221185 [info ]: Started building task graph
+07:34:20.221220 [info ]: Finished building task graph [  0.00s]
+07:34:20.222009 [info ]: Started rendering (5 nodes)
+07:34:20.222016 [info ]: Started model main.fct_orders_summary
+07:34:20.222023 [debug]: Started rendering model main.fct_orders_summary
+07:34:20.222035 [info ]: Started model main.fct_customer_lifetime_value
+07:34:20.222040 [debug]: Started rendering model main.fct_customer_lifetime_value
+07:34:20.222046 [info ]: Started model main.int_customer_orders
+07:34:20.222053 [debug]: Started rendering model main.int_customer_orders
+07:34:20.222057 [info ]: Started model main.stg_users
+07:34:20.222061 [debug]: Started rendering model main.stg_users
+07:34:20.222066 [info ]: Started model main.stg_orders
+07:34:20.222070 [debug]: Started rendering model main.stg_orders
+07:34:20.222378 [debug]: Compiled SQL for node model.dbt_dag.stg_orders at target/.lsp/compiled/dbt_dag/models/staging/stg_orders.sql
+07:34:20.222440 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+07:34:20.222464 [info ]: Started analyzing (5 nodes)
+07:34:20.222472 [debug]: Started analyzing model main.stg_orders
+07:34:20.222585 [debug]: Compiled SQL for node model.dbt_dag.stg_users at target/.lsp/compiled/dbt_dag/models/staging/stg_users.sql
+07:34:20.222586 [debug]: Compiled SQL for node model.dbt_dag.fct_orders_summary at target/.lsp/compiled/dbt_dag/models/marts/fct_orders_summary.sql
+07:34:20.222629 [debug]: Finished rendering [  0.00s] model main.fct_orders_summary [success]
+07:34:20.222641 [debug]: Started analyzing model main.fct_orders_summary
+07:34:20.222662 [debug]: Compiled SQL for node model.dbt_dag.fct_customer_lifetime_value at target/.lsp/compiled/dbt_dag/models/marts/fct_customer_lifetime_value.sql
+07:34:20.222685 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+07:34:20.222716 [debug]: Started analyzing model main.stg_users
+07:34:20.222743 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+07:34:20.222751 [info ]:  Succeeded model main.stg_orders (view) [5 of 5 in 0.00s]
+07:34:20.222763 [debug]: Finished rendering [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:20.222771 [debug]: Started analyzing model main.fct_customer_lifetime_value
+07:34:20.223030 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+07:34:20.223033 [debug]: Compiled SQL for node model.dbt_dag.int_customer_orders at target/.lsp/compiled/dbt_dag/models/intermediate/int_customer_orders.sql
+07:34:20.223039 [info ]:  Succeeded model main.stg_users (view) [4 of 5 in 0.00s]
+07:34:20.223073 [debug]: Finished rendering [  0.00s] model main.int_customer_orders [success]
+07:34:20.223078 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:20.223083 [debug]: Started analyzing model main.int_customer_orders
+07:34:20.224107 [debug]: Finished analyzing [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:20.224119 [info ]:  Succeeded model main.fct_customer_lifetime_value (table) [2 of 5 in 0.00s]
+07:34:20.224356 [debug]: Finished analyzing [  0.00s] model main.fct_orders_summary [success]
+07:34:20.224363 [info ]:  Succeeded model main.fct_orders_summary (table) [1 of 5 in 0.00s]
+07:34:20.224617 [debug]: Finished analyzing [  0.00s] model main.int_customer_orders [success]
+07:34:20.224622 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:20.224627 [info ]:  Succeeded model main.int_customer_orders (table) [3 of 5 in 0.00s]
+07:34:20.226714 [info ]: Started scheduling
+07:34:20.226733 [info ]: Finished scheduling [  0.00s]
+07:34:20.226758 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [16ms]
+Processed: 5 models
+Summary: 5 total | 5 success
+07:34:20.226802 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:21.443711Z | 53cfdc11-56e1-4629-8c23-469cf0841a17 ====================
+07:34:21.443769 [info ]: Started loading project
+07:34:21.444084 [info ]: Loading profiles.yml
+07:34:21.446036 [info ]: Finished loading project [  0.00s]
+07:34:21.464678 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [20ms]
+07:34:21.464730 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:22.502272Z | 03645d4e-4054-4507-a740-572618d4bc8f ====================
+07:34:22.502333 [info ]: Started loading project
+07:34:22.502618 [info ]: Loading profiles.yml
+07:34:22.504608 [info ]: Finished loading project [  0.00s]
+07:34:22.521725 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [19ms]
+07:34:22.521760 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:23.708525Z | 97f6c116-17d5-4d28-b065-9c3b3358ef78 ====================
+07:34:23.708600 [info ]: Started loading project
+07:34:23.709010 [info ]: Loading profiles.yml
+07:34:23.712013 [info ]: Finished loading project [  0.00s]
+07:34:23.734341 [info ]: Cached model count updated: 5 models (estimate)
+07:34:23.734373 [info ]: Cached model count updated: 5 models (accurate)
+07:34:23.734410 [info ]: Started scheduling
+07:34:23.734510 [info ]: Finished scheduling [  0.00s]
+07:34:23.734527 [debug]: Compilation - 5 nodes selected: {"model.dbt_dag.fct_customer_lifetime_value", "model.dbt_dag.fct_orders_summary", "model.dbt_dag.int_customer_orders", "model.dbt_dag.stg_orders", "model.dbt_dag.stg_users"}
+07:34:23.735417 [info ]: Started building task graph
+07:34:23.735487 [info ]: Finished building task graph [  0.00s]
+07:34:23.737094 [info ]: Started rendering (5 nodes)
+07:34:23.737110 [info ]: Started model main.fct_orders_summary
+07:34:23.737125 [debug]: Started rendering model main.fct_orders_summary
+07:34:23.737149 [info ]: Started model main.fct_customer_lifetime_value
+07:34:23.737160 [debug]: Started rendering model main.fct_customer_lifetime_value
+07:34:23.737168 [info ]: Started model main.int_customer_orders
+07:34:23.737175 [debug]: Started rendering model main.int_customer_orders
+07:34:23.737183 [info ]: Started model main.stg_users
+07:34:23.737189 [debug]: Started rendering model main.stg_users
+07:34:23.737201 [info ]: Started model main.stg_orders
+07:34:23.737208 [debug]: Started rendering model main.stg_orders
+07:34:23.737417 [debug]: Compiled SQL for node model.dbt_dag.stg_orders at target/.lsp/compiled/dbt_dag/models/staging/stg_orders.sql
+07:34:23.737417 [debug]: Compiled SQL for node model.dbt_dag.fct_orders_summary at target/.lsp/compiled/dbt_dag/models/marts/fct_orders_summary.sql
+07:34:23.737434 [debug]: Compiled SQL for node model.dbt_dag.stg_users at target/.lsp/compiled/dbt_dag/models/staging/stg_users.sql
+07:34:23.737509 [debug]: Compiled SQL for node model.dbt_dag.int_customer_orders at target/.lsp/compiled/dbt_dag/models/intermediate/int_customer_orders.sql
+07:34:23.737516 [debug]: Compiled SQL for node model.dbt_dag.fct_customer_lifetime_value at target/.lsp/compiled/dbt_dag/models/marts/fct_customer_lifetime_value.sql
+07:34:23.737522 [debug]: Finished rendering [  0.00s] model main.fct_orders_summary [success]
+07:34:23.737544 [info ]: Started analyzing (5 nodes)
+07:34:23.737549 [debug]: Started analyzing model main.fct_orders_summary
+07:34:23.737569 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+07:34:23.737579 [debug]: Started analyzing model main.stg_users
+07:34:23.737592 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+07:34:23.737601 [debug]: Started analyzing model main.stg_orders
+07:34:23.737611 [debug]: Finished rendering [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:23.737619 [debug]: Started analyzing model main.fct_customer_lifetime_value
+07:34:23.737632 [debug]: Finished rendering [  0.00s] model main.int_customer_orders [success]
+07:34:23.737639 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:23.737645 [debug]: Started analyzing model main.int_customer_orders
+07:34:23.737871 [debug]: Finished analyzing [  0.00s] model main.fct_orders_summary [success]
+07:34:23.737906 [info ]:  Succeeded model main.fct_orders_summary (table) [1 of 5 in 0.00s]
+07:34:23.737930 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+07:34:23.737940 [info ]:  Succeeded model main.stg_users (view) [4 of 5 in 0.00s]
+07:34:23.737951 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+07:34:23.737959 [info ]:  Succeeded model main.stg_orders (view) [5 of 5 in 0.00s]
+07:34:23.737969 [debug]: Finished analyzing [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:23.737976 [info ]:  Succeeded model main.fct_customer_lifetime_value (table) [2 of 5 in 0.00s]
+07:34:23.738378 [debug]: Finished analyzing [  0.00s] model main.int_customer_orders [success]
+07:34:23.738390 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:23.738396 [info ]:  Succeeded model main.int_customer_orders (table) [3 of 5 in 0.00s]
+07:34:23.741911 [info ]: Started scheduling
+07:34:23.741938 [info ]: Finished scheduling [  0.00s]
+07:34:23.741967 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [33ms]
+Processed: 5 models
+Summary: 5 total | 5 success
+07:34:23.742020 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:23.823264Z | 389badd0-02fe-49d6-a0b5-6a9850600e50 ====================
+07:34:23.823289 [info ]: Started loading project
+07:34:23.823416 [info ]: Loading profiles.yml
+07:34:23.824530 [info ]: Finished loading project [  0.00s]
+07:34:23.836488 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [13ms]
+07:34:23.836537 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:25.014615Z | 0241f6f1-165b-4db9-91e0-94615afafedd ====================
+07:34:25.014722 [info ]: Started loading project
+07:34:25.015239 [info ]: Loading profiles.yml
+07:34:25.018208 [info ]: Finished loading project [  0.00s]
+07:34:25.038587 [info ]: Cached model count updated: 5 models (estimate)
+07:34:25.038619 [info ]: Cached model count updated: 5 models (accurate)
+07:34:25.038652 [info ]: Started scheduling
+07:34:25.038743 [info ]: Finished scheduling [  0.00s]
+07:34:25.038759 [debug]: Compilation - 5 nodes selected: {"model.dbt_dag.fct_customer_lifetime_value", "model.dbt_dag.fct_orders_summary", "model.dbt_dag.int_customer_orders", "model.dbt_dag.stg_orders", "model.dbt_dag.stg_users"}
+07:34:25.039758 [info ]: Started building task graph
+07:34:25.039821 [info ]: Finished building task graph [  0.00s]
+07:34:25.041483 [info ]: Started rendering (5 nodes)
+07:34:25.041499 [info ]: Started model main.fct_orders_summary
+07:34:25.041512 [debug]: Started rendering model main.fct_orders_summary
+07:34:25.041543 [info ]: Started model main.fct_customer_lifetime_value
+07:34:25.041550 [debug]: Started rendering model main.fct_customer_lifetime_value
+07:34:25.041557 [info ]: Started model main.int_customer_orders
+07:34:25.041563 [debug]: Started rendering model main.int_customer_orders
+07:34:25.041573 [info ]: Started model main.stg_users
+07:34:25.041579 [debug]: Started rendering model main.stg_users
+07:34:25.041588 [info ]: Started model main.stg_orders
+07:34:25.041595 [debug]: Started rendering model main.stg_orders
+07:34:25.041773 [debug]: Compiled SQL for node model.dbt_dag.fct_customer_lifetime_value at target/.lsp/compiled/dbt_dag/models/marts/fct_customer_lifetime_value.sql
+07:34:25.041773 [debug]: Compiled SQL for node model.dbt_dag.fct_orders_summary at target/.lsp/compiled/dbt_dag/models/marts/fct_orders_summary.sql
+07:34:25.041822 [debug]: Compiled SQL for node model.dbt_dag.stg_orders at target/.lsp/compiled/dbt_dag/models/staging/stg_orders.sql
+07:34:25.041859 [debug]: Finished rendering [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:25.041886 [info ]: Started analyzing (5 nodes)
+07:34:25.041892 [debug]: Started analyzing model main.fct_customer_lifetime_value
+07:34:25.041910 [debug]: Finished rendering [  0.00s] model main.fct_orders_summary [success]
+07:34:25.041915 [debug]: Compiled SQL for node model.dbt_dag.stg_users at target/.lsp/compiled/dbt_dag/models/staging/stg_users.sql
+07:34:25.041926 [debug]: Started analyzing model main.fct_orders_summary
+07:34:25.041939 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+07:34:25.041940 [debug]: Compiled SQL for node model.dbt_dag.int_customer_orders at target/.lsp/compiled/dbt_dag/models/intermediate/int_customer_orders.sql
+07:34:25.041953 [debug]: Started analyzing model main.stg_orders
+07:34:25.041965 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+07:34:25.041973 [debug]: Started analyzing model main.stg_users
+07:34:25.041988 [debug]: Finished rendering [  0.00s] model main.int_customer_orders [success]
+07:34:25.041994 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:25.042001 [debug]: Started analyzing model main.int_customer_orders
+07:34:25.042168 [debug]: Finished analyzing [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:25.042219 [info ]:  Succeeded model main.fct_customer_lifetime_value (table) [2 of 5 in 0.00s]
+07:34:25.042238 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+07:34:25.042252 [info ]:  Succeeded model main.stg_orders (view) [5 of 5 in 0.00s]
+07:34:25.042262 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+07:34:25.042269 [info ]:  Succeeded model main.stg_users (view) [4 of 5 in 0.00s]
+07:34:25.042278 [debug]: Finished analyzing [  0.00s] model main.fct_orders_summary [success]
+07:34:25.042285 [info ]:  Succeeded model main.fct_orders_summary (table) [1 of 5 in 0.00s]
+07:34:25.042642 [debug]: Finished analyzing [  0.00s] model main.int_customer_orders [success]
+07:34:25.042651 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:25.042655 [info ]:  Succeeded model main.int_customer_orders (table) [3 of 5 in 0.00s]
+07:34:25.045620 [info ]: Started scheduling
+07:34:25.045644 [info ]: Finished scheduling [  0.00s]
+07:34:25.045669 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [31ms]
+Processed: 5 models
+Summary: 5 total | 5 success
+07:34:25.045717 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:25.382933Z | 4a104bb7-cc06-4833-b2c3-8f060f318ff3 ====================
+07:34:25.382961 [info ]: Started loading project
+07:34:25.383112 [info ]: Loading profiles.yml
+07:34:25.384362 [info ]: Finished loading project [  0.00s]
+07:34:25.398908 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [15ms]
+07:34:25.398948 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:26.582927Z | bc31256b-da39-408e-85f8-e6864050bc53 ====================
+07:34:26.583036 [info ]: Started loading project
+07:34:26.583560 [info ]: Loading profiles.yml
+07:34:26.586834 [info ]: Finished loading project [  0.00s]
+07:34:26.609087 [info ]: Cached model count updated: 5 models (estimate)
+07:34:26.609114 [info ]: Cached model count updated: 5 models (accurate)
+07:34:26.609149 [info ]: Started scheduling
+07:34:26.609251 [info ]: Finished scheduling [  0.00s]
+07:34:26.609272 [debug]: Compilation - 5 nodes selected: {"model.dbt_dag.fct_customer_lifetime_value", "model.dbt_dag.fct_orders_summary", "model.dbt_dag.int_customer_orders", "model.dbt_dag.stg_orders", "model.dbt_dag.stg_users"}
+07:34:26.610274 [info ]: Started building task graph
+07:34:26.610351 [info ]: Finished building task graph [  0.00s]
+07:34:26.611991 [info ]: Started rendering (5 nodes)
+07:34:26.612008 [info ]: Started model main.fct_orders_summary
+07:34:26.612021 [debug]: Started rendering model main.fct_orders_summary
+07:34:26.612044 [info ]: Started model main.fct_customer_lifetime_value
+07:34:26.612051 [debug]: Started rendering model main.fct_customer_lifetime_value
+07:34:26.612060 [info ]: Started model main.int_customer_orders
+07:34:26.612065 [debug]: Started rendering model main.int_customer_orders
+07:34:26.612075 [info ]: Started model main.stg_users
+07:34:26.612082 [debug]: Started rendering model main.stg_users
+07:34:26.612093 [info ]: Started model main.stg_orders
+07:34:26.612101 [debug]: Started rendering model main.stg_orders
+07:34:26.612302 [debug]: Compiled SQL for node model.dbt_dag.stg_users at target/.lsp/compiled/dbt_dag/models/staging/stg_users.sql
+07:34:26.612302 [debug]: Compiled SQL for node model.dbt_dag.int_customer_orders at target/.lsp/compiled/dbt_dag/models/intermediate/int_customer_orders.sql
+07:34:26.612321 [debug]: Compiled SQL for node model.dbt_dag.fct_customer_lifetime_value at target/.lsp/compiled/dbt_dag/models/marts/fct_customer_lifetime_value.sql
+07:34:26.612382 [debug]: Finished rendering [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:26.612411 [info ]: Started analyzing (5 nodes)
+07:34:26.612421 [debug]: Started analyzing model main.fct_customer_lifetime_value
+07:34:26.612436 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+07:34:26.612447 [debug]: Started analyzing model main.stg_users
+07:34:26.612447 [debug]: Compiled SQL for node model.dbt_dag.fct_orders_summary at target/.lsp/compiled/dbt_dag/models/marts/fct_orders_summary.sql
+07:34:26.612461 [debug]: Finished rendering [  0.00s] model main.int_customer_orders [success]
+07:34:26.612464 [debug]: Compiled SQL for node model.dbt_dag.stg_orders at target/.lsp/compiled/dbt_dag/models/staging/stg_orders.sql
+07:34:26.612471 [debug]: Started analyzing model main.int_customer_orders
+07:34:26.612494 [debug]: Finished rendering [  0.00s] model main.fct_orders_summary [success]
+07:34:26.612511 [debug]: Started analyzing model main.fct_orders_summary
+07:34:26.612525 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+07:34:26.612532 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:26.612540 [debug]: Started analyzing model main.stg_orders
+07:34:26.612684 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+07:34:26.612696 [info ]:  Succeeded model main.stg_users (view) [4 of 5 in 0.00s]
+07:34:26.612748 [debug]: Finished analyzing [  0.00s] model main.fct_orders_summary [success]
+07:34:26.612762 [info ]:  Succeeded model main.fct_orders_summary (table) [1 of 5 in 0.00s]
+07:34:26.612777 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+07:34:26.612784 [info ]:  Succeeded model main.stg_orders (view) [5 of 5 in 0.00s]
+07:34:26.612797 [debug]: Finished analyzing [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:26.612804 [info ]:  Succeeded model main.fct_customer_lifetime_value (table) [2 of 5 in 0.00s]
+07:34:26.613179 [debug]: Finished analyzing [  0.00s] model main.int_customer_orders [success]
+07:34:26.613220 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:26.613228 [info ]:  Succeeded model main.int_customer_orders (table) [3 of 5 in 0.00s]
+07:34:26.617130 [info ]: Started scheduling
+07:34:26.617186 [info ]: Finished scheduling [  0.00s]
+07:34:26.617231 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [34ms]
+Processed: 5 models
+Summary: 5 total | 5 success
+07:34:26.617311 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:27.244220Z | 4dc1bca0-1d81-4d82-97eb-a118a21e6d2c ====================
+07:34:27.244246 [info ]: Started loading project
+07:34:27.244386 [info ]: Loading profiles.yml
+07:34:27.245447 [info ]: Finished loading project [  0.00s]
+07:34:27.260708 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [16ms]
+07:34:27.260750 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:27.541773Z | 9e5d9903-574b-4ced-8cbb-008a1b040dcb ====================
+07:34:27.541815 [info ]: Started loading project
+07:34:27.542031 [info ]: Loading profiles.yml
+07:34:27.543509 [info ]: Finished loading project [  0.00s]
+07:34:27.559327 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [17ms]
+07:34:27.559365 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:34:28.745628Z | 93e27662-b22b-458e-89b1-3b000cec3a61 ====================
+07:34:28.745687 [info ]: Started loading project
+07:34:28.745984 [info ]: Loading profiles.yml
+07:34:28.748117 [info ]: Finished loading project [  0.00s]
+07:34:28.765819 [info ]: Cached model count updated: 5 models (estimate)
+07:34:28.765853 [info ]: Cached model count updated: 5 models (accurate)
+07:34:28.765895 [info ]: Started scheduling
+07:34:28.765999 [info ]: Finished scheduling [  0.00s]
+07:34:28.766021 [debug]: Compilation - 5 nodes selected: {"model.dbt_dag.fct_customer_lifetime_value", "model.dbt_dag.fct_orders_summary", "model.dbt_dag.int_customer_orders", "model.dbt_dag.stg_orders", "model.dbt_dag.stg_users"}
+07:34:28.767206 [info ]: Started building task graph
+07:34:28.767276 [info ]: Finished building task graph [  0.00s]
+07:34:28.768841 [info ]: Started rendering (5 nodes)
+07:34:28.768857 [info ]: Started model main.fct_orders_summary
+07:34:28.768870 [debug]: Started rendering model main.fct_orders_summary
+07:34:28.768897 [info ]: Started model main.fct_customer_lifetime_value
+07:34:28.768904 [debug]: Started rendering model main.fct_customer_lifetime_value
+07:34:28.768913 [info ]: Started model main.int_customer_orders
+07:34:28.768921 [debug]: Started rendering model main.int_customer_orders
+07:34:28.768929 [info ]: Started model main.stg_users
+07:34:28.768935 [debug]: Started rendering model main.stg_users
+07:34:28.768944 [info ]: Started model main.stg_orders
+07:34:28.768954 [debug]: Started rendering model main.stg_orders
+07:34:28.769141 [debug]: Compiled SQL for node model.dbt_dag.stg_users at target/.lsp/compiled/dbt_dag/models/staging/stg_users.sql
+07:34:28.769154 [debug]: Compiled SQL for node model.dbt_dag.int_customer_orders at target/.lsp/compiled/dbt_dag/models/intermediate/int_customer_orders.sql
+07:34:28.769151 [debug]: Compiled SQL for node model.dbt_dag.fct_orders_summary at target/.lsp/compiled/dbt_dag/models/marts/fct_orders_summary.sql
+07:34:28.769171 [debug]: Compiled SQL for node model.dbt_dag.fct_customer_lifetime_value at target/.lsp/compiled/dbt_dag/models/marts/fct_customer_lifetime_value.sql
+07:34:28.769236 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+07:34:28.769261 [info ]: Started analyzing (5 nodes)
+07:34:28.769265 [debug]: Started analyzing model main.stg_users
+07:34:28.769286 [debug]: Finished rendering [  0.00s] model main.int_customer_orders [success]
+07:34:28.769295 [debug]: Started analyzing model main.int_customer_orders
+07:34:28.769302 [debug]: Compiled SQL for node model.dbt_dag.stg_orders at target/.lsp/compiled/dbt_dag/models/staging/stg_orders.sql
+07:34:28.769305 [debug]: Finished rendering [  0.00s] model main.fct_orders_summary [success]
+07:34:28.769314 [debug]: Started analyzing model main.fct_orders_summary
+07:34:28.769326 [debug]: Finished rendering [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:28.769334 [debug]: Started analyzing model main.fct_customer_lifetime_value
+07:34:28.769346 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+07:34:28.769353 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:28.769359 [debug]: Started analyzing model main.stg_orders
+07:34:28.769450 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+07:34:28.769462 [info ]:  Succeeded model main.stg_users (view) [4 of 5 in 0.00s]
+07:34:28.769477 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+07:34:28.769484 [info ]:  Succeeded model main.stg_orders (view) [5 of 5 in 0.00s]
+07:34:28.769494 [debug]: Finished analyzing [  0.00s] model main.fct_orders_summary [success]
+07:34:28.769500 [info ]:  Succeeded model main.fct_orders_summary (table) [1 of 5 in 0.00s]
+07:34:28.769542 [debug]: Finished analyzing [  0.00s] model main.fct_customer_lifetime_value [success]
+07:34:28.769549 [info ]:  Succeeded model main.fct_customer_lifetime_value (table) [2 of 5 in 0.00s]
+07:34:28.769822 [debug]: Finished analyzing [  0.00s] model main.int_customer_orders [success]
+07:34:28.769832 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:34:28.769837 [info ]:  Succeeded model main.int_customer_orders (table) [3 of 5 in 0.00s]
+07:34:28.772765 [info ]: Started scheduling
+07:34:28.772787 [info ]: Finished scheduling [  0.00s]
+07:34:28.772811 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [27ms]
+Processed: 5 models
+Summary: 5 total | 5 success
+07:34:28.772855 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:35:05.001010Z | cbd4892e-2e06-4df2-9e5d-303ca3ae65e0 ====================
+07:35:05.001138 [info ]: Started loading project
+07:35:05.001737 [info ]: Loading profiles.yml
+07:35:05.004975 [info ]: Finished loading project [  0.00s]
+07:35:05.026374 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [25ms]
+07:35:05.026432 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:35:06.206416Z | cd707d81-7125-4ea2-8b76-54770516c389 ====================
+07:35:06.206530 [info ]: Started loading project
+07:35:06.206993 [info ]: Loading profiles.yml
+07:35:06.210070 [info ]: Finished loading project [  0.00s]
+07:35:06.232843 [info ]: Cached model count updated: 5 models (estimate)
+07:35:06.232880 [info ]: Cached model count updated: 5 models (accurate)
+07:35:06.232928 [info ]: Started scheduling
+07:35:06.233020 [info ]: Finished scheduling [  0.00s]
+07:35:06.233037 [debug]: Compilation - 5 nodes selected: {"model.dbt_dag.fct_customer_lifetime_value", "model.dbt_dag.fct_orders_summary", "model.dbt_dag.int_customer_orders", "model.dbt_dag.stg_orders", "model.dbt_dag.stg_users"}
+07:35:06.234247 [info ]: Started building task graph
+07:35:06.234323 [info ]: Finished building task graph [  0.00s]
+07:35:06.236612 [info ]: Started rendering (5 nodes)
+07:35:06.236629 [info ]: Started model main.fct_orders_summary
+07:35:06.236642 [debug]: Started rendering model main.fct_orders_summary
+07:35:06.236667 [info ]: Started model main.fct_customer_lifetime_value
+07:35:06.236675 [debug]: Started rendering model main.fct_customer_lifetime_value
+07:35:06.236685 [info ]: Started model main.int_customer_orders
+07:35:06.236692 [debug]: Started rendering model main.int_customer_orders
+07:35:06.236778 [info ]: Started model main.stg_users
+07:35:06.236785 [debug]: Started rendering model main.stg_users
+07:35:06.236795 [info ]: Started model main.stg_orders
+07:35:06.236800 [debug]: Started rendering model main.stg_orders
+07:35:06.237719 [debug]: Compiled SQL for node model.dbt_dag.int_customer_orders at target/.lsp/compiled/dbt_dag/models/intermediate/int_customer_orders.sql
+07:35:06.237795 [debug]: Finished rendering [  0.00s] model main.int_customer_orders [success]
+07:35:06.237835 [info ]: Started analyzing (5 nodes)
+07:35:06.237845 [debug]: Started analyzing model main.int_customer_orders
+07:35:06.238504 [debug]: Compiled SQL for node model.dbt_dag.stg_orders at target/.lsp/compiled/dbt_dag/models/staging/stg_orders.sql
+07:35:06.238505 [debug]: Compiled SQL for node model.dbt_dag.stg_users at target/.lsp/compiled/dbt_dag/models/staging/stg_users.sql
+07:35:06.238543 [debug]: Compiled SQL for node model.dbt_dag.fct_customer_lifetime_value at target/.lsp/compiled/dbt_dag/models/marts/fct_customer_lifetime_value.sql
+07:35:06.238621 [debug]: Compiled SQL for node model.dbt_dag.fct_orders_summary at target/.lsp/compiled/dbt_dag/models/marts/fct_orders_summary.sql
+07:35:06.238641 [debug]: Finished rendering [  0.00s] model main.stg_orders [success]
+07:35:06.238710 [debug]: Started analyzing model main.stg_orders
+07:35:06.238729 [debug]: Finished rendering [  0.00s] model main.stg_users [success]
+07:35:06.238741 [debug]: Started analyzing model main.stg_users
+07:35:06.238755 [debug]: Finished rendering [  0.00s] model main.fct_customer_lifetime_value [success]
+07:35:06.238763 [debug]: Started analyzing model main.fct_customer_lifetime_value
+07:35:06.238778 [debug]: Finished rendering [  0.00s] model main.fct_orders_summary [success]
+07:35:06.238783 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:35:06.238796 [debug]: Started analyzing model main.fct_orders_summary
+07:35:06.238860 [debug]: Finished analyzing [  0.00s] model main.stg_orders [success]
+07:35:06.238873 [info ]:  Succeeded model main.stg_orders (view) [5 of 5 in 0.00s]
+07:35:06.238964 [debug]: Finished analyzing [  0.00s] model main.stg_users [success]
+07:35:06.238978 [info ]:  Succeeded model main.stg_users (view) [4 of 5 in 0.00s]
+07:35:06.238993 [debug]: Finished analyzing [  0.00s] model main.fct_orders_summary [success]
+07:35:06.239000 [info ]:  Succeeded model main.fct_orders_summary (table) [1 of 5 in 0.00s]
+07:35:06.239013 [debug]: Finished analyzing [  0.00s] model main.fct_customer_lifetime_value [success]
+07:35:06.239020 [info ]:  Succeeded model main.fct_customer_lifetime_value (table) [2 of 5 in 0.00s]
+07:35:06.239176 [debug]: Finished analyzing [  0.00s] model main.int_customer_orders [success]
+07:35:06.239189 [info ]: Finished analyzing [  0.00s] (5 nodes, 0 skipped, 0 errors)
+07:35:06.239195 [info ]:  Succeeded model main.int_customer_orders (table) [3 of 5 in 0.00s]
+07:35:06.244057 [info ]: Started scheduling
+07:35:06.244087 [info ]: Finished scheduling [  0.00s]
+07:35:06.244120 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [37ms]
+Processed: 5 models
+Summary: 5 total | 5 success
+07:35:06.244179 [info ]: Cached model count updated: 5 models (accurate)
+==================== 2026-10-25T07:41:22.057813Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-25T07:41:22.057892Z | 81e630ba-48ad-4a26-89a0-b30be7a5668c ====================
+07:41:22.057902 [info ]: Starting dbt LSP server
+07:41:22.057912 [info ]: Connecting to LSP client on port 8000
+07:41:22.058063 [info ]: Successfully connected to LSP client
+07:41:22.058089 [info ]: Creating LSP service...
+07:41:22.059627 [info ]: Creating LSP server...
+07:41:22.059640 [info ]: Starting LSP server...
+07:41:22.064761 [info ]: Loading profiles.yml
+==================== 2026-10-25T07:41:22.080787Z | 5ca652a2-a9de-45c7-82e1-a12aa7b84ad8 ====================
+07:41:22.080830 [info ]: Started loading project
+07:41:22.081022 [info ]: Loading profiles.yml
+07:41:22.241476 [debug]:    Started loading packages
+07:41:22.241697 [debug]:     Loaded [  0.00s] packages
+07:41:22.242066 [info ]: Finished loading project [  0.16s]
+07:41:22.242205 [info ]: Started parsing (3 nodes)
+07:41:22.256603 [debug]:    Started building model nodes
+07:41:22.256611 [debug]:    Started building model nodes
+07:41:22.256616 [debug]:   Finished [  0.00s] building model nodes
+07:41:22.256617 [debug]:   Finished [  0.00s] building model nodes
+07:41:22.256745 [warn ]: [SemanticModelDeprecated (dbt1157)]: The package 'dbt_metrics' defines semantic models and metrics using the legacy YAML. Please migrate to the new YAML to use the semantic layer with dbt.
+07:41:22.256781 [debug]: Finished parsing models/semantic_layer.yml [  0.00s]
+07:41:22.256861 [debug]:    Started resolving data tests
+07:41:22.256873 [debug]:    Started resolving data tests
+07:41:22.256878 [debug]:   Finished [  0.00s] resolving data tests
+07:41:22.256884 [debug]:   Finished [  0.00s] resolving data tests
+07:41:22.256916 [debug]: Finished parsing models/sources.yml [  0.00s]
+07:41:22.258127 [debug]:    Started building model nodes
+07:41:22.258412 [debug]:   Finished [  0.00s] building model nodes
+07:41:22.258646 [debug]:    Started resolving data tests
+07:41:22.258656 [debug]:   Finished [  0.00s] resolving data tests
+07:41:22.258688 [debug]: Finished parsing models/orders.sql [  0.00s]
+07:41:22.258983 [debug]:    Started typechecking macros
+07:41:22.340048 [debug]:   Finished [  0.08s] typechecking macros
+07:41:22.340413 [info ]: Finished parsing [  0.10s] (3 nodes, 0 skipped, 0 errors)
+07:41:22.340518 [info ]: Cached model count updated: 1 models (estimate)
+07:41:22.340525 [info ]: Cached model count updated: 1 models (accurate)
+07:41:22.340555 [info ]: Started scheduling
+07:41:22.340618 [info ]: Finished scheduling [  0.00s]
+07:41:22.340625 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+07:41:22.340657 [info ]: Started scheduling
+07:41:22.340670 [info ]: Finished scheduling [  0.00s]
+07:41:22.340724 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+07:41:22.341224 [info ]: Started building task graph
+07:41:22.341270 [info ]: Finished building task graph [  0.00s]
+07:41:22.342332 [info ]: Started rendering (1 nodes)
+07:41:22.342345 [info ]: Started model main.orders
+07:41:22.342353 [debug]: Started rendering model main.orders
+07:41:22.342907 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+07:41:22.342972 [debug]: Finished rendering [  0.00s] model main.orders [success]
+07:41:22.342980 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:41:22.342995 [info ]: Started analyzing (1 nodes)
+07:41:22.343000 [debug]: Started analyzing model main.orders
+07:41:22.345530 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+07:41:22.345536 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:41:22.345539 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+07:41:22.347892 [info ]: Started scheduling
+07:41:22.347906 [info ]: Finished scheduling [  0.00s]
+07:41:22.347965 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [267ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+07:41:22.348013 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T07:41:23.527575Z | f3e420f5-cb08-4a9c-a9ff-1133a50b1255 ====================
+07:41:23.527650 [info ]: Started loading project
+07:41:23.527937 [info ]: Loading profiles.yml
+07:41:23.529581 [info ]: Finished loading project [  0.00s]
+07:41:23.543896 [info ]: Cached model count updated: 1 models (estimate)
+07:41:23.543913 [info ]: Cached model count updated: 1 models (accurate)
+07:41:23.543929 [info ]: Started scheduling
+07:41:23.543961 [info ]: Finished scheduling [  0.00s]
+07:41:23.543971 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+07:41:23.544540 [info ]: Started building task graph
+07:41:23.544563 [info ]: Finished building task graph [  0.00s]
+07:41:23.545737 [info ]: Started rendering (1 nodes)
+07:41:23.545747 [info ]: Started model main.orders
+07:41:23.545755 [debug]: Started rendering model main.orders
+07:41:23.545885 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+07:41:23.545921 [debug]: Finished rendering [  0.00s] model main.orders [success]
+07:41:23.545930 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:41:23.545939 [info ]: Started analyzing (1 nodes)
+07:41:23.545943 [debug]: Started analyzing model main.orders
+07:41:23.546131 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+07:41:23.546138 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:41:23.546143 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+07:41:23.549043 [info ]: Started scheduling
+07:41:23.549071 [info ]: Finished scheduling [  0.00s]
+07:41:23.549471 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [21ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+07:41:23.549535 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T07:44:47.156988Z | 9e4fa388-b111-4fad-bcad-a3ed15a60e9c ====================
+07:44:47.157356 [info ]: Started loading project
+07:44:47.157940 [info ]: Loading profiles.yml
+07:44:47.159695 [info ]: Finished loading project [  0.00s]
+07:44:47.175920 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [18ms]
+07:44:47.175992 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T07:44:48.357583Z | b6540d85-ca8c-4d9b-b531-edc18591df01 ====================
+07:44:48.357627 [info ]: Started loading project
+07:44:48.357832 [info ]: Loading profiles.yml
+07:44:48.359170 [info ]: Finished loading project [  0.00s]
+07:44:48.372531 [info ]: Cached model count updated: 1 models (estimate)
+07:44:48.372546 [info ]: Cached model count updated: 1 models (accurate)
+07:44:48.372855 [info ]: Started scheduling
+07:44:48.372908 [info ]: Finished scheduling [  0.00s]
+07:44:48.372921 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+07:44:48.373850 [info ]: Started building task graph
+07:44:48.373904 [info ]: Finished building task graph [  0.00s]
+07:44:48.377764 [info ]: Started rendering (1 nodes)
+07:44:48.377776 [info ]: Started model main.orders
+07:44:48.377787 [debug]: Started rendering model main.orders
+07:44:48.378095 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+07:44:48.378147 [debug]: Finished rendering [  0.00s] model main.orders [success]
+07:44:48.378159 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:44:48.378177 [info ]: Started analyzing (1 nodes)
+07:44:48.378183 [debug]: Started analyzing model main.orders
+07:44:48.378646 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+07:44:48.378654 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:44:48.378660 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+07:44:48.381405 [info ]: Started scheduling
+07:44:48.381424 [info ]: Finished scheduling [  0.00s]
+07:44:48.381454 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [23ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+07:44:48.381498 [info ]: Cached model count updated: 1 models (accurate)
+07:49:02.568685 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+==================== 2026-10-25T07:49:02.597032Z | 4bfbde5f-ca15-45a9-a796-cc90750eff4c ====================
+07:49:02.597069 [info ]: Started loading project
+07:49:02.597237 [info ]: Loading profiles.yml
+07:49:02.599691 [info ]: Started parsing (1 nodes)
+07:49:02.619610 [info ]: Finished loading project [  0.02s]
+07:49:02.619829 [debug]:    Started building model nodes
+07:49:02.619829 [debug]:    Started building model nodes
+07:49:02.619841 [debug]:   Finished [  0.00s] building model nodes
+07:49:02.619866 [debug]:   Finished [  0.00s] building model nodes
+07:49:02.619867 [warn ]: [SemanticModelDeprecated (dbt1157)]: The package 'dbt_metrics' defines semantic models and metrics using the legacy YAML. Please migrate to the new YAML to use the semantic layer with dbt.
+07:49:02.619896 [debug]: Finished parsing models/semantic_layer.yml [  0.00s]
+07:49:02.620001 [debug]:    Started building model nodes
+07:49:02.620006 [debug]:   Finished [  0.00s] building model nodes
+07:49:02.620111 [debug]:    Started resolving data tests
+07:49:02.620111 [debug]:    Started resolving data tests
+07:49:02.620132 [debug]:   Finished [  0.00s] resolving data tests
+07:49:02.620132 [debug]:   Finished [  0.00s] resolving data tests
+07:49:02.620654 [debug]:    Started resolving data tests
+07:49:02.620666 [debug]:   Finished [  0.00s] resolving data tests
+07:49:02.620956 [debug]:    Started typechecking macros
+07:49:02.699697 [debug]:   Finished [  0.08s] typechecking macros
+07:49:02.700147 [info ]: Finished parsing [  0.10s] (1 nodes, 0 skipped, 0 errors)
+07:49:02.700817 [info ]: Cached model count updated: 1 models (estimate)
+07:49:02.700826 [info ]: Cached model count updated: 1 models (accurate)
+07:49:02.700845 [info ]: Started scheduling
+07:49:02.700862 [info ]: Finished scheduling [  0.00s]
+07:49:02.700867 [debug]: Compilation - 0 nodes selected: {}
+07:49:02.700887 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+07:49:02.700897 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+07:49:02.701238 [info ]: Started building task graph
+07:49:02.701246 [info ]: Finished building task graph [  0.00s]
+07:49:02.706263 [info ]: Started scheduling
+07:49:02.706277 [info ]: Finished scheduling [  0.00s]
+07:49:02.706586 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [109ms]
+07:49:02.706622 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T07:49:03.889166Z | aa39a941-0505-4574-b82b-c7f6bcecd4a5 ====================
+07:49:03.889263 [info ]: Started loading project
+07:49:03.889774 [info ]: Loading profiles.yml
+07:49:03.892841 [info ]: Finished loading project [  0.00s]
+07:49:03.914782 [info ]: Cached model count updated: 1 models (estimate)
+07:49:03.914818 [info ]: Cached model count updated: 1 models (accurate)
+07:49:03.914849 [info ]: Started scheduling
+07:49:03.914913 [info ]: Finished scheduling [  0.00s]
+07:49:03.914930 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+07:49:03.915940 [info ]: Started building task graph
+07:49:03.915995 [info ]: Finished building task graph [  0.00s]
+07:49:03.917762 [info ]: Started rendering (1 nodes)
+07:49:03.917779 [info ]: Started model main.orders
+07:49:03.917791 [debug]: Started rendering model main.orders
+07:49:03.918613 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+07:49:03.918694 [debug]: Finished rendering [  0.00s] model main.orders [success]
+07:49:03.918708 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:49:03.918725 [info ]: Started analyzing (1 nodes)
+07:49:03.918731 [debug]: Started analyzing model main.orders
+07:49:03.919699 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+07:49:03.919709 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:49:03.919715 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+07:49:03.924214 [info ]: Started scheduling
+07:49:03.924242 [info ]: Finished scheduling [  0.00s]
+07:49:03.924308 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [35ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+07:49:03.924400 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T07:58:37.280357Z | c6cfd162-7565-4fa5-be9f-5f8c9589ee6f ====================
+07:58:37.284511 [info ]: Started loading project
+07:58:37.297190 [info ]: Loading profiles.yml
+07:58:37.327005 [info ]: Started parsing (1 nodes)
+07:58:37.360940 [info ]: Finished loading project [  0.08s]
+07:58:37.365432 [debug]:    Started building model nodes
+07:58:37.365433 [debug]:    Started building model nodes
+07:58:37.365458 [debug]:   Finished [  0.00s] building model nodes
+07:58:37.365459 [debug]:   Finished [  0.00s] building model nodes
+07:58:37.366690 [debug]:    Started resolving data tests
+07:58:37.366690 [debug]:    Started resolving data tests
+07:58:37.366777 [debug]:   Finished [  0.00s] resolving data tests
+07:58:37.366780 [debug]:   Finished [  0.00s] resolving data tests
+07:58:37.372793 [debug]:    Started building model nodes
+07:58:37.373960 [debug]:   Finished [  0.00s] building model nodes
+07:58:37.374198 [debug]:    Started resolving data tests
+07:58:37.374210 [debug]:   Finished [  0.00s] resolving data tests
+07:58:37.374255 [debug]: Finished parsing models/orders.sql [  0.01s]
+07:58:37.374771 [debug]:    Started typechecking macros
+07:58:37.452308 [debug]:   Finished [  0.08s] typechecking macros
+07:58:37.453941 [info ]: Finished parsing [  0.13s] (1 nodes, 0 skipped, 0 errors)
+07:58:37.456840 [info ]: Cached model count updated: 1 models (estimate)
+07:58:37.456872 [info ]: Cached model count updated: 1 models (accurate)
+07:58:37.457836 [info ]: Started scheduling
+07:58:37.459058 [info ]: Finished scheduling [  0.00s]
+07:58:37.459066 [debug]: Compilation - 0 nodes selected: {}
+07:58:37.459444 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+07:58:37.459513 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+07:58:37.467704 [info ]: Started building task graph
+07:58:37.467957 [info ]: Finished building task graph [  0.00s]
+07:58:37.486020 [info ]: Started scheduling
+07:58:37.486287 [info ]: Finished scheduling [  0.00s]
+07:58:37.487663 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [207ms]
+07:58:37.488629 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T07:58:38.669562Z | 288b6167-2ceb-4296-9409-ddab95302949 ====================
+07:58:38.669901 [info ]: Started loading project
+07:58:38.670284 [info ]: Loading profiles.yml
+07:58:38.673390 [info ]: Finished loading project [  0.00s]
+07:58:38.694896 [info ]: Cached model count updated: 1 models (estimate)
+07:58:38.694921 [info ]: Cached model count updated: 1 models (accurate)
+07:58:38.694949 [info ]: Started scheduling
+07:58:38.695001 [info ]: Finished scheduling [  0.00s]
+07:58:38.695016 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+07:58:38.695992 [info ]: Started building task graph
+07:58:38.696762 [info ]: Finished building task graph [  0.00s]
+07:58:38.699494 [info ]: Started rendering (1 nodes)
+07:58:38.699520 [info ]: Started model main.orders
+07:58:38.699547 [debug]: Started rendering model main.orders
+07:58:38.702377 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+07:58:38.702555 [debug]: Finished rendering [  0.00s] model main.orders [success]
+07:58:38.702566 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:58:38.702964 [info ]: Started analyzing (1 nodes)
+07:58:38.702999 [debug]: Started analyzing model main.orders
+07:58:38.711745 [debug]: Finished analyzing [  0.01s] model main.orders [success]
+07:58:38.711757 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+07:58:38.711762 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.01s]
+07:58:38.715121 [info ]: Started scheduling
+07:58:38.715150 [info ]: Finished scheduling [  0.00s]
+07:58:38.715194 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [45ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+07:58:38.715265 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T07:58:45.890312Z | bc40696a-ee79-4d10-b26c-ac0d039301c2 ====================
+07:58:45.890374 [info ]: Started loading project
+07:58:45.890673 [info ]: Loading profiles.yml
+07:58:45.896059 [info ]: Started parsing (1 nodes)
+07:58:45.931479 [info ]: Finished loading project [  0.04s]
+07:58:45.931623 [debug]:    Started building model nodes
+07:58:45.931631 [debug]:   Finished [  0.00s] building model nodes
+07:58:45.931632 [debug]:    Started building model nodes
+07:58:45.931642 [debug]:   Finished [  0.00s] building model nodes
+07:58:45.931896 [debug]:    Started resolving data tests
+07:58:45.931903 [debug]:    Started resolving data tests
+07:58:45.931912 [debug]:   Finished [  0.00s] resolving data tests
+07:58:45.931913 [debug]:   Finished [  0.00s] resolving data tests
+07:58:45.935256 [warn ]: [SemanticModelDeprecated (dbt1157)]: The package 'dbt_metrics' defines semantic models and metrics using the legacy YAML. Please migrate to the new YAML to use the semantic layer with dbt.
+07:58:45.935294 [debug]: Finished parsing models/semantic_layer.yml [  0.00s]
+07:58:45.935390 [debug]:    Started building model nodes
+07:58:45.935394 [debug]:   Finished [  0.00s] building model nodes
+07:58:45.935623 [debug]:    Started resolving data tests
+07:58:45.935633 [debug]:   Finished [  0.00s] resolving data tests
+07:58:45.935951 [debug]:    Started typechecking macros
+07:58:46.015129 [debug]:   Finished [  0.08s] typechecking macros
+07:58:46.015565 [info ]: Finished parsing [  0.12s] (1 nodes, 0 skipped, 0 errors)
+07:58:46.016304 [info ]: Cached model count updated: 1 models (estimate)
+07:58:46.016311 [info ]: Cached model count updated: 1 models (accurate)
+07:58:46.016323 [info ]: Started scheduling
+07:58:46.016339 [info ]: Finished scheduling [  0.00s]
+07:58:46.016345 [debug]: Compilation - 0 nodes selected: {}
+07:58:46.016353 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+07:58:46.016361 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+07:58:46.016696 [info ]: Started building task graph
+07:58:46.016705 [info ]: Finished building task graph [  0.00s]
+07:58:46.019655 [info ]: Started scheduling
+07:58:46.019667 [info ]: Finished scheduling [  0.00s]
+07:58:46.020070 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [129ms]
+07:58:46.021197 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T07:58:47.200983Z | e079678c-ce4a-4b5b-a435-1d3bcabc72b6 ====================
+07:58:47.201095 [info ]: Started loading project
+07:58:47.201568 [info ]: Loading profiles.yml
+07:58:47.205327 [info ]: Finished loading project [  0.00s]
+07:58:47.228741 [info ]: Cached model count updated: 1 models (estimate)
+07:58:47.228777 [info ]: Cached model count updated: 1 models (accurate)
+07:58:47.228805 [info ]: Started scheduling
+07:58:47.228866 [info ]: Finished scheduling [  0.00s]
+07:58:47.228884 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+07:58:47.229872 [info ]: Started building task graph
+07:58:47.229921 [info ]: Finished building task graph [  0.00s]
+07:58:47.231725 [info ]: Started rendering (1 nodes)
+07:58:47.231741 [info ]: Started model main.orders
+07:58:47.231754 [debug]: Started rendering model main.orders
+07:58:47.232034 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+07:58:47.232097 [debug]: Finished rendering [  0.00s] model main.orders [success]
+07:58:47.232110 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:58:47.232126 [info ]: Started analyzing (1 nodes)
+07:58:47.232134 [debug]: Started analyzing model main.orders
+07:58:47.232358 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+07:58:47.232366 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:58:47.232372 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+07:58:47.236511 [info ]: Started scheduling
+07:58:47.236540 [info ]: Finished scheduling [  0.00s]
+07:58:47.236607 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [35ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+07:58:47.236704 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T08:07:52.467437Z | 53254619-afc3-427f-80f5-2b476bbf338e ====================
+08:07:52.467551 [info ]: Started loading project
+08:07:52.468016 [info ]: Loading profiles.yml
+08:07:52.477480 [info ]: Started parsing (2 nodes)
+08:07:52.514994 [info ]: Finished loading project [  0.05s]
+08:07:52.515204 [debug]: Finished parsing models/semantic_layer.yml [  0.00s]
+08:07:52.515270 [debug]:    Started building model nodes
+08:07:52.515270 [debug]:    Started building model nodes
+08:07:52.515283 [debug]:   Finished [  0.00s] building model nodes
+08:07:52.515285 [debug]:   Finished [  0.00s] building model nodes
+08:07:52.515673 [debug]:    Started resolving data tests
+08:07:52.515693 [debug]:   Finished [  0.00s] resolving data tests
+08:07:52.515704 [debug]:    Started resolving data tests
+08:07:52.515722 [debug]:   Finished [  0.00s] resolving data tests
+08:07:52.520337 [error]: [UnusedConfigKey (dbt1060)]: While parsing config: Ignored unexpected key `"agg_time_dimension"`. YAML path: `semantic_model.agg_time_dimension`.
+  --> models/semantic_layer.yml:10:7
+08:07:52.520407 [error]: [UnusedConfigKey (dbt1060)]: While parsing config: Ignored unexpected key `"metric"`. YAML path: `columns[4].metric`.
+  --> models/semantic_layer.yml:38:9
+08:07:52.521194 [debug]:    Started building model nodes
+08:07:52.521557 [debug]:   Finished [  0.00s] building model nodes
+08:07:52.522422 [debug]:    Started resolving data tests
+08:07:52.522438 [debug]:   Finished [  0.00s] resolving data tests
+08:07:52.522478 [debug]: Finished parsing models/orders.sql [  0.00s]
+08:07:52.522936 [debug]:    Started typechecking macros
+08:07:52.600264 [debug]:   Finished [  0.08s] typechecking macros
+08:07:52.602356 [info ]: Finished parsing [  0.12s] (2 nodes, 0 skipped, 0 errors)
+08:07:52.603522 [info ]: Cached model count updated: 1 models (estimate)
+08:07:52.603530 [info ]: Cached model count updated: 1 models (accurate)
+08:07:52.603559 [info ]: Started scheduling
+08:07:52.603602 [info ]: Finished scheduling [  0.00s]
+08:07:52.603609 [debug]: Compilation - 0 nodes selected: {}
+08:07:52.603627 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:07:52.603638 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:07:52.604295 [info ]: Started building task graph
+08:07:52.604311 [info ]: Finished building task graph [  0.00s]
+08:07:52.609637 [info ]: Started scheduling
+08:07:52.609933 [info ]: Finished scheduling [  0.00s]
+08:07:52.610322 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+08:07:52.610322 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings and 2 errors for target 'dev' [142ms]
+08:07:52.611239 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T08:07:52.889191Z | 0e4c8aee-1bc8-46c1-b644-1e7bc8b067de ====================
+08:07:52.889268 [info ]: Started loading project
+08:07:52.889603 [info ]: Loading profiles.yml
+08:07:52.892087 [info ]: Finished loading project [  0.00s]
+08:07:52.906757 [info ]: Cached model count updated: 1 models (estimate)
+08:07:52.906769 [info ]: Cached model count updated: 1 models (accurate)
+08:07:52.906786 [info ]: Started scheduling
+08:07:52.906832 [info ]: Finished scheduling [  0.00s]
+08:07:52.906845 [debug]: Compilation - 2 nodes selected: {"model.dbt_metrics.orders", "semantic_model.dbt_metrics.orders"}
+08:07:52.907413 [info ]: Started building task graph
+08:07:52.907457 [info ]: Finished building task graph [  0.00s]
+08:07:52.908651 [info ]: Started rendering (1 nodes)
+08:07:52.908662 [info ]: Started model main.orders
+08:07:52.908672 [debug]: Started rendering model main.orders
+08:07:52.909271 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+08:07:52.909344 [debug]: Finished rendering [  0.00s] model main.orders [success]
+08:07:52.909354 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:07:52.909369 [info ]: Started analyzing (1 nodes)
+08:07:52.909375 [debug]: Started analyzing model main.orders
+08:07:52.909716 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+08:07:52.909723 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:07:52.909727 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+08:07:52.912807 [info ]: Started scheduling
+08:07:52.912827 [info ]: Finished scheduling [  0.00s]
+08:07:52.912873 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [23ms]
+Processed: 1 model | 1 semantic model
+Summary: 1 total | 1 success
+08:07:52.912904 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T08:07:54.094583Z | fc42f2ea-635c-4d0d-bccc-9da2aaadb365 ====================
+08:07:54.094714 [info ]: Started loading project
+08:07:54.095169 [info ]: Loading profiles.yml
+08:07:54.098778 [info ]: Finished loading project [  0.00s]
+08:07:54.121565 [info ]: Cached model count updated: 1 models (estimate)
+08:07:54.121600 [info ]: Cached model count updated: 1 models (accurate)
+08:07:54.121636 [info ]: Started scheduling
+08:07:54.121708 [info ]: Finished scheduling [  0.00s]
+08:07:54.121725 [debug]: Compilation - 2 nodes selected: {"model.dbt_metrics.orders", "semantic_model.dbt_metrics.orders"}
+08:07:54.122536 [info ]: Started building task graph
+08:07:54.122587 [info ]: Finished building task graph [  0.00s]
+08:07:54.124228 [info ]: Started rendering (1 nodes)
+08:07:54.124244 [info ]: Started model main.orders
+08:07:54.124256 [debug]: Started rendering model main.orders
+08:07:54.124454 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+08:07:54.124510 [debug]: Finished rendering [  0.00s] model main.orders [success]
+08:07:54.124521 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:07:54.124536 [info ]: Started analyzing (1 nodes)
+08:07:54.124542 [debug]: Started analyzing model main.orders
+08:07:54.124756 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+08:07:54.124765 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:07:54.124769 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+08:07:54.128316 [info ]: Started scheduling
+08:07:54.128344 [info ]: Finished scheduling [  0.00s]
+08:07:54.128395 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [33ms]
+Processed: 1 model | 1 semantic model
+Summary: 1 total | 1 success
+08:07:54.128466 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T08:08:14.809315Z | b6a1ae56-4490-4331-9d3a-f0417eed2500 ====================
+08:08:14.809345 [info ]: Started loading project
+08:08:14.809524 [info ]: Loading profiles.yml
+08:08:14.813526 [info ]: Started parsing (2 nodes)
+08:08:14.856559 [info ]: Finished loading project [  0.05s]
+08:08:14.856714 [debug]:    Started building model nodes
+08:08:14.856714 [debug]:    Started building model nodes
+08:08:14.856723 [debug]:   Finished [  0.00s] building model nodes
+08:08:14.856723 [debug]:   Finished [  0.00s] building model nodes
+08:08:14.856771 [warn ]: [SemanticModelDeprecated (dbt1157)]: The package 'dbt_metrics' defines semantic models and metrics using the legacy YAML. Please migrate to the new YAML to use the semantic layer with dbt.
+08:08:14.856802 [debug]: Finished parsing models/semantic_layer.yml [  0.00s]
+08:08:14.856975 [debug]:    Started resolving data tests
+08:08:14.856976 [debug]:    Started resolving data tests
+08:08:14.856992 [debug]:   Finished [  0.00s] resolving data tests
+08:08:14.856992 [debug]:   Finished [  0.00s] resolving data tests
+08:08:14.857445 [debug]:    Started building model nodes
+08:08:14.857687 [debug]:   Finished [  0.00s] building model nodes
+08:08:14.857905 [debug]:    Started resolving data tests
+08:08:14.857919 [debug]:   Finished [  0.00s] resolving data tests
+08:08:14.857954 [debug]: Finished parsing models/orders.sql [  0.00s]
+08:08:14.858213 [debug]:    Started typechecking macros
+08:08:14.939128 [debug]:   Finished [  0.08s] typechecking macros
+08:08:14.939700 [info ]: Finished parsing [  0.13s] (2 nodes, 0 skipped, 0 errors)
+08:08:14.940497 [info ]: Cached model count updated: 1 models (estimate)
+08:08:14.940506 [info ]: Cached model count updated: 1 models (accurate)
+08:08:14.940517 [info ]: Started scheduling
+08:08:14.940534 [info ]: Finished scheduling [  0.00s]
+08:08:14.940539 [debug]: Compilation - 0 nodes selected: {}
+08:08:14.940549 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:08:14.940558 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:08:14.940880 [info ]: Started building task graph
+08:08:14.940889 [info ]: Finished building task graph [  0.00s]
+08:08:14.943935 [info ]: Started scheduling
+08:08:14.943947 [info ]: Finished scheduling [  0.00s]
+08:08:14.944249 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [134ms]
+08:08:14.945359 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-25T08:08:16.118858Z | adb3dc5a-5ce2-4ca5-a08d-21ac2a6a8f65 ====================
+08:08:16.118890 [info ]: Started loading project
+08:08:16.119067 [info ]: Loading profiles.yml
+08:08:16.120805 [info ]: Finished loading project [  0.00s]
+08:08:16.133308 [info ]: Cached model count updated: 1 models (estimate)
+08:08:16.133330 [info ]: Cached model count updated: 1 models (accurate)
+08:08:16.133346 [info ]: Started scheduling
+08:08:16.133380 [info ]: Finished scheduling [  0.00s]
+08:08:16.133391 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+08:08:16.133955 [info ]: Started building task graph
+08:08:16.133979 [info ]: Finished building task graph [  0.00s]
+08:08:16.135168 [info ]: Started rendering (1 nodes)
+08:08:16.135178 [info ]: Started model main.orders
+08:08:16.135186 [debug]: Started rendering model main.orders
+08:08:16.135701 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+08:08:16.135789 [debug]: Finished rendering [  0.00s] model main.orders [success]
+08:08:16.135799 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:08:16.135823 [info ]: Started analyzing (1 nodes)
+08:08:16.135828 [debug]: Started analyzing model main.orders
+08:08:16.135961 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+08:08:16.135969 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:08:16.135973 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+08:08:16.138940 [info ]: Started scheduling
+08:08:16.138964 [info ]: Finished scheduling [  0.00s]
+08:08:16.139054 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [20ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:08:16.139179 [info ]: Cached model count updated: 1 models (accurate)
+11:57:21.854780 [debug]: Ignoring unsupported LSP notification
+11:57:21.892305 [debug]: Ignoring unsupported LSP notification
+11:58:04.561083 [debug]: Ignoring unsupported LSP notification
+11:59:09.800344 [debug]: Ignoring unsupported LSP notification
+11:59:58.021153 [debug]: Ignoring unsupported LSP notification

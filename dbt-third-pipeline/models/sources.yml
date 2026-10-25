@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw_duckdb
+    schema: main
+    description: "Raw tables loaded directly into DuckDB"
+    tables:
+      - name: users
+        description: "Raw user accounts table"
+      - name: orders
+        description: "Raw customer orders table"

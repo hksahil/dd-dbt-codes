@@ -1,0 +1,21 @@
+{
+  "target_dir": "/Users/seal/Desktop/dbt-duckdb/dbt-metrices/target",
+  "fingerprints": {
+    "semantic_manifest.json": {
+      "size": 1236,
+      "modified_secs": 1792915678
+    },
+    "manifest.json": {
+      "size": 503058,
+      "modified_secs": 1792915701
+    },
+    "run_results.json": {
+      "size": 343,
+      "modified_secs": 1792915701
+    }
+  },
+  "write_source": "DirectWrite",
+  "context_dir": null,
+  "context_fingerprints": {},
+  "source_identity": null
+}

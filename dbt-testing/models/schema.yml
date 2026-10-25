@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Staging table for customer data"
+    columns:
+      - name: customer_id
+        description: "Primary key"
+        tests:
+          # 1. UNIQUE TEST
+          - unique
+          # 2. NOT NULL TEST
+          - not_null
+
+      - name: status
+        description: "Customer account status"
+        tests:
+          # 3. ACCEPTED VALUES TEST
+          - accepted_values:
+              arguments:
+                values: ['active', 'inactive', 'pending']
+              config:
+                severity: warn
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        tests:
+          - not_null
+          # 4. RELATIONSHIPS TEST (Foreign Key Referential Integrity)
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+
+      - name: amount
+        tests:
+          - not_null
+          # 5. CUSTOM GENERIC TEST (from macros/test_is_positive.sql)
+          - is_positive
+
+      - name: order_status
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['completed', 'processing', 'cancelled', 'refunded']

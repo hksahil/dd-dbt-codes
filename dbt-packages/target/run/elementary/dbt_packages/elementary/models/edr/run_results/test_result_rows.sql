@@ -1,0 +1,53 @@
+
+  
+    
+    
+    create temporary table
+      "test_result_rows__dbt_tmp_6d14cc08_b9c7_4936_854e_94f5b84ef60e"
+  
+    as (
+      -- indexes are not supported in all warehouses, relevant to postgres only
+
+
+-- depends_on: "dev"."main"."elementary_test_results"
+select * from (
+            select
+            
+                
+        cast('this_is_just_a_long_dummy_string' as varchar(4096)) as elementary_test_results_id
+
+,
+                
+        cast('this_is_just_a_long_dummy_string' as varchar(4096)) as result_row
+
+,
+                cast('2091-02-17' as timestamp) as detected_at
+
+,
+                cast('2091-02-17' as timestamp) as created_at
+
+
+        ) as empty_table
+        where 1 = 0
+    );
+  
+    
+  ;
+
+        
+            delete from "dev"."main"."test_result_rows"
+            where (
+                elementary_test_results_id) in (
+                select (elementary_test_results_id)
+                from "test_result_rows__dbt_tmp_6d14cc08_b9c7_4936_854e_94f5b84ef60e"
+            );
+
+        
+    
+
+    insert into "dev"."main"."test_result_rows" ("elementary_test_results_id", "result_row", "detected_at", "created_at")
+    (
+        select "elementary_test_results_id", "result_row", "detected_at", "created_at"
+        from "test_result_rows__dbt_tmp_6d14cc08_b9c7_4936_854e_94f5b84ef60e"
+    )
+  
