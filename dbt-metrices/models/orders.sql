@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 -- ========================================================
--- Simple Orders Table for Semantic Layer Demo
+-- Simple Orders Table for Semantic Layer
 -- ========================================================
 
 select

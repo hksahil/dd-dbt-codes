@@ -1726,3 +1726,152 @@ Summary: 4 total | 4 success
 11:58:04.549110 [debug]: Ignoring unsupported LSP notification
 11:59:09.801279 [debug]: Ignoring unsupported LSP notification
 11:59:58.022809 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-31T09:46:10.528229Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-31T09:46:10.528613Z | a72b5fb7-8611-4086-bc2e-8df0954e876f ====================
+09:46:10.528638 [info ]: Starting dbt LSP server
+09:46:10.528662 [info ]: Connecting to LSP client on port 8000
+09:46:10.529806 [info ]: Successfully connected to LSP client
+09:46:10.529837 [info ]: Creating LSP service...
+09:46:10.532229 [info ]: Creating LSP server...
+09:46:10.532251 [info ]: Starting LSP server...
+09:46:10.547874 [info ]: Loading profiles.yml
+==================== 2026-10-31T09:46:10.579784Z | d442f16d-d433-4c19-bfdf-20f5b5cfb67a ====================
+09:46:10.579842 [info ]: Started loading project
+09:46:10.580569 [info ]: Loading profiles.yml
+09:46:10.897903 [debug]:    Started loading packages
+09:46:10.898808 [debug]:     Loaded [  0.00s] packages
+09:46:10.899784 [info ]: Finished loading project [  0.32s]
+09:46:10.900210 [info ]: Started parsing (3 nodes)
+09:46:10.944349 [debug]:    Started building model nodes
+09:46:10.944346 [debug]:    Started building model nodes
+09:46:10.944404 [debug]:   Finished [  0.00s] building model nodes
+09:46:10.944409 [debug]:   Finished [  0.00s] building model nodes
+09:46:10.945453 [debug]:    Started resolving data tests
+09:46:10.945462 [debug]:    Started resolving data tests
+09:46:10.945516 [debug]:   Finished [  0.00s] resolving data tests
+09:46:10.945530 [debug]:   Finished [  0.00s] resolving data tests
+09:46:10.949885 [debug]: Finished parsing seeds/schema.yml [  0.01s]
+09:46:10.960730 [debug]: Finished parsing models/dim_orders_with_status.sql [  0.00s]
+09:46:10.961430 [debug]:    Started building model nodes
+09:46:10.962472 [debug]:   Finished [  0.00s] building model nodes
+09:46:10.963136 [debug]:    Started resolving data tests
+09:46:10.963176 [debug]:   Finished [  0.00s] resolving data tests
+09:46:10.963290 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+09:46:10.963972 [debug]:    Started typechecking macros
+09:46:11.223035 [debug]:   Finished [  0.26s] typechecking macros
+09:46:11.225938 [info ]: Finished parsing [  0.33s] (3 nodes, 0 skipped, 0 errors)
+09:46:11.226516 [info ]: Cached model count updated: 2 models (estimate)
+09:46:11.226549 [info ]: Cached model count updated: 2 models (accurate)
+09:46:11.226673 [info ]: Started scheduling
+09:46:11.226791 [info ]: Finished scheduling [  0.00s]
+09:46:11.226815 [debug]: Compilation - 0 nodes selected: {}
+09:46:11.226867 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:46:11.226898 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:46:11.226950 [info ]: Started scheduling
+09:46:11.227014 [info ]: Finished scheduling [  0.00s]
+09:46:11.233918 [info ]: Started building task graph
+09:46:11.233980 [info ]: Finished building task graph [  0.00s]
+09:46:11.242986 [info ]: Started scheduling
+09:46:11.243101 [info ]: Finished scheduling [  0.00s]
+09:46:11.243213 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [663ms]
+09:46:11.243297 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-31T09:46:12.423728Z | ca05a2f6-f16e-47b0-995b-9bb774df9eb5 ====================
+09:46:12.423862 [info ]: Started loading project
+09:46:12.424331 [info ]: Loading profiles.yml
+09:46:12.427195 [info ]: Finished loading project [  0.00s]
+09:46:12.450404 [info ]: Cached model count updated: 2 models (estimate)
+09:46:12.450431 [info ]: Cached model count updated: 2 models (accurate)
+09:46:12.450457 [info ]: Started scheduling
+09:46:12.450526 [info ]: Finished scheduling [  0.00s]
+09:46:12.450545 [debug]: Compilation - 4 nodes selected: {"model.dbt_custom.dim_orders_with_status", "model.dbt_custom.user_orders", "seed.dbt_custom.country_codes", "seed.dbt_custom.order_status_lookup"}
+09:46:12.452025 [info ]: Started building task graph
+09:46:12.452120 [info ]: Finished building task graph [  0.00s]
+09:46:12.460733 [info ]: Started rendering (4 nodes)
+09:46:12.460770 [info ]: Started seed main.order_status_lookup
+09:46:12.460784 [debug]: Started rendering seed main.order_status_lookup
+09:46:12.460815 [info ]: Started model main.user_orders
+09:46:12.460826 [debug]: Started rendering model main.user_orders
+09:46:12.460846 [info ]: Started model main.dim_orders_with_status
+09:46:12.460858 [debug]: Started rendering model main.dim_orders_with_status
+09:46:12.460871 [info ]: Started seed main.country_codes
+09:46:12.460884 [debug]: Started rendering seed main.country_codes
+09:46:12.461161 [debug]: Finished rendering [  0.00s] seed main.country_codes [success]
+09:46:12.461183 [info ]:  Succeeded seed  main.country_codes (table) [4 of 4 in 0.00s]
+09:46:12.461210 [debug]: Finished rendering [  0.00s] seed main.order_status_lookup [success]
+09:46:12.461222 [info ]:  Succeeded seed  main.order_status_lookup (table) [1 of 4 in 0.00s]
+09:46:12.462086 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:46:12.462239 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:46:12.462284 [debug]: Compiled SQL for node model.dbt_custom.dim_orders_with_status at target/.lsp/compiled/dbt_custom/models/dim_orders_with_status.sql
+09:46:12.462300 [info ]: Started analyzing (2 nodes)
+09:46:12.462312 [debug]: Started analyzing model main.user_orders
+09:46:12.462388 [debug]: Finished rendering [  0.00s] model main.dim_orders_with_status [success]
+09:46:12.462406 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+09:46:12.462425 [debug]: Started analyzing model main.dim_orders_with_status
+09:46:12.466127 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:46:12.466159 [info ]:  Succeeded model main.user_orders (view) [2 of 4 in 0.00s]
+09:46:12.467862 [debug]: Finished analyzing [  0.01s] model main.dim_orders_with_status [success]
+09:46:12.467889 [info ]: Finished analyzing [  0.01s] (2 nodes, 0 skipped, 0 errors)
+09:46:12.467899 [info ]:  Succeeded model main.dim_orders_with_status (table) [3 of 4 in 0.01s]
+09:46:12.474869 [info ]: Started scheduling
+09:46:12.474922 [info ]: Finished scheduling [  0.00s]
+09:46:12.474990 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [51ms]
+Processed: 2 models | 2 seeds
+Summary: 4 total | 4 success
+09:46:12.475109 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-31T09:46:30.473763Z | 8c706d6c-8d33-439c-9fdd-766667fd06a6 ====================
+09:46:30.473831 [info ]: Started loading project
+09:46:30.474128 [info ]: Loading profiles.yml
+09:46:30.476525 [info ]: Finished loading project [  0.00s]
+09:46:30.497095 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [23ms]
+09:46:30.497171 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-31T09:46:31.676976Z | aedd3d9c-51bd-4daa-b3d2-0035dd3769ec ====================
+09:46:31.677041 [info ]: Started loading project
+09:46:31.677416 [info ]: Loading profiles.yml
+09:46:31.680355 [info ]: Finished loading project [  0.00s]
+09:46:31.699654 [info ]: Cached model count updated: 2 models (estimate)
+09:46:31.699689 [info ]: Cached model count updated: 2 models (accurate)
+09:46:31.699715 [info ]: Started scheduling
+09:46:31.699773 [info ]: Finished scheduling [  0.00s]
+09:46:31.699787 [debug]: Compilation - 4 nodes selected: {"model.dbt_custom.dim_orders_with_status", "model.dbt_custom.user_orders", "seed.dbt_custom.country_codes", "seed.dbt_custom.order_status_lookup"}
+09:46:31.700690 [info ]: Started building task graph
+09:46:31.700734 [info ]: Finished building task graph [  0.00s]
+09:46:31.703251 [info ]: Started rendering (4 nodes)
+09:46:31.703305 [info ]: Started seed main.order_status_lookup
+09:46:31.703335 [debug]: Started rendering seed main.order_status_lookup
+09:46:31.703376 [info ]: Started model main.user_orders
+09:46:31.703386 [debug]: Started rendering model main.user_orders
+09:46:31.703399 [info ]: Started model main.dim_orders_with_status
+09:46:31.703408 [debug]: Started rendering model main.dim_orders_with_status
+09:46:31.703423 [info ]: Started seed main.country_codes
+09:46:31.703429 [debug]: Started rendering seed main.country_codes
+09:46:31.703498 [debug]: Finished rendering [  0.00s] seed main.order_status_lookup [success]
+09:46:31.703520 [info ]:  Succeeded seed  main.order_status_lookup (table) [1 of 4 in 0.00s]
+09:46:31.703550 [debug]: Finished rendering [  0.00s] seed main.country_codes [success]
+09:46:31.703559 [info ]:  Succeeded seed  main.country_codes (table) [4 of 4 in 0.00s]
+09:46:31.703909 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:46:31.703968 [debug]: Compiled SQL for node model.dbt_custom.dim_orders_with_status at target/.lsp/compiled/dbt_custom/models/dim_orders_with_status.sql
+09:46:31.704013 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:46:31.704041 [info ]: Started analyzing (2 nodes)
+09:46:31.704047 [debug]: Started analyzing model main.user_orders
+09:46:31.704066 [debug]: Finished rendering [  0.00s] model main.dim_orders_with_status [success]
+09:46:31.704073 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+09:46:31.704081 [debug]: Started analyzing model main.dim_orders_with_status
+09:46:31.704291 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:46:31.704303 [info ]:  Succeeded model main.user_orders (view) [2 of 4 in 0.00s]
+09:46:31.704945 [debug]: Finished analyzing [  0.00s] model main.dim_orders_with_status [success]
+09:46:31.704955 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+09:46:31.704961 [info ]:  Succeeded model main.dim_orders_with_status (table) [3 of 4 in 0.00s]
+09:46:31.714608 [info ]: Started scheduling
+09:46:31.714660 [info ]: Finished scheduling [  0.00s]
+09:46:31.714707 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [37ms]
+Processed: 2 models | 2 seeds
+Summary: 4 total | 4 success
+09:46:31.714788 [info ]: Cached model count updated: 2 models (accurate)

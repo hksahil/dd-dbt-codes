@@ -1,7 +1,7 @@
 version: 2
 
 # ========================================================
-# TEACHING TOPIC: dbt Semantic Layer
+# dbt Semantic Layer
 # 
 # 1. semantic_models: Connects to a physical table (ref('orders'))
 #    - entities: Join keys (order_id, user_id)

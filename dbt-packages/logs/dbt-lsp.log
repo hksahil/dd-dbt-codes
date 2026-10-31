@@ -1928,3 +1928,161 @@ Summary: 4 total | 4 success
 11:58:04.561203 [debug]: Ignoring unsupported LSP notification
 11:59:09.800986 [debug]: Ignoring unsupported LSP notification
 11:59:58.016061 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-31T09:46:41.248696Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-31T09:46:41.248878Z | 75fc2378-3f48-426b-baea-3329000a22d8 ====================
+09:46:41.248912 [info ]: Starting dbt LSP server
+09:46:41.248937 [info ]: Connecting to LSP client on port 8000
+09:46:41.249209 [info ]: Successfully connected to LSP client
+09:46:41.249278 [info ]: Creating LSP service...
+09:46:41.250818 [info ]: Creating LSP server...
+09:46:41.250836 [info ]: Starting LSP server...
+09:46:41.258465 [info ]: Loading profiles.yml
+==================== 2026-10-31T09:46:41.273565Z | 6fbbbb2a-5810-48e5-840b-dcb2fc2057a8 ====================
+09:46:41.273743 [info ]: Started loading project
+09:46:41.275199 [info ]: Loading profiles.yml
+09:46:41.640797 [info ]: Loading packages.yml
+09:46:41.644367 [debug]:    Started loading packages
+09:46:41.665092 [debug]:     Loaded [  0.02s] packages
+09:46:41.666378 [info ]: Finished loading project [  0.39s]
+09:46:41.667501 [info ]: Started parsing (39 nodes)
+09:46:41.847719 [debug]:    Started building model nodes
+09:46:41.847719 [debug]:    Started building model nodes
+09:46:41.847733 [debug]:    Started building model nodes
+09:46:41.847753 [debug]:    Started building model nodes
+09:46:41.847770 [debug]:   Finished [  0.00s] building model nodes
+09:46:41.847771 [debug]:   Finished [  0.00s] building model nodes
+09:46:41.847769 [debug]:   Finished [  0.00s] building model nodes
+09:46:41.847776 [debug]:   Finished [  0.00s] building model nodes
+09:46:41.848587 [debug]:    Started resolving data tests
+09:46:41.848682 [debug]:   Finished [  0.00s] resolving data tests
+09:46:41.848724 [debug]:    Started resolving data tests
+09:46:41.848810 [debug]:   Finished [  0.00s] resolving data tests
+09:46:41.848813 [debug]:    Started resolving data tests
+09:46:41.848840 [debug]:    Started resolving data tests
+09:46:41.848861 [debug]:   Finished [  0.00s] resolving data tests
+09:46:41.848868 [debug]:   Finished [  0.00s] resolving data tests
+09:46:41.851540 [debug]:    Started building model nodes
+09:46:41.851564 [debug]:   Finished [  0.00s] building model nodes
+09:46:41.851637 [debug]: Finished parsing dbt_packages/elementary/models/alerts_views.yml [  0.00s]
+09:46:41.852469 [debug]:    Started resolving data tests
+09:46:41.852630 [debug]:   Finished [  0.00s] resolving data tests
+09:46:41.854359 [debug]: Finished parsing dbt_packages/elementary/models/dbt_artifacts.yml [  0.00s]
+09:46:41.854857 [debug]: Finished parsing dbt_packages/elementary/models/elementary_tests.yml [  0.00s]
+09:46:41.856739 [debug]: Finished parsing dbt_packages/elementary/models/run_results.yml [  0.00s]
+09:46:41.864967 [debug]: Finished parsing dbt_packages/elementary/models/edr/alerts/alerts_anomaly_detection.sql [  0.00s]
+09:46:41.865507 [debug]: Finished parsing dbt_packages/elementary/models/edr/alerts/alerts_dbt_models.sql [  0.00s]
+09:46:41.865756 [debug]: Finished parsing dbt_packages/elementary/models/edr/alerts/alerts_dbt_source_freshness.sql [  0.00s]
+09:46:41.866114 [debug]: Finished parsing dbt_packages/elementary/models/edr/alerts/alerts_dbt_tests.sql [  0.00s]
+09:46:41.866439 [debug]: Finished parsing dbt_packages/elementary/models/edr/alerts/alerts_schema_changes.sql [  0.00s]
+09:46:41.866896 [debug]: Finished parsing dbt_packages/elementary/models/edr/data_monitoring/anomaly_detection/anomaly_threshold_sensitivity.sql [  0.00s]
+09:46:41.867408 [debug]: Finished parsing dbt_packages/elementary/models/edr/data_monitoring/anomaly_detection/metrics_anomaly_score.sql [  0.00s]
+09:46:41.868020 [debug]: Finished parsing dbt_packages/elementary/models/edr/data_monitoring/data_monitoring/data_monitoring_metrics.sql [  0.00s]
+09:46:41.868472 [debug]: Finished parsing dbt_packages/elementary/models/edr/data_monitoring/schema_changes/schema_columns_snapshot.sql [  0.00s]
+09:46:41.868765 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_artifacts_hashes.sql [  0.00s]
+09:46:41.869395 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_columns.sql [  0.00s]
+09:46:41.870717 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_exposures.sql [  0.00s]
+09:46:41.871173 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_groups.sql [  0.00s]
+09:46:41.872139 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_invocations.sql [  0.00s]
+09:46:41.873220 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_metrics.sql [  0.00s]
+09:46:41.874180 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_models.sql [  0.00s]
+09:46:41.875241 [warn ]: [PackageParsingCompatibility (dbt1065)]: Package `elementary` issued one or more compatibility warnings. To display all warnings associated with this package, run with `--show-all-deprecations`. (will error post preview)
+09:46:41.876253 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_run_results.sql [  0.00s]
+09:46:41.876872 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_seeds.sql [  0.00s]
+09:46:41.877856 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_snapshots.sql [  0.00s]
+09:46:41.879114 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_sources.sql [  0.00s]
+09:46:41.879947 [debug]: Finished parsing dbt_packages/elementary/models/edr/dbt_artifacts/dbt_tests.sql [  0.00s]
+09:46:41.880342 [debug]: Finished parsing dbt_packages/elementary/models/edr/run_results/dbt_source_freshness_results.sql [  0.00s]
+09:46:41.880621 [debug]: Finished parsing dbt_packages/elementary/models/edr/run_results/elementary_test_results.sql [  0.00s]
+09:46:41.880950 [debug]: Finished parsing dbt_packages/elementary/models/edr/run_results/job_run_results.sql [  0.00s]
+09:46:41.881374 [debug]: Finished parsing dbt_packages/elementary/models/edr/run_results/model_run_results.sql [  0.00s]
+09:46:41.881748 [debug]: Finished parsing dbt_packages/elementary/models/edr/run_results/seed_run_results.sql [  0.00s]
+09:46:41.882334 [debug]: Finished parsing dbt_packages/elementary/models/edr/run_results/snapshot_run_results.sql [  0.00s]
+09:46:41.883040 [debug]: Finished parsing dbt_packages/elementary/models/edr/run_results/test_result_rows.sql [  0.00s]
+09:46:41.883362 [debug]: Finished parsing dbt_packages/elementary/models/edr/system/metadata.sql [  0.00s]
+09:46:41.883772 [debug]: Finished parsing dbt_packages/elementary/models/edr/system/monitors_runs.sql [  0.00s]
+09:46:41.884434 [debug]:    Started building model nodes
+09:46:41.904568 [debug]:   Finished [  0.02s] building model nodes
+09:46:41.906032 [debug]:    Started resolving data tests
+09:46:41.906131 [debug]:   Finished [  0.00s] resolving data tests
+09:46:41.909756 [debug]: Finished parsing models/schema.yml [  0.00s]
+09:46:41.911133 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:46:41.917971 [debug]: Finished parsing models/01_dbt_utils.sql [  0.00s]
+09:46:41.919088 [debug]: Finished parsing models/02_great_expectations.sql [  0.00s]
+09:46:41.919915 [debug]:    Started building model nodes
+09:46:41.922406 [debug]:   Finished [  0.00s] building model nodes
+09:46:41.923345 [debug]:    Started resolving data tests
+09:46:41.923393 [debug]:   Finished [  0.00s] resolving data tests
+09:46:41.923553 [debug]: Finished parsing models/03_elementary.sql [  0.00s]
+09:46:41.927300 [debug]:    Started typechecking macros
+09:46:42.613389 [debug]:   Finished [  0.69s] typechecking macros
+09:46:42.619539 [info ]: Finished parsing [  0.95s] (39 nodes, 0 skipped, 0 errors)
+09:46:42.620225 [info ]: Cached model count updated: 3 models (estimate)
+09:46:42.620253 [info ]: Cached model count updated: 3 models (accurate)
+09:46:42.620346 [info ]: Started scheduling
+09:46:42.620461 [info ]: Finished scheduling [  0.00s]
+09:46:42.620481 [debug]: Compilation - 0 nodes selected: {}
+09:46:42.620526 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:46:42.620552 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:46:42.620615 [info ]: Started scheduling
+09:46:42.620687 [info ]: Finished scheduling [  0.00s]
+09:46:42.621515 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+09:46:43.116204 [info ]: Started building task graph
+09:46:43.116275 [info ]: Finished building task graph [  0.00s]
+09:46:43.125464 [info ]: Started on-run-start hooks (1 nodes)
+09:46:43.132522 [debug]: DuckDB driver resolved: duckdb 1.5.4
+09:46:43.175547 [info ]: Finished on-run-start hooks [  0.05s] (1 nodes, 0 skipped, 0 errors)
+09:46:43.201919 [info ]: Started scheduling
+09:46:43.201989 [info ]: Finished scheduling [  0.00s]
+09:46:43.202459 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+09:46:43.202459 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [1.9s]
+Processed: 1 hook
+Summary: 1 total | 1 success
+09:46:43.202748 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-31T09:46:44.383968Z | 585a032c-0a82-40d1-aabd-288d9d0cb98b ====================
+09:46:44.384036 [info ]: Started loading project
+09:46:44.384414 [info ]: Loading profiles.yml
+09:46:44.388632 [info ]: Finished loading project [  0.00s]
+09:46:44.441391 [info ]: Cached model count updated: 3 models (estimate)
+09:46:44.441418 [info ]: Cached model count updated: 3 models (accurate)
+09:46:44.441458 [info ]: Started scheduling
+09:46:44.441532 [info ]: Finished scheduling [  0.00s]
+09:46:44.441553 [debug]: Compilation - 3 nodes selected: {"model.dbt_packages.01_dbt_utils", "model.dbt_packages.02_great_expectations", "model.dbt_packages.03_elementary"}
+09:46:44.720340 [info ]: Started building task graph
+09:46:44.720439 [info ]: Finished building task graph [  0.00s]
+09:46:44.727818 [info ]: Started on-run-start hooks (1 nodes)
+09:46:44.750514 [info ]: Finished on-run-start hooks [  0.02s] (1 nodes, 0 skipped, 0 errors)
+09:46:44.750586 [info ]: Started rendering (3 nodes)
+09:46:44.750608 [info ]: Started model main.03_elementary
+09:46:44.750622 [debug]: Started rendering model main.03_elementary
+09:46:44.750658 [info ]: Started model main.02_great_expectations
+09:46:44.750666 [debug]: Started rendering model main.02_great_expectations
+09:46:44.750681 [info ]: Started model main.01_dbt_utils
+09:46:44.750688 [debug]: Started rendering model main.01_dbt_utils
+09:46:44.752517 [debug]: Compiled SQL for node model.dbt_packages.03_elementary at target/.lsp/compiled/dbt_packages/models/03_elementary.sql
+09:46:44.752540 [debug]: Compiled SQL for node model.dbt_packages.02_great_expectations at target/.lsp/compiled/dbt_packages/models/02_great_expectations.sql
+09:46:44.752542 [debug]: Compiled SQL for node model.dbt_packages.01_dbt_utils at target/.lsp/compiled/dbt_packages/models/01_dbt_utils.sql
+09:46:44.752649 [debug]: Finished rendering [  0.00s] model main.03_elementary [success]
+09:46:44.752685 [info ]: Started analyzing (3 nodes)
+09:46:44.752694 [debug]: Started analyzing model main.03_elementary
+09:46:44.752711 [debug]: Finished rendering [  0.00s] model main.02_great_expectations [success]
+09:46:44.752721 [debug]: Started analyzing model main.02_great_expectations
+09:46:44.752733 [debug]: Finished rendering [  0.00s] model main.01_dbt_utils [success]
+09:46:44.752740 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+09:46:44.752748 [debug]: Started analyzing model main.01_dbt_utils
+09:46:44.757390 [debug]: Finished analyzing [  0.00s] model main.03_elementary [success]
+09:46:44.757406 [info ]:  Succeeded model main.03_elementary (table) [1 of 3 in 0.01s]
+09:46:44.757428 [debug]: Finished analyzing [  0.00s] model main.02_great_expectations [success]
+09:46:44.757438 [info ]:  Succeeded model main.02_great_expectations (table) [2 of 3 in 0.01s]
+09:46:44.759300 [debug]: Finished analyzing [  0.01s] model main.01_dbt_utils [success]
+09:46:44.759315 [info ]: Finished analyzing [  0.01s] (3 nodes, 0 skipped, 0 errors)
+09:46:44.759323 [info ]:  Succeeded model main.01_dbt_utils (table) [3 of 3 in 0.01s]
+09:46:44.777726 [info ]: Started scheduling
+09:46:44.777788 [info ]: Finished scheduling [  0.00s]
+09:46:44.778461 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [394ms]
+Processed: 1 hook | 3 models
+Summary: 4 total | 4 success
+09:46:44.781864 [info ]: Cached model count updated: 3 models (accurate)

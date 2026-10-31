@@ -1,0 +1,16 @@
+name: 'dbt_custom'
+version: '1.0.0'
+profile: 'dbt_custom'
+model-paths: ['models']
+
+# 1. Variables (Default values at project level)
+vars:
+  min_order_amount: 10
+  start_date: '2023-01-01'
+  revenue_target: 1000000
+
+# 2. Run Hooks (Execute at project run level)
+on-run-start:
+  - "{{ log('=== Run started at ' ~ run_started_at ~ ' on target: ' ~ target.name ~ ' ===', info=True) }}"
+on-run-end:
+  - "{{ log('=== Run completed at ' ~ modules.datetime.datetime.now() ~ ' ===', info=True) }}"

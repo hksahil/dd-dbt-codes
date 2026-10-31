@@ -1,0 +1,125 @@
+==================== 2026-10-31T08:44:55.893777Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-31T08:44:55.897682Z | 3e9923b0-c8e1-4b86-a455-ccad665e48b8 ====================
+08:44:55.897906 [info ]: Starting dbt LSP server
+08:44:55.898108 [info ]: Connecting to LSP client on port 8000
+08:44:55.898448 [info ]: Successfully connected to LSP client
+08:44:55.898464 [info ]: Creating LSP service...
+08:44:55.902792 [info ]: Creating LSP server...
+08:44:55.902799 [info ]: Starting LSP server...
+08:44:55.957176 [info ]: Loading profiles.yml
+==================== 2026-10-31T08:44:56.044406Z | 12c90938-c69b-4a4a-91d7-e013440226c1 ====================
+08:44:56.045336 [info ]: Started loading project
+08:44:56.051378 [info ]: Loading profiles.yml
+08:44:56.206876 [debug]:    Started loading packages
+08:44:56.208939 [debug]:     Loaded [  0.00s] packages
+08:44:56.212151 [info ]: Finished loading project [  0.17s]
+08:44:56.214697 [info ]: Started parsing (5 nodes)
+08:44:56.253788 [debug]:    Started building model nodes
+08:44:56.253788 [debug]:    Started building model nodes
+08:44:56.253929 [debug]:   Finished [  0.00s] building model nodes
+08:44:56.253948 [debug]:   Finished [  0.00s] building model nodes
+08:44:56.254759 [debug]: Finished parsing models/sources.yml [  0.01s]
+08:44:56.255090 [debug]:    Started resolving data tests
+08:44:56.255091 [debug]:    Started resolving data tests
+08:44:56.255332 [debug]:   Finished [  0.00s] resolving data tests
+08:44:56.255333 [debug]:   Finished [  0.00s] resolving data tests
+08:44:56.269997 [debug]: Finished parsing snapshots/users_snapshot1.sql [  0.01s]
+08:44:56.275943 [debug]: Finished parsing models/dim_users_scd1.sql [  0.00s]
+08:44:56.276187 [debug]: Finished parsing models/dim_users_scd3.sql [  0.00s]
+08:44:56.276345 [debug]:    Started building model nodes
+08:44:56.277984 [debug]:   Finished [  0.00s] building model nodes
+08:44:56.278590 [debug]:    Started resolving data tests
+08:44:56.278604 [debug]:   Finished [  0.00s] resolving data tests
+08:44:56.279184 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+08:44:56.280238 [debug]:    Started typechecking macros
+08:44:56.366201 [debug]:   Finished [  0.09s] typechecking macros
+08:44:56.369142 [info ]: Finished parsing [  0.15s] (5 nodes, 0 skipped, 0 errors)
+08:44:56.371493 [info ]: Cached model count updated: 3 models (estimate)
+08:44:56.371509 [info ]: Cached model count updated: 3 models (accurate)
+08:44:56.372828 [info ]: Started scheduling
+08:44:56.374886 [info ]: Finished scheduling [  0.00s]
+08:44:56.374898 [debug]: Compilation - 2 nodes selected: {"model.dbt_custom.dim_users_scd3", "snapshot.dbt_custom.users_snapshot1"}
+08:44:56.375217 [info ]: Started scheduling
+08:44:56.375241 [info ]: Finished scheduling [  0.00s]
+08:44:56.377262 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "users" }) and interval: None
+08:44:56.386301 [info ]: Started building task graph
+08:44:56.387664 [info ]: Finished building task graph [  0.00s]
+08:44:56.409237 [info ]: Started rendering (2 nodes)
+08:44:56.409397 [info ]: Started model main.dim_users_scd3
+08:44:56.409417 [debug]: Started rendering model main.dim_users_scd3
+08:44:56.409459 [info ]: Started snapshot main.users_snapshot1
+08:44:56.409465 [debug]: Started rendering snapshot main.users_snapshot1
+08:44:56.411761 [debug]: Compiled SQL for node snapshot.dbt_custom.users_snapshot1 at target/.lsp/compiled/dbt_custom/snapshots/users_snapshot1.sql/users_snapshot1.sql
+08:44:56.411762 [debug]: Compiled SQL for node model.dbt_custom.dim_users_scd3 at target/.lsp/compiled/dbt_custom/models/dim_users_scd3.sql
+08:44:56.411881 [debug]: Finished rendering [  0.00s] model main.dim_users_scd3 [success]
+08:44:56.412346 [info ]: Started analyzing (2 nodes)
+08:44:56.412484 [debug]: Started analyzing model main.dim_users_scd3
+08:44:56.412676 [debug]: Finished rendering [  0.00s] snapshot main.users_snapshot1 [success]
+08:44:56.412682 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+08:44:56.412705 [debug]: Started analyzing snapshot main.users_snapshot1
+08:44:56.425538 [debug]: Finished analyzing [  0.01s] model main.dim_users_scd3 [success]
+08:44:56.425546 [info ]:  Succeeded model main.dim_users_scd3 (view) [1 of 2 in 0.01s]
+08:44:56.425560 [debug]: Finished analyzing [  0.01s] snapshot main.users_snapshot1 [success]
+08:44:56.425566 [info ]: Finished analyzing [  0.01s] (2 nodes, 0 skipped, 0 errors)
+08:44:56.425571 [info ]:  Succeeded snapshot main.users_snapshot1 (snapshot) [2 of 2 in 0.01s]
+08:44:56.433058 [info ]: Started scheduling
+08:44:56.433079 [info ]: Finished scheduling [  0.00s]
+08:44:56.433332 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [388ms]
+Processed: 1 model | 1 snapshot
+Summary: 2 total | 2 success
+08:44:56.433385 [info ]: Cached model count updated: 3 models (accurate)
+==================== 2026-10-31T08:44:57.611651Z | 2498ff4c-cba9-4200-b0c6-feaafb29307a ====================
+08:44:57.611753 [info ]: Started loading project
+08:44:57.612271 [info ]: Loading profiles.yml
+08:44:57.614987 [info ]: Finished loading project [  0.00s]
+08:44:57.637638 [info ]: Cached model count updated: 3 models (estimate)
+08:44:57.637675 [info ]: Cached model count updated: 3 models (accurate)
+08:44:57.637715 [info ]: Started scheduling
+08:44:57.637807 [info ]: Finished scheduling [  0.00s]
+08:44:57.637827 [debug]: Compilation - 4 nodes selected: {"model.dbt_custom.dim_users_scd1", "model.dbt_custom.dim_users_scd3", "model.dbt_custom.user_orders", "snapshot.dbt_custom.users_snapshot1"}
+08:44:57.639403 [info ]: Started building task graph
+08:44:57.639469 [info ]: Finished building task graph [  0.00s]
+08:44:57.640967 [info ]: Started rendering (4 nodes)
+08:44:57.640985 [info ]: Started model main.user_orders
+08:44:57.640999 [debug]: Started rendering model main.user_orders
+08:44:57.641028 [info ]: Started model main.dim_users_scd3
+08:44:57.641037 [debug]: Started rendering model main.dim_users_scd3
+08:44:57.641054 [info ]: Started snapshot main.users_snapshot1
+08:44:57.641063 [debug]: Started rendering snapshot main.users_snapshot1
+08:44:57.641081 [info ]: Started model main.dim_users_scd1
+08:44:57.641088 [debug]: Started rendering model main.dim_users_scd1
+08:44:57.641316 [debug]: Compiled SQL for node model.dbt_custom.dim_users_scd3 at target/.lsp/compiled/dbt_custom/models/dim_users_scd3.sql
+08:44:57.641396 [debug]: Compiled SQL for node snapshot.dbt_custom.users_snapshot1 at target/.lsp/compiled/dbt_custom/snapshots/users_snapshot1.sql/users_snapshot1.sql
+08:44:57.641446 [debug]: Finished rendering [  0.00s] model main.dim_users_scd3 [success]
+08:44:57.641500 [info ]: Started analyzing (4 nodes)
+08:44:57.641511 [debug]: Started analyzing model main.dim_users_scd3
+08:44:57.641534 [debug]: Finished rendering [  0.00s] snapshot main.users_snapshot1 [success]
+08:44:57.641564 [debug]: Started analyzing snapshot main.users_snapshot1
+08:44:57.641893 [debug]: Finished analyzing [  0.00s] snapshot main.users_snapshot1 [success]
+08:44:57.641905 [info ]:  Succeeded snapshot main.users_snapshot1 (snapshot) [3 of 4 in 0.00s]
+08:44:57.642154 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+08:44:57.642209 [debug]: Finished analyzing [  0.00s] model main.dim_users_scd3 [success]
+08:44:57.642221 [info ]:  Succeeded model main.dim_users_scd3 (view) [2 of 4 in 0.00s]
+08:44:57.642239 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+08:44:57.642251 [debug]: Started analyzing model main.user_orders
+08:44:57.642341 [debug]: Compiled SQL for node model.dbt_custom.dim_users_scd1 at target/.lsp/compiled/dbt_custom/models/dim_users_scd1.sql
+08:44:57.642416 [debug]: Finished rendering [  0.00s] model main.dim_users_scd1 [success]
+08:44:57.642427 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+08:44:57.642437 [debug]: Started analyzing model main.dim_users_scd1
+08:44:57.642534 [debug]: Finished analyzing [  0.00s] model main.dim_users_scd1 [success]
+08:44:57.642545 [info ]:  Succeeded model main.dim_users_scd1 (table) [4 of 4 in 0.00s]
+08:44:57.642639 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+08:44:57.642649 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+08:44:57.642657 [info ]:  Succeeded model main.user_orders (view) [1 of 4 in 0.00s]
+08:44:57.646166 [info ]: Started scheduling
+08:44:57.646192 [info ]: Finished scheduling [  0.00s]
+08:44:57.646239 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [34ms]
+Processed: 3 models | 1 snapshot
+Summary: 4 total | 4 success
+08:44:57.646311 [info ]: Cached model count updated: 3 models (accurate)
+08:44:59.901114 [debug]: Ignoring unsupported LSP notification
+08:44:59.985120 [debug]: Ignoring unsupported LSP notification

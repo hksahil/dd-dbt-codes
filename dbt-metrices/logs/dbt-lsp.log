@@ -985,3 +985,347 @@ Summary: 1 total | 1 success
 11:58:04.561083 [debug]: Ignoring unsupported LSP notification
 11:59:09.800344 [debug]: Ignoring unsupported LSP notification
 11:59:58.021153 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-31T08:45:23.880657Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-31T08:45:23.880735Z | 8a6b0d53-651e-483b-97ba-9f72d3a83db6 ====================
+08:45:23.880745 [info ]: Starting dbt LSP server
+08:45:23.880756 [info ]: Connecting to LSP client on port 8000
+08:45:23.880887 [info ]: Successfully connected to LSP client
+08:45:23.880897 [info ]: Creating LSP service...
+08:45:23.881533 [info ]: Creating LSP server...
+08:45:23.881540 [info ]: Starting LSP server...
+08:45:23.887083 [info ]: Loading profiles.yml
+==================== 2026-10-31T08:45:23.905736Z | 9cc61a52-2cff-4fdb-8266-fc6fd2717b8d ====================
+08:45:23.905787 [info ]: Started loading project
+08:45:23.906185 [info ]: Loading profiles.yml
+08:45:24.043706 [debug]:    Started loading packages
+08:45:24.043972 [debug]:     Loaded [  0.00s] packages
+08:45:24.044413 [info ]: Finished loading project [  0.14s]
+08:45:24.044560 [info ]: Started parsing (3 nodes)
+08:45:24.059935 [debug]:    Started building model nodes
+08:45:24.059954 [debug]:   Finished [  0.00s] building model nodes
+08:45:24.059952 [debug]:    Started building model nodes
+08:45:24.059967 [debug]:   Finished [  0.00s] building model nodes
+08:45:24.060253 [debug]:    Started resolving data tests
+08:45:24.060276 [debug]:   Finished [  0.00s] resolving data tests
+08:45:24.060413 [debug]:    Started resolving data tests
+08:45:24.060427 [debug]:   Finished [  0.00s] resolving data tests
+08:45:24.060852 [warn ]: [SemanticModelDeprecated (dbt1157)]: The package 'dbt_metrics' defines semantic models and metrics using the legacy YAML. Please migrate to the new YAML to use the semantic layer with dbt.
+08:45:24.061830 [debug]: Finished parsing models/semantic_layer.yml [  0.00s]
+08:45:24.062112 [debug]: Finished parsing models/sources.yml [  0.00s]
+08:45:24.064494 [debug]:    Started building model nodes
+08:45:24.064874 [debug]:   Finished [  0.00s] building model nodes
+08:45:24.065144 [debug]:    Started resolving data tests
+08:45:24.065160 [debug]:   Finished [  0.00s] resolving data tests
+08:45:24.065240 [debug]: Finished parsing models/orders.sql [  0.00s]
+08:45:24.065614 [debug]:    Started typechecking macros
+08:45:24.154984 [debug]:   Finished [  0.09s] typechecking macros
+08:45:24.155342 [info ]: Finished parsing [  0.11s] (3 nodes, 0 skipped, 0 errors)
+08:45:24.155445 [info ]: Cached model count updated: 1 models (estimate)
+08:45:24.155452 [info ]: Cached model count updated: 1 models (accurate)
+08:45:24.155478 [info ]: Started scheduling
+08:45:24.155530 [info ]: Finished scheduling [  0.00s]
+08:45:24.155536 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+08:45:24.155558 [info ]: Started scheduling
+08:45:24.155569 [info ]: Finished scheduling [  0.00s]
+08:45:24.155614 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+08:45:24.156117 [info ]: Started building task graph
+08:45:24.156161 [info ]: Finished building task graph [  0.00s]
+08:45:24.157472 [info ]: Started rendering (1 nodes)
+08:45:24.157481 [info ]: Started model main.orders
+08:45:24.157490 [debug]: Started rendering model main.orders
+08:45:24.158175 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+08:45:24.158233 [debug]: Finished rendering [  0.00s] model main.orders [success]
+08:45:24.158241 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:45:24.158256 [info ]: Started analyzing (1 nodes)
+08:45:24.158261 [debug]: Started analyzing model main.orders
+08:45:24.161536 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+08:45:24.161569 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:45:24.161578 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+08:45:24.164354 [info ]: Started scheduling
+08:45:24.164381 [info ]: Finished scheduling [  0.00s]
+08:45:24.164447 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [258ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:45:24.164497 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T08:45:24.181718Z | ae72e0a5-31c4-433d-830d-c35e393d3e05 ====================
+08:45:24.181746 [info ]: Started loading project
+08:45:24.181874 [info ]: Loading profiles.yml
+08:45:24.182713 [info ]: Finished loading project [  0.00s]
+08:45:24.193995 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [12ms]
+08:45:24.194047 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T08:45:25.374844Z | 4e4231fd-6d23-4e45-bf78-87d02378504e ====================
+08:45:25.374879 [info ]: Started loading project
+08:45:25.375084 [info ]: Loading profiles.yml
+08:45:25.376750 [info ]: Finished loading project [  0.00s]
+08:45:25.392321 [info ]: Cached model count updated: 1 models (estimate)
+08:45:25.392342 [info ]: Cached model count updated: 1 models (accurate)
+08:45:25.392360 [info ]: Started scheduling
+08:45:25.392398 [info ]: Finished scheduling [  0.00s]
+08:45:25.392408 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+08:45:25.393008 [info ]: Started building task graph
+08:45:25.393035 [info ]: Finished building task graph [  0.00s]
+08:45:25.394241 [info ]: Started rendering (1 nodes)
+08:45:25.394251 [info ]: Started model main.orders
+08:45:25.394260 [debug]: Started rendering model main.orders
+08:45:25.394426 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+08:45:25.394475 [debug]: Finished rendering [  0.00s] model main.orders [success]
+08:45:25.394487 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:45:25.394497 [info ]: Started analyzing (1 nodes)
+08:45:25.394503 [debug]: Started analyzing model main.orders
+08:45:25.394674 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+08:45:25.394682 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:45:25.394687 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+08:45:25.397252 [info ]: Started scheduling
+08:45:25.397279 [info ]: Finished scheduling [  0.00s]
+08:45:25.398021 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [23ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:45:25.398076 [info ]: Cached model count updated: 1 models (accurate)
+08:45:39.200507 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+08:45:39.205681 [info ]:    Started formatting models/orders.sql
+08:45:39.235748 [info ]:  Formatted [  0.03s] models/orders.sql
+==================== 2026-10-31T08:45:39.254213Z | 29339828-7d13-47d4-8c16-4385198c9fd1 ====================
+08:45:39.254252 [info ]: Started loading project
+08:45:39.254385 [info ]: Loading profiles.yml
+08:45:39.259007 [info ]: Started parsing (1 nodes)
+08:45:39.278773 [info ]: Finished loading project [  0.02s]
+08:45:39.278932 [debug]:    Started building model nodes
+08:45:39.278940 [debug]:   Finished [  0.00s] building model nodes
+08:45:39.278943 [debug]:    Started building model nodes
+08:45:39.278948 [debug]:   Finished [  0.00s] building model nodes
+08:45:39.279184 [debug]:    Started resolving data tests
+08:45:39.279184 [debug]:    Started resolving data tests
+08:45:39.279202 [debug]:   Finished [  0.00s] resolving data tests
+08:45:39.279202 [debug]:   Finished [  0.00s] resolving data tests
+08:45:39.279307 [debug]:    Started building model nodes
+08:45:39.279565 [debug]:   Finished [  0.00s] building model nodes
+08:45:39.279800 [debug]:    Started resolving data tests
+08:45:39.279811 [debug]:   Finished [  0.00s] resolving data tests
+08:45:39.279832 [debug]: Finished parsing models/orders.sql [  0.00s]
+08:45:39.280115 [debug]:    Started typechecking macros
+08:45:39.362540 [debug]:   Finished [  0.08s] typechecking macros
+08:45:39.363221 [info ]: Finished parsing [  0.10s] (1 nodes, 0 skipped, 0 errors)
+08:45:39.364114 [info ]: Cached model count updated: 1 models (estimate)
+08:45:39.364121 [info ]: Cached model count updated: 1 models (accurate)
+08:45:39.364134 [info ]: Started scheduling
+08:45:39.364163 [info ]: Finished scheduling [  0.00s]
+08:45:39.364168 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+08:45:39.364721 [info ]: Started building task graph
+08:45:39.364742 [info ]: Finished building task graph [  0.00s]
+08:45:39.365573 [info ]: Started rendering (1 nodes)
+08:45:39.365581 [info ]: Started model main.orders
+08:45:39.365588 [debug]: Started rendering model main.orders
+08:45:39.365959 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+08:45:39.366006 [debug]: Finished rendering [  0.00s] model main.orders [success]
+08:45:39.366012 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:45:39.366020 [info ]: Started analyzing (1 nodes)
+08:45:39.366024 [debug]: Started analyzing model main.orders
+08:45:39.366125 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+08:45:39.366130 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:45:39.366134 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+08:45:39.369099 [info ]: Started scheduling
+08:45:39.369122 [info ]: Finished scheduling [  0.00s]
+08:45:39.370262 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [116ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:45:39.370309 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T08:45:40.549746Z | df8f810f-1a95-4aa5-85d6-5a62eb32c297 ====================
+08:45:40.549795 [info ]: Started loading project
+08:45:40.549973 [info ]: Loading profiles.yml
+08:45:40.551240 [info ]: Finished loading project [  0.00s]
+08:45:40.563209 [info ]: Cached model count updated: 1 models (estimate)
+08:45:40.563226 [info ]: Cached model count updated: 1 models (accurate)
+08:45:40.563242 [info ]: Started scheduling
+08:45:40.563277 [info ]: Finished scheduling [  0.00s]
+08:45:40.563287 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+08:45:40.563926 [info ]: Started building task graph
+08:45:40.563951 [info ]: Finished building task graph [  0.00s]
+08:45:40.564944 [info ]: Started rendering (1 nodes)
+08:45:40.564956 [info ]: Started model main.orders
+08:45:40.564964 [debug]: Started rendering model main.orders
+08:45:40.565123 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+08:45:40.565185 [debug]: Finished rendering [  0.00s] model main.orders [success]
+08:45:40.565195 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:45:40.565205 [info ]: Started analyzing (1 nodes)
+08:45:40.565209 [debug]: Started analyzing model main.orders
+08:45:40.565373 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+08:45:40.565380 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:45:40.565383 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+08:45:40.568960 [info ]: Started scheduling
+08:45:40.568984 [info ]: Finished scheduling [  0.00s]
+08:45:40.569017 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [19ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:45:40.569071 [info ]: Cached model count updated: 1 models (accurate)
+08:46:10.917741 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. dbt lint/format only supports SQLFluff templater 'dbt'. Continuing anyway.
+==================== 2026-10-31T08:46:10.974655Z | c38ade77-a5eb-4cb0-9d83-8d965b34dfc7 ====================
+08:46:10.975965 [info ]: Started loading project
+08:46:10.977173 [info ]: Loading profiles.yml
+08:46:11.006510 [info ]: Started parsing (1 nodes)
+08:46:11.059578 [info ]: Finished loading project [  0.08s]
+08:46:11.059807 [warn ]: [SemanticModelDeprecated (dbt1157)]: The package 'dbt_metrics' defines semantic models and metrics using the legacy YAML. Please migrate to the new YAML to use the semantic layer with dbt.
+08:46:11.059841 [debug]:    Started building model nodes
+08:46:11.059847 [debug]: Finished parsing models/semantic_layer.yml [  0.00s]
+08:46:11.059852 [debug]:   Finished [  0.00s] building model nodes
+08:46:11.059881 [debug]:    Started building model nodes
+08:46:11.059890 [debug]:   Finished [  0.00s] building model nodes
+08:46:11.059970 [debug]:    Started building model nodes
+08:46:11.059976 [debug]:   Finished [  0.00s] building model nodes
+08:46:11.060213 [debug]:    Started resolving data tests
+08:46:11.060227 [debug]:   Finished [  0.00s] resolving data tests
+08:46:11.060266 [debug]:    Started resolving data tests
+08:46:11.060281 [debug]:   Finished [  0.00s] resolving data tests
+08:46:11.060348 [debug]:    Started resolving data tests
+08:46:11.060383 [debug]:   Finished [  0.00s] resolving data tests
+08:46:11.060988 [debug]:    Started typechecking macros
+08:46:11.168568 [debug]:   Finished [  0.11s] typechecking macros
+08:46:11.169023 [info ]: Finished parsing [  0.16s] (1 nodes, 0 skipped, 0 errors)
+08:46:11.170026 [info ]: Cached model count updated: 1 models (estimate)
+08:46:11.170037 [info ]: Cached model count updated: 1 models (accurate)
+08:46:11.170059 [info ]: Started scheduling
+08:46:11.170078 [info ]: Finished scheduling [  0.00s]
+08:46:11.170105 [debug]: Compilation - 0 nodes selected: {}
+08:46:11.170128 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:46:11.170139 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:46:11.170593 [info ]: Started building task graph
+08:46:11.170603 [info ]: Finished building task graph [  0.00s]
+08:46:11.173927 [info ]: Started scheduling
+08:46:11.173942 [info ]: Finished scheduling [  0.00s]
+08:46:11.174271 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [199ms]
+08:46:11.174311 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T08:46:12.354974Z | f473865d-f469-4ae3-8307-d6b4e68cf39d ====================
+08:46:12.355075 [info ]: Started loading project
+08:46:12.355466 [info ]: Loading profiles.yml
+08:46:12.359023 [info ]: Finished loading project [  0.00s]
+08:46:12.381736 [info ]: Cached model count updated: 1 models (estimate)
+08:46:12.381782 [info ]: Cached model count updated: 1 models (accurate)
+08:46:12.381814 [info ]: Started scheduling
+08:46:12.381879 [info ]: Finished scheduling [  0.00s]
+08:46:12.381897 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+08:46:12.382980 [info ]: Started building task graph
+08:46:12.383036 [info ]: Finished building task graph [  0.00s]
+08:46:12.384837 [info ]: Started rendering (1 nodes)
+08:46:12.384853 [info ]: Started model main.orders
+08:46:12.384866 [debug]: Started rendering model main.orders
+08:46:12.385581 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+08:46:12.385682 [debug]: Finished rendering [  0.00s] model main.orders [success]
+08:46:12.385697 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:46:12.385713 [info ]: Started analyzing (1 nodes)
+08:46:12.385720 [debug]: Started analyzing model main.orders
+08:46:12.386332 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+08:46:12.386345 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:46:12.386351 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+08:46:12.390780 [info ]: Started scheduling
+08:46:12.390826 [info ]: Finished scheduling [  0.00s]
+08:46:12.390918 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [35ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:46:12.391025 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T09:08:08.332221Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-31T09:08:08.332412Z | 524d0c5c-7565-4a7b-9786-5afd6096bad6 ====================
+09:08:08.332426 [info ]: Starting dbt LSP server
+09:08:08.332469 [info ]: Connecting to LSP client on port 8000
+09:08:08.332697 [info ]: Successfully connected to LSP client
+09:08:08.332713 [info ]: Creating LSP service...
+09:08:08.333963 [info ]: Creating LSP server...
+09:08:08.333980 [info ]: Starting LSP server...
+09:08:08.340587 [info ]: Loading profiles.yml
+==================== 2026-10-31T09:08:08.351382Z | a5a4d8ac-bd6e-4257-814a-ce7c272da53d ====================
+09:08:08.351424 [info ]: Started loading project
+09:08:08.351599 [info ]: Loading profiles.yml
+09:08:08.463276 [debug]:    Started loading packages
+09:08:08.463535 [debug]:     Loaded [  0.00s] packages
+09:08:08.463944 [info ]: Finished loading project [  0.11s]
+09:08:08.464095 [info ]: Started parsing (3 nodes)
+09:08:08.479782 [debug]:    Started building model nodes
+09:08:08.479791 [debug]:    Started building model nodes
+09:08:08.479798 [debug]:   Finished [  0.00s] building model nodes
+09:08:08.479798 [debug]:   Finished [  0.00s] building model nodes
+09:08:08.480081 [debug]:    Started resolving data tests
+09:08:08.480081 [debug]:    Started resolving data tests
+09:08:08.480107 [debug]:   Finished [  0.00s] resolving data tests
+09:08:08.480125 [debug]:   Finished [  0.00s] resolving data tests
+09:08:08.486522 [warn ]: [SemanticModelDeprecated (dbt1157)]: The package 'dbt_metrics' defines semantic models and metrics using the legacy YAML. Please migrate to the new YAML to use the semantic layer with dbt.
+09:08:08.486585 [debug]: Finished parsing models/semantic_layer.yml [  0.01s]
+09:08:08.487196 [debug]: Finished parsing models/sources.yml [  0.00s]
+09:08:08.494111 [debug]:    Started building model nodes
+09:08:08.494812 [debug]:   Finished [  0.00s] building model nodes
+09:08:08.495086 [debug]:    Started resolving data tests
+09:08:08.495100 [debug]:   Finished [  0.00s] resolving data tests
+09:08:08.495150 [debug]: Finished parsing models/orders.sql [  0.01s]
+09:08:08.495657 [debug]:    Started typechecking macros
+09:08:08.584548 [debug]:   Finished [  0.09s] typechecking macros
+09:08:08.585185 [info ]: Finished parsing [  0.12s] (3 nodes, 0 skipped, 0 errors)
+09:08:08.585324 [info ]: Cached model count updated: 1 models (estimate)
+09:08:08.585332 [info ]: Cached model count updated: 1 models (accurate)
+09:08:08.585367 [info ]: Started scheduling
+09:08:08.585430 [info ]: Finished scheduling [  0.00s]
+09:08:08.585436 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+09:08:08.585459 [info ]: Started scheduling
+09:08:08.585473 [info ]: Finished scheduling [  0.00s]
+09:08:08.585963 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dev", schema: "main", table: "orders" }) and interval: None
+09:08:08.587052 [info ]: Started building task graph
+09:08:08.587100 [info ]: Finished building task graph [  0.00s]
+09:08:08.588466 [info ]: Started rendering (1 nodes)
+09:08:08.588477 [info ]: Started model main.orders
+09:08:08.588485 [debug]: Started rendering model main.orders
+09:08:08.590180 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+09:08:08.590249 [debug]: Finished rendering [  0.00s] model main.orders [success]
+09:08:08.590257 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:08:08.590272 [info ]: Started analyzing (1 nodes)
+09:08:08.590277 [debug]: Started analyzing model main.orders
+09:08:08.594649 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+09:08:08.594685 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:08:08.594690 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.01s]
+09:08:08.597182 [info ]: Started scheduling
+09:08:08.597203 [info ]: Finished scheduling [  0.00s]
+09:08:08.597256 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [245ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:08:08.597302 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T09:08:09.776730Z | 5894f0e5-e8e2-4757-9d68-9c5aa36068fb ====================
+09:08:09.776773 [info ]: Started loading project
+09:08:09.777005 [info ]: Loading profiles.yml
+09:08:09.778818 [info ]: Finished loading project [  0.00s]
+09:08:09.795318 [info ]: Cached model count updated: 1 models (estimate)
+09:08:09.795338 [info ]: Cached model count updated: 1 models (accurate)
+09:08:09.795358 [info ]: Started scheduling
+09:08:09.795397 [info ]: Finished scheduling [  0.00s]
+09:08:09.795410 [debug]: Compilation - 1 nodes selected: {"model.dbt_metrics.orders"}
+09:08:09.796094 [info ]: Started building task graph
+09:08:09.796122 [info ]: Finished building task graph [  0.00s]
+09:08:09.797330 [info ]: Started rendering (1 nodes)
+09:08:09.797340 [info ]: Started model main.orders
+09:08:09.797348 [debug]: Started rendering model main.orders
+09:08:09.797501 [debug]: Compiled SQL for node model.dbt_metrics.orders at target/.lsp/compiled/dbt_metrics/models/orders.sql
+09:08:09.797543 [debug]: Finished rendering [  0.00s] model main.orders [success]
+09:08:09.797554 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:08:09.797565 [info ]: Started analyzing (1 nodes)
+09:08:09.797570 [debug]: Started analyzing model main.orders
+09:08:09.797758 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+09:08:09.797764 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:08:09.797768 [info ]:  Succeeded model main.orders (table) [1 of 1 in 0.00s]
+09:08:09.801010 [info ]: Started scheduling
+09:08:09.801032 [info ]: Finished scheduling [  0.00s]
+09:08:09.801086 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [24ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:08:09.801171 [info ]: Cached model count updated: 1 models (accurate)

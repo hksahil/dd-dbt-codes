@@ -1,0 +1,218 @@
+==================== 2026-10-31T08:52:04.993379Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-31T08:52:04.993465Z | 3a6f8257-d979-4f6d-bbd1-c4732f3ee9ca ====================
+08:52:04.993475 [info ]: Starting dbt LSP server
+08:52:04.993486 [info ]: Connecting to LSP client on port 8000
+08:52:04.993623 [info ]: Successfully connected to LSP client
+08:52:04.993675 [info ]: Creating LSP service...
+08:52:04.994671 [info ]: Creating LSP server...
+08:52:04.994676 [info ]: Starting LSP server...
+08:52:05.002936 [info ]: Loading profiles.yml
+==================== 2026-10-31T08:52:05.019841Z | 51d632b3-5c52-45e1-b5e8-ebafd6cb9603 ====================
+08:52:05.019901 [info ]: Started loading project
+08:52:05.020862 [info ]: Loading profiles.yml
+08:52:05.157026 [debug]:    Started loading packages
+08:52:05.157263 [debug]:     Loaded [  0.00s] packages
+08:52:05.157669 [info ]: Finished loading project [  0.14s]
+08:52:05.157822 [info ]: Started parsing (1 nodes)
+08:52:05.172603 [debug]:    Started building model nodes
+08:52:05.172620 [debug]:   Finished [  0.00s] building model nodes
+08:52:05.172665 [debug]:    Started building model nodes
+08:52:05.172673 [debug]:   Finished [  0.00s] building model nodes
+08:52:05.172883 [debug]:    Started resolving data tests
+08:52:05.172902 [debug]:   Finished [  0.00s] resolving data tests
+08:52:05.172937 [debug]:    Started resolving data tests
+08:52:05.172949 [debug]:   Finished [  0.00s] resolving data tests
+08:52:05.173493 [debug]:    Started building model nodes
+08:52:05.173876 [debug]:   Finished [  0.00s] building model nodes
+08:52:05.174128 [debug]:    Started resolving data tests
+08:52:05.174139 [debug]:   Finished [  0.00s] resolving data tests
+08:52:05.174176 [debug]: Finished parsing models/user_orders.sql [  0.00s]
+08:52:05.174469 [debug]:    Started typechecking macros
+08:52:05.259720 [debug]:   Finished [  0.09s] typechecking macros
+08:52:05.260181 [info ]: Finished parsing [  0.10s] (1 nodes, 0 skipped, 0 errors)
+08:52:05.260285 [info ]: Cached model count updated: 1 models (estimate)
+08:52:05.260292 [info ]: Cached model count updated: 1 models (accurate)
+08:52:05.260317 [info ]: Started scheduling
+08:52:05.260354 [info ]: Finished scheduling [  0.00s]
+08:52:05.260359 [debug]: Compilation - 0 nodes selected: {}
+08:52:05.260375 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:52:05.260384 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:52:05.260559 [info ]: Started scheduling
+08:52:05.260579 [info ]: Finished scheduling [  0.00s]
+08:52:05.261627 [info ]: Started building task graph
+08:52:05.261646 [info ]: Finished building task graph [  0.00s]
+08:52:05.264898 [info ]: Started scheduling
+08:52:05.264910 [info ]: Finished scheduling [  0.00s]
+08:52:05.264962 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [245ms]
+08:52:05.265001 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T08:52:06.444832Z | 5afaf552-a738-4bcd-8db4-bff35e35adf9 ====================
+08:52:06.444867 [info ]: Started loading project
+08:52:06.445042 [info ]: Loading profiles.yml
+08:52:06.446188 [info ]: Finished loading project [  0.00s]
+08:52:06.457715 [info ]: Cached model count updated: 1 models (estimate)
+08:52:06.457726 [info ]: Cached model count updated: 1 models (accurate)
+08:52:06.457738 [info ]: Started scheduling
+08:52:06.457761 [info ]: Finished scheduling [  0.00s]
+08:52:06.457770 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+08:52:06.458258 [info ]: Started building task graph
+08:52:06.458294 [info ]: Finished building task graph [  0.00s]
+08:52:06.458862 [info ]: Started rendering (1 nodes)
+08:52:06.458873 [info ]: Started model main.user_orders
+08:52:06.458880 [debug]: Started rendering model main.user_orders
+08:52:06.459531 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+08:52:06.459599 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+08:52:06.459607 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:52:06.459625 [info ]: Started analyzing (1 nodes)
+08:52:06.459631 [debug]: Started analyzing model main.user_orders
+08:52:06.465251 [debug]: Finished analyzing [  0.01s] model main.user_orders [success]
+08:52:06.465260 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+08:52:06.465265 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.01s]
+08:52:06.467402 [info ]: Started scheduling
+08:52:06.467420 [info ]: Finished scheduling [  0.00s]
+08:52:06.467448 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [22ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:52:06.467495 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T08:52:11.307071Z | 4db69d0c-03eb-41de-953b-03c3fb462b1a ====================
+08:52:11.307107 [info ]: Started loading project
+08:52:11.307278 [info ]: Loading profiles.yml
+08:52:11.308429 [info ]: Finished loading project [  0.00s]
+08:52:11.322379 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [15ms]
+08:52:11.322419 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T08:52:12.503427Z | 6cab9876-c21a-4e91-a895-d6ad829ff618 ====================
+08:52:12.503558 [info ]: Started loading project
+08:52:12.504001 [info ]: Loading profiles.yml
+08:52:12.506152 [info ]: Finished loading project [  0.00s]
+08:52:12.524140 [info ]: Cached model count updated: 1 models (estimate)
+08:52:12.524161 [info ]: Cached model count updated: 1 models (accurate)
+08:52:12.524179 [info ]: Started scheduling
+08:52:12.524207 [info ]: Finished scheduling [  0.00s]
+08:52:12.524220 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+08:52:12.524867 [info ]: Started building task graph
+08:52:12.524892 [info ]: Finished building task graph [  0.00s]
+08:52:12.525649 [info ]: Started rendering (1 nodes)
+08:52:12.525660 [info ]: Started model main.user_orders
+08:52:12.525670 [debug]: Started rendering model main.user_orders
+08:52:12.525828 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+08:52:12.525871 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+08:52:12.525881 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:52:12.525893 [info ]: Started analyzing (1 nodes)
+08:52:12.525897 [debug]: Started analyzing model main.user_orders
+08:52:12.526491 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+08:52:12.526500 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+08:52:12.526504 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.00s]
+08:52:12.529071 [info ]: Started scheduling
+08:52:12.529085 [info ]: Finished scheduling [  0.00s]
+08:52:12.529105 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [25ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+08:52:12.529142 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T09:03:48.946405Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-31T09:03:48.950146Z | 6ec993a6-26c4-4764-bb69-3a0f6dc2456c ====================
+09:03:48.950779 [info ]: Starting dbt LSP server
+09:03:48.951365 [info ]: Connecting to LSP client on port 8000
+09:03:48.951950 [info ]: Successfully connected to LSP client
+09:03:48.952052 [info ]: Creating LSP service...
+09:03:48.956833 [info ]: Creating LSP server...
+09:03:48.956838 [info ]: Starting LSP server...
+09:03:48.994058 [info ]: Loading profiles.yml
+==================== 2026-10-31T09:03:49.018327Z | aaeaeaa2-d87b-408b-b762-bfc0192ffbd6 ====================
+09:03:49.018851 [info ]: Started loading project
+09:03:49.023407 [info ]: Loading profiles.yml
+09:03:49.145777 [debug]:    Started loading packages
+09:03:49.148282 [debug]:     Loaded [  0.00s] packages
+09:03:49.151255 [info ]: Finished loading project [  0.13s]
+09:03:49.154345 [info ]: Started parsing (1 nodes)
+09:03:49.188017 [debug]:    Started building model nodes
+09:03:49.188023 [debug]:    Started building model nodes
+09:03:49.188161 [debug]:   Finished [  0.00s] building model nodes
+09:03:49.188161 [debug]:   Finished [  0.00s] building model nodes
+09:03:49.189037 [debug]:    Started resolving data tests
+09:03:49.189055 [debug]:    Started resolving data tests
+09:03:49.189226 [debug]:   Finished [  0.00s] resolving data tests
+09:03:49.189226 [debug]:   Finished [  0.00s] resolving data tests
+09:03:49.194082 [debug]:    Started building model nodes
+09:03:49.197015 [debug]:   Finished [  0.00s] building model nodes
+09:03:49.197652 [debug]:    Started resolving data tests
+09:03:49.197672 [debug]:   Finished [  0.00s] resolving data tests
+09:03:49.198043 [debug]: Finished parsing models/user_orders.sql [  0.01s]
+09:03:49.198709 [debug]:    Started typechecking macros
+09:03:49.284479 [debug]:   Finished [  0.09s] typechecking macros
+09:03:49.287913 [info ]: Finished parsing [  0.13s] (1 nodes, 0 skipped, 0 errors)
+09:03:49.290094 [info ]: Cached model count updated: 1 models (estimate)
+09:03:49.290102 [info ]: Cached model count updated: 1 models (accurate)
+09:03:49.291094 [info ]: Started scheduling
+09:03:49.292577 [info ]: Finished scheduling [  0.00s]
+09:03:49.292732 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+09:03:49.292928 [info ]: Started scheduling
+09:03:49.292935 [info ]: Finished scheduling [  0.00s]
+09:03:49.302508 [info ]: Started building task graph
+09:03:49.304606 [info ]: Finished building task graph [  0.00s]
+09:03:49.320680 [info ]: Started rendering (1 nodes)
+09:03:49.320792 [info ]: Started model main.user_orders
+09:03:49.320813 [debug]: Started rendering model main.user_orders
+09:03:49.323820 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:03:49.324140 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:03:49.324148 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:03:49.324566 [info ]: Started analyzing (1 nodes)
+09:03:49.324667 [debug]: Started analyzing model main.user_orders
+09:03:49.341879 [debug]: Finished analyzing [  0.02s] model main.user_orders [success]
+09:03:49.341890 [info ]: Finished analyzing [  0.02s] (1 nodes, 0 skipped, 0 errors)
+09:03:49.341894 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.02s]
+09:03:49.347105 [info ]: Started scheduling
+09:03:49.347123 [info ]: Finished scheduling [  0.00s]
+09:03:49.347327 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [329ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:03:49.347497 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T09:03:49.366540Z | f0c8584b-36cb-4a71-90dd-8bd65ea94787 ====================
+09:03:49.366565 [info ]: Started loading project
+09:03:49.366696 [info ]: Loading profiles.yml
+09:03:49.367694 [info ]: Finished loading project [  0.00s]
+09:03:49.378585 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [12ms]
+09:03:49.378634 [info ]: Cached model count updated: 1 models (accurate)
+==================== 2026-10-31T09:03:50.563913Z | e1453437-0201-405b-a60c-5bba76ae3016 ====================
+09:03:50.564024 [info ]: Started loading project
+09:03:50.564583 [info ]: Loading profiles.yml
+09:03:50.567286 [info ]: Finished loading project [  0.00s]
+09:03:50.592637 [info ]: Cached model count updated: 1 models (estimate)
+09:03:50.592673 [info ]: Cached model count updated: 1 models (accurate)
+09:03:50.592702 [info ]: Started scheduling
+09:03:50.592755 [info ]: Finished scheduling [  0.00s]
+09:03:50.592774 [debug]: Compilation - 1 nodes selected: {"model.dbt_custom.user_orders"}
+09:03:50.593939 [info ]: Started building task graph
+09:03:50.593982 [info ]: Finished building task graph [  0.00s]
+09:03:50.594931 [info ]: Started rendering (1 nodes)
+09:03:50.594949 [info ]: Started model main.user_orders
+09:03:50.594964 [debug]: Started rendering model main.user_orders
+09:03:50.595200 [debug]: Compiled SQL for node model.dbt_custom.user_orders at target/.lsp/compiled/dbt_custom/models/user_orders.sql
+09:03:50.595268 [debug]: Finished rendering [  0.00s] model main.user_orders [success]
+09:03:50.595284 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:03:50.595303 [info ]: Started analyzing (1 nodes)
+09:03:50.595310 [debug]: Started analyzing model main.user_orders
+09:03:50.596159 [debug]: Finished analyzing [  0.00s] model main.user_orders [success]
+09:03:50.596171 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+09:03:50.596178 [info ]:  Succeeded model main.user_orders (view) [1 of 1 in 0.00s]
+09:03:50.599995 [info ]: Started scheduling
+09:03:50.600021 [info ]: Finished scheduling [  0.00s]
+09:03:50.600076 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [36ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+09:03:50.600155 [info ]: Cached model count updated: 1 models (accurate)
+09:03:51.060086 [debug]: Ignoring unsupported LSP notification
+09:03:56.089753 [debug]: Ignoring unsupported LSP notification
+09:03:56.126038 [debug]: Ignoring unsupported LSP notification

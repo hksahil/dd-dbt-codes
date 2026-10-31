@@ -1281,3 +1281,156 @@ Summary: 2 total | 2 success
 11:58:04.548926 [debug]: Ignoring unsupported LSP notification
 11:59:09.800541 [debug]: Ignoring unsupported LSP notification
 11:59:58.019497 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-31T10:16:13.367564Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-31T10:16:13.368329Z | 172595d3-3fac-4bf8-be33-4f669063a32c ====================
+10:16:13.368506 [info ]: Starting dbt LSP server
+10:16:13.368526 [info ]: Connecting to LSP client on port 8000
+10:16:13.368733 [info ]: Successfully connected to LSP client
+10:16:13.368745 [info ]: Creating LSP service...
+10:16:13.370478 [info ]: Creating LSP server...
+10:16:13.370500 [info ]: Starting LSP server...
+10:16:13.381801 [info ]: Loading profiles.yml
+==================== 2026-10-31T10:16:13.422493Z | 22e17a64-0b3e-467e-8322-0162965c8f39 ====================
+10:16:13.422676 [info ]: Started loading project
+10:16:13.423408 [info ]: Loading profiles.yml
+10:16:13.710879 [debug]:    Started loading packages
+10:16:13.711975 [debug]:     Loaded [  0.00s] packages
+10:16:13.713232 [info ]: Finished loading project [  0.29s]
+10:16:13.713974 [info ]: Started parsing (3 nodes)
+10:16:13.715075 [debug]: Ignoring unsupported LSP notification
+10:16:13.758172 [debug]:    Started building model nodes
+10:16:13.758172 [debug]:    Started building model nodes
+10:16:13.758205 [debug]:   Finished [  0.00s] building model nodes
+10:16:13.758212 [debug]:   Finished [  0.00s] building model nodes
+10:16:13.758829 [debug]:    Started resolving data tests
+10:16:13.758870 [debug]:   Finished [  0.00s] resolving data tests
+10:16:13.759026 [debug]:    Started resolving data tests
+10:16:13.759063 [debug]:   Finished [  0.00s] resolving data tests
+10:16:13.762399 [debug]: Finished parsing models/schema.yml [  0.01s]
+10:16:13.767722 [debug]: Finished parsing models/customers.sql [  0.00s]
+10:16:13.770851 [debug]:    Started building model nodes
+10:16:13.773591 [debug]:   Finished [  0.00s] building model nodes
+10:16:13.774775 [debug]:    Started resolving data tests
+10:16:13.774826 [debug]:   Finished [  0.00s] resolving data tests
+10:16:13.775005 [debug]: Finished parsing models/orders.sql [  0.01s]
+10:16:13.775890 [debug]:    Started typechecking macros
+10:16:13.990365 [debug]:   Finished [  0.21s] typechecking macros
+10:16:13.993352 [info ]: Finished parsing [  0.28s] (3 nodes, 0 skipped, 0 errors)
+10:16:13.994665 [info ]: Cached model count updated: 2 models (estimate)
+10:16:13.994697 [info ]: Cached model count updated: 2 models (accurate)
+10:16:13.995025 [info ]: Started scheduling
+10:16:13.995422 [info ]: Finished scheduling [  0.00s]
+10:16:13.995506 [debug]: Compilation - 1 nodes selected: {"model.dbt_documentation.customers"}
+10:16:13.995580 [info ]: Started scheduling
+10:16:13.995613 [info ]: Finished scheduling [  0.00s]
+10:16:14.012079 [info ]: Started building task graph
+10:16:14.012178 [info ]: Finished building task graph [  0.00s]
+10:16:14.021414 [info ]: Started rendering (1 nodes)
+10:16:14.021564 [info ]: Started model main.customers
+10:16:14.021589 [debug]: Started rendering model main.customers
+10:16:14.023746 [debug]: Compiled SQL for node model.dbt_documentation.customers at target/.lsp/compiled/dbt_documentation/models/customers.sql
+10:16:14.023935 [debug]: Finished rendering [  0.00s] model main.customers [success]
+10:16:14.023984 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+10:16:14.024051 [info ]: Started analyzing (1 nodes)
+10:16:14.024066 [debug]: Started analyzing model main.customers
+10:16:14.032398 [debug]: Finished analyzing [  0.01s] model main.customers [success]
+10:16:14.032469 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+10:16:14.032482 [info ]:  Succeeded model main.customers (table) [1 of 1 in 0.01s]
+10:16:14.037889 [info ]: Started scheduling
+10:16:14.037964 [info ]: Finished scheduling [  0.00s]
+10:16:14.038094 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [615ms]
+Processed: 1 model
+Summary: 1 total | 1 success
+10:16:14.038195 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-31T10:16:14.064610Z | d982adac-c143-4d2a-9dca-74e65c1907c5 ====================
+10:16:14.064726 [info ]: Started loading project
+10:16:14.065259 [info ]: Loading profiles.yml
+10:16:14.069413 [info ]: Finished loading project [  0.00s]
+10:16:14.097613 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [33ms]
+10:16:14.097709 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-31T10:16:15.275136Z | 9a1e34d2-b9be-46f6-ba6a-fa723b145e10 ====================
+10:16:15.275211 [info ]: Started loading project
+10:16:15.275559 [info ]: Loading profiles.yml
+10:16:15.278099 [info ]: Finished loading project [  0.00s]
+10:16:15.303044 [info ]: Cached model count updated: 2 models (estimate)
+10:16:15.303079 [info ]: Cached model count updated: 2 models (accurate)
+10:16:15.303104 [info ]: Started scheduling
+10:16:15.303161 [info ]: Finished scheduling [  0.00s]
+10:16:15.303179 [debug]: Compilation - 2 nodes selected: {"model.dbt_documentation.customers", "model.dbt_documentation.orders"}
+10:16:15.304424 [info ]: Started building task graph
+10:16:15.304530 [info ]: Finished building task graph [  0.00s]
+10:16:15.307541 [info ]: Started rendering (2 nodes)
+10:16:15.307572 [info ]: Started model main.orders
+10:16:15.307586 [debug]: Started rendering model main.orders
+10:16:15.307615 [info ]: Started model main.customers
+10:16:15.307630 [debug]: Started rendering model main.customers
+10:16:15.307938 [debug]: Compiled SQL for node model.dbt_documentation.customers at target/.lsp/compiled/dbt_documentation/models/customers.sql
+10:16:15.308044 [debug]: Finished rendering [  0.00s] model main.customers [success]
+10:16:15.308072 [info ]: Started analyzing (2 nodes)
+10:16:15.308079 [debug]: Started analyzing model main.customers
+10:16:15.308274 [debug]: Finished analyzing [  0.00s] model main.customers [success]
+10:16:15.308286 [info ]:  Succeeded model main.customers (table) [2 of 2 in 0.00s]
+10:16:15.308525 [debug]: Compiled SQL for node model.dbt_documentation.orders at target/.lsp/compiled/dbt_documentation/models/orders.sql
+10:16:15.308620 [debug]: Finished rendering [  0.00s] model main.orders [success]
+10:16:15.308635 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+10:16:15.308647 [debug]: Started analyzing model main.orders
+10:16:15.314206 [debug]: Finished analyzing [  0.01s] model main.orders [success]
+10:16:15.314253 [info ]: Finished analyzing [  0.01s] (2 nodes, 0 skipped, 0 errors)
+10:16:15.314262 [info ]:  Succeeded model main.orders (table) [1 of 2 in 0.01s]
+10:16:15.319833 [info ]: Started scheduling
+10:16:15.319896 [info ]: Finished scheduling [  0.00s]
+10:16:15.319973 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [44ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+10:16:15.320102 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-31T10:16:15.916395Z | 4adbc8fd-d1e8-44ff-9e6c-dc3f545fd011 ====================
+10:16:15.916533 [info ]: Started loading project
+10:16:15.917001 [info ]: Loading profiles.yml
+10:16:15.920606 [info ]: Finished loading project [  0.00s]
+10:16:15.956184 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [39ms]
+10:16:15.956265 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-10-31T10:16:17.133833Z | 992449b9-2122-4b66-9187-d67d06c784e1 ====================
+10:16:17.133881 [info ]: Started loading project
+10:16:17.134126 [info ]: Loading profiles.yml
+10:16:17.137395 [info ]: Finished loading project [  0.00s]
+10:16:17.157725 [info ]: Cached model count updated: 2 models (estimate)
+10:16:17.157757 [info ]: Cached model count updated: 2 models (accurate)
+10:16:17.157792 [info ]: Started scheduling
+10:16:17.157858 [info ]: Finished scheduling [  0.00s]
+10:16:17.157886 [debug]: Compilation - 2 nodes selected: {"model.dbt_documentation.customers", "model.dbt_documentation.orders"}
+10:16:17.158785 [info ]: Started building task graph
+10:16:17.158826 [info ]: Finished building task graph [  0.00s]
+10:16:17.160599 [info ]: Started rendering (2 nodes)
+10:16:17.160616 [info ]: Started model main.orders
+10:16:17.160628 [debug]: Started rendering model main.orders
+10:16:17.160649 [info ]: Started model main.customers
+10:16:17.160656 [debug]: Started rendering model main.customers
+10:16:17.160831 [debug]: Compiled SQL for node model.dbt_documentation.orders at target/.lsp/compiled/dbt_documentation/models/orders.sql
+10:16:17.160831 [debug]: Compiled SQL for node model.dbt_documentation.customers at target/.lsp/compiled/dbt_documentation/models/customers.sql
+10:16:17.160908 [debug]: Finished rendering [  0.00s] model main.customers [success]
+10:16:17.160934 [info ]: Started analyzing (2 nodes)
+10:16:17.160941 [debug]: Started analyzing model main.customers
+10:16:17.160959 [debug]: Finished rendering [  0.00s] model main.orders [success]
+10:16:17.160973 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+10:16:17.160981 [debug]: Started analyzing model main.orders
+10:16:17.161110 [debug]: Finished analyzing [  0.00s] model main.customers [success]
+10:16:17.161123 [info ]:  Succeeded model main.customers (table) [2 of 2 in 0.00s]
+10:16:17.161776 [debug]: Finished analyzing [  0.00s] model main.orders [success]
+10:16:17.161785 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+10:16:17.161791 [info ]:  Succeeded model main.orders (table) [1 of 2 in 0.00s]
+10:16:17.165861 [info ]: Started scheduling
+10:16:17.165895 [info ]: Finished scheduling [  0.00s]
+10:16:17.165928 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [32ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+10:16:17.166003 [info ]: Cached model count updated: 2 models (accurate)

@@ -1038,3 +1038,7 @@ Finished 'docs' with 1 error [1.2s]
 ==================== 2026-10-25T10:32:33.877796Z | 01a1729e-8554-7e63-9a21-bd0a05bde803 ====================
 10:32:33.909784 [debug]: DuckDB driver resolved: duckdb_extended 0.21.0.dev+dbt0.0.31
 10:32:34.168132 [info ]: started
+==================== 2026-10-31T10:16:13.367920Z | 01a19175-b734-72e0-932f-3ebc78edde32 ====================
+10:16:14.627834 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [1.3s]
